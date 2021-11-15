@@ -1,0 +1,57 @@
+<%= form_with(model: provider) do |form| %>
+  <% if provider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(provider.errors.count, "error") %> prohibited this provider from being saved:</h2>
+
+      <ul>
+        <% provider.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :タイトル %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :会社名 %>
+    <%= form.text_field :company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :報酬 %>
+    <%= form.text_field :reward %>
+  </div>
+
+  <div class="field">
+    <%= form.label :仕事内容 %>
+    <%= form.text_field :pcontent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :報酬支払日 %>
+    <%= form.text_field :rday %>
+  </div>
+
+  <div class="field">
+    <%= form.label :報酬内容 %>
+    <%= form.text_field :rcontent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :地域 %>
+    <%= form.text_field :area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :アピールポイント %>
+    <%= form.text_field :appeal %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

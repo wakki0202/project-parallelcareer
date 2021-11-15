@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>案件一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>案件名</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @providers.each do |provider| %>
+      <tr>
+        <td><%= provider.title %></td>
+        <td><%= link_to '詳細', provider %></td>
+        <td><%= link_to '編集', edit_provider_path(provider) %></td>
+        <td><%= link_to '削除', provider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '案件を作成する', new_provider_path %>

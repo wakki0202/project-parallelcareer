@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>案件名:</strong>
+  <%= @provider.title %>
+</p>
+
+<p>
+  <strong>企業名:</strong>
+  <%= @provider.company %>
+</p>
+
+<p>
+  <strong>報酬:</strong>
+  <%= @provider.reward %>
+</p>
+
+<p>
+  <strong>仕事内容:</strong>
+  <%= @provider.pcontent %>
+</p>
+
+<p>
+  <strong>報酬支払日:</strong>
+  <%= @provider.rday %>
+</p>
+
+<p>
+  <strong>報酬内容:</strong>
+  <%= @provider.rcontent %>
+</p>
+
+<p>
+  <strong>対象地域:</strong>
+  <%= @provider.area %>
+</p>
+
+<p>
+  <strong>アピールポイント:</strong>
+  <%= @provider.appeal %>
+</p>
+
+<%= link_to '編集する', edit_provider_path(@provider) %> |
+<%= link_to '戻る', providers_path %>
