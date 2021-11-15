@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root "tops#index"
+
   resources :providers
 
   get "posts/index",to:"posts#index"
