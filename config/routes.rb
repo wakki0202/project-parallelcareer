@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root "tops#index"
-
+  get "tops/index",to:"tops#index"
   resources :providers
 
   get "posts/index",to:"posts#index"
