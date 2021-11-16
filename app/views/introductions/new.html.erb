@@ -1,0 +1,25 @@
+<%= render '/layouts/header' %>
+<h1>口コミをする</h1>
+<%= form_with(model: [@provider, @introduction], local: true) do |form| %>
+ 
+
+  <div class="field">
+    <%= form.label :お客様名 %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :お客様電話番号 %>
+    <%= form.text_field :phonenumber %>
+  </div>
+
+  <div class="field">
+    <%= form.label :口コミ内容 %>
+    <%= form.text_field :contents %>
+  </div>
+
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

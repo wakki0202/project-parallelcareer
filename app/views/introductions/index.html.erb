@@ -1,0 +1,23 @@
+<%= render '/layouts/header' %>
+
+
+
+      
+    <div class="w-full flex pt-24">
+      <div id="sidebar" class="w-3/12 ml-20 text-center">
+      <%= render '/providers/side' %>
+      </div>
+      
+      <div class="w-8/12 m-auto">
+      <table class="border border-black w-11/12 m-auto">
+      
+        <h1 class="text-center font-bold text-2xl pb-6">口コミ一覧</h1>
+      <tr class="border"><th class="border border-black">案件名</th><th class="border border-black">紹介者名</th><th class="border border-black">お客様名</th><th class="border border-black">受信日時</th><th class="border border-black"></th></tr>
+      
+      
+      <% @introductions.each do |introduction| %> 
+      <tr class="border  text-center"><td class="border border-black"><%= introduction.provider.title %></td> <td class="border border-black"><%= introduction.user.username %></td><td class="border border-black"><%= introduction.name %></td><td class="border border-black"><%= l introduction.created_at %></td><td class="border border-black"><a href="<%= introduction.id %>" class=" ">詳細</a></td></tr>
+      <% end %>
+  
+      
+      </table>

@@ -9,11 +9,17 @@
         </div>
         <div id="header-list" class="hidden lg:block">
           <ul id="navbar" class="content-center flex truncate lg:space-x-16 xl:space-x-24">
-            <li><%= link_to "案件一覧","/post/index" %></li>
+            <li><%= link_to "案件一覧","/posts/index" %></li>
             <li><a href="/tops/index/#faq" class="">FAQ</a></li>
             <li>お問い合わせ</li>
+            <li><%= link_to "管理者ページ","/providers" %></li>
+          <% if user_signed_in? %>
+            <li><%=  link_to 'ログアウト' , destroy_user_session_path,method: :delete %></li>
+            <li><%= link_to "ユーザーページ","/users/home  " %></li>
+          <% else %>
             <li><%= link_to "ログイン","/users/sign_in" %></li>
             <li  class="bg-yellow-500 text-white font-bold  px-5 rounded-2xl "><%= link_to "会員登録","/users/sign_up" %></li>
+          <% end %>  
           </ul>
         </div>
       </div>

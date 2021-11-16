@@ -7,7 +7,7 @@ class PostsController < ProvidersController
 
   def show　#ユーザー側投稿詳細
      @provider = Provider.find(params[:id])
-   
+     @introduction = Introduction.new
   end
   
 

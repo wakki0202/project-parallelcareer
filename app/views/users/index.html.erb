@@ -1,0 +1,13 @@
+<%= render '/layouts/header' %>
+<div class="pt-24 flex w-12/12">
+   
+      <h1 class="text-center font-bold text-2xl p-6">ユーザー管理表</h1>
+      <table class="border border-black w-8/12 m-auto">
+      <tr class="border"><th class="border border-black">名前</th><th class="border border-black">メールアドレス</th><th class="border border-black">電話番号</th></tr>
+      <% @users.each do |user| %> 
+      <tr class="border  text-center"><td class="border border-black"><%= user.username %></td> <td class="border border-black"><%= user.email %></td><td class="border border-black"><%= user.phonenumber %></td></tr>
+      <% end %>
+      
+      </table>
+  </div>
+</div>

@@ -18,5 +18,8 @@ module Parallelcareer
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    
+    #以下の一文を追加
+    config.i18n.default_locale = :ja  #:jaはjapaneseのja
   end
 end
