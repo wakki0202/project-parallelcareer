@@ -1,3 +1,44 @@
 // Place all the styles related to the tops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.header-all{
+  height: 90px;
+  margin-top: -20px;
+  border-bottom-width: 2px;
+  border-color: gray;
+  background-color: white;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+
+  .header-top{
+    display: flex;
+    height: 64px;
+   
+   
+ 
+    .header-logo{
+      width: 30%;
+    }
+
+    .header-list{
+     width: 70%;
+
+      ul{
+        display: flex;
+        list-style: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    
+      }
+    }
+  }
+}
+.top{
+    padding-top: 100px;
+  	background: linear-gradient(90deg,#F59E17,#F87172  ) fixed;
+    color: white;
+}
+

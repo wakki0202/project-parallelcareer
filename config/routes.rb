@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get "posts/index",to:"posts#index"
   get "posts/:id",to:"posts#show"
   get "providers/:id/introductions", to:"introductions#new"
+  get "introductions/complete", to:"introductions#complete"
 
   get "introductions/index", to:"introductions#index"
   get "introductions/:id", to:"introductions#show"

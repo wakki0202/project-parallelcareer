@@ -10,9 +10,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    #スーパークラス(devise)のcreateアクションを呼ぶ 
+    super 
+    #WelcomeMailerクラスのsend_when_signupメソッドを呼び、POSTから受け取ったuserのemailとnameを渡す
+   ThanxMailer.complete_registration(params[:user][:email],params[:user][:username]).deliver
+  end
 
   # GET /resource/edit
   # def edit

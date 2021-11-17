@@ -1,13 +1,13 @@
 
 
 
-    <header class="h-16 lg:h-20 py-4 lg:pt-6 lg:block z-9 w-full fixed bg-white border-b-2">
+    <header  class="header-all">
      
-      <div id="headerForPC" class="flex h-16 lg:pl-36 lg:space-x-52 xl:space-x-64">
-        <div id="header-logo" class="">
+      <div id="headerForPC" class="header-top">
+        <div id="header-logo" class="header-logo">
           <%= link_to "ロゴ","/tops/index",class: 'hidden lg:block w-16' %>
         </div>
-        <div id="header-list" class="hidden lg:block">
+        <div id="header-list" class="header-list">
           <ul id="navbar" class="content-center flex truncate lg:space-x-16 xl:space-x-24">
             <li><%= link_to "案件一覧","/posts/index" %></li>
             <li><a href="/tops/index/#faq" class="">FAQ</a></li>
