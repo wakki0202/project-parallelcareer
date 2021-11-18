@@ -1,0 +1,81 @@
+@media (min-width: 1024px) {
+  .sign-up {
+    background-image: linear-gradient(to left, var(--tw-gradient-stops));
+    --tw-gradient-from: #f87171;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(248, 113, 113, 0));
+    --tw-gradient-to: #f59e0b;
+  }
+
+  .sign-up-main{
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    width: 66.666667%;
+    margin: auto;
+
+  }
+
+  h2{
+    font-size: 1.875rem/* 30px */;
+    line-height: 2.25rem/* 36px */;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 6rem/* 96px */;
+    margin-bottom: 0.75rem/* 12px */;
+  }
+
+  .fields{
+     --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+   
+    color: rgba(0, 0, 0, var(--tw-text-opacity));
+    margin-bottom: 3rem/* 48px */;
+    border-width: 2px;
+    border-radius: 0.25rem/* 4px */;
+    padding: 2rem/* 32px */;
+   
+   
+  }
+
+  .field{
+    text-align: left;
+    margin-bottom: 0.75rem/* 12px */;
+    width: 41.666667%;
+     margin: auto;
+  }
+  .label{
+    	font-size: 1.00rem;
+      line-height: 1.75rem;
+  }
+  .form{
+    border-width: 2px;
+    
+	  border-radius: 0.5rem;
+  
+  	padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+	 
+    width: 100%;
+    margin:0 auto;
+   
+  	line-height: 1.5;
+  }
+  .form:focus{
+     --tw-border-opacity: 1;
+    border-color: rgba(245, 158, 11, var(--tw-border-opacity));	
+    margin: auto;
+  }
+  .actions{
+    margin-top: 5px;
+    margin-bottom: 1.00rem/* 12px */;
+    width: 41.666667%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .submit{
+    width: 66.666667%;
+    background-color: rgb(46, 93, 248);
+    color: white;
+    font-weight: normal;
+    border-radius: 0.5rem;
+  }
+}
