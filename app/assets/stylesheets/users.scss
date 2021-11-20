@@ -1,3 +1,33 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.user-index{
+display: flex;
+padding-top: 100px;
+}
+
+#users{
+  text-align: center;
+  padding-top: 100px;
+ width:100%; 
+}
+
+#users-table{
+width: 80%;
+margin: 0 auto;
+}
+
+#introduction-show{
+  display: flex;
+  padding-top: 100px;
+}
+
+#sidebar{
+  width: 50%;
+  margin: 0 auto;
+}
+
+#center{
+  width: 50%;
+  margin: 0 auto;
+}
