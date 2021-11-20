@@ -1,16 +1,20 @@
- <%= render '/layouts/header' %>
-<h1>案件一覧</h1>
+<body class="post-index">
+  <%= render '/layouts/header' %>
+  <div class="post-main">
+    <h1>案件一覧</h1>
 
-<table>
 
-  <tbody>
-    <% @providers.each do |provider| %>
-      <tr>
-        <td>案件名：<%= provider.title %></td>
-        <td>報酬：<%= provider.reward %></td>
-        <td>地域：<%= provider.area %></td>
-        <td><a href="/posts/<%= provider.id %>" class=" font-bold">詳細</a></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class="post-list">
+        <% @providers.each do |provider| %>
+          <ul class="list-main">
+          <div class="lists">
+            <li class="title"><%= provider.title %></li>
+            <li>報酬：<%= provider.reward %></li>
+            <li>地域：<%= provider.area %></li>
+            <li><a href="/posts/<%= provider.id %>" class=" font-bold">詳細</a></li>
+          </div>
+          </ul>
+        <% end %>
+      </div>
+  </div>
+</body>

@@ -1,5 +1,7 @@
+<body class="post-show">
 <%= render '/layouts/header' %>
-<p id="notice"><%= notice %></p>
+
+<div class="posts">
 
 <p>
   <strong>案件名:</strong>
@@ -36,11 +38,15 @@
   <%= @provider.area %>
 </p>
 
-<p>
+<p class="bottom">
   <strong>アピールポイント:</strong>
   <%= @provider.appeal %>
 </p>
 
 
+<div class="action">
+<%= link_to "口コミをする","/providers/#{@provider.id}/introductions" %>
+</div>
 
-      <%= link_to "口コミをする","/providers/#{@provider.id}/introductions" %>
+</div>
+</body>
