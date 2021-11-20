@@ -16,11 +16,11 @@
 
   <tbody>
     <% @providers.each do |provider| %>
-      <tr>
-        <td><%= provider.title %></td>
-        <td><%= link_to '詳細', provider %></td>
-        <td><%= link_to '編集', edit_provider_path(provider) %></td>
-        <td><%= link_to '削除', provider, method: :delete, data: { confirm: '本当に削除しますか?' } %></td>
+      <tr class="provideredition">
+        <td class="provideredition"><%= provider.title %></td>
+        <td class="provideredition"><%= link_to '詳細', provider %></td>
+        <td class="provideredition"><%= link_to '編集', edit_provider_path(provider) %></td>
+        <td class="provideredition" ><%= link_to '削除', provider, method: :delete, data: { confirm: '本当に削除しますか?' } %></td>
       </tr>
     <% end %>
   </tbody>
