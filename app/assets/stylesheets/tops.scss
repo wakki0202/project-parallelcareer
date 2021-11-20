@@ -34,6 +34,7 @@ margin-left: calc(13rem * calc(1 - var(--tw-space-x-reverse)));
         width: 30%;
        a{ 
          text-decoration: none;
+         color: #666;
        }
     }
 
@@ -66,6 +67,7 @@ margin-left: calc(13rem * calc(1 - var(--tw-space-x-reverse)));
         li{ padding-left: 50px;
             a{
           text-decoration: none;
+          color: #666;
           }
         }
       }
@@ -92,6 +94,7 @@ footer{
       justify-content: space-evenly;
       a{
         text-decoration: none;
+        color: #666;
       }
     }
   }
@@ -505,7 +508,7 @@ text-align: center;
   }
 
   #Case1RewardWord{
-    padding-top: 1.25rem/* 20px */;
+    padding-top: 14px;
     text-align: center;
   }
 
@@ -534,21 +537,21 @@ text-align: center;
             font-size: 15px;
           }
           #Case2Content{
-            border-bottom: 1px dashed;
-            width: 100%;
-            margin: auto;
-            border-bottom-width: 1px;
-          }
-          #Case2Content{
+          border-bottom: 1px dashed;
+          width: 100%;
+          margin: auto;
+        }
+
+        .Case2ContentWord{
           padding: 12px;
-          }
+        }
           #Case2Reward{
-            width: 100%;
-            margin: auto;
-          }
+          width: 100%;
+          margin: auto;
+        }
+
           #Case2RewardWord{
-            padding-top: 20px;
-            padding-left: 8px;
+           padding-top: 14px;
             text-align: center;
           }
 
@@ -577,23 +580,23 @@ text-align: center;
             font-size: 15px;
           }
           #Case3Content{
-            border-bottom: 1px dashed;
-            width: 100%;
-            margin: auto;
-            border-bottom-width: 1px;
-          }
-          #Case3Content{
+          border-bottom: 1px dashed;
+          width: 100%;
+          margin: auto;
+        }
+
+        .Case3ContentWord{
           padding: 12px;
-          }
+        }
           #Case3Reward{
-            width: 75%;
-            margin: auto;
-          }
+          width: 100%;
+          margin: auto;
+        }
+
           #Case3RewardWord{
-            padding-top: 20px;
+            padding-top: 14px;
             text-align: center;
           }
-
 
         #matterCase4{
           border-bottom: 1px dashed;
@@ -612,30 +615,25 @@ text-align: center;
           #Case4Title{
             text-align: center;
             font-weight: 700;
-            width: 100%;
-            margin: auto;
-            font-size: 15px;
             padding: 20px;
+            font-size: 15px;
           }
           #Case4Content{
-            border-bottom: 1px dashed;
-            width: 100%;
-            margin: auto;
-          }
+          border-bottom: 1px dashed;
+          width: 100%;
+          margin: auto;
+        }
 
-          #Case4ContentWord{
-            padding-top: 2.25rem/* 36px */;
-            padding-bottom: 2.25rem/* 36px */;
-            padding-left: 1.5rem/* 24px */;
-            padding-right: 1.5rem/* 24px */;
-
-          }
+        .Case4ContentWord{
+          padding: 20px;
+        }
           #Case4Reward{
-            width: 83.333333%;
-            margin: auto;
-          }
+          width: 100%;
+          margin: auto;
+        }
+
           #Case4RewardWord{
-            padding-top: 20px;
+            padding-top: 14px;
             text-align: center;
           }
 
@@ -654,7 +652,7 @@ text-align: center;
           --tw-bg-opacity: 1;
           background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
           --tw-text-opacity: 1;
-          color: rgba(255, 255, 255, var(--tw-text-opacity));
+          color: white;
           margin: auto;
           padding-top: 12px;
           padding-bottom: 12px;
@@ -678,6 +676,12 @@ text-align: center;
     padding-top: 80px;
     padding-bottom: 20px;
   }
+
+.process{
+  width: 85%; 
+  margin:0 auto;
+  padding-left: 50px;
+}
 
   #FlowchartWrap{
     display: flex;
@@ -944,6 +948,7 @@ text-align: center;
     background-color: rgba(219, 234, 254, var(--tw-bg-opacity));
     margin-top: 2.5rem/* 40px */;
     margin-bottom: 2.5rem/* 40px */;
+    color: white;
   }
 
   #MemberWrap{
@@ -954,6 +959,7 @@ text-align: center;
 
   a{
         text-decoration: none;
+        color: white;
         
       }
 

@@ -143,10 +143,10 @@
               <h1 id="Case2Title" class="text-center font-bold p-5">補助金・助成金の申請サポート</h1>
             </div>
             <div id="Case2Content" class=" border-b border-dashed w-full m-auto">
-              <p id="Case1RewardWord" class="CaseContentWord p-6">補助金・助成金の申請のサポートをさせていただける方を紹介してください。</p>
+              <p class="Case2ContentWord" class="CaseContentWord p-6">補助金・助成金の申請のサポートをさせていただける方を紹介してください。</p>
             </div>
-            <div class="Case2Reward w-full m-auto">
-              <p class="Case2RewardWord lg:pt-5 pt-6 lg:pl-2 text-center">報酬：申請サポート手数料の２０％</p>
+            <div id="Case2Reward">
+              <p id="Case2RewardWord">報酬：申請サポート手数料の２０％</p>
             </div>
           </div>
 
@@ -155,7 +155,7 @@
               <h1 id="Case3Title" class="text-center font-bold p-5">賃貸物件紹介</h1>
             </div>
             <div id="Case3Content" class="border-b border-dashed w-full m-auto">
-              <p id="Case1RewardWord" class="CaseContentWord p-6">引越しする方をご紹介ください。 ネットに載ってる物件や未公開物件を安くご案内します。</p>
+              <p class="Case3ContentWord" class="CaseContentWord p-6">引越しする方をご紹介ください。 ネットに載ってる物件や未公開物件を安くご案内します。</p>
             </div>
             <div id="Case3Reward" class="w-9/12 m-auto">
               <p id="Case3RewardWord" class="lg:pt-5 pt-3 text-center">報酬：家賃の５０％</p>
@@ -166,7 +166,7 @@
               <h1 id="Case4Title" class="text-center font-bold p-5">火災保険申請サポート</h1>
             </div>
             <div id="Case4Content" class="border-b border-dashed w-full m-auto">
-              <p id="Case4ContentWord" class=" py-9 px-6">プロによる物件の無料調査を受けたいお客様をご紹介ください。</p>
+              <p class="Case4ContentWord" class=" py-9 px-6">プロによる物件の無料調査を受けたいお客様をご紹介ください。</p>
             </div>
             <div id="Case4Reward" class="w-10/12 m-auto">
               <p id="Case4RewardWord" class="lg:pt-5 pt-3 text-center">報酬：１件あたり約１０万円</p>
@@ -179,7 +179,9 @@
       </section>
       <section id="RewardWrap" class="text-gray-700">
         <h1 id="RewardFlow" class="text-yellow-500 lg:font-light font-bold lg:text-4xl text-2xl text-center lg:pt-20 pb-5 ">報酬獲得までの流れ</h1>
-         <%= image_tag "process.png" ,class:"xl:w-9/12 2xl:w-6/12  m-auto hidden lg:block" %>
+        <div class="process">
+         <%= image_tag "process.png" ,class:"process" %>
+        </div>
         <div id="FlowchartWrap" class="lg:flex justify-center lg lg:mb-8">
           <div id="Step1" class="border lg:shadow-md lg:w-64 lg:h-36 lg:m-0 w-72  m-auto  rounded-3xl lg:mb-10">
             <h1 id="Step1Title" class="text-center font-bold pt-5  ">STEP.1　会員登録</h1>
