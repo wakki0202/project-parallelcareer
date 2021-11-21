@@ -12,43 +12,48 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :タイトル %>
-    <%= form.text_field :title %>
+    <%= form.label :タイトル,class: 'label' %>
+    <%= form.text_field :title,class: "form" %>
   </div>
 
   <div class="field">
-    <%= form.label :会社名 %>
-    <%= form.text_field :company %>
+    <%= form.label :会社名,class: 'label' %>
+    <%= form.text_field :company,class: "form" %>
   </div>
 
   <div class="field">
-    <%= form.label :報酬 %>
-    <%= form.text_field :reward %>
+    <%= form.label :報酬,class: 'label' %>
+    <%= form.text_field :reward,class: "form" %>
   </div>
 
   <div class="field">
-    <%= form.label :仕事内容 %>
-    <%= form.text_field :pcontent %>
+    <%= form.label :仕事内容,class: 'label' %>
+    <%= form.text_field :pcontent,class: "form" %>
   </div>
 
   <div class="field">
-    <%= form.label :報酬支払日 %>
-    <%= form.text_field :rday %>
+    <%= form.label :報酬支払日,class: 'label' %>
+    <%= form.text_field :rday,class: "form" %>
   </div>
 
   <div class="field">
-    <%= form.label :報酬内容 %>
-    <%= form.text_field :rcontent %>
+    <%= form.label :報酬内容,class: 'label' %>
+    <%= form.text_field :rcontent,class: "form" %>
   </div>
 
   <div class="field">
-    <%= form.label :地域 %>
-    <%= form.text_field :area %>
+    <%= form.label :地域,class: 'label' %>
+    <%= form.text_field :area,class: "form" %>
   </div>
 
   <div class="field">
-    <%= form.label :アピールポイント %>
-    <%= form.text_field :appeal %>
+    <%= form.label :アピールポイント,class: 'label' %>
+    <%= form.text_field :appeal,class: "form" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :案件ステータス,class: 'label' %>
+    <%= form.select :status, [['公開'], ['非公開']], { include_blank: false }, { class: "form" } %>
   </div>
 
   <div class="actions">

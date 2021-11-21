@@ -6,6 +6,7 @@
 
       <div class="post-list">
         <% @providers.each do |provider| %>
+          <% if provider.status == "公開" %>
           <ul class="list-main">
           <div class="lists">
             <li class="title"><%= provider.title %></li>
@@ -14,6 +15,7 @@
             <li class="more"><a href="/posts/<%= provider.id %>" class=" font-bold">詳細</a></li>
           </div>
           </ul>
+          <% end %>
         <% end %>
       </div>
   </div>

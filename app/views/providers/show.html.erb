@@ -40,5 +40,10 @@
   <%= @provider.appeal %>
 </p>
 
+<p>
+  <strong>案件状態:</strong>
+  <%= @provider.status %>
+</p>
+
 <%= link_to '編集する', edit_provider_path(@provider) %> |
 <%= link_to '戻る', providers_path %>
