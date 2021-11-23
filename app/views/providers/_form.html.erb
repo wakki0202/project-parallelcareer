@@ -11,6 +11,9 @@
     </div>
   <% end %>
 
+  <%= form.label :画像 %><br />
+  <%= form.file_field :img, multiple: true, class: "image" %>
+
   <div class="field">
     <%= form.label :タイトル,class: 'label' %>
     <%= form.text_field :title,class: "form" %>

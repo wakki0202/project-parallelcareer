@@ -2,113 +2,117 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-@media (min-width: 1024px) {
 
-body{
-  margin:0;
+.overflow-hidden {
+  overflow: hidden;
 }
 
-header{
- z-index: 9;
- position: fixed;
- background-color: white;
- border-bottom: 1px solid; 
- width: 100%;
- 
- 
- 
 
-  .header-nav{
-    display: flex;
-    height: 28px;
-    width: 100%;
-    --tw-space-x-reverse: 0;
-margin-right: calc(13rem * var(--tw-space-x-reverse));
-margin-left: calc(13rem * calc(1 - var(--tw-space-x-reverse)));
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+@media (max-width: 1024px) {
 
+  body{
+    margin:0;
+  }
 
-   
-    .header-logo{
-        width: 30%;
-       a{ 
-         text-decoration: none;
-         color: #666;
-       }
-    }
+  header{
+  z-index: 9;
+  position: fixed;
+  background-color: white;
+  border-bottom: 1px solid; 
+  width: 100%;
+  
+  
+  
 
- 
+    .header-nav{
+      display: flex;
+      height: 28px;
+      width: 100%;
+      --tw-space-x-reverse: 0;
+  margin-right: calc(13rem * var(--tw-space-x-reverse));
+  margin-left: calc(13rem * calc(1 - var(--tw-space-x-reverse)));
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
 
     
-    .header-list{
-      width:70%;
-    
-
-      .navbar{
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        list-style: none;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        --tw-space-x-reverse: 0;
-      
-        margin-right: calc(4rem * var(--tw-space-x-reverse));
-        margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
-                
-        align-content: center;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        
-
-        li{ padding-left: 50px;
-            a{
+      .header-logo{
+          width: 30%;
+        a{ 
           text-decoration: none;
           color: #666;
+        }
+      }
+
+  
+
+      
+      .header-list{
+        width:70%;
+      
+
+        .navbar{
+          width: 80%;
+          margin: 0 auto;
+          display: flex;
+          list-style: none;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          --tw-space-x-reverse: 0;
+        
+          margin-right: calc(4rem * var(--tw-space-x-reverse));
+          margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
+                  
+          align-content: center;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          
+
+          li{ padding-left: 50px;
+              a{
+            text-decoration: none;
+            color: #666;
+            }
           }
         }
       }
     }
   }
-}
 
-footer{
-  background-color: white;
-  .footer-title{
-    text-align: center;
-    padding-bottom:30px;
-    font-size: 20px;
+  footer{
+    background-color: white;
+    .footer-title{
+      text-align: center;
+      padding-bottom:30px;
+      font-size: 20px;
 
-  }
-  .footer-list{
-    text-align: center;
-    padding-bottom:16px;
-    ul{
-      display: flex;
-      width: 50%;
-      margin: 0 auto;
-      list-style: none;
-      justify-content: space-evenly;
-      a{
-        text-decoration: none;
-        color: #666;
+    }
+    .footer-list{
+      text-align: center;
+      padding-bottom:16px;
+      ul{
+        display: flex;
+        width: 50%;
+        margin: 0 auto;
+        list-style: none;
+        justify-content: space-evenly;
+        a{
+          text-decoration: none;
+          color: #666;
+        }
       }
     }
+    .copyright{
+  text-align: center;
+    }
   }
-  .copyright{
-text-align: center;
-  }
-}
-// Place all the styles related to the tops controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+  // Place all the styles related to the tops controller here.
+  // They will automatically be included in application.css.
+  // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.overflow-hidden {
-  overflow: hidden;
-}
+
 
 
   .bg-gradient-to-l {
@@ -978,6 +982,35 @@ text-align: center;
     border-radius: 1.5rem/* 24px */;
 
 
-}
+ }
 }
 
+@media (max-width: 599px) {
+
+  .bg-gradient-to-l {
+    background-image: linear-gradient(to left, var(--tw-gradient-stops));
+    --tw-gradient-from: #f87171;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(248, 113, 113, 0));
+  }
+
+  .mainMessege {
+    font-weight: 800;
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    margin-top: 40px;
+    padding-top: 96px;
+    padding-left: 24px;
+    padding-bottom: 12px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .subMessege {
+    list-style: none;
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    margin-top: 40px;
+    padding-left: 24px;
+  }
+
+}

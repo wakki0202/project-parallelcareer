@@ -11,10 +11,11 @@
           <ul id="navbar" class="navbar">
             <li><%= link_to "案件一覧" ,"/posts/index" %></li>
             <li><a href="" class="">FAQ</a></li>
-            <li>お問い合わせ</li>
+            
           <% if user_signed_in?  %>
             <li><a><%= link_to 'ログアウト' , destroy_user_session_path,method: :delete %></a></li>
             <li><%= link_to "管理者ページ" ,"/providers" %></li>
+            <li><%= link_to "進捗状況確認" ,"/progresses/index" %></li>
         
           <% else %>
             <li><%= link_to "会員登録" ,"/users/sign_up" %></li>

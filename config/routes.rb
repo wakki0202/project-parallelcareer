@@ -24,5 +24,7 @@ Rails.application.routes.draw do
   get "introductions/:id", to:"introductions#show"
 
   get "users/index",to:"users#index"
+  get "progresses/index",to:"progresses#index"
+  get "progresses/:id",to:"progresses#show"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

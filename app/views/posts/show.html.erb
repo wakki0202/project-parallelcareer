@@ -3,43 +3,49 @@
 
 <div class="posts">
 
+<% if @provider.img? %>
+<%= image_tag(@provider.img.url.to_s) %>
+<% else%>
+<div> <div>
+<% end %>
+
 <p>
-  <strong>案件名:</strong>
+  <strong>案件名</strong><br>
   <%= @provider.title %>
 </p>
 
 <p>
-  <strong>企業名:</strong>
+  <strong>企業名</strong><br>
   <%= @provider.company %>
 </p>
 
 <p>
-  <strong>報酬:</strong>
+  <strong>報酬</strong><br>
   <%= @provider.reward %>
 </p>
 
 <p>
-  <strong>仕事内容:</strong>
+  <strong>仕事内容</strong><br>
   <%= @provider.pcontent %>
 </p>
 
 <p>
-  <strong>報酬支払日:</strong>
+  <strong>報酬支払日</strong><br>
   <%= @provider.rday %>
 </p>
 
 <p>
-  <strong>報酬内容:</strong>
+  <strong>報酬内容</strong><br>
   <%= @provider.rcontent %>
 </p>
 
 <p>
-  <strong>対象地域:</strong>
+  <strong>対象地域</strong><br>
   <%= @provider.area %>
 </p>
 
 <p class="bottom">
-  <strong>アピールポイント:</strong>
+  <strong>アピールポイント</strong>
   <%= @provider.appeal %>
 </p>
 

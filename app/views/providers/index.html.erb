@@ -9,6 +9,7 @@
 <table>
   <thead>
     <tr>
+      <th>会社名</th>
       <th>案件名</th>
       <th colspan="3"></th>
     </tr>
@@ -17,6 +18,7 @@
   <tbody>
     <% @providers.each do |provider| %>
       <tr class="provideredition">
+        <td class="provideredition"><%= provider.company %></td>
         <td class="provideredition"><%= provider.title %></td>
         <td class="provideredition"><%= link_to '詳細', provider %></td>
         <td class="provideredition"><%= link_to '編集', edit_provider_path(provider) %></td>
@@ -27,8 +29,5 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to '案件を作成する', new_provider_path %>
 </div>
 </div>

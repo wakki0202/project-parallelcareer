@@ -66,3 +66,6 @@ gem 'devise'
 
 #devise日本語化
 gem 'devise-i18n'
+
+#画像追加
+gem 'carrierwave', '~> 1.3', '>= 1.3.1'

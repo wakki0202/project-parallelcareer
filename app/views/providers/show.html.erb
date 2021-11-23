@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<% if @provider.img? %>
+<%= image_tag(@provider.img.url).to_s %>
+<% else%>
+<div>画像がありません<div>
+<% end %>
+
 <p>
   <strong>案件名:</strong>
   <%= @provider.title %>
@@ -45,5 +51,4 @@
   <%= @provider.status %>
 </p>
 
-<%= link_to '編集する', edit_provider_path(@provider) %> |
-<%= link_to '戻る', providers_path %>
+<button><%= link_to '◀トップへ戻る', providers_path %></button>
