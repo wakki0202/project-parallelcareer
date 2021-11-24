@@ -14,6 +14,7 @@
             
           <% if user_signed_in?  %>
             <li><a><%= link_to 'ログアウト' , destroy_user_session_path,method: :delete %></a></li>
+            <li><%= link_to "友人を招待する" ,"/users/invitation/new" %></li>
             <li><%= link_to "管理者ページ" ,"/providers" %></li>
             <li><%= link_to "進捗状況確認" ,"/progresses/index" %></li>
         

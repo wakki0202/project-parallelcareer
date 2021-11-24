@@ -67,5 +67,8 @@ gem 'devise'
 #devise日本語化
 gem 'devise-i18n'
 
+#友人招待
+gem 'devise_invitable'
+
 #画像追加
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
