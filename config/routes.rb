@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  
   devise_for :users, controllers: {
         sessions: 'users/sessions',
         registrations: 'users/registrations',
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
     resources :introductions, only: [:create, :edit, :update]
   end
 
+  resources :news
 
 
   get "posts/index",to:"posts#index"

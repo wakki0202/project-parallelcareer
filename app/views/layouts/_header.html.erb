@@ -10,13 +10,12 @@
         <div id="header-list" class="header-list">
           <ul id="navbar" class="navbar">
             <li><%= link_to "案件一覧" ,"/posts/index" %></li>
-            <li><a href="" class="">FAQ</a></li>
             
           <% if user_signed_in?  %>
             <li><a><%= link_to 'ログアウト' , destroy_user_session_path,method: :delete %></a></li>
             <li><%= link_to "友人を招待する" ,"/users/invitation/new" %></li>
             <li><%= link_to "管理者ページ" ,"/providers" %></li>
-            <li><%= link_to "進捗状況確認" ,"/progresses/index" %></li>
+            <li><%= link_to "マイページ" ,"/progresses/index" %></li>
             <li><%= link_to '退会する', "/users", method: :delete, data: { confirm: '本当に退会しますか?' } %></li>
         
           <% else %>

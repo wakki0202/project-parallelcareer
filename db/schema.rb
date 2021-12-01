@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_01_094805) do
+ActiveRecord::Schema.define(version: 2021_12_01_130600) do
 
   create_table "introductions", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 2021_12_01_094805) do
     t.string "step"
     t.index ["provider_id"], name: "index_introductions_on_provider_id"
     t.index ["user_id"], name: "index_introductions_on_user_id"
+  end
+
+  create_table "news", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "progresses", force: :cascade do |t|

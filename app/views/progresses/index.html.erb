@@ -15,12 +15,27 @@
       
        <% @introductions.each do |introduction| %> 
       <% if introduction.user_id == current_user.id %>
-      <tr class="border  text-center"><td class="border border-black"><%= introduction.provider.title %></td><td class="border border-black"><a href="<%= introduction.id %>" class="introductionlink">詳細</a></td><td><%= introduction.step %></td></tr>
+      <tr class="border  text-center"><td class="border border-black"><%= introduction.provider.title %></td><td class="border border-black"><a href="/progresses/<%= introduction.id %>" class="introductionlink">詳細</a></td><td><%= introduction.step %></td></tr>
       <% end %>
       <% end %>
        
         
       <tr class="border  text-center"><td class="border border-black"></td></tr>
+      
+
+      </table>
+
+      <table class="border border-black w-11/12 m-auto">
+      
+        <h1 class="text-center font-bold text-2xl pb-6">お知らせ</h1>
+        <tr class="border"><th class="border border-black">タイトル</th></tr>
+        
+        <% @news.each do |news| %> 
+        <tr class="border  text-center"><td class="border border-black"><a href="/news/<%= news.id %>"><%= news.title %></a></td></tr>
+        <% end %>
+        
+          
+        <tr class="border  text-center"><td class="border border-black"></td></tr>
       
 
       </table>

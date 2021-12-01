@@ -4,7 +4,19 @@
         <p class="bg-gray-200">お問い合わせ</p>
       </div>
       <div class="w-full p-3">
-        <button class="w-full p-1 border border-gray-400 hover:bg-gray-300">お問い合わせを確認する</button>
+        <button class="w-full p-1 border border-gray-400 hover:bg-gray-300">お問い合わせ一覧</button>
+      </div>
+    </div>
+
+    <div id="introduction" class="shadow-md mb-5 w-full">
+      <div>
+        <p class="bg-gray-200">お知らせ</p>
+      </div>
+      <div class="w-full p-3">
+        <button class="w-full p-1 border border-gray-400 hover:bg-gray-300"><%= link_to "お知らせ一覧","/news" %></button>
+      </div>
+      <div class="w-full pb-3 pr-3 pl-3">
+        <button class="w-full p-1 border border-gray-400 hover:bg-gray-300 block"><%= link_to "お知らせを追加する","/news/new" %></button>
       </div>
     </div>
 
@@ -13,7 +25,7 @@
         <p class="bg-gray-200">お客様紹介</p>
       </div>
       <div class="w-full p-3">
-        <button class="w-full p-1 border border-gray-400 hover:bg-gray-300"><%= link_to "口コミを確認する","/introductions/index" %></button>
+        <button class="w-full p-1 border border-gray-400 hover:bg-gray-300"><%= link_to "口コミ一覧","/introductions/index" %></button>
       </div>
     </div>
 
