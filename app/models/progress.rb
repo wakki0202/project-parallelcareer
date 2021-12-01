@@ -1,3 +1,0 @@
-class Progress < ApplicationRecord
- 
-end
