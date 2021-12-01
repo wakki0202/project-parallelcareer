@@ -9,13 +9,73 @@
     <table class="border border-black w-7/12 m-auto">
       
         
-      <tr class="border font-bold "><td class="border border-black text-center py-3">案件名</td><td class="border border-black text-center"><%= @introduction.provider.title %></td></tr>
-      <tr class="border"><td class="border border-black text-center py-3">紹介者名</td><td class="border border-black"><%= @introduction.user.username %>様</td></tr>
-      <tr class="border"><td class="border border-black text-center py-3">お客様名</td><td class="border border-black"><%= @introduction.name %>様</td></tr>
-      <tr class="border"><td class="border border-black text-center py-3">お客様電話番号</td><td class="border border-black"><%= @introduction.phonenumber %></td></tr>
-      <tr class="border"><td class="border border-black text-center py-3">内容</td><td class="border border-black"><%= @introduction.contents %></td></tr>
-      
-      
+      <tr class="border font-bold ">
+        <td class="border border-black text-center py-3">案件名</td>
+        <td class="border border-black text-center"><%= @introduction.provider.title %></td>
+      </tr>
+      <tr class="border">
+        <td class="border border-black text-center py-3">紹介者名</td>
+        <td class="border border-black"><%= @introduction.user.username %>様</td>
+      </tr>
+      <tr class="border">
+        <td class="border border-black text-center py-3">お客様名</td>
+        <td class="border border-black"><%= @introduction.name %>様</td>
+      </tr>
+      <tr class="border">
+        <td class="border border-black text-center py-3">お客様電話番号</td>
+        <td class="border border-black"><%= @introduction.phonenumber %></td>
+      </tr>
+      <tr class="border">
+        <td class="border border-black text-center py-3">内容</td>
+        <td class="border border-black"><%= @introduction.contents %></td>
+      </tr>
+      <tr class="border">
+        <td class="border border-black text-center py-3">進捗状況</td>
+        <% if @introduction.step == nil %>
+        <td class="border border-black">口コミ完了</td>
+        <% else %>
+        <td class="border border-black"><%= @introduction.step %></td>
+        <% end %>
+
+      </tr>
+
     </table>
-    </div>
+ 
+
+<%= form_with(model: [@introduction], local: true ) do |form| %>
+    
+  <div class="field">
+    <%= form.label :口コミ進捗度,class: 'label'  %>
+      <div>
+        進行中<%= form.radio_button :step, '進行中' %>
+      </div>
+
+      <div>
+        断られました<%= form.radio_button :step, '断られました' %>
+      </div>
+
+      <div>
+        検討中<%= form.radio_button :step, '検討中' %>
+      </div>
+
+      <div>
+        お客様と繋がりませんでした<%= form.radio_button :step, 'お客様と繋がりませんでした' %>
+      </div>
+
+      <div>
+        契約成立<%= form.radio_button :step, '契約成立' %>
+      </div>
+
+      <div>
+        報酬振込完了<%= form.radio_button :step, '報酬振込完了' %>
+      </div>
+  </div>
+
+  
+  <div class="actions">
+    <%= form.submit '進捗を更新する',data: { confirm: '更新しますか？' },class: 'submit' %>
+  </div>
+  
+<% end %>
+</div>
 </div>

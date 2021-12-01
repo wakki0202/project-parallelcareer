@@ -72,3 +72,5 @@ gem 'devise_invitable'
 
 #画像追加
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+
+gem 'pry-rails'
