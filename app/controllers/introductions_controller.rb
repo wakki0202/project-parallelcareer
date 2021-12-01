@@ -25,7 +25,7 @@ class IntroductionsController < ApplicationController
       
       if  @introduction.save
           IntroductionMailer.complete_introduction(@introduction,@provider,@current_user).deliver
-          redirect_to introductions_complete_path
+          redirect_to introductions_index_path
       else
           redirect_back(fallback_location: providers_path)  #同上
           flash.now.alert = '入力に誤りがあります。入力必須項目を確認して下さい。'
