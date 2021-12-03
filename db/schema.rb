@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_01_130600) do
+ActiveRecord::Schema.define(version: 2021_12_03_130905) do
 
   create_table "introductions", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -42,11 +42,11 @@ ActiveRecord::Schema.define(version: 2021_12_01_130600) do
     t.string "title"
     t.string "company"
     t.string "reward"
-    t.string "pcontent"
+    t.text "pcontent"
     t.string "rday"
-    t.string "rcontent"
-    t.string "area"
-    t.string "appeal"
+    t.text "rcontent"
+    t.text "area"
+    t.text "appeal"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status"

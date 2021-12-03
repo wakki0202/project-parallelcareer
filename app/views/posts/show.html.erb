@@ -9,45 +9,48 @@
 <div> <div>
 <% end %>
 
-<p>
+<div class="post-contents">
   <strong>案件名</strong><br>
   <%= @provider.title %>
-</p>
+</div>
 
-<p>
+<div class="post-contents">
   <strong>企業名</strong><br>
   <%= @provider.company %>
-</p>
+</div>
 
-<p>
+<div class="post-contents">
   <strong>報酬</strong><br>
   <%= @provider.reward %>
-</p>
+</div>
 
-<p>
+
+<div class="post-contents">
   <strong>仕事内容</strong><br>
-  <%= @provider.pcontent %>
-</p>
+  <%= simple_format(@provider.pcontent) %>
+</div>
 
-<p>
+<div class="post-contents">
   <strong>報酬支払日</strong><br>
   <%= @provider.rday %>
-</p>
+</div>
 
-<p>
+<div class="post-contents">
   <strong>報酬内容</strong><br>
-  <%= @provider.rcontent %>
-</p>
+  <%= simple_format(@provider.rcontent) %>
+</div>
 
-<p>
+
+<div class="post-contents">
   <strong>対象地域</strong><br>
-  <%= @provider.area %>
-</p>
+  <%= simple_format(@provider.area) %>
+</div>
 
-<p class="bottom">
-  <strong>アピールポイント</strong>
-  <%= @provider.appeal %>
-</p>
+
+<div class="bottom">
+  <strong>アピールポイント</strong><br>
+  <%= simple_format(@provider.appeal) %>
+</div>
 
 
 <div class="action">

@@ -70,13 +70,36 @@
       margin: auto;
       padding-top: 80px;
 
-      p{
+      .post-contents{
       font-size: 16px;
       padding-bottom: 50px;
       border-bottom: 1px solid;
-      padding-top: 30px ;
+      padding-top: 30px;
+      line-height: 2;
+      color: black;
+      
+      strong{
+        font-size: 20px;
+      }
+
+      p{
+        font-size: 16px;
+        line-height: 1.5;
+      }
         }
       .bottom{
+        font-size: 16px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid;
+      padding-top: 30px ;
+      strong{
+        font-size: 20px;
+      }
+
+      p{
+        font-size: 16px;
+        line-height: 1.5;
+      }
         border-bottom: 0px;
       }
       }

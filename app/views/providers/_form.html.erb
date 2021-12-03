@@ -31,7 +31,7 @@
 
   <div class="field">
     <%= form.label :仕事内容,class: 'label' %>
-    <%= form.text_field :pcontent,class: "form" %>
+    <%= form.text_area :pcontent, :size => "75x5",class: "formB" %>
   </div>
 
   <div class="field">
@@ -41,17 +41,17 @@
 
   <div class="field">
     <%= form.label :報酬内容,class: 'label' %>
-    <%= form.text_field :rcontent,class: "form" %>
+    <%= form.text_area :rcontent, class: "formB", :size => "75x5" %>
   </div>
 
   <div class="field">
     <%= form.label :地域,class: 'label' %>
-    <%= form.text_field :area,class: "form" %>
+    <%= form.text_area :area, class: "formB", :size => "75x5" %>
   </div>
 
   <div class="field">
     <%= form.label :アピールポイント,class: 'label' %>
-    <%= form.text_field :appeal,class: "form" %>
+    <%= form.text_area :appeal, :size => "75x5",class: "formB" %>
   </div>
 
   <div class="field">
