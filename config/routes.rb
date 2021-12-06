@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   
+  resources :questions
   devise_for :users, controllers: {
         sessions: 'users/sessions',
         registrations: 'users/registrations',
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
   end
 
   resources :news
+  resources :questions
 
   get "providers/:id/introductions/detail", to:"introductions#detail"
 

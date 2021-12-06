@@ -32,7 +32,7 @@
 
 <div class="post-contents">
   <strong>仕事内容</strong><br>
-  <%= simple_format(@provider.pcontent) %>
+  <%= auto_link(simple_format(@provider.pcontent), html: {target: '_blank'}) %>
 </div>
 
 <div class="post-contents">
