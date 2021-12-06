@@ -3,11 +3,11 @@
 
 <div class="posts">
 
-<% if @provider.img? %>
-  <%= @provider.provider_files.file %>
-<% else%>
-<div> <div>
+
+<% @provider.images.each do |image| %>
+  <%= image_tag asset_path(image.to_s) %>
 <% end %>
+
 
 <div class="post-contents">
   <strong>案件名</strong><br>
