@@ -12,6 +12,8 @@
             <li class="title"><%= provider.title %></li>
             <li>報酬：<%= provider.reward %></li>
             <li>地域：<%= provider.area %></li>
+            <li class="more"><a href="/providers/<%= provider.id %>/introductions/new" class=" font-bold">口コミをする</a></li>
+            <li class="more"><%= link_to "掲載主から詳細を聞く", "/providers/#{ provider.id }/introductions/detail",  data:{ confirm: 'あなたの連絡先が送られ掲載主から近日中に連絡が入ります。よろしいですか？' }  %></li>
             <li class="more"><a href="/posts/<%= provider.id %>" class=" font-bold">詳細</a></li>
           </div>
           </ul>

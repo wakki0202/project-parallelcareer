@@ -73,6 +73,14 @@ class IntroductionsController < ApplicationController
 
   end
 
+  def detail
+  if current_user == @user
+   DetailMailer.detail_introduction(provider,current_user).deliver
+    redirect_to posts_index_path
+  else
+    redirect_to posts_index_path
+  end
+  end
   
 
   

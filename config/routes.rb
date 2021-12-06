@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   resources :news
 
+  get "providers/:id/introductions/detail", to:"introductions#detail"
 
   get "posts/index",to:"posts#index"
   get "posts/:id",to:"posts#show"
