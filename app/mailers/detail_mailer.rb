@@ -6,4 +6,5 @@ class DetailMailer < ApplicationMailer
     to: 'ytk0202@outlook.jp',
     subject: '口コミのお知らせ'
     )
+  end
 end
