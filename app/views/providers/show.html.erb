@@ -2,7 +2,7 @@
 
 
 <% @provider.images.each do |image| %>
-<%= image_tag image.to_s %>
+<%= image_tag asset_path(image.to_s) %>
 <% end %>
 
 
