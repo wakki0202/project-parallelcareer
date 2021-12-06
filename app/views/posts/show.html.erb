@@ -4,7 +4,7 @@
 <div class="posts">
 
 <% if @provider.img? %>
-<%= image_tag(@provider.img.url.to_s) %>
+  <%= @provider.provider_files.file %>
 <% else%>
 <div> <div>
 <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_06_115930) do
+ActiveRecord::Schema.define(version: 2021_12_06_175401) do
 
   create_table "introductions", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -38,6 +38,12 @@ ActiveRecord::Schema.define(version: 2021_12_06_115930) do
     t.string "step"
   end
 
+  create_table "provider_files", force: :cascade do |t|
+    t.string "file"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "providers", force: :cascade do |t|
     t.string "title"
     t.string "company"
@@ -50,8 +56,8 @@ ActiveRecord::Schema.define(version: 2021_12_06_115930) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status"
-    t.string "img"
     t.string "link"
+    t.string "images"
   end
 
   create_table "questions", force: :cascade do |t|

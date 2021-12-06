@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<% if @provider.img? %>
-<%= image_tag(@provider.img.url).to_s %>
-<% else%>
-<div>画像がありません<div>
+
+<% @provider.images.each do |image| %>
+<%= image_tag image.to_s %>
 <% end %>
+
 
 <p>
   <strong>案件名:</strong>
