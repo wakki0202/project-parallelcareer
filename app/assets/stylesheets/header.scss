@@ -1,0 +1,201 @@
+header{
+
+  z-index: 9;
+  position: fixed;
+  top:0;
+  background-color: white;
+  border-bottom: transparent;
+  width: 100%;
+  justify-content: space-between;
+.header-logo{ 
+  width: 20%;
+a{
+  text-decoration: none;
+  color: #666;
+}
+}
+
+ 
+.site-header__wrapper {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  @media (min-width: 710px) {
+    .site-header__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0;
+      padding-bottom: 0; } }
+@media (min-width: 710px) {
+  .nav__wrapper {
+    display: flex; } }
+ 
+@media (max-width: 709px) {
+  .nav__wrapper {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #d9f0f7;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out; }
+    .nav__wrapper.active {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0); } }
+ 
+@media (min-width: 710px)  {
+  .display-none{
+    display:none;
+  }
+}
+
+.nav__item a {
+  display: block;
+  padding: 1.5rem 1rem;
+  letter-spacing: 0.04em;
+  color: #484c4c;
+  font-weight: 800;
+  font-size: 16px;
+ }
+ 
+.h-reg a{
+  margin-right: 33px;
+}
+
+ .h-list a:hover {
+	background-color:#FCAF17;	
+  color: white;
+  border-radius: 30px;
+}
+
+.h-contact a:hover {
+	background-color:#F58220;	
+  color: white;
+  border-radius: 30px;
+}
+
+.h-log a:hover {
+	background-color:#F36C21;	
+  color: white;
+  border-radius: 30px;
+}
+
+.h-reg a:hover {
+	background-color:#fa4c4c;	
+  color: white;
+  border-radius: 30px;
+}
+
+ul{
+  list-style-type: none;
+ }
+
+
+.nav__toggle {
+  display: none; 
+}
+  @media (max-width: 709px) {
+
+    .hamburger {
+      display : block;
+      position: fixed;
+      z-index : 3;
+      right : 13px;
+      top   : 12px;
+      width : 42px;
+      height: 42px;
+      cursor: pointer;
+      text-align: center;
+    }
+    .hamburger span {
+      display : block;
+      position: absolute;
+      width   : 30px;
+      height  : 2px ;
+      left    : 6px;
+      background : #555;
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition   : 0.5s ease-in-out;
+      transition        : 0.5s ease-in-out;
+    }
+    .hamburger span:nth-child(1) {
+      top: 10px;
+    }
+    .hamburger span:nth-child(2) {
+      top: 20px;
+    }
+    .hamburger span:nth-child(3) {
+      top: 30px;
+    }
+    
+    /* ナビ開いてる時のボタン */
+    .hamburger.active span:nth-child(1) {
+      top : 16px;
+      left: 6px;
+      background : #fff;
+      -webkit-transform: rotate(315deg);
+      -moz-transform   : rotate(315deg);
+      transform        : rotate(315deg);
+    }
+    
+    .hamburger.active span:nth-child(2),
+    .hamburger.active span:nth-child(3) {
+      top: 16px;
+      background : #fff;
+      -webkit-transform: rotate(-315deg);
+      -moz-transform   : rotate(-315deg);
+      transform        : rotate(-315deg);
+    }
+    
+    nav.globalMenuSp {
+      position: fixed;
+      z-index : 2;
+      top  : 0;
+      left : 0;
+      color: #fff;
+      background: rgba(0,0,0,0.7);
+      text-align: center;
+      width: 100%;
+      opacity: 0;
+      transition: opacity .6s ease, visibility .6s ease;
+    }
+    
+    nav.globalMenuSp ul {
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+    }
+    
+    nav.globalMenuSp ul li {
+      list-style-type: none;
+      padding: 0;
+      width: 100%;
+      transition: .4s all;
+    }
+    nav.globalMenuSp ul li:last-child {
+      padding-bottom: 0;
+    }
+    nav.globalMenuSp ul li:hover{
+      background :#ddd;
+    }
+    
+    nav.globalMenuSp ul li a {
+      display: block;
+      color: #fff;
+      padding: 1em 0;
+      text-decoration :none;
+    }
+    
+    /* このクラスを、jQueryで付与・削除する */
+    nav.globalMenuSp.active {
+      opacity: 100;
+    
+    }
+    
+    }
+
+  }

@@ -1,30 +1,45 @@
-
-
-
-  <header class="lg:block z-9 w-full fixed bg-white border-b-2">
-      <div id="header-nav" class="header-nav">
+ <header class="site-header lg:block z-9 w-full fixed bg-white border-b-2">
+      <div class="wrapper site-header__wrapper">
         <div class="header-logo">
           <%= link_to "ロゴ" ,"/tops/index" %>
         </div>
-     
-        <div id="header-list" class="header-list">
-          <ul id="navbar" class="navbar">
-            <li><%= link_to "案件一覧" ,"/posts/index" %></li>
-            <li><%= link_to "お問い合わせはこちら" ,"/questions/new" %></li>
+
+
+<nav class="nav">
+<div class="display-none">
+<div class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<nav class="globalMenuSp">
+    <ul>
+        <li><a href="#">Menu1</a></li>
+        <li><a href="#">Menu2</a></li>
+        <li><a href="#">Menu3</a></li>
+        <li><a href="#">Menu4</a></li>
+        <li><a href="#">Menu5</a></li>
+    </ul>
+</nav>
+      </div>
+<!--△△ヘッダーリスト△△-->
+          <ul class="nav__wrapper">
+            <li class="nav__item h-list"><%= link_to "案件一覧" ,"/posts/index" %></li>
+            <li class="nav__item h-contact"><%= link_to "お問い合わせはこちら" ,"/questions/new" %></li>
             
           <% if user_signed_in?  %>
-            <li><a><%= link_to 'ログアウト' , destroy_user_session_path,method: :delete %></a></li>
-            <li><%= link_to "友人を招待する" ,"/users/invitation/new" %></li>
-            <li><%= link_to "管理者ページ" ,"/providers" %></li>
-            <li><%= link_to "マイページ" ,"/progresses/index" %></li>
+            <li class="nav__item"><a><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></a></li>
+            <li class="nav__item"><%= link_to "友人を招待する" ,"/users/invitation/new" %></li>
+            <li class="nav__item"><%= link_to "管理者ページ" ,"/providers" %></li>
+            <li class="nav__item"><%= link_to "マイページ" ,"/progresses/index" %></li>
             
         
           <% else %>
-            <li><%= link_to "会員登録" ,"/users/sign_up" %></li>
-            <li><%= link_to "ログイン" ,"/users/sign_in" %></li>
+            <li class="nav__item h-log"><%= link_to "ログイン" ,"/users/sign_in" %></li>
+            <li class="nav__item h-reg"><%= link_to "会員登録" ,"/users/sign_up" %></li>
           <% end %>
           </ul>
-        </div>
-      </div>
-    </header>
-    
+        </nav>
+</div>
+      </header>
