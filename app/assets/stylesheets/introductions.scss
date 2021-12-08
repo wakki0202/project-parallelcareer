@@ -1,6 +1,13 @@
 // Place all the styles related to the introductions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.toTop{
+  a{
+    color: black;
+  }
+}
+
 .introduction-new{
   background-image: linear-gradient(to left, var(--tw-gradient-stops));
     --tw-gradient-from: #f87171;
@@ -20,6 +27,7 @@
   }
 }
 
+
 .title{
   font-size: 18px;
   font-weight: bold;
@@ -30,7 +38,9 @@
 
 .complete{
   color: black;
+  margin-bottom: 20px;
 }
+
 .introductionlink{
   
     color: black;
