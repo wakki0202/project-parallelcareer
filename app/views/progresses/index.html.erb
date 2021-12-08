@@ -10,6 +10,20 @@
       <div class="introductions">
       <table class="border border-black w-11/12 m-auto">
       
+        <h1 class="text-center font-bold text-2xl pb-6">お知らせ</h1>
+        <tr class="border"><th class="border border-black">タイトル</th></tr>
+        
+        <% @news.each do |news| %> 
+        <tr class="border  text-center"><td class="toTop"><a href="/news/<%= news.id %>"><%= news.title %></a></td></tr>
+        <% end %>
+        
+          
+        <tr class="border  text-center"><td class="border border-black"></td></tr>
+      
+
+      </table>
+      <table class="border border-black w-11/12 m-auto">
+      
         <h1 class="text-center font-bold text-2xl pb-6">進捗状況確認表</h1>
       <tr class="border"><th class="border border-black">案件名</th><th class="border border-black"></th><th class="border border-black">進捗状況</th></tr>
       
@@ -25,18 +39,5 @@
 
       </table>
 
-      <table class="border border-black w-11/12 m-auto">
       
-        <h1 class="text-center font-bold text-2xl pb-6">お知らせ</h1>
-        <tr class="border"><th class="border border-black">タイトル</th></tr>
-        
-        <% @news.each do |news| %> 
-        <tr class="border  text-center"><td class="toTop"><a href="/news/<%= news.id %>"><%= news.title %></a></td></tr>
-        <% end %>
-        
-          
-        <tr class="border  text-center"><td class="border border-black"></td></tr>
-      
-
-      </table>
       <li class="toTop"><%= link_to '退会する', "/users", method: :delete, data: { confirm: '本当に退会しますか?' } %></li>
