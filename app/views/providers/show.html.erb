@@ -56,5 +56,5 @@
   <%= @provider.status %>
 </p>
 
-
 <button><%= link_to '◀トップへ戻る', providers_path %></button>
+<button><%= link_to '削除する', @provider, method: :delete, data: { confirm: '本当に削除しますか?' } %></button>

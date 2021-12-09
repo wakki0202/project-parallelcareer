@@ -1,0 +1,31 @@
+.buttons{
+width: 40%;
+margin: 0 auto;
+
+}
+
+button{
+  width: 200px;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.btn-border {
+  border: 2px solid #000;
+  border-radius: 0;
+  background: #fff;
+ 
+}
+
+.btn-border:hover {
+  color: #fff;
+  background: #000;
+  transition: 0.6s;
+}
+
+.btn-border:hover a{
+  color: #fff;
+}
+
+
