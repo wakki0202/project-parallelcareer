@@ -7,11 +7,17 @@
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <form class="login-form">
 
+    <div class="formSet">
       <%= f.email_field :email, autofocus: true, placeholder: ' E-mail' %>
+    </div>
 
+    <div class="formSet">
       <%= f.password_field :password, autocomplete: "current-password", placeholder: ' Password' %>
-      
+    </div>  
+    
+    <div class="formSet">
       <%= f.submit "ログインする",class:"button" %>
+    </div> 
 
       <% if devise_mapping.rememberable? %>
           <p>

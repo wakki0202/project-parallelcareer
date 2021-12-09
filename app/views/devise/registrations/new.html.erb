@@ -12,37 +12,56 @@
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <form class="login-form">
 
-       <%= f.label :お名前,class: 'label' %>
+      <div class="formSet">
+       <div class="label">お名前</div>
        <%= f.text_field :username, placeholder: '  原　キャリー' %>
-  
+      </div>
+
+      <div class="formSet">
         <%= f.label :電話番号,class: 'label' %>
         <%= f.text_field :phonenumber, autofocus: true, placeholder: '  09012345678' %>
+      </div>
 
+      <div class="formSet">
         <%= f.label :メールアドレス,class: 'label' %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: '  paracari@example.com' %>
+      </div>
 
+      <div class="formSet">
         <%= f.label :銀行名,class: 'label' %>
         <%= f.text_field :bank, placeholder: '  パラ銀行' %>
+      </div>
 
+      <div class="formSet">
         <%= f.label :支店名,class: 'label' %>
         <%= f.text_field :branch, placeholder: '  キャリ支店' %>
+      </div>
 
+      <div class="formSet">
         <%= f.label :口座種類,class: 'label' %>
         <%= f.select :kinds, [['普通'], ['当座']], { include_blank: false },class:"kinds" %>
+      </div>
 
+      <div class="formSet">
           <%= f.label :口座番号,class: 'label' %>
           <%= f.text_field :banknumber %>
+      </div>
 
+      <div class="formSet">
           <%= f.label :"パスワード(６文字以上)",class: 'label' %>
           <% if @minimum_password_length %>
           <% end %>
           <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
 
-
+        <div class="formSet">
           <%= f.label :password_confirmation,class: 'label' %>
           <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-      
+      </div>
+
+      <div class="formSet">
       <%= f.submit "会員登録する",class:"button" %>
+      </div>
 
 
       <% end %>
