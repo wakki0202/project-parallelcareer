@@ -33,9 +33,8 @@
           <%= f.label :口座番号,class: 'label' %>
           <%= f.text_field :banknumber %>
 
-          <%= f.label :password,class: 'label' %>
+          <%= f.label :"パスワード(６文字以上)",class: 'label' %>
           <% if @minimum_password_length %>
-          (<%= @minimum_password_length %> 文字以上)
           <% end %>
           <%= f.password_field :password, autocomplete: "new-password" %>
 
@@ -48,7 +47,7 @@
 
       <% end %>
   
-      <p class="message">ログイン<a href="/users/sign_in">こちら</a></p>
+      <p1 class="message">ログイン<a href="/users/sign_in">こちら</a></p1>
     </form>
   </div>
 </div>

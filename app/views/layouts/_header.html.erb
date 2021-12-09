@@ -36,6 +36,7 @@
                     <li class="nav__item h-invite"><%= link_to "友人を招待する" ,"/users/invitation/new" %></li>
                     <li class="nav__item h-Myadmin"><%= link_to "管理者ページ" ,"/providers" %></li>
                     <li class="nav__item h-mypage"><%= link_to "マイページ" ,"/progresses/index" %></li>
+                    <li class="nav__item"><%= link_to '　ログアウト' , destroy_user_session_path, method: :delete %></li>
                   <% else %>
                     <li class="nav__item h-log"><%= link_to "ログイン" ,"/users/sign_in" %></li>
                     <li class="nav__item h-reg"><%= link_to "会員登録" ,"/users/sign_up" %></li>
