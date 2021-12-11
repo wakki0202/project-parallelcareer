@@ -12,7 +12,7 @@
                 <div class="menu-content">
                     <ul>
                     <li class=""><%= link_to "　案件一覧" ,"/posts/index" %></li>
-                    <li class=""><%= link_to "　お問い合わせはこちら" ,"/questions/new" %></li>
+                    <li class=""><%= link_to "　お問い合わせ" ,"/questions/new" %></li>
                     
                 <% if user_signed_in?  %>
                     <li class="nav__item"><%= link_to "　友人を招待する" ,"/users/invitation/new" %></li>
@@ -30,7 +30,7 @@
 
                   <ul class="nav__wrapper">
                     <li class="nav__item h-list"><%= link_to "案件一覧" ,"/posts/index" %></li>
-                    <li class="nav__item h-contact"><%= link_to "お問い合わせはこちら" ,"/questions/new" %></li>
+                    <li class="nav__item h-contact"><%= link_to "お問い合わせ" ,"/questions/new" %></li>
                   <% if user_signed_in?  %>
                     <li class="nav__item h-invite"><%= link_to "友人を招待する" ,"/users/invitation/new" %></li>
                     <li class="nav__item h-Myadmin"><%= link_to "管理者ページ" ,"/providers" %></li>

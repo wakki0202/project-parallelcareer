@@ -1,31 +1,28 @@
-.buttons{
-width: 40%;
-margin: 0 auto;
 
+
+.buttons{
+width: 90%;
+margin: 0 auto;
+list-style: none;
+display: inline-block;
+font-size: 14px;
 }
 
-button{
-  width: 200px;
-  margin-bottom: 30px;
+.btn{
+  margin-bottom: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
+  background-color: rgb(37,45,51);
 }
 
-.btn-border {
-  border: 2px solid #000;
-  border-radius: 0;
+.btn:hover {
+  color: rgb(37,45,51);
   background: #fff;
- 
-}
-
-.btn-border:hover {
-  color: #fff;
-  background: #000;
   transition: 0.6s;
 }
 
-.btn-border:hover a{
-  color: #fff;
+.btn:hover a{
+  color: rgb(37,45,51);
+  background: #fff;
+  transition: 0.6s;
 }
-
-

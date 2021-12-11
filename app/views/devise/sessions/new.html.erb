@@ -20,10 +20,8 @@
     </div> 
 
       <% if devise_mapping.rememberable? %>
-          <p>
-            <%= f.check_box :remember_me %>
-            ログインを記憶する
-          </p>
+          
+            <p><%= f.check_box :remember_me,class:"checkbutton" %>ログインを記憶する</p>
         <% end %>
 
       <% end %>

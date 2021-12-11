@@ -1,7 +1,7 @@
-<%= render '/layouts/header' %>
 
 
 
+<div class="bg_pattern Paper_v2"></div>
       
     <div class="introduction-index w-full flex pt-24">
       <div id="sidebar" class="side w-3/12 ml-20 text-center">
@@ -21,7 +21,8 @@
         <td class="border border-black">口コミ完了</td>
         <% else %>
         <td class="border border-black"><%= introduction.step %></td>
-        <% end %><td class="border border-black"><a href="<%= introduction.id %>" class="introductionlink">詳細</a></td></tr>
+        <% end %>
+        <td class="border border-black"><a href="<%= introduction.id %>" class="introductionlink">詳細</a></td></tr>
       <% end %>
   
       

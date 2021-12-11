@@ -4,9 +4,9 @@ header{
   position: fixed;
   top:0;
   background-color: white;
-  border-bottom: transparent;
   width: 100%;
   justify-content: space-between;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
 
 .header-logo{ 
   width: 20%;
@@ -65,11 +65,11 @@ a{
 
 .nav__item a {
   display: block;
-  padding: 1.5rem 1rem;
+  padding: 1rem 1rem;
   letter-spacing: 0.04em;
   color: #484c4c;
   font-weight: 800;
-  font-size: 16px;
+  font-size: 14px;
  }
  
 .h-reg a{

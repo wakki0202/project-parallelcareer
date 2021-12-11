@@ -1,5 +1,4 @@
-
-<%= render '/layouts/header' %>
+<div class="bg_pattern Paper_v2"></div>
 <div id="introduction-show" class="flex w-12/12">
     <div id="sidebar" class="w-3/12 ml-20 text-center">
       <%= render '/providers/side' %>
@@ -46,6 +45,15 @@
     
   <div class="field">
     <%= form.label :口コミ進捗度,class: 'label'  %>
+
+      <div>
+        口コミ確認完了<%= form.radio_button :step, '口コミ確認完了' %>
+      </div>
+
+      <div>
+        お客様と繋がりませんでした<%= form.radio_button :step, 'お客様と繋がりませんでした' %>
+      </div>
+
       <div>
         進行中<%= form.radio_button :step, '進行中' %>
       </div>
@@ -56,10 +64,6 @@
 
       <div>
         検討中<%= form.radio_button :step, '検討中' %>
-      </div>
-
-      <div>
-        お客様と繋がりませんでした<%= form.radio_button :step, 'お客様と繋がりませんでした' %>
       </div>
 
       <div>

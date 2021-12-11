@@ -61,6 +61,12 @@ input {
   cursor: pointer;
   -webkit-appearance: none;
 }
+.checkbutton{
+  width: 30px;
+  margin: 0px;
+  padding: 10px;
+}
+
 .button:hover,button:active,button:focus {
   background: #ffa641;
 }
