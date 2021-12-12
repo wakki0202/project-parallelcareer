@@ -4,6 +4,7 @@ class NewsController < ApplicationController
   # GET /news or /news.json
   def index
     @news = News.all
+    @questionnumber = Question.all.count
   end
 
   # GET /news/1 or /news/1.json
@@ -13,6 +14,7 @@ class NewsController < ApplicationController
   # GET /news/new
   def new
     @news = News.new
+    @questionnumber = Question.all.count
   end
 
   # GET /news/1/edit

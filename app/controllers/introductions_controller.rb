@@ -1,6 +1,8 @@
 class IntroductionsController < ApplicationController
   def index
     @introductions = Introduction.all.order(id: :DESC)
+    @introductionnumber = Introduction.all.count
+    @questionnumber = Question.all.count
   end
 
   def show

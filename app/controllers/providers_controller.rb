@@ -4,6 +4,7 @@ class ProvidersController < ApplicationController
   # GET /providers or /providers.json
   def index
     @providers = Provider.all
+    @questionnumber = Question.all.count
   end
 
   # GET /providers/1 or /providers/1.json
@@ -14,7 +15,7 @@ class ProvidersController < ApplicationController
   # GET /providers/new
   def new
     @provider = Provider.new
-
+    @questionnumber = Question.all.count
   end
 
   # GET /providers/1/edit
