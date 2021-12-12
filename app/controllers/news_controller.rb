@@ -5,6 +5,7 @@ class NewsController < ApplicationController
   def index
     @news = News.all
     @questionnumber = Question.all.count
+    @introductionnumber = Introduction.all.count
   end
 
   # GET /news/1 or /news/1.json
@@ -15,6 +16,7 @@ class NewsController < ApplicationController
   def new
     @news = News.new
     @questionnumber = Question.all.count
+    @introductionnumber = Introduction.all.count
   end
 
   # GET /news/1/edit

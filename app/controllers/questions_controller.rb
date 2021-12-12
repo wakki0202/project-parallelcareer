@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
   def index
     @questions = Question.all
     @questionnumber = Question.all.count
+    @introductionnumber = Introduction.all.count
   end
 
   # GET /questions/1 or /questions/1.json
