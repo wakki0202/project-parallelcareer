@@ -3,40 +3,18 @@
 <%= render '/layouts/header' %>
   <div class="sign-up-main ">
 
-
 <h2>口コミをする</h2>
   
-  
 <%= form_with(model: [@provider, @introduction], local: true ) do |form| %>
- 
- <div class="fields">
- 
   <div class="title">
   案件名:<%= @provider.title %>
   </div>
-  
-  <div class="field">
-    <%= form.label :紹介するお客様名,class: 'label'  %>
-    <%= form.text_field :name,class: 'form' %>
-  </div>
-
-  <div class="field">
-    <%= form.label :紹介するお客様電話番号,class: 'label'  %>
-    <%= form.text_field :phonenumber,class: 'form' %>
-  </div>
-
-  <div class="field">
-    <%= form.label :口コミ内容,class: 'label'  %>
-    <%= form.text_field :contents,class: 'form' %>
-  </div>
-
-
-  
-  <div class="actions">
-    <%= form.submit '口コミする',data: { confirm: '口コミを送信しますか？' },class: 'submit' %>
-  </div>
+<form>      
+  <%= form.text_field :name,class: 'form' , :autocomplete => "off",:class => "feedback-input" , :placeholder => "紹介するお客様名"  %>
+  <%= form.text_field :phonenumber,class: 'form'  , :autocomplete => "off",:class => "feedback-input" ,:placeholder => "紹介するお客様電話番号" %>
+  <%= form.text_area :contents,class: 'form' , :autocomplete => "off",:class => "feedback-input" ,:placeholder => "口コミ内容" %>
+  <%= form.submit '口コミする',data: { confirm: '口コミを送信しますか？' },class: 'submit' %>
+</form>
 <% end %>
-</div>
-</div>
 </body>
   
