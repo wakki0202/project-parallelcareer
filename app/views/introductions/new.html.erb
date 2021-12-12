@@ -7,7 +7,7 @@
   
 <%= form_with(model: [@provider, @introduction], local: true ) do |form| %>
   <div class="title">
-  案件名:<%= @provider.title %>
+  案件名: <%= @provider.title %>
   </div>
 <form>      
   <%= form.text_field :name,class: 'form' , :autocomplete => "off",:class => "feedback-input" , :placeholder => "紹介するお客様名"  %>
