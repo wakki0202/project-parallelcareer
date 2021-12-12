@@ -1,10 +1,11 @@
+<div class="bg_pattern Paper_v2">
 <p id="notice"><%= notice %></p>
 
-<% if @provider.img? %>
-<%= image_tag(@provider.img.url).to_s %>
-<% else%>
-<div>画像がありません<div>
+
+<% @provider.images.each do |image| %>
+<%= image_tag asset_path(image.to_s) %>
 <% end %>
+
 
 <p>
   <strong>案件名:</strong>
@@ -56,5 +57,7 @@
   <%= @provider.status %>
 </p>
 
-
 <button><%= link_to '◀トップへ戻る', providers_path %></button>
+<button><%= link_to '削除する', @provider, method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
+
+</div>

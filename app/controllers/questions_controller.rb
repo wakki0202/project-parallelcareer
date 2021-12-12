@@ -8,6 +8,7 @@ class QuestionsController < ApplicationController
 
   # GET /questions/1 or /questions/1.json
   def show
+    @question_count = Question.where(question_id: @question.id).count
   end
 
   # GET /questions/new

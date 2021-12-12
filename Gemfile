@@ -76,3 +76,5 @@ gem 'carrierwave', '~> 2.0'
 gem 'pry-rails'
 
  gem 'rails_autolink'
+
+ gem 'rails-erd'

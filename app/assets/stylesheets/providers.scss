@@ -4,19 +4,38 @@
 .provider-index{
   display: flex;
   width: 100%;
-  padding-top: 100px;
 
 
+   .side{
+      width: 20%;
+      background-color: rgb(37,45,51);
+      padding-top: 100px;
+      
 
-.providers{
-  width: 60%;
-  margin: 0 auto;
+      a {
+      color: #fff; 
+    background-color: rgb(37,45,51);
+      }
+    }
 
-  a{
-    color: black;
-  }
-  
-}
 
+    .providers{
+      width: 70%;
+      margin: 0 auto;
+      padding-top: 100px;
+
+      a{
+        color: black;
+      }
+
+   
+      
+
+    }
+
+
+    h1{
+      text-align: center;
+    }
 }
 

@@ -8,6 +8,7 @@
 <% @providers.each do |provider| %>
   <% if provider.status == "公開" %>
 
+
       <section class="card">
 
       <a  class="link" href="/posts/<%= provider.id %>" class=" font-bold">
@@ -20,10 +21,11 @@
       
       <div class="card-link">
       <a href="/providers/<%= provider.id %>/introductions/new" class=" font-bold">口コミをする</a>
-      <%= link_to "掲載主から詳細を聞く", "/providers/#{ provider.id }/introductions/detail",  data:{ confirm: 'あなたの連絡先が送られ掲載主から近日中に連絡が入ります。よろしいですか？' }  %> 
+      <%= link_to "掲載主から詳細を聞く", "/providers/#{ provider.id }/details/new"  %> 
       </div>
       </section>
       
+
           <% end %>
       <% end %>
       </div>

@@ -1,6 +1,7 @@
 <body class="post-show">
 <%= render '/layouts/header' %>
 
+
 <% if @provider.img? %>
 <%= image_tag(@provider.img.url.to_s) %>
 <% else%>
@@ -44,8 +45,10 @@
 <td><%= simple_format(@provider.appeal) %>
 </tr>
 </table>
+
+
 <div class="action">
 <%= link_to "口コミをする","/providers/#{@provider.id}/introductions/new" %>
 </div>
-</div> 
+
 </body>

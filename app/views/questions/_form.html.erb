@@ -11,27 +11,30 @@
     </div>
   <% end %>
 
-  <div class="field">
+  
+
+  <div class="formSet">
     <%= form.label :お名前 %>
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
+  <div class="formSet">
     <%= form.label :電話番号 %>
     <%= form.text_field :phonenumber %>
   </div>
 
-  <div class="field">
+  <div class="formSet">
     <%= form.label :メールアドレス %>
     <%= form.text_field :email %>
   </div>
 
-  <div class="field">
+ <div class="formSet">
     <%= form.label :お問い合わせ内容 %>
-    <%= form.text_area :content %>
+    <%= form.text_area :content,:size => "55x10" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit "お問い合わせを送信する",data: { confirm: '管理者に送信されます。送信しますか？' } %>
+  <div class="formSet">
+    <%= form.submit "お問い合わせを送信する",data: { confirm: '管理者に送信されます。送信しますか？' },class:"button" %>
   </div>
 <% end %>
+

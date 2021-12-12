@@ -1,24 +1,25 @@
-<%= render 'providers/side' %>
+
 
 <p>
-  <strong>Name:</strong>
+  <strong>お名前:</strong>
   <%= @question.name %>
 </p>
 
 <p>
-  <strong>Phonenumber:</strong>
+  <strong>電話番号:</strong>
   <%= @question.phonenumber %>
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <strong>メールアドレス:</strong>
   <%= @question.email %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>お問い合わせ内容:</strong>
   <%= @question.content %>
 </p>
 
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
+<div class="toTop">
+<%= link_to '一覧に戻る', questions_path %>
+</div>

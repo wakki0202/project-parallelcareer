@@ -10,7 +10,6 @@
       </ul>
     </div>
   <% end %>
-
   
 
   <div class="field">
@@ -59,9 +58,16 @@
   </div>
 
   <div class="field">
+      <%= form.label :写真を貼る,class: 'label' %>
+      <%= form.file_field :images,multiple: true %>
+  </div>
+
+  <div class="field">
     <%= form.label :案件ステータス,class: 'label' %>
     <%= form.select :status, [['公開'], ['非公開']], { include_blank: false }, { class: "form" } %>
   </div>
+
+
 
   <div class="actions">
     <%= form.submit %>
