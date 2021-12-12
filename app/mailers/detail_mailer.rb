@@ -1,10 +1,11 @@
 class DetailMailer < ApplicationMailer
-  def detail_introduction(provider,current_user)
-      @provider = provider
+  def detail_introduction(detail,provider,current_user)
+    @provider = provider
     @current_user = current_user
+    @detail = detail
     mail(
-    to: 'tanachu_78@yahoo.co.jp',
-    subject: '口コミのお知らせ'
+    to: 'ytk0202@outlook.jp',
+    subject: '案件の詳細を求めてる方から連絡が来ました！'
     )
   end
 end

@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_06_175401) do
+ActiveRecord::Schema.define(version: 2021_12_12_084927) do
+
+  create_table "details", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.integer "provider_id"
+    t.index ["provider_id"], name: "index_details_on_provider_id"
+    t.index ["user_id"], name: "index_details_on_user_id"
+  end
 
   create_table "introductions", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -91,6 +101,7 @@ ActiveRecord::Schema.define(version: 2021_12_06_175401) do
     t.string "invited_by_type"
     t.integer "invited_by_id"
     t.integer "invitations_count", default: 0
+    t.string "status"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
     t.index ["invited_by_id"], name: "index_users_on_invited_by_id"
@@ -98,6 +109,8 @@ ActiveRecord::Schema.define(version: 2021_12_06_175401) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "details", "providers"
+  add_foreign_key "details", "users"
   add_foreign_key "introductions", "providers"
   add_foreign_key "introductions", "users"
 end

@@ -8,7 +8,7 @@
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 710px) {
 
   body{
     margin:0;
@@ -52,7 +52,7 @@
     background-image: linear-gradient(to left, var(--tw-gradient-stops));
     --tw-gradient-from: #fa4c4c;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(248, 113, 113, 0));
-    --tw-gradient-to: #ffa641;
+    --tw-gradient-to: #ffbd41;
   }
 
   .mainWrap {
@@ -918,7 +918,7 @@
  }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 709px) {
 
   body{
     margin: 0;
@@ -966,9 +966,15 @@ ul{
       font-size: 24px;
        
     }
+   
     ul{
       list-style: none;
-   
+      display: inline-block;
+     
+      li{
+        text-align: left;
+       
+      }
     }
   }
   }

@@ -9,9 +9,19 @@
     
         <h1 class="text-center font-bold text-2xl p-6">ユーザー管理表</h1>
         <table id="users-table" class="border border-black w-8/12 m-auto">
-        <tr class="border"><th class="border border-black">名前</th><th class="border border-black">メールアドレス</th><th class="border border-black">電話番号</th><th class="border border-black">口座情報(銀行名/支店/口座種類/口座番号)</th><th class="border border-black">紹介者</th><th class="border border-black">紹介者メアド</th></tr>
+        <tr class="border"><th class="border border-black">名前</th><th class="border border-black">メールアドレス</th><th class="border border-black">電話番号</th><th class="border border-black">口座情報(銀行名/支店/口座種類/口座番号)</th><th class="border border-black">紹介者</th><th class="border border-black">紹介者アドレス</th><th class="border border-black">ステータス</th></tr>
         <% @users.each do |user| %> 
-        <tr class="border  text-center"><td class="border border-black"><%= user.username %></td> <td class="border border-black"><%= user.email %></td><td class="border border-black"><%= user.phonenumber %></td><td class="border border-black"><%= user.bank %>/<%= user.branch %>/<%= user.kinds %>/<%= user.banknumber %></td> <% if user.invited_by.present? %><td class="border border-black"><%= user.invited_by.username %></td><td class="border border-black"><%= user.invited_by.email %></td><% end %></tr>
+        <tr class="border  text-center">
+          <td class="border border-black"><%= user.username %></td>
+          <td class="border border-black"><%= user.email %></td>
+          <td class="border border-black"><%= user.phonenumber %></td>
+          <td class="border border-black"><%= user.bank %>/<%= user.branch %>/<%= user.kinds %>/<%= user.banknumber %></td>
+          <% if user.invited_by.present? %>
+          <td class="border border-black"><%= user.invited_by.username %></td>
+          <td class="border border-black"><%= user.invited_by.email %></td>
+          <% end %>
+          <td class="border border-black"><%= user.phonenumber %></td>
+        </tr>
         <% end %>
         
         </table>

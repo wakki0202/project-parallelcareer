@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   
+  
   resources :questions
   devise_for :users, controllers: {
         sessions: 'users/sessions',
@@ -14,12 +15,12 @@ Rails.application.routes.draw do
 
   resources :providers do
     resources :introductions, only: [:create, :edit, :update]
+    resources :details, only: [:create]
   end
 
   resources :news
   resources :questions
 
-  get "providers/:id/introductions/detail", to:"introductions#detail"
 
   get "posts/index",to:"posts#index"
   get "posts/:id",to:"posts#show"
@@ -27,8 +28,12 @@ Rails.application.routes.draw do
   get "providers/:id/introductions/edit", to:"introductions#edit"
   get "introductions/complete", to:"introductions#complete"
 
+  get "providers/:id/details/new", to:"details#new"
+
   get "providers/:id/introductions", to:"introductions#index"
   get "providers/:id/introductions/:id", to:"introductions#show"
+
+
 
 
   get "introductions/index", to:"introductions#index"
