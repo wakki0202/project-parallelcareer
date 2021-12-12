@@ -6,13 +6,14 @@
     --tw-gradient-from: #f87171;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(248, 113, 113, 0));
     --tw-gradient-to: #f59e0b;
-
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
   .post-main{
-    width: 66.666667%;
+    width: 100%;
     text-align: center;
     margin: 0 auto;
     padding-top: 50px;
-    color: rgba(55, 65, 81, 1);
+    color: rgba(55, 65, 81, 1); 
   }
 
   h1{
@@ -21,100 +22,174 @@
     font-size: 30px;
     padding-top: 50px;
     margin-bottom: 30px;
+    position: relative;
+  }
+  a{
+    color: black;
+    font-size: 14px;
+    text-decoration:none;
+    font-weight: 580;
+  }
+
+  a:hover{
+    color: black;
+    font-size: 14px;
+    text-decoration:none;
+    font-weight: 550;
   }
 
   .post-list{
-    	width: 83.333333%;
+    	width: 100%;
       margin-left: auto;
       margin-right: auto;
-      
-
-  }
-  .list-main{
-    background-color: white;
-    border: black;
-    margin-bottom: 40px;
-    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);	
-    list-style: none;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 40px;
-   
   }
 
-  .lists{
-    width: 100%;
-    margin: 0 auto;
+  .card {
+    width: 330px;
+    min-height: 280px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #ccc;
+    position:relative;
+    display: inline-block;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .3);
   }
 
-  .title{
+  .card-title {
     font-size: 18px;
-    font-weight: bold;
-    padding-bottom: 15px;
-    
-   
+    color: #333;
+    min-height:90px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
-  .more a{     font-weight: bold;
-           color:#666;
-        }
+
+  .card-content{
+    border-top: 1px solid #eee;
+  }
+
+  .card-text {
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    line-height: 1.5;
+    color:black;
+  }
+
+  .card-text :hover{
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    line-height: 1.5;
+    color:black;
+  }
+
+  .card-link {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding: 20px;
+  }
+
+  .card-link a {
+    text-decoration: none;
+    color: #0bd;
+    text-align: center;
+    margin: 0 10px;
+  }
+
+  .card-link a:hover {
+    background-color:white;	
+    color: #0090aa;
+  }
+  .card {
+    position:relative;
+    z-index:1;
+    box-shadow:0 0 20px rgba(0, 0, 0, 0.04);
+    transition:transform 0.3s;
+}
+  
+  .card::before {
+        position:absolute;
+        left:0;
+        bottom:0;
+        z-index:-1;
+        display:block;
+        width:100%;
+        height:30px;
+        content:"";
+        background:radial-gradient(
+            50% 30% at center center,
+            rgba(0, 0, 0, 0.16),
+            rgba(0, 0, 0, 0));
+        transform:translate(0, 100%);
+        transition:transform 0.3s, opacity;
+    }
+  
+.card:hover {
+    transform:translate(0, -15px);
+}
+  
+    .card:hover::before {
+        opacity:0.6;
+        transform:translate(0, calc(100% + 20px)) scale(0.7);
+    }
+
 
 }
 
 
   .post-show{
     background-color: white;
-
-    .posts{
-      width: 60%;
-      margin: auto;
-      padding-top: 80px;
-
-      .post-contents{
-      font-size: 16px;
-      padding-bottom: 50px;
-      border-bottom: 1px solid;
-      padding-top: 30px;
-      line-height: 2;
-      color: black;
+    .office {
+      width: 100%;
+      margin-top: 100px;
+      }
+      .office th,
+      .office td {
+      border: 1px solid #ccc;
+      padding: 20px;
+      }
       
-      strong{
-        font-size: 20px;
+      .office th {
+      font-weight: bold;
+      background-color: #dedede; 
       }
-
-      p{
-        font-size: 16px;
-        line-height: 1.5;
-      }
-        }
-      .bottom{
-        font-size: 16px;
-      padding-bottom: 50px;
-      border-bottom: 1px solid;
-      padding-top: 30px ;
-      strong{
-        font-size: 20px;
-      }
-
-      p{
-        font-size: 16px;
-        line-height: 1.5;
-      }
-        border-bottom: 0px;
-      }
+      
+      @media screen and (max-width: 767px) {
+      .office,
+      .office tr,
+      .office td,
+      .office th {display:block;}
+      .office th {width:auto;}
       }
       .action{
+        margin-top:30px;
         text-align: center;
         margin-bottom: 50px;
         font-size: 20px;
         font-weight:bold;
-        a{
-          
-           color:#666;
-      
+        color:#0bd;
+       a{
+        color: inherit;
         }
-      
+        a:hover{
+          background-color:white;	
+          color: #0090aa;
+        }
       }
+      }
+
+      
         
 
-    }
+   
