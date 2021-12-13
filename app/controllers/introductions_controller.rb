@@ -1,4 +1,6 @@
 class IntroductionsController < ApplicationController
+before_action :authenticate_provider!,only: [:index,:show,:edit,:update]
+before_action :authenticate_user!,only: [:new,:create]
   def index
     @introductions = Introduction.all.order(id: :DESC)
     @introductionnumber = Introduction.all.count

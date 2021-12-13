@@ -9,6 +9,24 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:accept_invitation, keys: [:password, :password_confirmation, :username, :phonenumber])
     end
 
+  def after_sign_in_path_for(resource)
+    case resource
+    when User
+      tops_index_path
+    when Admin
+      questions_path
+    when Provider
+      works_path
 
+    end
+  end
+
+  #def authenticate_any!
+  #if admin_signed_in?
+      #true
+  #else
+      #authenticate_provider!
+  #end
+  #end
   
 end

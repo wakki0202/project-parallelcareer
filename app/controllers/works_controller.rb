@@ -1,4 +1,5 @@
 class WorksController < ApplicationController
+  before_action :authenticate_provider!
   before_action :set_work, only: %i[ show edit update destroy ]
 
   # GET /works or /works.json

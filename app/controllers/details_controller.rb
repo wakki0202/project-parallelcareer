@@ -1,4 +1,6 @@
 class DetailsController < ApplicationController
+  before_action :authenticate_user!,only: [:new,:create]
+  before_action :authenticate_provider!,only: [:index]
   before_action :set_detail, only: %i[ show edit update destroy ]
 
   # GET /details or /details.json

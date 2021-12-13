@@ -4,23 +4,39 @@
 
         <li class="btn"><%= link_to "トップページに戻る >","/tops/index" %></button>
 
+
+<% if admin_signed_in?  %>  
+
+<% if current_admin.email == "ytk0202@outlook.jp"  %> 
+
         <li class="btn"><%= link_to "プロ人材アカウントを登録する >","/providers/sign_up" %></button>
+
+<% end %>
+
+        <li class="btn"><%= link_to '管理者ログアウト' , destroy_admin_session_path, method: :delete %></button>
 
         <li class="btn"><%= link_to "お問い合わせ一覧(#{ @questionnumber }件) >","/questions" %></button>
   
         <li class="btn"><%= link_to "お知らせ一覧 >","/news" %></button>
   
         <li class="btn"><%= link_to "お知らせを追加する >","/news/new" %></button>
+        
+        <li class="btn"><%= link_to "ユーザー一覧 >","/users/index" %></button>
+
+<% end %>
       
         <li class="btn"><%= link_to "口コミ一覧(#{ @introductionnumber }件) >","/introductions/index" %></button>
      
         <li class="btn"><%= link_to "案件一覧 >","/works" %></button>
     
         <li class="btn"><%= link_to "案件を追加する >","/works/new" %></button>
-     
-        <li class="btn"><%= link_to "ユーザー一覧 >","/users/index" %></button>
 
-        <li class="btn"><%= link_to 'ログアウト' , destroy_provider_session_path, method: :delete %></button>
+
+<% if provider_signed_in?  %> 
+
+        <li class="btn"><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete %></button>
+
+<% end %>
       
 </ul>
   
