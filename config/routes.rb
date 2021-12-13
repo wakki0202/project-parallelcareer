@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
-  
-  
   resources :questions
+  
+  devise_for :providers, controllers: {
+    sessions: 'providers/sessions',
+    passwords: 'providers/passwords',
+    registrations: 'providers/registrations'
+  }
   devise_for :users, controllers: {
         sessions: 'users/sessions',
         registrations: 'users/registrations',

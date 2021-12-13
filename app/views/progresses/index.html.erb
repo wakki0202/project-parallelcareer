@@ -11,7 +11,7 @@
         <% if introduction.user_id == current_user.id %>
         <tr class="border  text-center posts">
           <td class="border border-black post_title_th">
-            <a href="/progresses/<%= introduction.id %>" class="introductionlink"><%= introduction.provider.title %></a>
+            <a href="/progresses/<%= introduction.id %>" class="introductionlink"><%= introduction.work.title %></a>
           </td>
           <td class="post_progress_th"><%= introduction.step %></td>
         </tr>

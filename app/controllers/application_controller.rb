@@ -10,10 +10,5 @@ class ApplicationController < ActionController::Base
     end
 
 
-  def after_sign_in_path_for(resource)
-    progresses_index_path
-  end
-  def after_sign_out_path_for(resource)
-    tops_index_path
-  end
+  
 end

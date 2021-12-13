@@ -4,6 +4,8 @@
 
         <li class="btn"><%= link_to "トップページに戻る >","/tops/index" %></button>
 
+        <li class="btn"><%= link_to "プロ人材アカウントを登録する >","/providers/sign_up" %></button>
+
         <li class="btn"><%= link_to "お問い合わせ一覧(#{ @questionnumber }件) >","/questions" %></button>
   
         <li class="btn"><%= link_to "お知らせ一覧 >","/news" %></button>
@@ -17,6 +19,8 @@
         <li class="btn"><%= link_to "案件を追加する >","/works/new" %></button>
      
         <li class="btn"><%= link_to "ユーザー一覧 >","/users/index" %></button>
+
+        <li class="btn"><%= link_to 'ログアウト' , destroy_provider_session_path, method: :delete %></button>
       
 </ul>
   
