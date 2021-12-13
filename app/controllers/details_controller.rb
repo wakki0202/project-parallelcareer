@@ -12,7 +12,7 @@ class DetailsController < ApplicationController
 
   # GET /details/new
   def new
-    @provider = Provider.find(params[:id])
+    @work = Work.find(params[:id])
     @detail = Detail.new
   end
 
@@ -22,11 +22,11 @@ class DetailsController < ApplicationController
 
   # POST /details or /details.json
   def create
-    @provider = Provider.find(params[:provider_id])
+    @work = Work.find(params[:work_id])
     @detail = Detail.new(detail_params)
 
       if @detail.save
-        DetailMailer.detail_introduction(@detail,@provider,@current_user).deliver
+        DetailMailer.detail_introduction(@detail,@work,@current_user).deliver
          redirect_to introductions_complete_path
        
       end
@@ -62,6 +62,6 @@ class DetailsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def detail_params
-      params.require(:detail).permit(:content).merge(user_id: current_user.id, provider_id: params[:provider_id])
+      params.require(:detail).permit(:content).merge(user_id: current_user.id, work_id: params[:work_id])
     end
 end

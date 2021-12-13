@@ -2,62 +2,62 @@
 <p id="notice"><%= notice %></p>
 
 
-<% @provider.images.each do |image| %>
+<% @work.images.each do |image| %>
 <%= image_tag asset_path(image.to_s) %>
 <% end %>
 
 
 <p>
   <strong>案件名:</strong>
-  <%= @provider.title %>
+  <%= @work.title %>
 </p>
 
 <p>
   <strong>企業名:</strong>
-  <%= @provider.company %>
+  <%= @work.company %>
 </p>
 
 <div class="post-contents">
   <strong>事業者URL</strong><br>
-  <%= auto_link(simple_format(@provider.link), html: {target: '_blank'}) %>
+  <%= auto_link(simple_format(@work.link), html: {target: '_blank'}) %>
 </div>
 
 <p>
   <strong>報酬:</strong>
-  <%= @provider.reward %>
+  <%= @work.reward %>
 </p>
 
 <p>
   <strong>仕事内容:</strong>
-  <%= @provider.pcontent %>
+  <%= @work.pcontent %>
 </p>
 
 <p>
   <strong>報酬支払日:</strong>
-  <%= @provider.rday %>
+  <%= @work.rday %>
 </p>
 
 <p>
   <strong>報酬内容:</strong>
-  <%= @provider.rcontent %>
+  <%= @work.rcontent %>
 </p>
 
 <p>
   <strong>対象地域:</strong>
-  <%= @provider.area %>
+  <%= @work.area %>
 </p>
 
 <p>
   <strong>アピールポイント:</strong>
-  <%= @provider.appeal %>
+  <%= @work.appeal %>
 </p>
 
 <p>
   <strong>案件状態:</strong>
-  <%= @provider.status %>
+  <%= @work.status %>
 </p>
 
-<button><%= link_to '◀トップへ戻る', providers_path %></button>
-<button><%= link_to '削除する', @provider, method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
+<button><%= link_to '◀トップへ戻る', works_path %></button>
+<button><%= link_to '削除する', @work, method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
 
 </div>

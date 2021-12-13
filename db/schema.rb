@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_12_084927) do
+ActiveRecord::Schema.define(version: 2021_12_13_044031) do
 
   create_table "details", force: :cascade do |t|
     t.text "content"
@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(version: 2021_12_12_084927) do
     t.string "phonenumber"
     t.text "contents"
     t.integer "user_id", null: false
-    t.integer "provider_id", null: false
+    t.integer "work_id", null: false
     t.string "step"
-    t.index ["provider_id"], name: "index_introductions_on_provider_id"
     t.index ["user_id"], name: "index_introductions_on_user_id"
+    t.index ["work_id"], name: "index_introductions_on_work_id"
   end
 
   create_table "news", force: :cascade do |t|
@@ -52,22 +52,6 @@ ActiveRecord::Schema.define(version: 2021_12_12_084927) do
     t.string "file"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "providers", force: :cascade do |t|
-    t.string "title"
-    t.string "company"
-    t.string "reward"
-    t.text "pcontent"
-    t.string "rday"
-    t.text "rcontent"
-    t.text "area"
-    t.text "appeal"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "status"
-    t.string "link"
-    t.string "images"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -109,8 +93,24 @@ ActiveRecord::Schema.define(version: 2021_12_12_084927) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "details", "providers"
+  create_table "works", force: :cascade do |t|
+    t.string "title"
+    t.string "company"
+    t.string "reward"
+    t.text "pcontent"
+    t.string "rday"
+    t.text "rcontent"
+    t.text "area"
+    t.text "appeal"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "status"
+    t.string "link"
+    t.string "images"
+  end
+
   add_foreign_key "details", "users"
-  add_foreign_key "introductions", "providers"
+  add_foreign_key "details", "works", column: "provider_id"
   add_foreign_key "introductions", "users"
+  add_foreign_key "introductions", "works"
 end

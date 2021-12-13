@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get "tops/index",to:"tops#index"
 
 
-  resources :providers do
+  resources :works do
     resources :introductions, only: [:create, :edit, :update]
     resources :details, only: [:create]
   end
@@ -24,14 +24,14 @@ Rails.application.routes.draw do
 
   get "posts/index",to:"posts#index"
   get "posts/:id",to:"posts#show"
-  get "providers/:id/introductions/new", to:"introductions#new"
-  get "providers/:id/introductions/edit", to:"introductions#edit"
+  get "works/:id/introductions/new", to:"introductions#new"
+  get "works/:id/introductions/edit", to:"introductions#edit"
   get "introductions/complete", to:"introductions#complete"
 
-  get "providers/:id/details/new", to:"details#new"
+  get "works/:id/details/new", to:"details#new"
 
-  get "providers/:id/introductions", to:"introductions#index"
-  get "providers/:id/introductions/:id", to:"introductions#show"
+  get "works/:id/introductions", to:"introductions#index"
+  get "works/:id/introductions/:id", to:"introductions#show"
 
 
 

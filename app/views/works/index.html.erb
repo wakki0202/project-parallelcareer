@@ -19,13 +19,13 @@
         </thead>
 
         <tbody>
-          <% @providers.each do |provider| %>
+          <% @works.each do |work| %>
             <tr class="provideredition">
-              <td class="provideredition"><%= provider.company %></td>
-              <td class="provideredition"><%= provider.title %></td>
-              <td class="provideredition"><%= link_to '詳細', provider %></td>
-              <td class="provideredition"><%= link_to '編集', edit_provider_path(provider) %></td>
-              <td class="provideredition"><%= provider.status %></td>
+              <td class="provideredition"><%= work.company %></td>
+              <td class="provideredition"><%= work.title %></td>
+              <td class="provideredition"><%= link_to '詳細', work %></td>
+              <td class="provideredition"><%= link_to '編集', edit_work_path(work) %></td>
+              <td class="provideredition"><%= work.status %></td>
             </tr>
           <% end %>
         </tbody>

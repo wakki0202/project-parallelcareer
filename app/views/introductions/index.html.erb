@@ -3,7 +3,7 @@
 
 <div class="provider-index">
   <div class="side">
-      <%= render '/providers/side' %>
+      <%= render '/works/side' %>
     </div>
       
       <div class="bg_pattern Paper_v2"> 
@@ -15,7 +15,7 @@
       
       
       <% @introductions.each do |introduction| %> 
-      <tr class="border  text-center"><td class="border border-black"><%= introduction.provider.title %></td> <td class="border border-black"><%= introduction.user.username %></td><td class="border border-black"><%= introduction.name %></td><td class="border border-black"><%= l introduction.created_at %></td>
+      <tr class="border  text-center"><td class="border border-black"><%= introduction.work.title %></td> <td class="border border-black"><%= introduction.user.username %></td><td class="border border-black"><%= introduction.name %></td><td class="border border-black"><%= l introduction.created_at %></td>
       <% if introduction.step == nil %>
         <td class="border border-black">口コミ完了</td>
         <% else %>

@@ -5,23 +5,23 @@
 
 <div class="post-list-all">
 <div class="post-list">
-<% @providers.each do |provider| %>
-  <% if provider.status == "公開" %>
+<% @works.each do |work| %>
+  <% if work.status == "公開" %>
 
 
       <section class="card">
 
-      <a  class="link" href="/posts/<%= provider.id %>" class=" font-bold">
-        <h1 class="card-title"><%= provider.title %></h1>
+      <a  class="link" href="/posts/<%= work.id %>" class=" font-bold">
+        <h1 class="card-title"><%= work.title %></h1>
         <div class="card-content">
-          <p class="card-text">報酬：<%= provider.reward %></p>
-          <p class="card-text">地域：<%= provider.area %></p>
+          <p class="card-text">報酬：<%= work.reward %></p>
+          <p class="card-text">地域：<%= work.area %></p>
         </div>
       </a>
       
       <div class="card-link">
-      <a href="/providers/<%= provider.id %>/introductions/new" class=" font-bold">口コミをする</a>
-      <%= link_to "掲載主から詳細を聞く", "/providers/#{ provider.id }/details/new"  %> 
+      <a href="/works/<%= work.id %>/introductions/new" class=" font-bold">口コミをする</a>
+      <%= link_to "掲載主から詳細を聞く", "/works/#{ work.id }/details/new"  %> 
       </div>
       </section>
       

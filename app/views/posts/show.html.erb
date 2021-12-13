@@ -2,52 +2,52 @@
 <%= render '/layouts/header' %>
 
 
-<% @provider.images.each do |image| %>
+<% @work.images.each do |image| %>
   <%= image_tag asset_path(image.to_s) %>
 <% end %>
 
 <table class="office">
 <tr>
 <th>案件名</th>
-<td> <%= @provider.title %></td>
+<td> <%= @work.title %></td>
 </tr>
 <tr>
 <th>事業名</th>
-<td><%= @provider.company %></td>
+<td><%= @work.company %></td>
 </tr>
 <tr>
 <th>事業者ホームページ欄</th>
-<td><%= auto_link(simple_format(@provider.link), html: {target: '_blank'}) %></td>
+<td><%= auto_link(simple_format(@work.link), html: {target: '_blank'}) %></td>
 </tr>
 <tr>
 <th>報酬</th>
-<td><%= @provider.reward %></td>
+<td><%= @work.reward %></td>
 </tr>
 <tr>
 <th>仕事内容</th>
-<td><%= auto_link(simple_format(@provider.pcontent), html: {target: '_blank'}) %></td>
+<td><%= auto_link(simple_format(@work.pcontent), html: {target: '_blank'}) %></td>
 </tr>
 <tr>
 <th>報酬支払日</th>
-<td><%= @provider.rday %></td>
+<td><%= @work.rday %></td>
 </tr>
 <tr>
 <th>報酬内容</th>
-<td><%= simple_format(@provider.rcontent) %></td>
+<td><%= simple_format(@work.rcontent) %></td>
 </tr>
 <tr>
 <th>対象地域</th>
-<td> <%= simple_format(@provider.area) %></td>
+<td> <%= simple_format(@work.area) %></td>
 </tr>
 <tr>
 <th>アピールポイント</th>
-<td><%= simple_format(@provider.appeal) %>
+<td><%= simple_format(@work.appeal) %>
 </tr>
 </table>
 
 
 <div class="action">
-<%= link_to "口コミをする","/providers/#{@provider.id}/introductions/new" %>
+<%= link_to "口コミをする","/works/#{@work.id}/introductions/new" %>
 </div>
 </div>
 

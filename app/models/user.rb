@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
 
     has_many :introductions, dependent: :destroy
-    has_many :providers, through: :introductions
+    has_many :works, through: :introductions
 
     has_many :details
 

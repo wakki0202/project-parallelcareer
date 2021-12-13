@@ -1,16 +1,18 @@
-<div class="bg_pattern Paper_v2"></div>
-<div id="introduction-show" class="flex w-12/12">
-    <div id="sidebar" class="w-3/12 ml-20 text-center">
-      <%= render '/providers/side' %>
+
+<div class="provider-index">
+    <div class="side">
+      <%= render '/works/side' %>
     </div>
-    <div id="center">
+
+    <div class="bg_pattern Paper_v2"> 
+    <div class="providers">
 
     <table class="border border-black w-7/12 m-auto">
       
         
       <tr class="border font-bold ">
         <td class="border border-black text-center py-3">案件名</td>
-        <td class="border border-black text-center"><%= @introduction.provider.title %></td>
+        <td class="border border-black text-center"><%= @introduction.work.title %></td>
       </tr>
       <tr class="border">
         <td class="border border-black text-center py-3">紹介者名</td>
@@ -73,13 +75,17 @@
       <div>
         報酬振込完了<%= form.radio_button :step, '報酬振込完了' %>
       </div>
-  </div>
+  
 
   
   <div class="actions">
     <%= form.submit '進捗を更新する',data: { confirm: '更新しますか？' },class: 'submit' %>
   </div>
+
   
 <% end %>
+</div>
+
+</div>
 </div>
 </div>
