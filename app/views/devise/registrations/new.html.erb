@@ -11,6 +11,21 @@
     <h2>ユーザー登録</h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <form class="login-form">
+      <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    
+
+      <div class="formSet">
+       <div class="label">紹介コード</div>
+       <%= f.text_field :referrer_id, placeholder: '' %>
+      </div>
 
       <div class="formSet">
        <div class="label">お名前</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_13_084711) do
+ActiveRecord::Schema.define(version: 2021_12_13_154255) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -110,6 +110,8 @@ ActiveRecord::Schema.define(version: 2021_12_13_084711) do
     t.integer "invited_by_id"
     t.integer "invitations_count", default: 0
     t.string "status"
+    t.string "affiliater_id"
+    t.string "referrer_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
     t.index ["invited_by_id"], name: "index_users_on_invited_by_id"
@@ -134,7 +136,7 @@ ActiveRecord::Schema.define(version: 2021_12_13_084711) do
   end
 
   add_foreign_key "details", "users"
-  add_foreign_key "details", "works", column: "provider_id"
+  add_foreign_key "details", "works", column: "work_id"
   add_foreign_key "introductions", "users"
   add_foreign_key "introductions", "works"
 end

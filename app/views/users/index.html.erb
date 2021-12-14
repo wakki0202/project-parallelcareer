@@ -16,10 +16,8 @@
           <td class="border border-black"><%= user.email %></td>
           <td class="border border-black"><%= user.phonenumber %></td>
           <td class="border border-black"><%= user.bank %>/<%= user.branch %>/<%= user.kinds %>/<%= user.banknumber %></td>
-          <% if user.invited_by.present? %>
-          <td class="border border-black"><%= user.invited_by.username %></td>
-          <td class="border border-black"><%= user.invited_by.email %></td>
-          <% end %>
+          <td class="border border-black"><%= @users.find_by(affiliater_id: user.referrer_id)&.username %></td> 
+          <td class="border border-black"><%= @users.find_by(affiliater_id: user.referrer_id)&.email  %></td>
         </tr>
         <% end %>
         
