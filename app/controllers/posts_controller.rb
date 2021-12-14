@@ -1,5 +1,5 @@
 class PostsController < WorksController
-before_action :authenticate_provider!, except: [:index,:show]
+before_action :authenticate_provider!,except: [:index,:show]
   
   def index　#ユーザー側投稿一覧
     @works = Work.all

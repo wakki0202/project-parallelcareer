@@ -1,5 +1,5 @@
 class WorksController < ApplicationController
-  before_action :authenticate_provider!
+  before_action :authenticate_provider!,only: [:index,:show,:edit,:update], unless: proc { admin_signed_in? }
   before_action :set_work, only: %i[ show edit update destroy ]
 
   # GET /works or /works.json
