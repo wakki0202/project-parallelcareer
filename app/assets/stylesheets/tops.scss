@@ -12,6 +12,7 @@
 
   body{
     margin:0;
+
   }
 
   footer{
@@ -120,8 +121,8 @@
     --tw-text-opacity: 1;
     color: rgba(245, 158, 11, var(--tw-text-opacity));
     text-align: center;
-    font-weight: 300;
-    font-size: 36px;
+    font-weight: 600;
+    font-size: 40px;
     line-height: 40px;
     padding-top: 96px;
     padding-bottom: 32px;
@@ -142,7 +143,7 @@
   .specificWorries {
     --tw-text-opacity: 1;
     color: rgba(245, 158, 11, var(--tw-text-opacity));
-    font-weight: 300;
+    font-weight: 500;
     font-size: 24px;
     line-height: 32px;
     margin-left: 64px;
@@ -181,8 +182,8 @@
   --tw-text-opacity: 1;
   color: rgba(245, 158, 11, var(--tw-text-opacity));
   text-align: center;
-  font-weight: 300;
-  font-size: 36px;
+  font-weight: 600;
+  font-size: 40px;
   line-height: 40px;
   margin-bottom: 0px;
   margin-top: 96px;
@@ -281,10 +282,10 @@
   .otherMerit {
     --tw-text-opacity: 1;
     color: rgba(245, 158, 11, var(--tw-text-opacity));
-    font-weight: 300;
-    font-size: 30px;
+    font-weight: 600;
+    font-size: 40px;
     line-height: 36px;
-    padding-bottom: 12px;
+    padding-bottom: 30px;
   }
 
   .otherMeritWrap {
@@ -348,16 +349,16 @@
   }
   .noRiskPosition{
     width: 50%;
-    padding-top: 40px;
   }
   .zeroRisk{
     --tw-text-opacity: 1;
     color: rgba(245, 158, 11, var(--tw-text-opacity));
     font-size: 1.5rem/* 24px */;
     line-height: 2rem/* 32px */;
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
-    padding-bottom: 12px;
+    padding-bottom: 3px;
+    font-size: 35px;
   }
 
   .noRiskMessage{
@@ -365,7 +366,8 @@
     margin: auto;
     line-height: 2;
     padding-bottom: 0px;
-    font-weight: 400;
+    font-weight: 600;
+    font-size: 21px;
     --tw-text-opacity: 1;
     color: rgba(75, 85, 99, var(--tw-text-opacity));
   }
@@ -387,13 +389,13 @@
   .HighUnitPrice{
     --tw-text-opacity: 1;
     color: rgba(245, 158, 11, var(--tw-text-opacity));
-    font-weight: 300;
+    font-weight: 600;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
     padding-top: 40px;
     padding-bottom: 20px;
-    font-size: 2.25rem/* 36px */;
+    font-size: 40px;
     line-height: 2.5rem/* 40px */;
   }
 
@@ -407,13 +409,13 @@
   }
 
   #matterCase1{
-    border-bottom: 1px dashed;
     --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     width: 16rem/* 256px */;
     margin-bottom: 2rem/* 32px */;
     height: 16rem/* 256px */;
     border-radius: 1.5rem/* 24px */;
+    box-shadow: 4px 4px 7px -2px #555,
+  4px 4px 9px rgba(255,255,255,0.8) inset;
   }
 
   #Case1{
@@ -445,20 +447,22 @@
   }
 
   #Case1RewardWord{
-    padding-top: 14px;
     text-align: center;
+    font-size: 13px;
+    font-weight: 600;
   }
 
   #matterCase2{
     border-width: 1px;
     height: 15rem/* 240px */;
     --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
     margin-top: 0px;
     width: 16rem/* 256px */;
     margin-bottom: 0px;
     height: 16rem/* 256px */;
     border-radius: 1.5rem/* 24px */;
+    box-shadow: 4px 4px 7px -2px #555,
+  4px 4px 9px rgba(255,255,255,0.8) inset;
   }
 
   #Case2{
@@ -488,21 +492,21 @@
         }
 
           #Case2RewardWord{
-           padding-top: 14px;
             text-align: center;
+            font-size: 13px;
+            font-weight: 600;
           }
 
 
 
         #matterCase3{
-          border-bottom: 1px dashed;
           margin: 0px;
           width: 256px;
           height: 256px;
           --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
           border-radius: 1.5rem/* 24px */;
-
+          box-shadow: 4px 4px 7px -2px #555,
+  4px 4px 9px rgba(255,255,255,0.8) inset;
         }
           #Case3{
             border-bottom: 1px dashed;
@@ -531,18 +535,19 @@
         }
 
           #Case3RewardWord{
-            padding-top: 14px;
             text-align: center;
+            font-size: 13px;
+            font-weight: 600;
           }
 
         #matterCase4{
-          border-bottom: 1px dashed;
           margin: 0px;
           width: 256px;
           height: 256px;
           --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
           border-radius: 1.5rem/* 24px */;
+          box-shadow: 4px 4px 7px -2px #555,
+  4px 4px 9px rgba(255,255,255,0.8) inset;
         }
           #Case4{
             border-bottom: 1px dashed;
@@ -570,8 +575,9 @@
         }
 
           #Case4RewardWord{
-            padding-top: 14px;
             text-align: center;
+            font-size: 13px;
+            font-weight: 600;
           }
 
 
@@ -579,7 +585,7 @@
           padding-top: 32px;
         }
 
-
+        
          .SeeMore{
           display: block;
           text-align: center;
@@ -589,14 +595,24 @@
           --tw-bg-opacity: 1;
           background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
           --tw-text-opacity: 1;
-          color: white;
+
           margin: auto;
           padding-top: 12px;
           padding-bottom: 12px;
           border-radius: 1.5rem/* 24px */;
+
+  
+            color: white;
+        
         }
 
 
+        .top-page{
+        .SeeMores a{
+          color: white;
+        } 
+      }
+      
 
   #RewardWrap{
     --tw-text-opacity: 1;
@@ -606,8 +622,8 @@
   #RewardFlow{
     --tw-text-opacity: 1;
     color: rgba(245, 158, 11, var(--tw-text-opacity));
-    font-weight: 300;
-    font-size: 36px;
+    font-weight: 600;
+    font-size: 40px;
     line-height: 40px;
     text-align: center;
     padding-top: 80px;
@@ -646,6 +662,8 @@
     width: 91.666667%;
     margin: auto;
     padding-bottom: 0px;
+    font-weight: 600;
+    font-size: 15px;
   }
 
   #Step2{
@@ -670,6 +688,8 @@
     width: 91.666667%;
     margin: auto;
     padding-bottom: 0px;
+    font-weight: 600;
+    font-size: 15px;
   }
 
   #Step3{
@@ -694,6 +714,8 @@
     width: 91.666667%;
     margin: auto;
     padding-bottom: 0px;
+    font-weight: 600;
+    font-size: 15px;
   }
 
   #Step4{
@@ -716,6 +738,8 @@
     width: 91.666667%;
     margin: auto;
     padding-bottom: 0px;
+    font-weight: 600;
+    font-size: 15px;
   }
 
 
@@ -729,8 +753,8 @@
   #VoiceMessage{
   --tw-text-opacity: 1;
     color: rgba(245, 158, 11, var(--tw-text-opacity));
-    font-weight: 300;
-    font-size: 2.25rem/* 36px */;
+    font-weight: 600;
+    font-size: 40px;
     line-height: 2.5rem/* 40px */;
     text-align: center;
     padding-top: 5rem/* 80px */;
@@ -808,18 +832,24 @@
     width: 91.666667%;
     margin: auto;
     padding-top: 1rem/* 16px */;
+    font-weight: 600;
+    font-size: 14px;
   }
 
   #SpecificVoice2{
     width: 91.666667%;
     margin: auto;
     padding-top: 2rem/* 12px */;
+    font-weight: 600;
+    font-size: 14px;
   }
 
   #SpecificVoice3{
     width: 91.666667%;
     margin: auto;
     padding-top: 2rem/* 12px */;
+    font-weight: 600;
+    font-size: 14px;
   }
 
   .Voice6{
@@ -845,9 +875,9 @@
   #FAQTitle{
   --tw-text-opacity: 1;
     color: rgba(245, 158, 11, var(--tw-text-opacity));
-    font-weight: 300;
+    font-weight: 600;
     font-size: 2.25rem/* 36px */;
-    line-height: 2.5rem/* 40px */;
+    line-height: 40px;
     text-align: center;
     padding-bottom: 2.5rem/* 40px */;
 
@@ -913,9 +943,62 @@
     padding-bottom: 1.25rem/* 20px */;
     padding-top: 1.25rem/* 20px */;
     border-radius: 1.5rem/* 24px */;
-
-
  }
+.top-page{
+  .registerFor{
+    color: white;
+  }
+}
+.main-solution{
+  min-height: 48px;
+}
+
+.detail-text{
+  font-weight: 580;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.other-merit{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 2.5;
+}
+
+.noRiskWord {
+  --tw-text-opacity: 1;
+  color: rgba(248, 113, 113, var(--tw-text-opacity));
+  font-weight: 580;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 40px;
+  line-height: 32px;
+}
+
+.negative-word{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.matter-detail{
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.limit-1{
+  min-height: 80px;
+}
+
+.limit-2{
+  min-height: 100px;
+}
+
+
+
+
+
 }
 
 @media (max-width: 709px) {
