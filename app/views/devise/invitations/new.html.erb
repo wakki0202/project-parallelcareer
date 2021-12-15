@@ -3,22 +3,9 @@
 <div class="login-page">
   <div class="formSession">
 
-<h2>友人を招待する</h2>
-
-<%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <% resource.class.invite_key_fields.each do |field| -%>
-    <div class="formSet">
-      <%= f.label :email %>
-      <%= f.text_field :email %>
-    </div>
-  <% end -%>
-
-  <div class="formSet">
-    <%= f.submit t("devise.invitations.new.submit_button"),class:"button" %>
-  </div>
-<% end %>
+<h2>副業希望者を紹介する</h2>
+<p>お客様ID:</p>
+<p><%= current_user.affiliater_id %></p>
 
 </div>
 </div>
