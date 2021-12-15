@@ -1,4 +1,4 @@
-  
+ <body class="provider-side"> 
  <% if admin_signed_in? ||  provider_signed_in? %>  
 <ul class="buttons">
 
@@ -37,4 +37,59 @@
         <% end %>
      
 <% end %>
+</ul>
   
+<header class="site-header lg:block z-9 w-full fixed bg-white border-b-2">
+
+ <div class="wrapper site-header__wrapper">
+        <div class="header-logo">
+          <%= link_to "ロゴ" ,"/tops/index" %>
+        </div>
+
+          <nav class="nav">
+            <div class="display-none">
+            <div class="hamburger-menu">
+                    <input type="checkbox" id="menu-btn-check">
+                    <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                  <div class="menu-content">
+                  <% if admin_signed_in? ||  provider_signed_in? %>  
+                          <ul>
+                          <li class=""><%= link_to "トップページに戻る >","/tops/index" %></li>
+                          <li class=""><%= link_to "案件一覧 >","/works" %></li>
+                          <li class="nav__item"><%= link_to "案件を追加する >","/works/new" %></li>
+
+                          <li class=""><%= link_to "口コミ一覧(#{ @introductionnumber }件) >","/introductions/index" %></button>
+
+                          <% if admin_signed_in? %>  
+
+                           <% if current_admin.email == "ytk0202@outlook.jp"  %> 
+                      
+                          <li class="nav__item"><%= link_to "プロ人材アカウントを登録する >","/providers/sign_up" %></li>
+                          <li class="nav__item"><%= link_to "お問い合わせ一覧(#{ @questionnumber }件) >","/questions" %></li>          
+                          <li class="nav__item"><%= link_to "お知らせ一覧 >","/news" %></li>
+                          <li class="nav__item"><%= link_to "お知らせを追加する >","/news/new" %></li>
+                      
+                          <li class=""><%= link_to "ユーザー一覧 >","/users/index" %></li>
+                          <li class=""><%= link_to '管理者ログアウト' , destroy_admin_session_path, method: :delete %></li>
+                 
+                        <% end %>
+
+                        <% end %>
+
+                        <% if provider_signed_in? %>
+
+                        <li class=""><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete %></li>
+                        <% end %>
+     
+                        <% end %>
+
+                          </ul>
+                    </div>
+                </div>
+                </div>
+
+                      
+            </nav>
+  </div>
+ </header>
+</body>

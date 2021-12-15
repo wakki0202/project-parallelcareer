@@ -10,10 +10,11 @@
      <%= form_with(model: [@work, @detail], local: true ) do |form| %>
 
       <form>      
-      <%= form.text_area :contents,class: 'form' , :autocomplete => "off",:class => "feedback-input" ,:placeholder => "具体的に聞きたい内容" %>
+      <%= form.text_area :content,class: 'form' , :autocomplete => "off",:class => "feedback-input" ,:placeholder => "具体的に聞きたい内容" %>
       <%= form.submit '詳細を聞く',class: 'submit' %>
       </form>
 
     <% end %>
 
+<%= render '/layouts/footer' %>
 </body>

@@ -1,18 +1,24 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+  @media (min-width: 710px) {
 .user-index{
 display: flex;
 padding-top: 100px;
+ width:80%; 
+ margin: 0 auto;
 }
 
 #users{
   text-align: center;
 
- width:100%; 
+ width:80%; 
+ margin: 0 auto;
 }
 
 #users-table{
+padding-top: 100px;
 width: 80%;
 margin: 0 auto;
 }
@@ -66,3 +72,25 @@ margin: 0 auto;
       transparent 105px,  transparent 129px, 
       rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px);
 }
+
+  }
+  @media (max-width: 709px) {
+  .user-index{
+display: flex;
+padding-top: 100px;
+ width:80%; 
+ margin: 0 auto;
+}
+
+#users{
+  text-align: center;
+
+ width:80%; 
+ margin: 0 auto;
+}
+#users-table{
+padding-top: 100px;
+width: 80%;
+margin: 0 auto;
+}
+  }

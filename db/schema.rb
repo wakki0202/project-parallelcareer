@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_13_154255) do
+ActiveRecord::Schema.define(version: 2021_12_15_083213) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(version: 2021_12_13_154255) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
-    t.integer "provider_id"
-    t.index ["provider_id"], name: "index_details_on_provider_id"
+    t.integer "work_id"
     t.index ["user_id"], name: "index_details_on_user_id"
+    t.index ["work_id"], name: "index_details_on_work_id"
   end
 
   create_table "introductions", force: :cascade do |t|
@@ -136,7 +136,7 @@ ActiveRecord::Schema.define(version: 2021_12_13_154255) do
   end
 
   add_foreign_key "details", "users"
-  add_foreign_key "details", "works", column: "work_id"
+  add_foreign_key "details", "works"
   add_foreign_key "introductions", "users"
   add_foreign_key "introductions", "works"
 end

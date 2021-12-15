@@ -257,6 +257,7 @@ DEPENDENCIES
   devise-i18n
   devise_invitable
   jbuilder (~> 2.7)
+  mini_magick
   pg
   pry-rails
   puma (~> 5.0)

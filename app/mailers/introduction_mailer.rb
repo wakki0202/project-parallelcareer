@@ -4,7 +4,7 @@ class IntroductionMailer < ApplicationMailer
     @work = work
     @current_user = current_user
     mail(
-    to: 'ytk0202@outlook.jp',
+    to: 'tanachu_78@yahoo.co.jp',
     subject: '口コミのお知らせ'
     )
   end

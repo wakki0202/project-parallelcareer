@@ -1,6 +1,7 @@
 // Place all the styles related to the Providers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@media (min-width: 710px) {
 .provider-index{
   display: flex;
   width: 100%;
@@ -48,3 +49,21 @@
         color: black;
       }
     }
+  }
+
+  @media (max-width: 709px) {
+    
+    .providers{
+      width: 70%;
+      margin: 0 auto;
+      padding-top: 100px;
+
+      a{
+        color: black;
+      }
+
+    
+      
+
+    }
+  }

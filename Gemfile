@@ -78,3 +78,5 @@ gem 'pry-rails'
  gem 'rails_autolink'
 
  gem 'rails-erd'
+
+ gem 'mini_magick' 
