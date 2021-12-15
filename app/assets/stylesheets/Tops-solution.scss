@@ -1,0 +1,270 @@
+@media (min-width: 710px) {
+.solution {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+    margin-bottom: 60px;
+  }
+
+  .solutionPicture {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+    .arrow1{
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  border: 1px solid;
+  border-color:  transparent transparent #565656 #565656;
+  transform: rotate(-45deg);
+  }
+
+  .solutionWord {
+  --tw-text-opacity: 1;
+  color: #000;
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 0px;
+  margin-top: 96px;
+  }
+
+  .solutionWrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 56px;
+    --tw-text-opacity: 1;
+    color: rgba(55, 65, 81, var(--tw-text-opacity));
+     font-family: "Noto Sans JP", 游ゴシック;
+  }
+
+  .solution1 {
+    border-width: 1px;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    width: 320px;
+    height: 320px;
+    border-radius: 24px;
+    padding: 24px;
+    line-height: 28px;
+  }
+
+  .solutionTitle1 {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 12px;
+    padding-top: 16px;
+  }
+
+  .solution2 {
+    border-width: 1px;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    width: 320px;
+    height: 320px;
+    border-radius: 24px;
+    margin-top: 0px;
+    margin-left: 48px;
+    margin-right: 48px;
+    padding: 24px;
+    line-height: 28px;
+  }
+
+  .solutionTitle2 {
+    white-space: nowrap;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 12px;
+    padding-top: 16px;
+  }
+
+  .solution3 {
+    border-width: 1px;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    width: 320px;
+    height: 320px;
+    border-radius: 24px;
+    margin-top: 0px;
+    padding: 24px;
+    line-height: 28px;
+  }
+
+  .solutionTitle3 {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 12px;
+  }
+
+  .solutionContent {
+    margin-bottom: 40px;
+     font-family: "Noto Sans JP", 游ゴシック;
+  }
+
+  .solutionSpan {
+    --tw-text-opacity: 1;
+    color: rgba(239, 68, 68, var(--tw-text-opacity));
+  }
+
+ 
+}
+@media (max-width: 709px) {
+ .solution {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+    margin-bottom: 20px;
+  }
+
+  .solutionPicture {
+    width: 50%;
+    margin:0 auto;
+    padding-bottom: 40px;
+      .arrow1{
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  border: 1px solid;
+  border-color:  transparent transparent #565656 #565656;
+  transform: rotate(-45deg);
+  }
+  }
+
+  .solutionWord {
+    margin-bottom: 20px;
+    text-align: center;
+    --tw-text-opacity: 1;
+    color: #000;
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 28px;
+  }
+
+  .solutionWrap {
+    justify-content: center;
+    --tw-text-opacity: 1;
+    color: rgba(55, 65, 81, var(--tw-text-opacity));
+  }
+
+  .solution1 {
+    height: 240px;
+    padding: 24px;
+    line-height: 28px;
+  }
+
+  .solutionTitle1 {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: 700px;
+    padding-bottom: 12px;
+    padding-top: 16px;
+  }
+
+  .solutionContent {
+    margin-bottom: 40px;
+    line-height: normal;
+  }
+
+  .solutionSpan {
+    --tw-text-opacity: 1;
+    color: rgba(239, 68, 68, var(--tw-text-opacity));
+  }
+
+  hr {
+    margin-top: 40px;
+  }
+
+
+  
+  .solution2 {
+ 
+    height: 240px;
+    padding: 24px;
+  }
+
+  .solutionTitle2 {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 700px;
+    padding-bottom: 12px;
+    padding-top: 16px;
+  }
+
+  .solution3 {
+
+    height: 288px;
+    padding: 24px;
+    line-height: 28px;
+  }
+
+  .solutionTitle3 {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 12px;
+  }
+
+  #pcStyle{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 16px;
+  }
+
+  
+
+  #anyMerit {
+    font-size: 24px;
+    line-height: 32px;
+    padding-bottom: 28px;
+  }
+
+  #smartWrap {
+    text-align: left;
+    display: inline-block;
+  }
+
+  #smartFlex1 {
+    display: flex;
+  }
+
+  .oneSmartP {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 12px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  #smartFlex2 {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  #smartProjects {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 12px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  #smartFlex3 {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .detail-text{
+  line-height: normal;
+}
+}
