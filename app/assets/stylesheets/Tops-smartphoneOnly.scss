@@ -1,9 +1,11 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 @media (min-width: 710px) {
 .smartphoneContents{
   display: flex;
   width: 90%;
   margin: 0 auto;
   padding-bottom: 60px;
+  font-family: "Noto Sans JP", '游ゴシック';
  
 
   h1{
