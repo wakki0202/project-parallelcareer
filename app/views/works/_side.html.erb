@@ -12,7 +12,7 @@
 
         <% if admin_signed_in? %>  
 
-        <% if current_admin.email == "ytk0202@outlook.jp"  %> 
+       <!-- <% if current_admin.email == "ytk0202@outlook.jp"  %>  -->
 
         <li class="btn"><%= link_to "プロ人材アカウントを登録する >","/providers/sign_up" %></button>
 
@@ -26,7 +26,7 @@
 
         <li class="btn"><%= link_to '管理者ログアウト' , destroy_admin_session_path, method: :delete %></button>
 
-         <% end %>
+        <!-- <% end %> -->
 
          <% end %>
 
@@ -62,7 +62,7 @@
 
                           <% if admin_signed_in? %>  
 
-                           <% if current_admin.email == "ytk0202@outlook.jp"  %> 
+                          <!-- <% if current_admin.email == "ytk0202@outlook.jp"  %>  -->
                       
                           <li class="nav__item"><%= link_to "プロ人材アカウントを登録する >","/providers/sign_up" %></li>
                           <li class="nav__item"><%= link_to "お問い合わせ一覧(#{ @questionnumber }件) >","/questions" %></li>          
@@ -72,7 +72,7 @@
                           <li class=""><%= link_to "ユーザー一覧 >","/users/index" %></li>
                           <li class=""><%= link_to '管理者ログアウト' , destroy_admin_session_path, method: :delete %></li>
                  
-                        <% end %>
+                         <!-- <% end %> -->
 
                         <% end %>
 
