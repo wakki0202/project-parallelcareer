@@ -1,0 +1,85 @@
+ <body class="sidebar"> 
+ <% if admin_signed_in? ||  provider_signed_in? %>  
+<ul class="nav flex-column">
+
+        <li class="btn nav-item"><%= link_to "トップページに戻る","/tops/index" %></li>
+
+        <li class="btn nav-item"><%= link_to "案件一覧","/works" %></li>
+
+        <li class="btn nav-item"><%= link_to "案件詳細希望者","/details" %></li>
+
+        <li class="btn nav-item"><a href="/introductions/index">口コミ一覧 <span class="badge badge-primary badge-pill"><%= @introductionnumber %></span></a></li>
+
+        <% if admin_signed_in? %>  
+
+       <!-- <% if current_admin.email == "ytk0202@outlook.jp"  %>  -->
+  
+        <li class="btn"><%= link_to "お知らせ一覧","/news" %></button>
+        
+        <li class="btn"><%= link_to "ユーザー一覧","/users/index" %></button>
+
+        <li class="btn"><%= link_to '管理者ログアウト' , destroy_admin_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></button>
+
+        <!-- <% end %> -->
+
+         <% end %>
+
+        <% if provider_signed_in? %>  
+
+        <li class="btn"><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></button>
+
+        <% end %>
+     
+<% end %>
+</ul>
+  
+<header class="site-header lg:block z-9 w-full fixed bg-white border-b-2">
+
+ <div class="wrapper site-header__wrapper">
+        <div class="header-logo">
+          <%= link_to "ロゴ" ,"/tops/index" %>
+        </div>
+
+          <nav class="nav">
+            <div class="display-none">
+            <div class="hamburger-menu">
+                    <input type="checkbox" id="menu-btn-check">
+                    <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                  <div class="menu-content">
+                  <% if admin_signed_in? ||  provider_signed_in? %>  
+                          <ul>
+                          <li class=""><%= link_to "トップページに戻る","/tops/index" %></li>
+                          <li class=""><%= link_to "案件一覧","/works" %></li>
+
+                          <li class=""><%= link_to "口コミ一覧(#{ @introductionnumber }件)","/introductions/index" %></button>
+
+                          <% if admin_signed_in? %>  
+
+                          <!-- <% if current_admin.email == "ytk0202@outlook.jp"  %>  -->
+             
+                          <li class="nav__item"><%= link_to "お知らせ一覧","/news" %></li>
+                      
+                          <li class=""><%= link_to "ユーザー一覧","/users/index" %></li>
+                          <li class=""><%= link_to '管理者ログアウト' , destroy_admin_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></li>
+                 
+                         <!-- <% end %> -->
+
+                        <% end %>
+
+                        <% if provider_signed_in? %>
+
+                        <li class=""><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></li>
+                        <% end %>
+     
+                        <% end %>
+
+                          </ul>
+                    </div>
+                </div>
+                </div>
+
+                      
+            </nav>
+  </div>
+ </header>
+</body>

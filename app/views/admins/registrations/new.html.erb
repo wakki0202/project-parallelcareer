@@ -1,0 +1,34 @@
+<body class="devise">
+<div class="login-page">
+<p class="alert"><%= alert %></p>
+<div class="formRegistration">
+<h2>管理者登録</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "admins/shared/error_messages", resource: resource %>
+
+   <div class="formSet">
+    <%= f.label :メールアドレス %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="formSet">
+    <%= f.label :パスワード %>
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="formSet">
+    <%= f.label :パスワードのご確認 %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="formSet">
+    <%= f.submit "登録する",class:"button" %>
+  </div>
+<% end %>
+
+<%= render "admins/shared/links" %>
+
+ </div>
+</div>
+</body>

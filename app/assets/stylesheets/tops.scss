@@ -7,16 +7,24 @@
 }
 
 @media (min-width: 710px) {
-  body {
-    margin: 0;
+
+
+
+
+  body{
+    margin:0;
+     font-family: "Noto Sans JP", '游ゴシック','游ゴシック体';
+
   }
 
   footer {
     background-color: white;
+
     .footer-title {
       text-align: center;
       padding-bottom: 30px;
       font-size: 20px;
+
     }
     .footer-list {
       text-align: center;
@@ -161,6 +169,7 @@
     padding: auto;
     margin: auto;
   }
+
 
   .yourWorries {
     --tw-bg-opacity: 1;
@@ -319,15 +328,10 @@
     padding-bottom: 12px;
   }
 
-  .solutionContent {
-    margin-bottom: 40px;
-  }
 
-  .solutionSpan {
-    --tw-text-opacity: 1;
-    color: rgba(239, 68, 68, var(--tw-text-opacity));
-  }
 
+
+  
   hr {
     display: none;
   }
@@ -338,17 +342,20 @@
 
   .otherMerit {
     --tw-text-opacity: 1;
-    color: rgba(245, 158, 11, var(--tw-text-opacity));
+    color: #000;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 36px;
-    padding-bottom: 30px;
+    padding-top: 100px;
+    padding-bottom: 60px;
+
   }
 
   .otherMeritWrap {
     text-align: left;
     display: inline-block;
   }
+
 
   .meritList {
     list-style: none;
@@ -436,19 +443,21 @@
 
   .matter {
     margin-bottom: 5rem /* 80px */;
+
     --tw-text-opacity: 1;
     color: rgba(55, 65, 81, var(--tw-text-opacity));
   }
 
   .HighUnitPrice {
     --tw-text-opacity: 1;
-    color: rgba(245, 158, 11, var(--tw-text-opacity));
+    color: #000;
     font-weight: 600;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
     padding-top: 40px;
     padding-bottom: 20px;
+
     font-size: 40px;
     line-height: 2.5rem /* 40px */;
   }
@@ -499,7 +508,13 @@
   #Case1Reward {
     width: 100%;
     margin: auto;
+
   }
+}
+.main-solution{
+  min-height: 48px;
+}
+
 
   #Case1RewardWord {
     text-align: center;
@@ -566,6 +581,8 @@
   #Case3 {
     border-bottom: 1px dashed;
 
+
+
     width: 100%;
     margin: auto;
   }
@@ -580,6 +597,7 @@
     width: 100%;
     margin: auto;
   }
+
 
   .Case3ContentWord {
     padding: 12px;
@@ -1799,14 +1817,9 @@
 
   #SpecificVoice3 {
     width: 91.666667%;
-    margin: auto;
-    padding-top: 12px;
-  }
 
-  #faq {
-    --tw-text-opacity: 1;
-    color: rgba(55, 65, 81, var(--tw-text-opacity));
-    padding-top: 80px;
+    margin: auto;
+    padding-bottom: 24px;
   }
 
   #FAQTitle {
@@ -1881,6 +1894,7 @@
     border-radius: 1.5rem /* 24px */;
   }
   footer {
+
     background-color: white;
     .footer-title {
       text-align: center;

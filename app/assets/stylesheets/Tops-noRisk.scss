@@ -1,0 +1,97 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@media (min-width: 710px) {
+.noRisk{
+    --tw-bg-opacity: 1;
+   background-color: rgb(253, 243, 227);
+    margin-bottom: 60px;
+    padding-bottom: 64px;
+  }
+
+
+  .noRiskWrap{
+    display: flex;
+    width: 83.333333%;
+    margin: auto;
+    padding-top: 60px;
+  }
+  .noRiskPosition{
+    width: 50%;
+  }
+  .zeroRisk{
+    --tw-text-opacity: 1;
+    color: #000;
+    font-size: 24px/* 24px */;
+    line-height: 2rem/* 32px */;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 3px;
+  }
+
+  .noRiskMessage{
+    width: 83.333333%;
+    margin: auto;
+    line-height: 2;
+    padding-bottom: 0px;
+    font-weight: 400;
+    font-size: 18px;
+    --tw-text-opacity: 1;
+    color: rgba(75, 85, 99, var(--tw-text-opacity));
+  }
+
+  .noRiskPicture2{
+    width: 320px;
+    height: 320px;
+    margin: auto;
+  }
+    .noRiskPicture1{
+    display: none;
+    }
+}
+@media (max-width: 709px) {
+   .noRisk {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 251, 235, var(--tw-bg-opacity));
+    margin-bottom: 80px;
+    padding-bottom: 48px;
+  }
+
+  .noRiskWord {
+    --tw-text-opacity: 1;
+    color: rgba(248, 113, 113, var(--tw-text-opacity));
+    font-weight: 700;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .noRiskPosition {
+    padding-top: 40px;
+  }
+
+  .zeroRisk {
+    --tw-text-opacity: 1;
+    color: #000;
+  
+  }
+
+  .noRiskMessage {
+    width: 83.333333%;
+    margin: auto;
+    line-height: 2;
+    font-weight: 400;
+    --tw-text-opacity: 1;
+    color: rgba(75, 85, 99, var(--tw-text-opacity));
+  }
+
+  .noRiskPicture1 {
+    width: 320px;
+    height: 320px;
+    margin: auto;
+  }
+
+  .noRiskPicture2 {
+    display: none;
+  }
+
+}

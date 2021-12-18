@@ -3,23 +3,20 @@
 <div class="login-page">
   <div class="formSession">
 
-<h2>友人を招待する</h2>
+<h2>副業希望者を紹介する</h2>
+<p>お客様ID:</p>
+<p><%= current_user.affiliater_id %></p>
 
-<%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<p>紹介する人</p>
 
-  <% resource.class.invite_key_fields.each do |field| -%>
-    <div class="formSet">
-      <%= f.label :email %>
-      <%= f.text_field :email %>
-    </div>
-  <% end -%>
+<p>ご自身の紹介コードをお知り合いに登録時に入力いただければ、紹介した人の報酬の10%が永続的に支払われます。
+このキャンペーンはオープンキャンペーンとなりますので、お早めにご活用いただくことをオススメします！</p>
 
-  <div class="formSet">
-    <%= f.submit t("devise.invitations.new.submit_button"),class:"button" %>
-  </div>
-<% end %>
+<p>紹介された人</p>
+
+<p>紹介コードを入力したら初回報酬振込時に1,000円が振り込まれます。ご紹介時にお友達にお伝えください。</p>
 
 </div>
 </div>
+<%= render '/layouts/footer' %>
 </body>

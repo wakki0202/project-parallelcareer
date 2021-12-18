@@ -1,5 +1,6 @@
 
 <%= render '/layouts/header' %>
+<div class="bg_pattern Paper_v2"> 
 <div id="introduction-show" class="flex w-12/12">
 
     <div id="center">
@@ -7,7 +8,7 @@
     <table class="border border-black w-7/12 m-auto">
       
         
-      <tr class="border font-bold "><td class="border border-black text-center py-3">案件名</td><td class="border border-black text-center"><%= @introduction.provider.title %></td></tr>
+      <tr class="border font-bold "><td class="border border-black text-center py-3">案件名</td><td class="border border-black text-center"><%= @introduction.work.title %></td></tr>
       <tr class="border"><td class="border border-black text-center py-3">お客様名</td><td class="border border-black"><%= @introduction.name %>様</td></tr>
       <tr class="border"><td class="border border-black text-center py-3">お客様電話番号</td><td class="border border-black"><%= @introduction.phonenumber %></td></tr>
       <tr class="border"><td class="border border-black text-center py-3">口コミ内容</td><td class="border border-black"><%= @introduction.contents %></td></tr>
@@ -83,3 +84,5 @@
  <% end %>
     </div>
 </div>
+</div>
+<%= render '/layouts/footer' %>

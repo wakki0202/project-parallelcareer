@@ -1,12 +1,13 @@
-class PostsController < ProvidersController
-
+class PostsController < WorksController
+before_action :authenticate_provider!,except: [:index,:show]
+  
   def index　#ユーザー側投稿一覧
-    @providers = Provider.all
+    @works = Work.all
     
   end
 
   def show　#ユーザー側投稿詳細
-     @provider = Provider.find(params[:id])
+     @work = Work.find(params[:id])
      @introduction = Introduction.new
   end
   

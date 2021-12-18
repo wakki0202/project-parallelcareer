@@ -3,7 +3,7 @@
 
 <div class="provider-index">
 <div class="side">
-<%= render 'providers/side' %>
+<%= render 'works/side' %>
 </div>
 
 <div class="bg_pattern Paper_v2">
@@ -16,6 +16,7 @@
     <tr>
       <th>名前</th>
       <th>お問い合わせ内容</th>
+      <th>対応チェック</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,7 +26,8 @@
       <tr>
         <td><%= question.name %></td>
         <td><%= question.content %></td>
-        <td><%= link_to '詳細を見る', question %></td>
+        <td><%= question.check %></td>
+        <td class="hoverwhite"><%= link_to '詳細を見る', question %></td>
       </tr>
     <% end %>
   </tbody>

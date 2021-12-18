@@ -1,4 +1,7 @@
 class ProgressesController < IntroductionsController
+    before_action :authenticate_user!
+    before_action :authenticate_admin!,except: [:index,:show]
+    before_action :authenticate_provider!,except: [:index,:show]
 
   def index
     @introductions = Introduction.all.order(id: :DESC)

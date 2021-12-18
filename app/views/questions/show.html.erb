@@ -20,6 +20,24 @@
   <%= @question.content %>
 </p>
 
+<%= form_with(model: [@question], local: true ) do |form| %>
+    
+    <%= form.label :対応チェック,class: 'label'  %>
+
+      <div>
+        未対応<%= form.radio_button :check, '未対応' %>
+      </div>
+
+      <div>
+        対応済み<%= form.radio_button :check, '対応済み' %>
+      </div>
+
+  
+  <div class="actions">
+    <%= form.submit '変更する',data: { confirm: '変更しますか？' },class: 'submit' %>
+  </div>
+<% end %>
+
 <div class="toTop">
 <%= link_to '一覧に戻る', questions_path %>
 </div>

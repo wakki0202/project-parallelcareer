@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'パラレルキャリア <ytk.jagaimo@gmail.com>'
+  default from: 'パラレルキャリア <tanachu_78@yahoo.co.jp>'
   layout 'mailer'
 end

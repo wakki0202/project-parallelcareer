@@ -10,16 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_12_084927) do
+ActiveRecord::Schema.define(version: 2021_12_16_001556) do
+
+  create_table "admins", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "work_id"
+    t.index ["email"], name: "index_admins_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+    t.index ["work_id"], name: "index_admins_on_work_id"
+  end
 
   create_table "details", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
-    t.integer "provider_id"
-    t.index ["provider_id"], name: "index_details_on_provider_id"
+    t.integer "work_id"
     t.index ["user_id"], name: "index_details_on_user_id"
+    t.index ["work_id"], name: "index_details_on_work_id"
   end
 
   create_table "introductions", force: :cascade do |t|
@@ -29,10 +43,10 @@ ActiveRecord::Schema.define(version: 2021_12_12_084927) do
     t.string "phonenumber"
     t.text "contents"
     t.integer "user_id", null: false
-    t.integer "provider_id", null: false
+    t.integer "work_id", null: false
     t.string "step"
-    t.index ["provider_id"], name: "index_introductions_on_provider_id"
     t.index ["user_id"], name: "index_introductions_on_user_id"
+    t.index ["work_id"], name: "index_introductions_on_work_id"
   end
 
   create_table "news", force: :cascade do |t|
@@ -55,19 +69,17 @@ ActiveRecord::Schema.define(version: 2021_12_12_084927) do
   end
 
   create_table "providers", force: :cascade do |t|
-    t.string "title"
-    t.string "company"
-    t.string "reward"
-    t.text "pcontent"
-    t.string "rday"
-    t.text "rcontent"
-    t.text "area"
-    t.text "appeal"
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "status"
-    t.string "link"
-    t.string "images"
+    t.integer "work_id"
+    t.index ["email"], name: "index_providers_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_providers_on_reset_password_token", unique: true
+    t.index ["work_id"], name: "index_providers_on_work_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -77,6 +89,7 @@ ActiveRecord::Schema.define(version: 2021_12_12_084927) do
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "check"
   end
 
   create_table "users", force: :cascade do |t|
@@ -102,6 +115,8 @@ ActiveRecord::Schema.define(version: 2021_12_12_084927) do
     t.integer "invited_by_id"
     t.integer "invitations_count", default: 0
     t.string "status"
+    t.string "affiliater_id"
+    t.string "referrer_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
     t.index ["invited_by_id"], name: "index_users_on_invited_by_id"
@@ -109,8 +124,28 @@ ActiveRecord::Schema.define(version: 2021_12_12_084927) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "details", "providers"
+  create_table "works", force: :cascade do |t|
+    t.string "title"
+    t.string "company"
+    t.string "reward"
+    t.text "pcontent"
+    t.string "rday"
+    t.text "rcontent"
+    t.text "area"
+    t.text "appeal"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "status"
+    t.string "link"
+    t.string "images"
+    t.integer "provider_id"
+    t.integer "admin_id"
+  end
+
+  add_foreign_key "admins", "works"
   add_foreign_key "details", "users"
-  add_foreign_key "introductions", "providers"
+  add_foreign_key "details", "works"
   add_foreign_key "introductions", "users"
+  add_foreign_key "introductions", "works"
+  add_foreign_key "providers", "works"
 end

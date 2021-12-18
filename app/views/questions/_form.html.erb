@@ -13,28 +13,15 @@
 
   
 
-  <div class="formSet">
-    <%= form.label :お名前 %>
-    <%= form.text_field :name %>
-  </div>
+<form>      
+  <%= form.text_field :name,class: 'form' , :autocomplete => "off",:class => "feedback-input" , :placeholder => "お名前"  %>
+  <%= form.text_field :email,class: 'form'  , :autocomplete => "off",:class => "feedback-input" ,:placeholder => "メールアドレス" %>
+  <%= form.text_field :phonenumber,class: 'form'  , :autocomplete => "off",:class => "feedback-input" ,:placeholder => "電話番号" %>
+  <%= form.text_area :content,class: 'form' , :autocomplete => "off",:class => "feedback-input" ,:placeholder => "お問い合わせ内容" %>
+  <%= form.hidden_field :check,:value => "未対応" %>
+  <%= form.submit '送信する',data: { confirm: 'お問い合わせを送信しますか？' },class: 'submit' %>
+</form>
 
-  <div class="formSet">
-    <%= form.label :電話番号 %>
-    <%= form.text_field :phonenumber %>
-  </div>
-
-  <div class="formSet">
-    <%= form.label :メールアドレス %>
-    <%= form.text_field :email %>
-  </div>
-
- <div class="formSet">
-    <%= form.label :お問い合わせ内容 %>
-    <%= form.text_area :content,:size => "55x10" %>
-  </div>
-
-  <div class="formSet">
-    <%= form.submit "お問い合わせを送信する",data: { confirm: '管理者に送信されます。送信しますか？' },class:"button" %>
-  </div>
 <% end %>
+
 

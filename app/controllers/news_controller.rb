@@ -1,9 +1,12 @@
 class NewsController < ApplicationController
+  before_action :authenticate_admin!
   before_action :set_news, only: %i[ show edit update destroy ]
 
   # GET /news or /news.json
   def index
     @news = News.all
+    @questionnumber = Question.all.count
+    @introductionnumber = Introduction.all.count
   end
 
   # GET /news/1 or /news/1.json
@@ -13,6 +16,8 @@ class NewsController < ApplicationController
   # GET /news/new
   def new
     @news = News.new
+    @questionnumber = Question.all.count
+    @introductionnumber = Introduction.all.count
   end
 
   # GET /news/1/edit

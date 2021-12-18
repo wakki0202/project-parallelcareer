@@ -1,16 +1,20 @@
-<h1>掲載主から詳細を聞く</h1>
-<p>あなたの連絡先が送られ掲載主から近日中に連絡が入ります。よろしいですか？</p>
 
-<%= form_with(model: [@provider, @detail], local: true ) do |form| %>
+<body class="introduction-new">
+<%= render '/layouts/header' %>
+  <div class="sign-up-main ">
 
+  
+      <h2>掲載主から詳細を聞く</h2>
+      <p>あなたの連絡先が送られ掲載主から近日中に事業者が直接電話でお応えします！</p>
+     
+     <%= form_with(model: [@work, @detail], local: true ) do |form| %>
 
-  <div class="field">
-    <%= form.label :具体的に聞きたい内容 %>
-    <%= form.text_area :content %>
-  </div>
+      <form>      
+      <%= form.text_area :content,class: 'form' , :autocomplete => "off",:class => "feedback-input" ,:placeholder => "具体的に聞きたい内容" %>
+      <%= form.submit '詳細を聞く',class: 'submit' %>
+      </form>
 
-  <div class="actions">
-    <%= form.submit"詳細を聞く" %>
-  </div>
-<% end %>
+    <% end %>
 
+<%= render '/layouts/footer' %>
+</body>

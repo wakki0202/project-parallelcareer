@@ -1,14 +1,16 @@
 class QuestionsController < ApplicationController
+  before_action :authenticate_admin!,only: [:index,:show]
   before_action :set_question, only: %i[ show edit update destroy ]
 
   # GET /questions or /questions.json
   def index
     @questions = Question.all
+    @questionnumber = Question.where(check: '未対応').count
+    @introductionnumber = Introduction.all.count
   end
 
   # GET /questions/1 or /questions/1.json
   def show
-    @question_count = Question.where(question_id: @question.id).count
   end
 
   # GET /questions/new
@@ -66,6 +68,6 @@ class QuestionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def question_params
-      params.require(:question).permit(:name, :phonenumber, :email, :content)
+      params.require(:question).permit(:name, :phonenumber, :email, :content, :check)
     end
 end

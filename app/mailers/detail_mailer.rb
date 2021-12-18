@@ -1,6 +1,6 @@
 class DetailMailer < ApplicationMailer
-  def detail_introduction(detail,provider,current_user)
-    @provider = provider
+  def detail_introduction(detail,work,current_user)
+    @work = work
     @current_user = current_user
     @detail = detail
     mail(

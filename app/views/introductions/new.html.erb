@@ -2,12 +2,13 @@
 <body class="introduction-new">
 <%= render '/layouts/header' %>
   <div class="sign-up-main ">
+  <p class="alert"><%= alert %></p>
 
 <h2>口コミをする</h2>
   
-<%= form_with(model: [@provider, @introduction], local: true ) do |form| %>
+<%= form_with(model: [@work, @introduction], local: true ) do |form| %>
   <div class="title">
-  案件名: <%= @provider.title %>
+  案件名: <%= @work.title %>
   </div>
 <form>      
   <%= form.text_field :name,class: 'form' , :autocomplete => "off",:class => "feedback-input" , :placeholder => "紹介するお客様名"  %>

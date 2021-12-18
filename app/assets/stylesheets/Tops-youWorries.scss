@@ -1,0 +1,101 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@media (min-width: 710px) {
+ .yourWorries {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  margin-bottom: 64px;
+  }
+
+  .rUworries {
+    --tw-text-opacity: 1;
+    color: #000;
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+    padding-top: 96px;
+    padding-bottom: 32px;
+  }
+
+  .worriesWrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+    font-family: "Noto Sans JP", '游ゴシック','游ゴシック体';
+  }
+
+  .pictureWorries {
+    width: 320px;
+    height: 320px;
+    margin-right: 64px;
+  }
+
+  .specificWorries {
+    --tw-text-opacity: 1;
+    color: #000;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 32px;
+    margin-left: 64px;
+    padding-top: 32px;
+    list-style: none;
+  }
+
+  .specificWorries2 {
+    margin-bottom: 32px;
+    margin-left: 60px;
+  }
+
+  .specificWorries4 {
+    margin-bottom: 32px;
+    margin-left: 60px;
+  }
+
+  .specificWorries6 {
+    margin-left: 60px;
+  }
+ 
+}
+@media (max-width: 709px) {
+  .yourWorries {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+    margin-bottom: 64px;
+  }
+
+  .rUworries {
+    --tw-text-opacity: 1;
+    color: #000;
+    text-align: center;
+    font-size: 24px;
+    line-height: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .worriesWrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pictureWorries {
+    width: 160px;
+  }
+
+  .specificWorries {
+    --tw-text-opacity: 1;
+    color: #000;
+    font-weight: 600;
+    font-size: 11px;
+    list-style: none;
+    font-family: "Noto Sans JP", '游ゴシック','游ゴシック体';
+  }
+
+  .specificWorries2 {
+    margin-bottom: 12px;
+  }
+
+  .specificWorries4 {
+    margin-bottom: 12px;
+  }
+}
