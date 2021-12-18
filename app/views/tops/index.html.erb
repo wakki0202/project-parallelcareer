@@ -269,49 +269,71 @@
         </div>
       </section>
 
-      <section id="faq" class="text-gray-700 pt-20">
-        <h1 id="FAQTitle" class="text-yellow-500 font-light text-4xl text-center  pb-10">よくあるご質問</h1>
+      # <section id="faq" class="text-gray-700 pt-20">
+      <div class="FAQ">
+        <div class="FAQ-item">
+          <label for="Q1" class="Q-title">
+            <div>Q.自分の案件でも報酬は発生しますか？</div>
+            <div><i class="fas fa-plus"></i></div>
+          </label>
+          <input type="checkbox" id="Q1">
+          <ul class="A A1">
+            <li>A.ご自身で案件の内容を活用いただき、サービスをご利用いただくことは可能です。また、その際に報酬も発生致します。そのため、まずはご自身で使えるサービスは使って見て、本当に良かったらお知り合いにご紹介いただくことをオススメしております。</li>
+          </ul>
 
-        <div id="FAQWrap1" class="lg:w-8/12 w-9/12 m-auto text-xl border-black pt-5 pb-10">
-          <div  class="Question">
-            <span class="Q ">Q.</span>自分の案件でも報酬は発生しますか？
-          </div>
-          <div class="Answer">
-            <span class="A ">A.</span>ご自身で案件の内容を活用いただき、サービスをご利用いただくことは可能です。また、その際に報酬も発生致します。そのため、まずはご自身で使えるサービスは使って見て、本当に良かったらお知り合いにご紹介いただくことをオススメしております。
-          </div>
+        </div>
+
+        <div class="FAQ-item">
+          <label for="Q2" class="Q-title">
+            <div>Q.匿名でも使えますか？</div>
+            <div><i class="fas fa-plus"></i></div>
+          </label>
+          <input type="checkbox" id="Q2">
+          <ul class="A A2">
+            <li>A.匿名でのご利用はご遠慮いただいています。</li>
+          </ul>
         </div>
 
 
-        <div id="FAQWrap1" class="FAQWrap2 lg:w-8/12 w-9/12 m-auto text-xl border-black pt-10 pb-10">
-          <div class="Question ">
-            <span class="Q ">Q.</span>自分の案件でも報酬は発生しますか？
-          </div>
-          <div  class="Answer">
-            <span class="A ">A.</span>ご自身で案件の内容を活用いただき、サービスをご利用いただくことは可能です。また、その際に報酬も発生致します。そのため、まずはご自身で使えるサービスは使って見て、本当に良かったらお知り合いにご紹介いただくことをオススメしております。
-          </div>
+        
+        <div class="FAQ-item">
+          <label for="Q3" class="Q-title">
+            <div>Q.未成年は使えますか？</div>
+            <i class="fas fa-plus"></i>
+          </label>
+          <input type="checkbox" id="Q3">
+          <ul class="A A3">
+            <li>A.未成年のご利用はご遠慮いただいています。</li>
+          </ul>
+
+        </div>
+
+        <div class="FAQ-item">
+          <label for="Q4" class="Q-title">
+            <div>Q.支払いの時に間に誰か入ってくれますか？</div>
+            <i class="fas fa-plus"></i>
+          </label>
+          <input type="checkbox" id="Q4">
+          <ul class="A A4">
+            <li>A.報酬はパラキャリから支払われます。クライアント（掲載主）から口座に振り込まれることや、それによる金銭的トラブル等のリスクはございませんのでご安心ください。</li>
+          </ul>
         </div>
 
 
-        <div id="FAQWrap1" class="FAQWrap3 lg:w-8/12 w-9/12 m-auto text-xl  border-black pt-10 pb-10">
-          <div class="Question">
-            <span class="Q ">Q.</span>自分の案件でも報酬は発生しますか？
-          </div>
-          <div  class="Answer">
-            <span class="A ">A.</span>ご自身で案件の内容を活用いただき、サービスをご利用いただくことは可能です。また、その際に報酬も発生致します。そのため、まずはご自身で使えるサービスは使って見て、本当に良かったらお知り合いにご紹介いただくことをオススメしております。
-          </div>
+        <div class="FAQ-item">
+          <label for="Q5" class="Q-title">
+            <div>Q.過去の報酬の支払い実績はありますか？どれくらい稼げますか？</div>
+            <i class="fas fa-plus"></i>
+          </label>
+          <input type="checkbox" id="Q5">
+          <ul class="A A5">
+            <li>A.累計これまでに１００人以上の方にお支払いしています。中には月収で１００万円以上を達成された方も多くいらっしゃいます。</li>
+          </ul>
         </div>
 
 
-        <div id="FAQWrap1" class="FAQWrap4 lg:w-8/12 w-9/12 m-auto text-xl  pt-10 pb-10">
-          <div class="Question border-b  border-dashed pb-5">
-            <span class="Q ">Q.</span>自分の案件でも報酬は発生しますか？
-          </div>
-          <div class="Answer">
-            <span class="A ">A.</span>ご自身で案件の内容を活用いただき、サービスをご利用いただくことは可能です。また、その際に報酬も発生致します。そのため、まずはご自身で使えるサービスは使って見て、本当に良かったらお知り合いにご紹介いただくことをオススメしております。
-          </div>
-        </div>
 
-      </section>
+      </div>
 
       <section id="JoinFree" class="bg-blue-100 mt-10 mb-10">
         <div id="MemberWrap" class="lg:py-16 py-8">
@@ -321,5 +343,5 @@
     </main>
 
     <%= render '/layouts/footer' %>
-
+    <script src="https://kit.fontawesome.com/a5c533f20f.js" crossorigin="anonymous"></script>
 </body>
