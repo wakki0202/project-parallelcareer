@@ -24,11 +24,13 @@ before_action :authenticate_user!,only: [:new,:create]
       @work = Work.find(params[:work_id])
       @introduction = Introduction.new(
         introduction_params )
+        @provider = Provider.find_by(email: @work.provider.email)  #provider=事業者 #work=案件undefined method `email' for nil:NilClass
       
   
       
       if  @introduction.save
-          IntroductionMailer.complete_introduction(@introduction,@work,@current_user).deliver
+          IntroductionMailer.complete_introduction(@introduction,@work,@current_user,receiver: @provider ).deliver
+          IntroductionMailer.complete_introduction(@introduction,@work,@current_user ).deliver
           redirect_to introductions_complete_path
       else
           redirect_back(fallback_location: works_path)  #同上
@@ -65,6 +67,8 @@ before_action :authenticate_user!,only: [:new,:create]
 
     params.require(:introduction).permit(:name, :phonenumber, :contents, :step, :work_id, :id).merge(user_id: current_user.id, work_id: params[:work_id]) #ストロングパラメーターで、
   end 
+
+
 
   def update_introduction_params
 

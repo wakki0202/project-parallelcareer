@@ -33,7 +33,7 @@ Rails.application.routes.draw do
 
   resources :news
   resources :questions
-
+  
 
   get "posts/index",to:"posts#index"
   get "posts/:id",to:"posts#show"
@@ -42,6 +42,8 @@ Rails.application.routes.draw do
   get "introductions/complete", to:"introductions#complete"
 
   get "works/:id/details/new", to:"details#new"
+
+  resources :details
 
   get "works/:id/introductions", to:"introductions#index"
   get "works/:id/introductions/:id", to:"introductions#show"

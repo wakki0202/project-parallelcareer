@@ -18,7 +18,7 @@
                       <% elsif provider_signed_in?  %>
                           <li class="nav__item"><%= link_to "　事業者ページ" ,"/works" %></li>
                       <% elsif user_signed_in?  %>
-                          <li class="nav__item"><%= link_to "　副業希望者を紹介する" ,"/users/invitation/new" %></li>          
+                          <li class="nav__item"><%= link_to "　友人を招待する" ,"/users/invitation/new" %></li>          
                           <li class="nav__item"><%= link_to "　マイページ" ,"/progresses/index" %></li>
                           <li class="nav__item"><%= link_to '　ログアウト' , destroy_user_session_path, method: :delete %></li>
                         <% else %>
@@ -38,7 +38,7 @@
                       <% elsif provider_signed_in?  %>
                         <li class="nav__item h-mypage"><%= link_to "事業者ページ" ,"/works" %></li>
                       <% elsif user_signed_in?  %>
-                        <li class="nav__item h-invite"><%= link_to "副業希望者を紹介する" ,"/users/invitation/new" %></li>
+                        <li class="nav__item h-invite"><%= link_to "友人を招待する" ,"/users/invitation/new" %></li>
                         <li class="nav__item h-mypage"><%= link_to "マイページ" ,"/progresses/index" %></li>
                         <li class="nav__item h-logout"><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></li>
                       <% else %>

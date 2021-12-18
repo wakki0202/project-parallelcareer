@@ -1,4 +1,5 @@
-<%= form_with(model: [@provider, @introduction], local: true ) do |form| %>
+
+<%= form_with(model: [@work, @introduction], local: true ) do |form| %>
   <% if detail.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(detail.errors.count, "error") %> prohibited this detail from being saved:</h2>

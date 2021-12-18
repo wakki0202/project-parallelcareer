@@ -2,6 +2,7 @@
 <body class="devise">
 <div class="login-page">
   <div class="formSession">
+  <p class="alert"><%= alert %></p>
   <h2>ログイン</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

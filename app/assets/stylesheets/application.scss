@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 html{
       font-family: "Noto Sans JP", 'YuGothic','Yu Gothic','Hiragino Kaku Gothic ProN', '游ゴシック','游ゴシック体','ヒラギノ角ゴ ProN W3','メイリオ', 'Meiryo','ＭＳ ゴシック',sans-serif;

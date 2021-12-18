@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_15_083213) do
+ActiveRecord::Schema.define(version: 2021_12_16_001556) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 2021_12_15_083213) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "work_id"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+    t.index ["work_id"], name: "index_admins_on_work_id"
   end
 
   create_table "details", force: :cascade do |t|
@@ -74,8 +76,10 @@ ActiveRecord::Schema.define(version: 2021_12_15_083213) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "work_id"
     t.index ["email"], name: "index_providers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_providers_on_reset_password_token", unique: true
+    t.index ["work_id"], name: "index_providers_on_work_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -85,6 +89,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_083213) do
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "check"
   end
 
   create_table "users", force: :cascade do |t|
@@ -133,10 +138,14 @@ ActiveRecord::Schema.define(version: 2021_12_15_083213) do
     t.string "status"
     t.string "link"
     t.string "images"
+    t.integer "provider_id"
+    t.integer "admin_id"
   end
 
+  add_foreign_key "admins", "works"
   add_foreign_key "details", "users"
   add_foreign_key "details", "works"
   add_foreign_key "introductions", "users"
   add_foreign_key "introductions", "works"
+  add_foreign_key "providers", "works"
 end

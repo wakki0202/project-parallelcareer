@@ -1,6 +1,6 @@
 class DetailsController < ApplicationController
+  before_action :authenticate_user!,only: [:new]
   before_action :authenticate_provider!,only: [:index,:show,:edit,:update], unless: proc { admin_signed_in? }
-  before_action :authenticate_admin!,only: [:index]
   before_action :set_detail, only: %i[ show edit update destroy ]
 
   # GET /details or /details.json
@@ -10,6 +10,7 @@ class DetailsController < ApplicationController
 
   # GET /details/1 or /details/1.json
   def show
+    @detail = Detail.find(params[:id])
   end
 
   # GET /details/new
@@ -64,6 +65,6 @@ class DetailsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def detail_params
-      params.require(:detail).permit(:content).merge(user_id: current_user.id, work_id: params[:work_id])
+      params.require(:detail).permit(:content, :work_id).merge(user_id: current_user.id, work_id: params[:work_id])
     end
 end

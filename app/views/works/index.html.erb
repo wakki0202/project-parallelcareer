@@ -5,15 +5,15 @@
   <%= render 'side' %>
   </div>
 
-   <div class="bg_pattern Paper_v2"> 
   <div class="providers">
  
       <h1>案件一覧</h1>
-      <table>
+      <table class="table">
         <thead>
           <tr>
             <th>会社名</th>
             <th>案件名</th>
+            <th>ステータス</th>
             <th colspan="3"></th>
           </tr>
         </thead>
@@ -23,14 +23,15 @@
             <tr class="provideredition">
               <td class="provideredition"><%= work.company %></td>
               <td class="provideredition"><%= work.title %></td>
+              <td class="provideredition"><%= work.status %></td>
               <td class="provideredition"><%= link_to '詳細', work %></td>
               <td class="provideredition"><%= link_to '編集', edit_work_path(work) %></td>
-              <td class="provideredition"><%= work.status %></td>
+              
             </tr>
           <% end %>
         </tbody>
       </table>
     </div>
-  </div>
+
 
 </div>
