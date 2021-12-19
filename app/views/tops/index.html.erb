@@ -126,61 +126,66 @@
           </div>
         </div>
       </section>
-      <section class="matter mb-20 text-gray-700">
-        <h1 class="HighUnitPrice text-yellow-500 lg:font-light font-bold text-center my-5 lg:pt-10 lg:pb-5 lg:text-4xl text-2xl">豊富な高単価案件も！</h1>
-        <div id="matterWrap" class="my-10 lg:flex justify-center lg:mt-10 lg:mb-14">
-          <div id="matterCase1" class="border m-5 h-60 shadow-md lg:m-0 lg:w-64 w-72 m-auto mb-8 lg:h-64 rounded-3xl">
-            <div id="Case1" class="border-b border-dashed w-full m-auto limit-1">
-              <h1 id="Case1Title" class="text-center font-bold p-5 matter-detail">転職先企業紹介＆転職サポート</h1>
+      
+      <section class="Items-list">
+      <div class="Items">
+        <div class="Item">
+            <div class="Item-top">
+              <i class="fas fa-hand-holding-heart"></i>
+              <p class="Item-title">転職先企業紹介＆転職サポート</p><div class="border"></div>
             </div>
-            <div id="Case1Content" class="border-b border-dashed w-full m-auto limit-2">
-              <p class="CaseContentWord p-6 matter-detail">転職もしくは就職をしたい方をご紹介ください。現在フリーター・無職の方でもOKです。</p>
+            <div class="Item-bottom">
+              <p class="Item-reward">報酬：紹介料の20%</p>
+              <p class="Item-content">転職もしくは就職をしたい方をご紹介ください。現在フリーター・無職の方でもOKです。</p>
             </div>
-            <div id="Case1Reward" class="w-full m-auto limit-3">
-              <p id="Case1RewardWord" class="lg:pt-5 p-3 text-center">報酬：紹介フィーの２０％</p>
-            </div>
-          </div>
-          <div id="matterCase2" class="border m-5 h-60 shadow-md lg:m-0 lg:w-64 w-72 m-auto mb-8 lg:h-64 rounded-3xl lg:ml-12 lg:mr-6">
-            <div id="Case2" class="border-b border-dashed w-full m-auto limit-1">
-              <h1 id="Case2Title" class="text-center font-bold p-5">補助金・助成金の申請サポート</h1>
-            </div>
-            <div id="Case2Content" class=" border-b border-dashed w-full m-auto limit-2">
-              <p class="Case2ContentWord matter-detail" class="CaseContentWord p-6">補助金・助成金の申請のサポートをさせていただける方を紹介してください。</p>
-            </div>
-            <div id="Case2Reward limit-3">
-              <p id="Case2RewardWord">報酬：申請サポート手数料の２０％</p>
-            </div>
-          </div>
-
-          <div id="matterCase3" class=" border m-5 h-60 shadow-md lg:m-0 lg:w-64 w-72 m-auto mb-8 lg:h-64 rounded-3xl lg:ml-6 lg:mr-12">
-            <div id="Case3" class="border-b border-dashed w-full m-auto limit-1">
-              <h1 id="Case3Title" class="text-center font-bold p-5 matter-detail">賃貸物件紹介</h1>
-            </div>
-            <div id="Case3Content" class="border-b border-dashed w-full m-auto limit-2">
-              <p class="Case3ContentWord matter-detail" class="CaseContentWord p-6 matter-detail">引越しする方をご紹介ください。 ネットに載ってる物件や未公開物件を安くご案内します。</p>
-            </div>
-            <div id="Case3Reward" class="w-9/12 m-auto limit-3">
-              <p id="Case3RewardWord" class="lg:pt-5 pt-3 text-center">報酬：家賃の５０％</p>
-            </div>
-          </div>
-          <div id="matterCase4" class="border m-5 h-60 shadow-md lg:m-0 lg:w-64 w-72 m-auto mb-8 lg:h-64 rounded-3xl">
-            <div id="Case4" class="border-b border-dashed w-full m-auto limit-1">
-              <h1 id="Case4Title" class="text-center font-bold p-5">火災保険申請サポート</h1>
-            </div>
-            <div id="Case4Content" class="border-b border-dashed w-full m-auto limit-2">
-              <p class="Case4ContentWord matter-detail" class=" py-9 px-6 matter-detail">プロによる物件の無料調査を受けたいお客様をご紹介ください。</p>
-            </div>
-            <div id="Case4Reward" class="w-10/12 m-auto limit-3">
-              <p id="Case4RewardWord" class="lg:pt-5 pt-3 text-center">報酬：１件あたり約１０万円</p>
-            </div>
-          </div>
         </div>
-        <div class="SeeMores">
-        <div id="SeeMoreWrap" class="lg:pt-8">
-          <%= link_to "案件をもっとみる" ,"/posts/index", class:"SeeMore" %>
+        <div class="Item">
+            <div class="Item-top">
+              <i class="fas fa-coins"></i>
+              <p class="Item-title">補助金・助成金の申請サポート</p><div class="border"></div>
+            </div>
+            <div class="Item-bottom">
+              <p class="Item-reward">報酬：申請サポート手数料の20%</p>
+              <p class="Item-content">補助金・助成金の申請のサポートをさせていただける方を紹介してください。</p>
+            </div>
         </div>
+        <div class="Item">
+            <div class="Item-top">
+              <i class="fas fa-building"></i>
+              <p class="Item-title">賃貸物件紹介</p><div class="border"></div>
+            </div>
+            <div class="Item-bottom">
+              <p class="Item-reward">報酬：家賃の50%</p>
+              <p class="Item-content">引越しする方をご紹介ください。 ネットに載ってる物件や未公開物件を安くご案内します。</p>
+            </div>
         </div>
+        <div class="Item">
+            <div class="Item-top">
+              <i class="far fa-file-alt"></i>
+              <p class="Item-title">火災保険申請サポート</p><div class="border"></div>
+            </div>
+            <div class="Item-bottom">
+              <p class="Item-reward">報酬：約10万円/件</p>
+              <p class="Item-content">プロによる物件の無料調査を受けたいお客様をご紹介ください。</p>
+            </div>
+        </div>
+        
+      </div>
+      <div class="SeeMore">
+        <%= link_to "案件をもっとみる", "/posts/index" , class: "btn-more" %></div>
+      </div>
       </section>
+
+
+
+
+
+
+
+
+
+
+        
       <section id="RewardWrap" class="text-gray-700">
         <h1 id="RewardFlow" class="text-yellow-500 lg:font-light font-bold lg:text-4xl text-2xl text-center lg:pt-20 pb-5 ">報酬獲得までの流れ</h1>
         <div class="process">
