@@ -1,16 +1,15 @@
-<body class="devise">
+<body class="introduction-new">
 <%= render '/layouts/header' %>
+  <div class="sign-up-main ">
 
-<div class="login-page">
-<div class="newQuestion">
-<div class="formRegistration">
   
-      <h1>お問い合わせ</h1>
+      <h2>お問い合わせ</h2>
+      <p>1人1人に丁寧な対応を心がけております。</p>
+      <p>まだ会員でない方もこちらからお問い合わせください</p>
 
-      <form class="login-form">
+  
       <%= render 'form', question: @question %>
-      </form>
-
   </div>
-</div>
-</div>
+
+<%= render '/layouts/footer' %>
+</body>

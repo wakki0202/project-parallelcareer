@@ -1,0 +1,63 @@
+<div class="bg_pattern Paper_v2">
+<p id="notice"><%= notice %></p>
+
+
+<% @work.images.each do |image| %>
+<%= image_tag asset_path(image.to_s) %>
+<% end %>
+
+
+<p>
+  <strong>案件名:</strong>
+  <%= @work.title %>
+</p>
+
+<p>
+  <strong>企業名:</strong>
+  <%= @work.company %>
+</p>
+
+<div class="post-contents">
+  <strong>事業者URL</strong><br>
+  <%= auto_link(simple_format(@work.link), html: {target: '_blank'}) %>
+</div>
+
+<p>
+  <strong>報酬:</strong>
+  <%= @work.reward %>
+</p>
+
+<p>
+  <strong>仕事内容:</strong>
+  <%= @work.pcontent %>
+</p>
+
+<p>
+  <strong>報酬支払日:</strong>
+  <%= @work.rday %>
+</p>
+
+<p>
+  <strong>報酬内容:</strong>
+  <%= @work.rcontent %>
+</p>
+
+<p>
+  <strong>対象地域:</strong>
+  <%= @work.area %>
+</p>
+
+<p>
+  <strong>アピールポイント:</strong>
+  <%= @work.appeal %>
+</p>
+
+<p>
+  <strong>案件状態:</strong>
+  <%= @work.status %>
+</p>
+
+<button><%= link_to '◀トップへ戻る', works_path %></button>
+<button><%= link_to '削除する', @work, method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
+
+</div>

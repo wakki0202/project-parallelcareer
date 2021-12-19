@@ -3,17 +3,29 @@ class ApplicationController < ActionController::Base
 
   private
     def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:username,:phonenumber,:bank,:branch,:kinds,:banknumber])
-
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:username,:phonenumber,:bank,:branch,:kinds,:banknumber,:referrer_id])
       devise_parameter_sanitizer.permit(:invite, keys: [:email, :username, :phonenumber])
       devise_parameter_sanitizer.permit(:accept_invitation, keys: [:password, :password_confirmation, :username, :phonenumber])
     end
 
-
   def after_sign_in_path_for(resource)
-    progresses_index_path
+    case resource
+    when User
+      tops_index_path
+    when Admin
+      questions_path
+    when Provider
+      works_path
+
+    end
   end
-  def after_sign_out_path_for(resource)
-    tops_index_path
-  end
+
+  #def authenticate_any!
+  #if admin_signed_in?
+      #true
+  #else
+      #authenticate_provider!
+  #end
+  #end
+  
 end

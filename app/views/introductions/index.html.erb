@@ -1,29 +1,34 @@
 
 
 
-<div class="bg_pattern Paper_v2"></div>
-      
-    <div class="introduction-index w-full flex pt-24">
-      <div id="sidebar" class="side w-3/12 ml-20 text-center">
-      <%= render '/providers/side' %>
-      </div>
-      
-      <div class="introductions">
-      <table class="border border-black w-11/12 m-auto">
+<div class="provider-index">
+  <div class="side">
+      <%= render '/works/side' %>
+    </div>
+ 
+      <div class="providers">
+      <table class="table ">
       
         <h1 class="text-center font-bold text-2xl pb-6">口コミ一覧</h1>
-      <tr class="border"><th class="border border-black">案件名</th><th class="border border-black">紹介者名</th><th class="border border-black">お客様名</th><th class="border border-black">受信日時</th><th class="border border-black">進捗状況</th><th class="border border-black"></th></tr>
+      <tr class="border text-center"><th>案件名</th><th class="border border-black">紹介者名</th><th class="border border-black">お客様名</th><th class="border border-black">受信日時</th><th class="border border-black">進捗状況</th><th class="border border-black"></th></tr>
       
       
       <% @introductions.each do |introduction| %> 
-      <tr class="border  text-center"><td class="border border-black"><%= introduction.provider.title %></td> <td class="border border-black"><%= introduction.user.username %></td><td class="border border-black"><%= introduction.name %></td><td class="border border-black"><%= l introduction.created_at %></td>
+      <tr class="border">
+      <td class="border border-black"><%= introduction.work.title %></td> 
+      <td class="border border-black"><%= introduction.user.username %></td>
+      <td class="border border-black"><%= introduction.name %></td>
+      <td class=""><%= l introduction.created_at %></td>
       <% if introduction.step == nil %>
         <td class="border border-black">口コミ完了</td>
         <% else %>
         <td class="border border-black"><%= introduction.step %></td>
         <% end %>
-        <td class="border border-black"><a href="<%= introduction.id %>" class="introductionlink">詳細</a></td></tr>
+        <td class="text-white"><a href="<%= introduction.id %>" class="btn text-white white-50">詳細</a></td></tr>
       <% end %>
   
       
       </table>
+
+</div>
+    

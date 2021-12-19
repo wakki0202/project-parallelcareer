@@ -1,9 +1,8 @@
 class Provider < ApplicationRecord
-  has_many :introductions, dependent: :destroy
-  accepts_nested_attributes_for :introductions, allow_destroy: true
-  has_many :users, through: :introductions
-  has_many :details
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
 
-   mount_uploaders :images, ImgUploader
-  serialize :images, JSON # SQLiteを使っているときはこの列を追記
+        has_many :works
 end

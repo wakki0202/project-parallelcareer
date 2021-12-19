@@ -1,48 +1,49 @@
-<%= render '/layouts/header' %>
 
- <h1>こんにちは<%= current_user.username %>さん</h1>
+<%= render '/layouts/header' %>
+<div class="bg_pattern Paper_v2"> 
     <div class="introduction-index w-full flex pt-24">
       <div class="introductions">
+
+
+        <table class="border border-black w-11/12 m-auto">
+          <h1 class="text-center font-bold text-2xl pb-6 main_title main_title_info">パラキャリからのお知らせ</h1>
+          <tr class="border"><th class="border border-black info_title">タイトル</th></tr>
+        
+          <% @news.each do |news| %> 
+            <tr class="border  text-center infos">
+              <td class="border border-black">
+              <a href="/news/<%= news.id %>"><%= news.title %></a>
+              </td>
+            </tr>
+          <% end %>
+        
+        </table>
+
+
+
       <table class="border border-black w-11/12 m-auto">
 
-       <h1 class="text-center font-bold text-2xl pb-6 main_title">進捗状況確認表</h1>
-       <tr class="border"><th class="border border-black posts_name">案件名</th><th class="border border-black progressing">進捗状況</th></tr>
+        <h1 class="text-center font-bold text-2xl pb-6 main_title">口コミの進捗状況確認表</h1>
+         <tr class="border"><th class="border border-black posts_name">案件名</th><th class="border border-black progressing">進捗状況</th></tr>
         <% @introductions.each do |introduction| %> 
-       <% if introduction.user_id == current_user.id %>
-      <tr class="border  text-center posts">
-        <td class="border border-black post_title_th">
-          <a href="/progresses/<%= introduction.id %>" class="introductionlink">
-          <%= introduction.provider.title %>
-          </a>
-        </td>
-      <td class="post_progress_th"><%= introduction.step %></td></tr>
-
-      
-        <h1 class="text-center font-bold text-2xl pb-6">お知らせ</h1>
-        <tr class="border"><th class="border border-black">タイトル</th></tr>
-        
-        <% @news.each do |news| %> 
-        <tr class="border  text-center"><td class="toTop"><a href="/news/<%= news.id %>"><%= news.title %></a></td></tr>
-        <% end %>
-        
-          
-        <tr class="border  text-center"><td class="border border-black"></td></tr>
-      
-
-      </table>
-     
-
-
-      <table class="border border-black w-11/12 m-auto">
-        <h1 class="text-center font-bold text-2xl pb-6 main_title main_title_info">お知らせ</h1>
-        <tr class="border"><th class="border border-black info_title">タイトル</th></tr>
-        <% @news.each do |news| %> 
-        <tr class="border  text-center infos">
-          <td class="border border-black">
-           <a href="/news/<%= news.id %>"><%= news.title %></a>
+        <% if introduction.user_id == current_user.id %>
+        <tr class="border  text-center posts">
+          <td class="border border-black post_title_th">
+            <a href="/progresses/<%= introduction.id %>" class="introductionlink"><%= introduction.work.title %></a>
           </td>
+          <td class="post_progress_th"><%= introduction.step %></td>
         </tr>
         <% end %>
+        <% end %>
       </table>
-      <li class="leave"><%= link_to '退会する', "/users", method: :delete, data: { confirm: '本当に退会しますか?' } %></li>
 
+
+    
+      <%= render '/layouts/footer' %>
+      
+
+     
+
+    </div>
+  </div>
+</div>

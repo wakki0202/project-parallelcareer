@@ -5,6 +5,7 @@
 
   <body>
   <header>
+  <p class="notice"><%= notice %></p>
   <%= render '/layouts/header' %>
   </header>
 
@@ -30,12 +31,12 @@
         <div class="worriesWrap">
           <div class="pictureWorries">
 
-          <%= image_tag "Questions-rafiki (1).png" ,class:"pictureWorries " %>
+          <%= image_tag "Questions-amico.png" ,class:"pictureWorries " %>
 
           </div>
-          <div>
+          <div class='arrow_box'>
             <ul class="specificWorries text-yellow-500 lg:font-light font-normal lg:text-2xl  lg:ml-16 lg:pt-8 negative-word">
-              <li class="specificWorries1 text-shadow-md negative-word">ネットで稼ごうと思っても、</li>
+              <li class="specificWorries1 text-shadow-md negative-word">ネットで稼ぎたいけど</li>
               <li class="specificWorries2 lg:mb-8 lg:ml-20 mb-3 negative-word">特にスキルは持ってないし...</li>
               <li class="specificWorries3 negative-word">あまり時間はかけられないので、</li>
               <li class="specificWorries4 lg:mb-8 lg:ml-20 mb-3 negative-word">手軽にできるものがいいけど...</li>
@@ -49,7 +50,8 @@
       <section class="solution bg-white mb-20">
         <div class="solutionPicture lg:mr-auto lg:ml-auto lg:w-40 w-20 m-auto pb-10">
 
-        <%= image_tag "center-mark.png" ,class:"m-auto" %>
+         <div class="arrow1">
+        </div>
 
         </div>
         <h1 class="solutionWord mb-5 text-yellow-500 text-center lg:font-light font-bold text-xl lg:text-2xl lg:text-4xl lg:mb-0 lg:mt-24">そのお悩み、パラキャリで解決できます！</h1>
@@ -73,57 +75,49 @@
           </div>
         </div>
         <div id="pcStyle" class="hidden lg:block text-center ">
-          <h2 class="otherMerit text-yellow-500 font-light lg:text-3xl lg:pb-3">ほかにもメリットたくさん！</h2>
-          <div class="otherMeritWrap text-left inline-block">
-            <ul class="meritList lg:ml-1 text-gray-700">
-              <li class="meritList1 lg:mt-5 lg:text-xl other-merit">・スマホ一台で始められる！</li>
-              <li class="meritList2 lg:mt-4 lg:text-xl other-merit">・豊富な案件と信頼できる報酬獲得実績！</li>
-              <li class="meritList3 lg:mt-4 lg:mb-16 lg:text-xl other-merit">・紹介した人の状況をリアルタイムで確認できる！</li>
-            </ul>
+          <h2 class="otherMerit text-yellow-500 font-light lg:text-3xl lg:pb-3">ほかにもメリットがたくさん！</h2>
+        </div>
+    
+      </section>
+
+      <section class="smartphoneOnly">
+      <div class="smartphoneContents">
+        <div class="herf-left">
+          <h1>スマホ一台で始められる！</h1>
+          <p>アフィリエイトをするためのメディア、サイトの登録の登録が一切不要です。必要事項を登録すれば、２分ですぐに登録できるのでスマホ一台で簡単に始められます！</p>
+        </div>
+        <div class="herf-right">
+          <div class="picture">
+          <%= image_tag "Phone customization-bro.png" ,class:"pictureIphone" %>
           </div>
         </div>
-        <div id="smartStyle" class="lg:hidden text-center  mx-5 mt-40 mb-10 py-7">
-          <h2 class="text-2xl pb-7">パラキャリには<br>ほかにもメリットたくさん！</h2>
-          <div class="text-left inline-block">
-            <div class="">
-              <div class="flex">
-                <p></p>
-                <p class="my-auto ml-3 text-xl">スマホ一台で始められる！</p>
-              </div>
-              <div class="flex mt-5">
-                <p></p>
-                <p class="my-auto ml-3 text-xl">豊富な案件と<br>信頼できる報酬獲得実績！</p>
-              </div>
-              <div class="flex mt-5">
-                <p></p>
-                <p class="my-auto ml-3 text-xl ">紹介した人の状況を<br>リアルタイムで確認できる！</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
       </section>
 
       <section class="noRisk bg-yellow-50 mb-20 pb-12">
-        <h1 class="noRiskWord text-red-400 lg:font-light font-bold text-center lg:text-4xl lg:pt-20 lg:pb-10 pt-10 text-2xl ">ノーリスクでOK!</h1>
         <div class="noRiskWrap lg:flex lg:w-7/12 lg:m-auto">
+
+          <div class="noRiskPicture2 lg:w-80 lg:h-80 lg:block hidden   m-auto">
+
+          <%= image_tag "Young and happy-bro (1).png" ,class:"noRiskPicture2" %>
+
+          </div>
           <div class="noRiskPosition lg:w-6/12 pt-10">
-            <h1 class="zeroRisk text-yellow-500 lg:text-2xl lg:block hidden font-bold text-center pb-3">顧客リスクがゼロ</h1>
+            <h1 class="zeroRisk text-yellow-500 lg:text-2xl lg:block hidden font-bold text-center pb-3">ノーリスクでOK!</h1>
 
             <div class="noRiskMessage 2xl:w-6/12 xl:w-10/12 lg:m-auto w-10/12 m-auto leading-loose lg:pb-0 pb-10  font-normal text-gray-600">
             案件紹介サービスは顧客側が課金して成果が発生するものがほとんどですが、パラキャリでは金銭的なリスクがなく利用できる案件も多数取り扱っているため、気軽に紹介できます。また案件掲載主は全て法人に限定しているので、報酬支払いも安心！
             </div>
           </div>
 
-          <div class="noRiskPicture1 lg:hidden block w-60 m-auto">
+          <div class="noRiskPicture1 lg:w-80 lg:h-80 lg:block hidden   m-auto">
 
-            <!--imagetags-->
-
-            </div>
-          <div class="noRiskPicture2 lg:w-80 lg:h-80 lg:block hidden   m-auto">
-
-          <%= image_tag "Young and happy-bro (1).png" ,class:"noRiskPicture2" %>
+          <%= image_tag "Young and happy-bro (1).png" ,class:"noRiskPicture1" %>
 
           </div>
+
+        
+          
         </div>
       </section>
       
@@ -188,32 +182,31 @@
         
       <section id="RewardWrap" class="text-gray-700">
         <h1 id="RewardFlow" class="text-yellow-500 lg:font-light font-bold lg:text-4xl text-2xl text-center lg:pt-20 pb-5 ">報酬獲得までの流れ</h1>
-        <div class="process">
-         <%= image_tag "process.png" ,class:"process" %>
+       <div class="chart">
+          <ol class="progress-bar">
+            <li class="is-active"><span>step1.会員登録</span></li>  
+            <li class="is-active"><span>step2.知人に案件紹介</span></li>  
+            <li class="is-active"><span>step3.口コミ！</span></li>
+            <li class="is-active"><span>step4.報酬発生！</span></li>  
+          </ol>
         </div>
         <div id="FlowchartWrap" class="lg:flex justify-center lg lg:mb-8">
           <div id="Step1" class="border lg:shadow-md lg:w-64 lg:h-36 lg:m-0 w-72  m-auto  rounded-3xl lg:mb-10">
             <h1 id="Step1Title" class="text-center font-bold pt-5">STEP.1　会員登録</h1>
             <div id="Step1Content" class="w-11/12  m-auto lg:pb-0 pb-8">
-                <p>会員登録して紹介したい案件を見つける
-                ※その際にパラキャリ公式LINEにも登録！</p>
+                <p>会員登録して紹介したい案件を見つける。
+                 ※その際にパラキャリ公式LINEにも登録！</p>
             </div>
           </div>
-          <div class="lg:hidden  w-20 m-auto block py-3">
-
-          <!--imagetags-->
-
+          <div class="arrow1">
           </div>
           <div id="Step2" class="border lg:shadow-md lg:w-64 lg:h-36 lg:m-0 w-72 m-auto rounded-3xl lg:ml-12 lg:mr-6">
-              <h1 id="Step2Title" class="text-center font-bold pt-5">STEP.2　知人に紹介</h1>
+              <h1 id="Step2Title" class="text-center font-bold pt-5">STEP.2　知人に案件紹介</h1>
             <div id="Step2Content" class="w-11/12 m-auto lg:pb-0 pb-8">
               <p>知人や友人に紹介。知人が詳細をご希望されたら掲載主から連絡が入ると伝える</p>
             </div>
           </div>
-          <div class="lg:hidden  w-20 m-auto block py-3">
-
-          <!--imagetags-->
-
+          <div class="arrow1">
           </div>
           <div id="Step3" class="border lg:shadow-md lg:w-64 lg:h-36 lg:m-0 w-72 m-auto rounded-3xl lg:ml-6 lg:mr-12">
             <h1 id="Step3Title" class="text-center font-bold pt-5">STEP.3　情報入力</h1>
@@ -221,10 +214,7 @@
               <p>パラキャリに顧客口コミ情報(お名前、電話番号、口コミ内容)を入力</p>
             </div>
           </div>
-          <div class="lg:hidden  w-20 m-auto block py-3">
-
-          <!--imagetags-->
-
+          <div class="arrow1">
           </div>
           <div id="Step4" class="border lg:shadow-md lg:w-64 lg:h-36 lg:m-0 w-72 m-auto  rounded-3xl">
             <h1 id="Step4Title" class="text-center font-bold pt-5">STEP.4　報酬発生</h1>
@@ -248,7 +238,7 @@
           </div>
           <div id="VoiciesWrap1" class="border shadow-md text-sm lg:w-9/12 lg:h-36 w-10/12 h-64 m-auto  rounded-3xl leading-relaxed">
             <div id="SpecificVoice1" class=" w-11/12 m-auto 2xl:pt-9 xl:pt-3 pt-4">
-            同僚に教えてもらってパラキャリに登録しました。この不安定な世の中、会社の収入だけに頼るのはリスクだと思い、今までに様々な副業に挑戦しました。ただ会社の仕事はかなりハードで、ヘトヘトで家に帰ってから副業をするのはとても大変で結局今まで１円も稼ぐことができませんでした。しかしこのサイトはお客様への説明などの手間のかかることは不要で、見込み顧客を紹介するだけであとは全て掲載主の方が行ってくれるので、忙しい私でも初月から１０万円以上稼ぐことができました。
+            同僚に教えてもらってパラキャリに登録しました。このサイトはお客様への説明などの手間のかかることは不要で、見込み顧客を紹介するだけであとは全て掲載主の方が行ってくれるので、忙しい私でも初月から１０万円以上稼ぐことができました。
             </div>
           </div>
         </div>
@@ -295,6 +285,7 @@
           <ul class="A A1">
             <li>A.ご自身で案件の内容を活用いただき、サービスをご利用いただくことは可能です。また、その際に報酬も発生致します。そのため、まずはご自身で使えるサービスは使って見て、本当に良かったらお知り合いにご紹介いただくことをオススメしております。</li>
           </ul>
+
         </div>
 
         <div class="FAQ-item">
@@ -308,6 +299,7 @@
           </ul>
         </div>
 
+
         
         <div class="FAQ-item">
           <label for="Q3" class="Q-title">
@@ -318,6 +310,7 @@
           <ul class="A A3">
             <li>A.未成年のご利用はご遠慮いただいています。</li>
           </ul>
+
         </div>
 
         <div class="FAQ-item">
@@ -330,6 +323,7 @@
             <li>A.報酬はパラキャリから支払われます。クライアント（掲載主）から口座に振り込まれることや、それによる金銭的トラブル等のリスクはございませんのでご安心ください。</li>
           </ul>
         </div>
+
 
         <div class="FAQ-item">
           <label for="Q5" class="Q-title">
