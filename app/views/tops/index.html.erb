@@ -1,5 +1,8 @@
 <!--以下をコピーして使用してください-->
 
+
+
+
   <body>
   <header>
   <p class="notice"><%= notice %></p>
@@ -167,6 +170,16 @@
       </div>
       </section>
 
+
+
+
+
+
+
+
+
+
+        
       <section id="RewardWrap" class="text-gray-700">
         <h1 id="RewardFlow" class="text-yellow-500 lg:font-light font-bold lg:text-4xl text-2xl text-center lg:pt-20 pb-5 ">報酬獲得までの流れ</h1>
        <div class="chart">
@@ -211,11 +224,58 @@
           </div>
         </div>
       </section>
-      
-      <section>
-      <div class="subtitle">FAQ</div>
+
+      <section id="Voicies" class="2xl:pb-16 xl:pb-6 text-gray-700">
+        <h1 id="VoiceMessage" class="text-yellow-500 lg:font-light font-bold text-4xl  text-center lg:pt-20 pt-24 lg:pb-10 pb-3 ">ご利用者の声</h1>
+        <div class="Voice1 lg:flex lg:w-9/12 m-auto pt-10">
+          <div class="Voice2 lg:w-3/12 h-36 mb-10">
+            <div class="Voice3 w-36 h-36 m-auto ">
+              <div class="Voice4 w-24 h-24 m-auto lg:pt-3">
+               <%= image_tag "man-first.png",class:"Voice4" %>
+                <p class="Voice5 text-center">27歳 男性</p>
+              </div>
+            </div>
+          </div>
+          <div id="VoiciesWrap1" class="border shadow-md text-sm lg:w-9/12 lg:h-36 w-10/12 h-64 m-auto  rounded-3xl leading-relaxed">
+            <div id="SpecificVoice1" class=" w-11/12 m-auto 2xl:pt-9 xl:pt-3 pt-4">
+            同僚に教えてもらってパラキャリに登録しました。このサイトはお客様への説明などの手間のかかることは不要で、見込み顧客を紹介するだけであとは全て掲載主の方が行ってくれるので、忙しい私でも初月から１０万円以上稼ぐことができました。
+            </div>
+          </div>
+        </div>
+        <div class="Voice6 lg:flex lg:w-9/12 m-auto lg:pt-10 pt-20">
+          <div class="Voice2 lg:w-3/12 h-36 mb-10">
+            <div class="Voice3 w-36 h-36 m-auto ">
+              <div class="Voice7 w-32 h-32 m-auto lg:">
+                 <%= image_tag "woman-first.png",class:"Voice7" %>
+                <p class="Voice5 text-center">34歳 女性</p>
+              </div>
+            </div>
+          </div>
+          <div id="VoiciesWrap2" class="border shadow-md text-sm lg:w-9/12 lg:h-36 w-10/12 h-40 m-auto rounded-3xl leading-relaxed ">
+            <div id="SpecificVoice2" class=" w-11/12 m-auto 2xl:pt-12 xl:pt-8 pt-3">
+            コロナでパートの収入が減って外出もできない中で不安な毎日でしたが、パラキャリで副業することで金銭的な余裕が生まれました。今ではパートを卒業して、パラキャリだけで自宅にいながら収入を得ることができるので、子供との時間を今まで以上にとることができて心にも余裕が生まれました。
+            </div>
+          </div>
+        </div>
+        <div class="Voice6 lg:flex lg:w-9/12 m-auto pt-10 pb-20">
+          <div class="Voice2 lg:w-3/12 h-36 mb-10">
+            <div class="Voice3 w-36 h-36 m-auto ">
+              <div class="Voice8 w-28 h-28 m-auto lg:">
+                <%= image_tag "man-second.png",class:"Voice7" %>
+                <p class="Voice5 text-center">62歳 男性</p>
+              </div>
+            </div>
+          </div>
+          <div id="VoiciesWrap3" class="border shadow-md text-sm lg:w-9/12 lg:h-36 w-10/12 h-40 m-auto  rounded-3xl leading-relaxed">
+            <div  id="SpecificVoice3"  class=" w-11/12 m-auto pt-3 xl:pt-8 2xl:pt-12">
+            セカンドライフを見据えてもう少し収入を増やしたいと思ってましたが、特別な技術もパソコンスキルもなく副業は難しいと思っておりました。ただパラキャリはそんな私でも凄く簡単に使えました。困っている知人を紹介するだけで感謝もされるし収入もしっかりと稼げるので遣り甲斐を感じております。
+            </div>
+          </div>
+        </div>
+      </section>
+
+      # <section id="faq" class="text-gray-700 pt-20">
       <div class="FAQ">
-        
         <div class="FAQ-item">
           <label for="Q1" class="Q-title">
             <div>Q.自分の案件でも報酬は発生しますか？</div>
@@ -225,8 +285,9 @@
           <ul class="A A1">
             <li>A.ご自身で案件の内容を活用いただき、サービスをご利用いただくことは可能です。また、その際に報酬も発生致します。そのため、まずはご自身で使えるサービスは使って見て、本当に良かったらお知り合いにご紹介いただくことをオススメしております。</li>
           </ul>
+
         </div>
-        
+
         <div class="FAQ-item">
           <label for="Q2" class="Q-title">
             <div>Q.匿名でも使えますか？</div>
@@ -237,6 +298,8 @@
             <li>A.匿名でのご利用はご遠慮いただいています。</li>
           </ul>
         </div>
+
+
         
         <div class="FAQ-item">
           <label for="Q3" class="Q-title">
@@ -247,6 +310,7 @@
           <ul class="A A3">
             <li>A.未成年のご利用はご遠慮いただいています。</li>
           </ul>
+
         </div>
 
         <div class="FAQ-item">
@@ -259,7 +323,8 @@
             <li>A.報酬はパラキャリから支払われます。クライアント（掲載主）から口座に振り込まれることや、それによる金銭的トラブル等のリスクはございませんのでご安心ください。</li>
           </ul>
         </div>
-    
+
+
         <div class="FAQ-item">
           <label for="Q5" class="Q-title">
             <div>Q.過去の報酬の支払い実績はありますか？どれくらい稼げますか？</div>
@@ -270,37 +335,10 @@
             <li>A.累計これまでに１００人以上の方にお支払いしています。中には月収で１００万円以上を達成された方も多くいらっしゃいます。</li>
           </ul>
         </div>
-      </div>
-      </section>
 
-      <section>
-      <div class="subtitle">ユーザーの声</div>
-      <div class="Voices">
-        <div class="Voice">
-          <div class="Voice-user">
-            <img src="../../assets/woman-second.png" class="Voice-img">
-            <div class="user-info">34歳 女性</div>
-          </div>
-          <div class="user-comment"><div>コロナでパートの収入が減って外出もできない中で不安な毎日でしたが、パラキャリで副業することで<span>金銭的な余裕</span>が生まれました。今ではパートを卒業して、パラキャリだけで自宅にいながら収入を得ることができるので、子供との時間を今まで以上にとることができて心にも余裕が生まれました。</div></div>
-        </div>
-        <div class="Voice-border"></div>
-        <div class="Voice">
-          <div class="Voice-user">
-            <img src="../../assets/man-second.png" class="Voice-img">
-            <div class="user-info">62歳 男性</div>
-          </div>
-          <div class="user-comment"><div>セカンドライフを見据えてもう少し収入を増やしたいと思ってましたが、特別な技術もパソコンスキルもなく副業は難しいと思っておりました。ただパラキャリはそんな私でも凄く<span>簡単に</span>使えました。困っている知人を紹介するだけで感謝もされるし収入もしっかりと稼げるので遣り甲斐を感じております。</div></div>
-        </div>
-        <div class="Voice-border"></div>
-        <div class="Voice">
-          <div class="Voice-user">
-            <img src="../../assets/man-first.png" class="Voice-img">
-            <div class="user-info">27歳 男性</div>
-          </div>
-          <div class="user-comment"><div>同僚に教えてもらってパラキャリに登録しました。この不安定な世の中、会社の収入だけに頼るのはリスクだと思い、今までに様々な副業に挑戦しました。ただ会社の仕事はかなりハードで、ヘトヘトで家に帰ってから副業をするのはとても大変で結局今まで１円も稼ぐことができませんでした。しかしこのサイトはお客様への説明などの手間のかかることは不要で、見込み顧客を紹介するだけであとは全て掲載主の方が行ってくれるので、忙しい私でも<span>初月から１０万円以上</span>稼ぐことができました。</div></div>
-        </div>
+
+
       </div>
-      </section>
 
       <section id="JoinFree" class="bg-blue-100 mt-10 mb-10">
         <div id="MemberWrap" class="lg:py-16 py-8">
