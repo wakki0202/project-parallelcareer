@@ -1,6 +1,6 @@
 
 <%= render '/layouts/header' %>
-<div class="bg_pattern Paper_v2"> 
+
     <div class="introduction-index w-full flex pt-24">
       <div class="introductions">
 
@@ -31,7 +31,13 @@
           <td class="border border-black post_title_th">
             <a href="/progresses/<%= introduction.id %>" class="introductionlink"><%= introduction.work.title %></a>
           </td>
-          <td class="post_progress_th"><%= introduction.step %></td>
+          <td class="post_progress_th">
+            <% if introduction.step == nil %>
+            口コミ完了
+            <% else %>
+            <%= introduction.step %>
+            <% end %>
+          </td>
         </tr>
         <% end %>
         <% end %>
@@ -45,5 +51,5 @@
      
 
     </div>
-  </div>
+
 </div>

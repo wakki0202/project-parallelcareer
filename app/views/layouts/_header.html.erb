@@ -13,13 +13,15 @@
                           <ul>
                           <li class=""><%= link_to "　案件一覧" ,"/posts/index" %></li>
                           <li class=""><%= link_to "　LINEでお問い合わせ" ,"https://page.line.me/892qodsr?openQrModal=true" %></li>
+                          <li class="nav__item"><%= link_to "　友人を招待する" ,"/users/invitation/new" %></li>   
                       <% if admin_signed_in?  %> 
                           <li class="nav__item"><%= link_to "　管理者ページ" ,"/works" %></li>
                       <% elsif provider_signed_in?  %>
                           <li class="nav__item"><%= link_to "　事業者ページ" ,"/works" %></li>
                       <% elsif user_signed_in?  %>
-                          <li class="nav__item"><%= link_to "　友人を招待する" ,"/users/invitation/new" %></li>          
-                          <li class="nav__item"><%= link_to "　マイページ" ,"/progresses/index" %></li>
+                                 
+                          <li class="nav__item"><%= link_to "　ユーザーページ" ,"/progresses/index" %></li>
+                          <li class="nav__item"><%= link_to "　ユーザー設定" ,"/progresses/index" %></li>
                           <li class="nav__item"><%= link_to '　ログアウト' , destroy_user_session_path, method: :delete %></li>
                         <% else %>
                           <li class=""><%= link_to "　ログイン" ,"/users/sign_in" %></li>
@@ -33,12 +35,13 @@
                       <ul class="nav__wrapper">
                         <li class="nav__item h-list"><%= link_to "案件一覧" ,"/posts/index" %></li>
                         <li class="nav__item h-contact"><%= link_to "LINEでお問い合わせ" ,"https://page.line.me/892qodsr?openQrModal=true" %></li>
+                        <li class="nav__item h-invite"><%= link_to "友人を招待する" ,"/users/invitation/new" %></li>
                       <% if admin_signed_in?  %> 
                         <li class="nav__item h-mypage"><%= link_to "管理者ページ" ,"/questions" %></li>
                       <% elsif provider_signed_in?  %>
                         <li class="nav__item h-mypage"><%= link_to "事業者ページ" ,"/works" %></li>
                       <% elsif user_signed_in?  %>
-                        <li class="nav__item h-invite"><%= link_to "友人を招待する" ,"/users/invitation/new" %></li>
+                        
                         <li class="nav__item h-mypage"><%= link_to "マイページ" ,"/progresses/index" %></li>
                         <li class="nav__item h-logout"><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></li>
                       <% else %>
