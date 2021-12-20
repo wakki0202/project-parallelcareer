@@ -251,6 +251,7 @@
     color: rgba(0, 0, 0, 0.6);
   }
 
+
   input[type="checkbox"] {
     display: none;
   }
@@ -1095,6 +1096,7 @@
           display: block;
           font-weight: 700;
 
+
           text-align: center;
           --tw-text-opacity: 1;
           color: white;
@@ -1133,9 +1135,12 @@
           }
           .copyright {
             text-align: center;
+
           }
         }
       }
     }
+  }
+}
   }
 }
