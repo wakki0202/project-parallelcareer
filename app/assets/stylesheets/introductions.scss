@@ -9,11 +9,14 @@
 }
 
 .introduction-new{
-  background-image: linear-gradient(to left, var(--tw-gradient-stops));
-    --tw-gradient-from: #f87171;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(248, 113, 113, 0));
-    --tw-gradient-to: #f59e0b;
+
     margin-top: 58px ;
+    background-image: linear-gradient(to left, var(--tw-gradient-stops));
+    --tw-gradient-from: #fa4c4c;
+    --tw-gradient-stops: var(--tw-gradient-from),
+      var(--tw-gradient-to, rgba(248, 113, 113, 0));
+    --tw-gradient-to: #ffbd41;
+
 
 h2{
   font-size: 30px;
