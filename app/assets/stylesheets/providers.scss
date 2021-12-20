@@ -9,9 +9,21 @@
 
    .side{
       width: 20%;
+      height: 100%;
       background-color: rgb(37,45,51);
       padding-top: 100px;
+      padding-bottom: 400px;
+      padding-left: 40px;
       
+    .side-contents {
+      margin: 2.5rem;
+    }
+    .glyphicon {
+      color: white;
+    }
+    .nav-item {
+      margin-bottom: 5px;
+    }
 
       a {
       color: #fff; 
