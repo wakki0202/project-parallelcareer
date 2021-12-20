@@ -164,50 +164,51 @@
       </div>
       </section>
 
+      <section>
+        <div class="subtitle">ご利用の流れ</div>
+        <div class="reward-flow">
+          <div class="step-nums">
+            <div class="step-num">1</div>
+            <p class="reward-border"></p>
+            <div class="step-num">2</div>
+            <p class="reward-border"></p>
+            <div class="step-num">3</div>
+            <p class="reward-border"></p>
+            <div class="step-num">4</div>
+          </div>
 
-      <section id="RewardWrap" class="text-gray-700">
-        <h1 id="RewardFlow" class="text-yellow-500 lg:font-light font-bold lg:text-4xl text-2xl text-center lg:pt-20 pb-5 ">報酬獲得までの流れ</h1>
-       <div class="chart">
-          <ol class="progress-bar">
-            <li class="is-active"><span>step1.会員登録</span></li>  
-            <li class="is-active"><span>step2.知人に案件紹介</span></li>  
-            <li class="is-active"><span>step3.口コミ！</span></li>
-            <li class="is-active"><span>step4.報酬発生！</span></li>  
-          </ol>
-        </div>
-        <div id="FlowchartWrap" class="lg:flex justify-center lg lg:mb-8">
-          <div id="Step1" class="border lg:shadow-md lg:w-64 lg:h-36 lg:m-0 w-72  m-auto  rounded-3xl lg:mb-10">
-            <h1 id="Step1Title" class="text-center font-bold pt-5">STEP.1　会員登録</h1>
-            <div id="Step1Content" class="w-11/12  m-auto lg:pb-0 pb-8">
-                <p>会員登録して紹介したい案件を見つける。
-                 ※その際にパラキャリ公式LINEにも登録！</p>
+          <div class="step-items">
+            <div class="step-item">
+              <li class="step-title">会員登録</li>
+              <li class="step-content">
+                会員登録後、紹介したい案件を見つけます。
+                （その際、パラキャリ公式LINEにも登録）
+              </li>
             </div>
-          </div>
-          <div class="arrow1">
-          </div>
-          <div id="Step2" class="border lg:shadow-md lg:w-64 lg:h-36 lg:m-0 w-72 m-auto rounded-3xl lg:ml-12 lg:mr-6">
-              <h1 id="Step2Title" class="text-center font-bold pt-5">STEP.2　知人に案件紹介</h1>
-            <div id="Step2Content" class="w-11/12 m-auto lg:pb-0 pb-8">
-              <p>知人や友人に紹介。知人が詳細をご希望されたら掲載主から連絡が入ると伝える</p>
+            <div class="step-item">
+              <li class="step-title">知人に紹介</li>
+              <li class="step-content">
+              知人や友人に紹介します。知人が詳細をご希望されたら「掲載主から連絡が入る」と伝えます。
+              </li>
             </div>
-          </div>
-          <div class="arrow1">
-          </div>
-          <div id="Step3" class="border lg:shadow-md lg:w-64 lg:h-36 lg:m-0 w-72 m-auto rounded-3xl lg:ml-6 lg:mr-12">
-            <h1 id="Step3Title" class="text-center font-bold pt-5">STEP.3　情報入力</h1>
-            <div id="Step3Content" class="w-11/12 m-auto lg:pb-0 pb-8">
-              <p>パラキャリに顧客口コミ情報(お名前、電話番号、口コミ内容)を入力</p>
+            <div class="step-item">
+              <li class="step-title">入力作業</li>
+              <li class="step-content">
+              パラキャリに顧客情報を入力します。
+              </li>
             </div>
-          </div>
-          <div class="arrow1">
-          </div>
-          <div id="Step4" class="border lg:shadow-md lg:w-64 lg:h-36 lg:m-0 w-72 m-auto  rounded-3xl">
-            <h1 id="Step4Title" class="text-center font-bold pt-5">STEP.4　報酬発生</h1>
-            <div id="Step4Content" class="w-11/12 m-auto lg:pb-0 pb-8">
-              <p>掲載主から紹介先に連絡が入り、契約になれば報酬発生！</p>
+            <div class="step-item">
+              <li class="step-title">報酬発生</li>
+              <li class="step-content">
+              掲載主から紹介先に連絡が入り、契約になれば報酬発生します。
+              </li>
             </div>
           </div>
         </div>
+        <div class="reward-start">
+          <%= link_to "無料ではじめる" ,"/users/sign_up",class: "btn-reward" %></div>
+        </div>
+          
       </section>
       
       <section>

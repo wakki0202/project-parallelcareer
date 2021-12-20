@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     when User
       tops_index_path
     when Admin
-      questions_path
+      works_path
     when Provider
       works_path
 
