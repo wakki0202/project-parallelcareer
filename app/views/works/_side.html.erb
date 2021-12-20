@@ -2,13 +2,29 @@
  <% if admin_signed_in? ||  provider_signed_in? %>  
 <ul class="nav flex-column">
 
-        <li class="btn nav-item"><%= link_to "トップページに戻る","/tops/index" %></li>
+        <div class="side-contents back-toppage">
+          <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"><li class="btn nav-item"><%= link_to "トップページに戻る","/tops/index" %></li></span>
+        </div>
 
-        <li class="btn nav-item"><%= link_to "案件一覧","/works" %></li>
+        <div class="side-contents all-cases">
+          <span class="glyphicon glyphicon-list-alt" aria-hidden="true"><li class="btn nav-item"><%= link_to "案件一覧","/works" %></li></span>
+        </div>
 
-        <li class="btn nav-item"><%= link_to "案件詳細希望者","/details" %></li>
+        <div class="side-contents cases-hopeful">
+          <span class="glyphicon glyphicon-info-sign" aria-hidden="true"><li class="btn nav-item"><%= link_to "案件詳細希望者","/details" %></li></span>
+        </div>
 
-        <li class="btn nav-item"><a href="/introductions/index">口コミ一覧 <span class="badge badge-primary badge-pill"><%= @introductionnumber %></span></a></li>
+        <div class="side-contents all-user">
+          <span class="glyphicon glyphicon-user" aria-hidden="true"><li class="btn nav-item"><%= link_to "ユーザー一覧","#" %></li></span>
+        </div>
+
+        <div class="side-contents all-reviews">
+          <span class="glyphicon glyphicon-comment" aria-hidden="true"><li class="btn nav-item"><a href="/introductions/index">口コミ一覧 <span class="badge badge-primary badge-pill"><%= @introductionnumber %></span></a></li></span>        
+        </div>
+
+        <div class="side-contents all-notices">
+          <span class="glyphicon glyphicon-envelope" aria-hidden="true"><li class="btn nav-item"><a href="#">お知らせ一覧 <span class="badge badge-primary badge-pill"><%= @introductionnumber %></span></a></li></span>
+        </div>
 
         <% if admin_signed_in? %>  
 

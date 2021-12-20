@@ -56,12 +56,6 @@ ActiveRecord::Schema.define(version: 2021_12_16_001556) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "progresses", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "step"
-  end
-
   create_table "provider_files", force: :cascade do |t|
     t.string "file"
     t.datetime "created_at", precision: 6, null: false
