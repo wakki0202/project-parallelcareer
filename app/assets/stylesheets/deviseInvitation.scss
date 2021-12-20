@@ -1,11 +1,12 @@
 @media (min-width: 710px) {
+  
 .inviteArea{
   display:flex;
 
 
   .formSet{
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     margin-top: 30px;
   }
 }
@@ -17,18 +18,33 @@
   width: 80%;
   margin: 0 auto 100px;
   margin-top: 150px;
-  padding: 45px;
+  padding: 10px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   border-radius: 1rem;
 }
 
 .right{
-  width: 40%;
-  margin: 0 auto;
-
+  width: 50%;
+  border-radius: 1rem;
+  background-color: #ff7b2f;
+  padding: 60px;
   h3{
-   display: none;
+   font-weight: bold;
+   color: #fff;
+ }
+ .text-left{
+   padding-bottom: 8px;
+   color: #fff;
+ }
+ input{
+   background-color: #fff;
+ }
+ .button{
+   background-color: #fa4c4c;
+ }
+ .button a :hover{
+   background-color: #db4747;
  }
 }
 
@@ -37,8 +53,9 @@
   margin: 0 auto;
 
  h3{
+   padding-top: 60px;
    font-weight: bold;
-   padding-bottom: 10px;
+   padding-bottom: 20px;
  }
 
  h4{
@@ -46,7 +63,7 @@
  }
 
  .inviter{
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 
  }
  span{
@@ -82,7 +99,7 @@ margin-bottom: 200px;
   width: 80%;
   margin: 0 auto 100px;
   margin-top: 150px;
-  padding: 45px;
+  padding: 15px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   border-radius: 1rem;
