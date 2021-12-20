@@ -1,28 +1,25 @@
 <!--以下をコピーして使用してください-->
-
+  
   <body>
   <header>
   <p class="notice"><%= notice %></p>
   <%= render '/layouts/header' %>
   </header>
 
-
+  <section class="top-bg">
+    <div class="top">
+      <div class="top-catchcopy">
+        <div class="phrase p1"><div class="bgappear">あなたの口コミが副業になる</div></div>
+        <div class="phrase p2"><div class="bgappear">営業一切不要</div></div>
+        <div class="phrase p3"><div class="bgappear">口コミで見込み客の紹介、あとは丸投げ</div></div>
+      </div>
+      <div class="start-top">
+        <%= link_to "無料ではじめる" ,"/users/sign_up",class: "btn-top" %></div>
+      </div>
+    </div>
+  </section>
     <main class="top-page">
-      <section class="bg-gradient-to-l from-red-400 to-yellow-500 ">
-      <div class="mainWrap lg:flex">
-      <div class="wide">
-        <div class="wideBalance">
-          <h1 class="mainMessege font-extrabold text-white mt-10 pt-24 pl-6 pb-3 sm:text-xl  lg:text-5xl lg:m-0 lg:pl-20 lg:pt-56 lg:pb-0 xl:pt-72">あなたの口コミが<span style="font-size:1.5em;"><ruby>複<rt>・</rt>業<rt>・</rt></ruby></span>になる</h1>
-          <div class="subMessage-list">
-            <ul class="subMessege list-none text-white font-bold pl-6 pb-20  lg:pb-36 lg:text-2xl lg:pl-20 lg:pt-12 xl:pb-48">
-              <li class="subMessege1 lg:text-2xl text-xs"> 営業一切不要！</li>
-              <li class="subMessege2 lg:text-2xl text-xs"> 口コミで見込み客の紹介、あとは丸投げでOK！</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      </div>
-      </section>
+      
       <section class="yourWorries bg-white mb-16">
         <h1 class="rUworries text-yellow-500 text-center lg:font-light font-bold text-2xl lg:text-4xl lg:pt-28 py-8">こんなお悩みありませんか？</h1>
         <div class="worriesWrap">

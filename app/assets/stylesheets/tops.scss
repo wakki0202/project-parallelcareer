@@ -8,6 +8,7 @@
 
 @media (min-width: 710px) {
   body {
+    font-size: 100%;
     margin: 0;
     font-family: "ヒラギノ角ゴ ProN", sans-serif;
   }
@@ -41,6 +42,122 @@
   // Place all the styles related to the tops controller here.
   // They will automatically be included in application.css.
   // You can use Sass (SCSS) here: https://sass-lang.com/
+
+  // ---------ここからメイン------------------
+  .top-bg {
+    background-image: url("talk.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+  // .top {
+  //   background-color: rgba(255, 255, 255, 0.7);
+  //   backdrop-filter: blur(1px);
+  //   min-height: 100vh;
+  // }
+
+  .top-catchcopy {
+    color: #eb6302;
+    padding-top: 30vh;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+  .phrase {
+    animation-name: phraseAnimeBase;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .p1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .p2,
+  .p3 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+    color: #eb6302;
+  }
+
+  .start-top {
+    margin-top: 2rem;
+    padding-left: 10%;
+    display: flex;
+  }
+
+  a.btn-top {
+    width: 220px;
+    height: 60px;
+    background-color: #eb6302;
+    color: #fff;
+    border-radius: 6px;
+    transition: 0.3s;
+    text-decoration: none !important;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    padding-left: 40px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  a.btn-top:hover {
+    opacity: 0.6;
+  }
+
+  @keyframes phraseAnimeBase {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+  /*中の要素*/
+  .bgappear {
+    animation-name: phraseAnimeBase;
+    animation-duration: 1s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  .phrase::before {
+    animation-name: phraseAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333; /*伸びる背景色の設定*/
+  }
+  @keyframes phraseAnime {
+    0% {
+      transform-origin: left;
+      transform: scaleX(0);
+    }
+    50% {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+    50.001% {
+      transform-origin: right;
+    }
+    100% {
+      transform-origin: right;
+      transform: scaleX(0);
+    }
+  }
+
+  // --------ここから案件一覧---------------------------
   .Items-list {
     padding: 100px 0 100px;
     background: #fceabb; /* fallback for old browsers */
@@ -62,10 +179,8 @@
     justify-content: center;
   }
 
-  // --------ここから案件一覧---------------------------
   .Items-list {
     padding: 100px 0 100px;
-    margin-bottom: 200px;
     background: #fceabb; /* fallback for old browsers */
     background: -webkit-linear-gradient(
       to right,
@@ -136,88 +251,20 @@
     padding: 18px 30px;
     border-radius: 6px;
     transition: 0.3s;
-    text-decoration: none !important;
   }
   .btn-more:hover {
     opacity: 0.6;
   }
 
-  // ----ここから報酬獲得の流れ------------------
+  // --------ここからFAQ---------------------------
   .subtitle {
     background-color: #fff;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 30px;
   }
 
-  .reward-flow {
-    padding: 30px 20%;
-  }
-
-  .step-nums {
-    display: flex;
-    justify-content: center;
-  }
-
-  .step-num {
-    background: black;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    color: #fff;
-    font-size: 19px;
-    text-align: center;
-  }
-
-  .reward-border {
-    width: 20%;
-    border-bottom: 2px solid black;
-  }
-
-  .step-items {
-    text-align: center;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    background-color: #fff;
-    padding: 10px 40px;
-  }
-
-  .step-item {
-    list-style: none;
-  }
-  .step-title {
-    font-weight: bold;
-  }
-  .step-content {
-    margin-top: 10px;
-    padding: 0 10px;
-    text-align: left;
-  }
-
-  .reward-start {
-    margin-bottom: 200px;
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .btn-reward {
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #333;
-    padding: 18px 30px;
-    border-radius: 6px;
-    transition: 0.3s;
-    text-decoration: none !important;
-  }
-  .btn-reward:hover {
-    opacity: 0.6;
-  }
-
-  // --------ここからFAQ---------------------------
   .FAQ {
     width: 100%;
     height: auto;
@@ -250,21 +297,31 @@
   label:hover {
     color: rgba(0, 0, 0, 0.6);
   }
-
+  li {
+    display: block;
+    padding: 2em;
+    background: #d3d3d3;
+  }
 
   input[type="checkbox"] {
     display: none;
   }
 
-  #Q1:checked + .A1,
-  #Q2:checked + .A2,
-  #Q3:checked + .A3,
-  #Q4:checked + .A4,
+  #Q1:checked + .A1 {
+    display: block;
+  }
+  #Q2:checked + .A2 {
+    display: block;
+  }
+  #Q3:checked + .A3 {
+    display: block;
+  }
+  #Q4:checked + .A4 {
+    display: block;
+  }
+
   #Q5:checked + .A5 {
     display: block;
-    padding: 2em;
-    background-color: #d3d3d3;
-    list-style: none;
   }
 
   // --------ここから利用者の声---------------
@@ -1056,6 +1113,500 @@
       line-height: 32px;
     }
 
+    #matterCase1 {
+      border: 1px;
+      margin: 20px;
+      height: 240px;
+      --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      border-radius: 24px;
+      margin-bottom: 60px;
+    }
+
+    #Case1 {
+      border-bottom: 1px dashed;
+      width: 100%;
+      margin: auto;
+    }
+
+    #Case1Title {
+      text-align: center;
+      font-weight: 700;
+      padding: 20px;
+      font-size: 15px;
+    }
+
+    #Case1Content {
+      border-bottom: 1px dashed;
+      width: 100%;
+      margin: auto;
+    }
+
+    .CaseContentWord {
+      padding: 12px;
+    }
+
+    #Case1Reward {
+      width: 100%;
+      margin: auto;
+    }
+
+    #Case1RewardWord {
+      padding: 14px;
+      text-align: center;
+    }
+
+    #matterCase2 {
+      border-width: 1px;
+      margin: 20px;
+      height: 240px;
+      --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      margin-bottom: 32px;
+      border-radius: 24px;
+      margin-bottom: 60px;
+    }
+
+    #Case2 {
+      border-bottom: 1px dashed;
+      width: 100%;
+      margin: auto;
+    }
+
+    #Case2Title {
+      text-align: center;
+      font-weight: 700;
+      padding: 20px;
+      font-size: 15px;
+    }
+
+    #Case2Content {
+      border-bottom: 1px dashed;
+      width: 100%;
+      margin: auto;
+    }
+
+    .Case2ContentWord {
+      padding: 12px;
+    }
+
+    #Case2Reward {
+      width: 100%;
+      margin: auto;
+    }
+
+    #Case2RewardWord {
+      padding-top: 14px;
+      text-align: center;
+    }
+
+    #matterCase3 {
+      border-width: 1px;
+      margin: 20px;
+      height: 240px;
+      --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      margin-bottom: 32px;
+      border-radius: 24px;
+      margin-bottom: 60px;
+    }
+
+    #Case3 {
+      border-bottom: 1px dashed;
+
+      width: 100%;
+      margin: auto;
+    }
+
+    #Case3Title {
+      text-align: center;
+      font-weight: 700;
+      padding: 20px;
+      font-size: 15px;
+    }
+
+    #Case3Content {
+      border-bottom: 1px dashed;
+      width: 100%;
+      margin: auto;
+    }
+
+    .Case3ContentWord {
+      padding: 12px;
+    }
+
+    #Case3ReWard {
+      width: 100%;
+      margin: auto;
+    }
+
+    #Case3RewardWord {
+      padding-top: 14px;
+      text-align: center;
+    }
+
+    #matterCase4 {
+      border-width: 1px;
+      margin: 20px;
+      height: 240px;
+      --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      margin-bottom: 32px;
+      border-radius: 24px;
+    }
+
+    #Case4 {
+      border-bottom: 1px dashed;
+      width: 100%;
+      margin: auto;
+    }
+
+    #Case4Title {
+      text-align: center;
+      font-weight: 700;
+      padding: 20px;
+      font-size: 15px;
+    }
+
+    #Case4Content {
+      border-bottom: 1px dashed;
+      width: 100%;
+      margin: auto;
+    }
+
+    .Case4ContentWord {
+      padding: 20px;
+    }
+
+    #Case4Reward {
+      width: 100%;
+      margin: auto;
+    }
+
+    #Case4RewardWord {
+      padding-top: 14px;
+      text-align: center;
+    }
+
+    #SeeMoreWrap {
+      padding-top: 16px;
+    }
+
+    .SeeMore {
+      border-radius: 1.5rem /* 24px */;
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      line-height: 28px;
+      width: 70%;
+      --tw-bg-opacity: 1;
+      background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+      --tw-text-opacity: 1;
+      color: white;
+      margin: auto;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-decoration: none;
+
+      a {
+        color: white;
+      }
+    }
+
+    #RewardWrap {
+      --tw-text-opacity: 1;
+      color: rgba(55, 65, 81, var(--tw-text-opacity));
+    }
+
+    #RewardFlow {
+      --tw-text-opacity: 1;
+      color: rgba(245, 158, 11, var(--tw-text-opacity));
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    #FlowchartWrap {
+      justify-content: center;
+    }
+
+    .process {
+      width: 30%;
+      margin: 0 auto;
+      padding-left: 50px;
+    }
+
+    #Step1 {
+      border-width: 1px;
+      width: 288px;
+      margin: auto;
+      border-radius: 24px;
+    }
+
+    #Step1Title {
+      text-align: center;
+      font-weight: 700;
+      padding-top: 20px;
+    }
+
+    #Step1Content {
+      width: 91.666667%;
+      margin: auto;
+      padding-bottom: 32px;
+    }
+
+    .StepPicture {
+      width: 80px;
+      margin: auto;
+      display: block;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    #Step2 {
+      border-width: 1px;
+      width: 288px;
+      margin: auto;
+      border-radius: 24px;
+    }
+
+    #Step2Title {
+      text-align: center;
+      font-weight: 700;
+      padding-top: 20px;
+    }
+
+    #Step2Content {
+      width: 91.666667%;
+      margin: auto;
+      padding-bottom: 32px;
+    }
+
+    #Step3 {
+      border-width: 1px;
+      width: 288px;
+      margin: auto;
+      border-radius: 24px;
+    }
+
+    #Step3Title {
+      text-align: center;
+      font-weight: 700;
+      padding-top: 20px;
+    }
+
+    #Step3Content {
+      width: 91.666667%;
+      margin: auto;
+      padding-bottom: 32px;
+    }
+
+    #Step4 {
+      border-width: 1px;
+      width: 288px;
+      margin: auto;
+      border-radius: 24px;
+    }
+
+    #Step4Title {
+      text-align: center;
+      font-weight: 700;
+      padding-top: 20px;
+    }
+
+    #Step4Content {
+      width: 91.666667%;
+      margin: auto;
+      padding-bottom: 32px;
+    }
+
+    #Voicies {
+      --tw-text-opacity: 1;
+      color: rgba(55, 65, 81, var(--tw-text-opacity));
+    }
+
+    #VoiceMessage {
+      --tw-text-opacity: 1;
+      color: rgba(245, 158, 11, var(--tw-text-opacity));
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 40px;
+      text-align: center;
+      padding-top: 96px;
+      padding-bottom: 12px;
+    }
+
+    .Voice1 {
+      margin: auto;
+      padding-top: 40px;
+    }
+
+    .Voice2 {
+      height: 144px;
+    }
+
+    .Voice3 {
+      width: 144px;
+      height: 144px;
+      margin: auto;
+    }
+
+    .Voice4 {
+      width: 96px;
+      height: 96px;
+      margin: auto;
+    }
+
+    .Voice5 {
+      text-align: center;
+    }
+
+    .Voice6 {
+      margin: auto;
+      padding-top: 80px;
+    }
+
+    .Voice7 {
+      width: 144px;
+      height: 144px;
+      margin: auto;
+    }
+
+    .Voice8 {
+      width: 112px;
+      height: 112px;
+    }
+
+    #VoiciesWrap1 {
+      border-width: 1px;
+      --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      font-size: 14px;
+      line-height: 20px;
+      width: 83.333333%;
+      height: 300px;
+      margin: auto;
+      border-radius: 24px;
+      line-height: 1.625;
+    }
+
+    #SpecificVoice1 {
+      width: 91.666667%;
+      margin: auto;
+      padding-top: 16px;
+    }
+
+    #VoiciesWrap2 {
+      border-width: 1px;
+      --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      font-size: 14px;
+      line-height: 20px;
+      width: 83.333333%;
+      height: 180px;
+      margin: auto;
+      border-radius: 24px;
+      line-height: 1.625;
+      margin-top: 50px;
+    }
+
+    #SpecificVoice3 {
+      width: 91.666667%;
+      margin: auto;
+      padding-top: 12px;
+    }
+
+    #faq {
+      --tw-text-opacity: 1;
+      color: rgba(55, 65, 81, var(--tw-text-opacity));
+      padding-top: 80px;
+    }
+
+    #SpecificVoice2 {
+      width: 91.666667%;
+      margin: auto;
+      padding-top: 12px;
+    }
+    #VoiciesWrap3 {
+      border-width: 1px;
+      --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      font-size: 14px;
+      line-height: 20px;
+      width: 83.333333%;
+      height: 180px;
+      margin: auto;
+      border-radius: 24px;
+      line-height: 1.625;
+      margin-top: 50px;
+    }
+
+    #SpecificVoice3 {
+      width: 91.666667%;
+      margin: auto;
+      padding-top: 12px;
+    }
+
+    #faq {
+      --tw-text-opacity: 1;
+      color: rgba(55, 65, 81, var(--tw-text-opacity));
+      padding-top: 80px;
+    }
+
+    #FAQTitle {
+      --tw-text-opacity: 1;
+      color: rgba(245, 158, 11, var(--tw-text-opacity));
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    #FAQWrap1 {
+      width: 70%;
+      margin: auto;
+      font-size: 14px;
+      line-height: 28px;
+      --tw-border-opacity: 1;
+      border-color: rgba(0, 0, 0, var(--tw-border-opacity));
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .Question {
+      border-bottom: 1px dashed;
+      --tw-border-opacity: 1;
+      border-color: rgba(0, 0, 0, var(--tw-border-opacity));
+      padding-bottom: 20px;
+    }
+
+    .Answer {
+      padding-top: 20px;
+      font-size: 14px;
+      line-height: 1.625;
+    }
+
+    .QA {
+      --tw-text-opacity: 1;
+      color: rgba(245, 158, 11, var(--tw-text-opacity));
+    }
+
     #JoinFree {
       --tw-bg-opacity: 1;
       background-color: rgba(219, 234, 254, var(--tw-bg-opacity));
@@ -1096,7 +1647,6 @@
           display: block;
           font-weight: 700;
 
-
           text-align: center;
           --tw-text-opacity: 1;
           color: white;
@@ -1135,12 +1685,9 @@
           }
           .copyright {
             text-align: center;
-
           }
         }
       }
     }
-  }
-}
   }
 }
