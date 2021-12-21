@@ -1,6 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :authenticate_admin!,only: [:index,:show]
-  before_action :set_question, only: %i[ show edit update destroy ]
+
 
   # GET /questions or /questions.json
   def index
