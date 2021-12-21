@@ -45,6 +45,9 @@
                         
                         <li class="nav__item h-mypage"><%= link_to "マイページ" ,"/progresses/index" %></li>
                         <li class="nav__item h-logout"><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></li>
+                        <li class="nav__item userIcon"><i class="fas fa-user-circle fa-3x"></i></li>
+                        
+                        
                       <% else %>
                         <li class="nav__item h-log"><%= link_to "ログイン" ,"/users/sign_in" %></li>
                         <li class="nav__item h-reg"><%= link_to "会員登録" ,"/users/sign_up" %></li>

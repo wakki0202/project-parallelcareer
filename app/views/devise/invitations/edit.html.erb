@@ -1,4 +1,8 @@
-<h2 class="text-center">会員登録</h2>
+<body class="devise">
+<div class="login-page">
+  <div class="formRegistration">
+
+<h2 class="text-center">パラキャリ会員登録</h2>
 
 <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -43,3 +47,7 @@
       <% end %>
 
 <% end %>
+
+</div>
+</div>
+</body>

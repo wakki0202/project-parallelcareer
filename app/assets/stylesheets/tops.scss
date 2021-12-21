@@ -357,6 +357,9 @@
     opacity: 0.6;
   }
 
+
+
+  
   // ----ここから報酬獲得の流れ------------------
   .parent {
     .child {
@@ -482,11 +485,11 @@
     display: block;
     padding: 2em;
   }
-
+.FAQ-item{
   input[type="checkbox"] {
     display: none;
   }
-
+}
   #Q1:checked + .A1 {
     display: block;
   }
