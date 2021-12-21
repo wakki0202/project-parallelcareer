@@ -1,17 +1,18 @@
 @media (min-width: 710px) {
 
   .deviseInvite{
-     background-color: #ffa641;
+  background-image: url("talk.jpg");
+  background-size: cover;   
+  background-repeat: no-repeat;
+  }
+  .blackBack{
+    background-color: rgba(0,0,0,0.7);
+    background-size: cover;
   }
   .inviteArea{
-    width: 80%;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    margin: 0 auto;
-    background-color: white;
-    margin-top: 200px;
-    margin-bottom: 150px;
-    border-radius: 0.75rem;
+    padding-top: 200px;
+    color: white;
+   
   
   .invitePhrase{
     text-align: center;
@@ -43,14 +44,14 @@ p span{
   height: 300px;
   margin-top: 30px;
   margin-bottom: 50px;
-  background-image: url("talk.jpg");
-  background-size: cover;   
-  background-repeat: no-repeat;
+ 
   .orangeBack{
     position: relative;
-     background-color: rgba(253,131,71,0.7);
+     background-color: #fff;
     background-size: cover;
     height: 300px;
+    width: 70%;
+    margin: 0 auto;
 
     p span{
       position: absolute;
@@ -72,7 +73,7 @@ p span{
 }
 
 .formSet{
-  width:60%;
+  width:40%;
   margin-top: 20px;
 }
 
@@ -81,6 +82,7 @@ p span{
 }
 .button{
   margin-top: 10px;
+  margin-bottom: 100px;
 }
 }
 
@@ -109,18 +111,18 @@ p span{
     }
   }
 
-  h2{
+  h1{
     font-weight: 600;
     font-size: 18px;
     padding-bottom: 20px;
   }
 
-  h3{
+  h2{
     font-size: 18px;
     font-weight: 600;
   }
 
-  h2 span{
+  h1 span{
     border-bottom: 5px solid #ff5a3d;
   }
 }
@@ -162,6 +164,15 @@ p span{
 }
 .button{
   margin-top: 20px;
+}
+
+.formArea{
+  h3{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 20px;
+  }
 }
 
 }
