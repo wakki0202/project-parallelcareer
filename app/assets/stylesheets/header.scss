@@ -10,6 +10,13 @@ header{
 
 .header-logo{ 
   width: 20%;
+  margin: 0 auto;
+  .logoImages{
+
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+  }
 a{
   text-decoration: none;
   color: #666;
