@@ -2,8 +2,8 @@
   <%= render '/layouts/header' %>
   <div class="inviteArea">
       <div class="invitePhrase">
-            <h3>友達や同僚にも</h3>
-            <h2><span>パラキャリをおすすめしてみませんか？</span></h2>
+            <h2>友達や同僚にも</h2>
+            <h1><span>パラキャリをおすすめしてみませんか？</span></h1>
             <p>招待した方には招待された方の<span>報酬の10%が永続的に支払われます！</span></p>
             <p>招待された方は初回報酬振込時に<span>1000円プラスで支払われます！</span></p>
       </div>
@@ -16,7 +16,8 @@
         </div>
       </div>
 
-      <div>
+      <div class="formArea">
+        <h3>さっそく招待用リンクを送りましょう！</h3>
 
                 <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
                   <%= render "devise/shared/error_messages", resource: resource %>

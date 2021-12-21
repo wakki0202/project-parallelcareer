@@ -1,10 +1,10 @@
 @media (min-width: 710px) {
 
   .deviseInvite{
-    background-color: #F3F3F6;
+     background-color: #ffa641;
   }
   .inviteArea{
-    width: 70%;
+    width: 80%;
     padding-top: 80px;
     padding-bottom: 80px;
     margin: 0 auto;
@@ -15,15 +15,108 @@
   
   .invitePhrase{
     text-align: center;
-    
+    p{
+      font-size: 18px;
+      
+      padding:5px;
+    }
+  }
+
+  h1{
+    font-weight: 600;
+    padding-bottom: 30px;
   }
 
   h2{
     font-weight: 600;
+  }
+
+  h1 span{
+    border-bottom: 5px solid #ff5a3d;
+  }
+}
+p span{
+  font-weight: 600;
+}
+
+.inviteImages{
+  height: 300px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  background-image: url("talk.jpg");
+  background-size: cover;   
+  background-repeat: no-repeat;
+  .orangeBack{
+    position: relative;
+     background-color: rgba(253,131,71,0.7);
+    background-size: cover;
+    height: 300px;
+
+    p span{
+      position: absolute;
+      color:white;
+      background-color: #ff5a3d;
+      padding: 5px;
+      margin: 20px;
+    }
+  }
+  
+}
+
+.formArea{
+  h3{
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 20px;
+  }
+}
+
+.formSet{
+  width:60%;
+  margin-top: 20px;
+}
+
+.text-left{
+  padding-bottom: 8px;
+}
+.button{
+  margin-top: 10px;
+}
+}
+
+@media (max-width: 709px) {
+
+    .deviseInvite{
+    background-color: #F3F3F6;
+  }
+  .inviteArea{
+    width: 90%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 200px;
+    margin-bottom: 150px;
+    border-radius: 0.75rem;
+  
+  .invitePhrase{
+    text-align: center;
+    p{
+      width:80%;
+      margin: 0 auto;
+      padding-bottom: 15px;
+      text-align: left;
+    }
+  }
+
+  h2{
+    font-weight: 600;
+    font-size: 18px;
     padding-bottom: 20px;
   }
 
   h3{
+    font-size: 18px;
     font-weight: 600;
   }
 
@@ -32,6 +125,7 @@
   }
 }
 p span{
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -60,7 +154,7 @@ p span{
 }
 
 .formSet{
-  width:50%;
+  width:80%;
 }
 
 .text-left{
@@ -69,8 +163,5 @@ p span{
 .button{
   margin-top: 20px;
 }
-}
-
-@media (max-width: 709px) {
 
 }
