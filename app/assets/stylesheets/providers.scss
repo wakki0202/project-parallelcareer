@@ -6,7 +6,6 @@
   display: flex;
   width: 100%;
 
-
    .side{
       width: 20%;
       height: 100%;
@@ -18,11 +17,15 @@
     .side-contents {
       margin: 2.5rem;
     }
+    .cases-title {
+      float: left;
+    }
     .glyphicon {
       color: white;
     }
     .nav-item {
-      margin-bottom: 5px;
+      margin-bottom: 6px;
+      vertical-align: middle;
     }
 
       a {
@@ -36,7 +39,11 @@
     .providers{
       width: 70%;
       margin: 0 auto;
-      padding-top: 100px;
+      padding-top: 21px;
+      
+      .header {
+        background-color: rgb(10, 117, 118);
+      }
 
       .hoverwhite{
       
@@ -55,9 +62,9 @@
     }
 
 
-    h1{
-      text-align: center;
-    }
+    // h1{
+    //   text-align: center;
+    // }
 }
 
 .users{
