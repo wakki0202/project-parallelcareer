@@ -6,6 +6,10 @@ class ProgressesController < IntroductionsController
     @news = News.all
   end
 
+  def news
+    @news = News.find(params[:id])
+  end
+
   def show
     @introduction = Introduction.find(params[:id])
   end

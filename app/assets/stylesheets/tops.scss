@@ -47,6 +47,7 @@
   .top-bg {
     background-image: url("talk.jpg");
     background-size: cover;
+    
     background-repeat: no-repeat;
     min-height: 100vh;
   }
@@ -57,11 +58,17 @@
   // }
 
   .top-catchcopy {
-    color: #eb6302;
+    color: #fff;
     padding-top: 30vh;
     padding-left: 10%;
     display: flex;
     flex-direction: column;
+  }
+
+  .top{
+    background-color: rgba(0,0,0,0.6);
+    background-size: cover;
+    min-height: 100vh;
   }
   .phrase {
     animation-name: phraseAnimeBase;
@@ -84,7 +91,7 @@
     font-size: 2rem;
     margin-bottom: 0.75rem;
     font-weight: bold;
-    color: #eb6302;
+    color: #fff;
   }
 
   .start-top {

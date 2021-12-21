@@ -63,6 +63,7 @@ Rails.application.routes.draw do
   get "introductions/:id/progresses",to:"progresses#new"
   get "progresses/index",to:"progresses#index"
   get "progresses/:id",to:"progresses#show"
+  get "progresses/news",to:"progresses#news"
 
   get "users/index",to:"users#index"
   get "users/confirm",to:"users#confirm"

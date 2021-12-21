@@ -1,6 +1,6 @@
 class IntroductionsController < ApplicationController
-before_action :authenticate_provider!,only: [:index,:show,:edit,:update], unless: proc { admin_signed_in? }
-before_action :authenticate_user!,only: [:new,:create]
+#before_action :authenticate_provider!,only: [:index,:show,:edit,:update], unless: proc { admin_signed_in? }
+#before_action :authenticate_user!,only: [:new,:create]
   def index
     @introductions = Introduction.all.order(id: :DESC)
     @introductionnumber = Introduction.all.count
