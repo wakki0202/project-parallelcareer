@@ -1,17 +1,17 @@
 #footer {
   position: relative;
   margin-top: 40px;
-  color: rgb(55,65,81);
-   border-style: solid;
+  color: rgb(55, 65, 81);
+  border-style: solid;
   border-color: rgb(231, 231, 231);
-  border-bottom: rgb(55,65,81);
-  border-right: rgb(55,65,81);
-  border-left: rgb(55,65,81);
+  border-bottom: rgb(55, 65, 81);
+  border-right: rgb(55, 65, 81);
+  border-left: rgb(55, 65, 81);
   border-width: 1px;
 }
 #footer a {
   text-decoration: none;
-  color: rgb(55,65,81);
+  color: rgb(55, 65, 81);
 }
 #footer a:hover {
   text-decoration: underline;
@@ -23,10 +23,10 @@
 #footer .primary .flex {
   display: flex;
 }
-#footer .primary .flex .left{
+#footer .primary .flex .left {
   width: 40%;
 }
-#footer .primary .flex .right{
+#footer .primary .flex .right {
   display: flex;
   width: 60%;
   justify-content: flex-end;
@@ -35,18 +35,21 @@
   color: #fff;
   display: flex;
   padding: 20px 20px;
-  background: rgb(55,65,81);;
+  background: rgb(55, 65, 81);
   border-style: solid;
   border-color: rgb(231, 231, 231);
-  border-bottom: rgb(55,65,81);
-  border-right: rgb(55,65,81);
-  border-left: rgb(55,65,81);
+  border-bottom: rgb(55, 65, 81);
+  border-right: rgb(55, 65, 81);
+  border-left: rgb(55, 65, 81);
   border-width: 1px;
- a {
-  text-decoration: none;
-  color: #fff;
+  a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #374151;
+  }
 }
-
+#footer li {
+  background-color: #fff;
 }
 
 @media screen and (max-width: 767px) {
@@ -57,17 +60,16 @@
   #footer .primary .flex {
     display: block;
   }
-  #footer .primary .flex .left{
+  #footer .primary .flex .left {
     width: 100%;
   }
-  #footer .primary .flex .right{
+  #footer .primary .flex .right {
     width: 100%;
     display: block;
   }
   #footer .secondary {
     display: block;
     padding: 20px 20px;
-    
   }
 }
 
@@ -128,14 +130,14 @@
 
 @media screen and (max-width: 767px) {
   .navi-section {
-  display: block;
-  width: 100%;
-  margin: 40px 0 0;
-}
-#footer .parent {
-  font-size: 12px;
-  margin: 0 0 10px;
-}
+    display: block;
+    width: 100%;
+    margin: 40px 0 0;
+  }
+  #footer .parent {
+    font-size: 12px;
+    margin: 0 0 10px;
+  }
   #footer .navi {
     font-size: 12px;
     padding-bottom: 10px;
