@@ -353,23 +353,25 @@
     display: flex;
     align-items: center;
     line-height: 1.5;
+      span {
+    background: linear-gradient(transparent 60%, #ffff66 60%);
+  }
   }
   .Voice-border {
     border-bottom: #d3d3d3 solid 1px;
     width: 100%;
     margin: 50px 0;
+   
   }
 
-  span {
-    background: linear-gradient(transparent 60%, #ffff66 60%);
-  }
+ 
 
   .bg-gradient-to-l {
     background-image: linear-gradient(to left, var(--tw-gradient-stops));
     --tw-gradient-from: #fa4c4c;
     --tw-gradient-stops: var(--tw-gradient-from),
       var(--tw-gradient-to, rgba(248, 113, 113, 0));
-    --tw-gradient-to: #ffbd41;
+    --tw-gradient-to: #ffc251;
   }
 
   .mainWrap {
@@ -1709,3 +1711,4 @@
     }
   }
 }
+

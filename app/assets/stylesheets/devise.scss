@@ -20,6 +20,7 @@
   padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 1rem;
 }
 
 .formRegistration {
@@ -31,11 +32,13 @@
   padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 1rem;
 }
 
 .formSet{
   width: 80%;
   margin: 0 auto;
+  border-radius: 1rem;
 }
 input {
   font-family: "Roboto", sans-serif;
@@ -47,6 +50,7 @@ input {
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
+  border-radius: 1rem;
 }
 .button {
   font-family: "Roboto", sans-serif;
@@ -62,6 +66,7 @@ input {
   transition: all 0.3 ease;
   cursor: pointer;
   -webkit-appearance: none;
+  border-radius: 1rem;
 }
 .checkbutton{
   width: 30px;
