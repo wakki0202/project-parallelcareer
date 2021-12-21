@@ -5,10 +5,16 @@
   <%= render 'side' %>
   </div>
 
-  <div class="providers border">
- 
-      <h1>案件一覧</h1>
-      <table class="table table-striped">
+
+  <div class="providers">
+      <div class="header">
+      <%= render 'side_header'%>
+      </div>
+      <div class="cases-title">
+        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"><h1>案件一覧</h1></span>
+      </div>
+      <table class="table">
+
         <thead>
           <tr>
             <th>会社名</th>

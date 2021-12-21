@@ -863,9 +863,27 @@
       --tw-gradient-to: #ffa641;
     }
 
-    iframe {
-      margin: auto;
-      padding-bottom: 24px;
+  .limit-1 {
+    min-height: 80px;
+  }
+
+  .limit-2 {
+    min-height: 100px;
+  }
+
+
+@media (max-width: 709px) {
+  body {
+    margin: 0;
+  }
+  header {
+    .header-logo {
+      font-size: 16px;
+      padding-top: 10px;
+    }
+    ul {
+      list-style: none;
+
     }
 
     .yourWorries {
