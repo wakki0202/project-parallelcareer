@@ -65,5 +65,6 @@ Rails.application.routes.draw do
   get "progresses/:id",to:"progresses#show"
 
   get "users/index",to:"users#index"
+  get "users/confirm",to:"users#confirm"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
