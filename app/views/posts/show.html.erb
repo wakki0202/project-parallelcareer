@@ -28,8 +28,11 @@
 <td><%= @work.company %></td>
 </tr>
 <tr>
+<% if @work.link == nil %>
+<% else %>
 <th>事業者ホームページ欄</th>
 <td><%= auto_link(simple_format(@work.link), html: {target: '_blank'}) %></td>
+<% end %>
 </tr>
 <tr>
 <th>報酬</th>

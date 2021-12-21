@@ -7,7 +7,7 @@
     </div>
  
       <div class="providers">
-      <table class="table ">
+      <table class="table table-striped">
       
         <h1 class="text-center font-bold text-2xl pb-6">口コミ一覧</h1>
       <tr class="border text-center"><th>案件名</th><th class="border border-black">紹介者名</th><th class="border border-black">お客様名</th><th class="border border-black">受信日時</th><th class="border border-black">進捗状況</th><th class="border border-black"></th></tr>
@@ -24,7 +24,7 @@
         <% else %>
         <td class="border border-black"><%= introduction.step %></td>
         <% end %>
-        <td class="text-white"><a href="<%= introduction.id %>" class="btn text-white white-50">詳細</a></td></tr>
+        <td class="btn "><a href="<%= introduction.id %>" class=" text-white white-50">詳細</a></td></tr>
       <% end %>
   
       
