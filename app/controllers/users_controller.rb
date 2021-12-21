@@ -6,6 +6,8 @@ class UsersController < ApplicationController
     @introductionnumber = Introduction.all.count
   end
 
- 
+ def confirm
+
+ end
 
 end

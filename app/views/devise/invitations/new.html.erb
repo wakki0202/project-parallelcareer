@@ -1,50 +1,41 @@
-<body class="devise">
+<body class="deviseInvite">
+<div class="blackBack">
   <%= render '/layouts/header' %>
-  
-      <div class="formInvite">
-      <div class="inviteArea">
-    
-        
+  <div class="inviteArea">
+      <div class="invitePhrase">
+            <h2>友達や同僚にも</h2>
+            <h1><span>パラキャリをおすすめしてみませんか？</span></h1>
+            <p>招待した方には招待された方の<span>報酬の10%が永続的に支払われます！</span></p>
+            <p>招待された方は初回報酬振込時に<span>1000円プラスで支払われます！</span></p>
+      </div>
 
-        <div class="right">
-        <h3 class="text-center">友人を紹介する</h3>
-            <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
-              <%= render "devise/shared/error_messages", resource: resource %>
-              <% resource.class.invite_key_fields.each do |field| -%>
-                <div class="formSet">
-                  <div class="text-left">紹介する人のEメール</div>
-                  <%= f.text_field :email %>
-                </div>
-              <% end -%>
+      <div class="inviteImages">
+        <div class="orangeBack">
+          <p><span>伝え方の例</span></p>
+          <div></div>
 
-
-              <div class="formSet">
-                <%= f.submit "友人に招待メールを送る",class:"button" %>
-              </div>
-            <% end %>
-          </div>
-
-          <div class="left">
-            <div class="">
-            <h3 class="text-center">友人を紹介すると...</h3>
-            <div class="row">
-              <div class="inviter">
-                <h4>紹介した方には</h4>
-                <p>紹介された方の<span>報酬の10%が永続的に</span>支払われます!</p>
-              </div>
-              <div class="invited">
-                <h4>紹介された方には</h4>
-                <p>初回報酬振込時に<span>1000円</span>がプラスで振り込まれます!</p>
-              </div>
-            </div>
-            </div>
-          </div>
-
-          
-
-        
         </div>
       </div>
-      
 
+      <div class="formArea">
+        <h3>さっそく招待用リンクを送りましょう！</h3>
+
+                <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
+                  <%= render "devise/shared/error_messages", resource: resource %>
+                  <% resource.class.invite_key_fields.each do |field| -%>
+                    <div class="formSet">
+                      <div class="text-left">紹介する人のEメール</div>
+                      <%= f.text_field :email %>
+                    </div>
+                  <% end -%>
+
+
+                  <div class="formSet">
+                    <%= f.submit "友人に招待メールを送る",class:"button" %>
+                  </div>
+                <% end %>
+        </div>
+  </div>
+      
+</div>
 </body>

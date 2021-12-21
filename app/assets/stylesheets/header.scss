@@ -8,13 +8,21 @@ header {
   justify-content: space-between;
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
 
-  .header-logo {
-    width: 20%;
-    a {
-      text-decoration: none;
-      color: #666;
-    }
+
+.header-logo{ 
+  width: 20%;
+  margin: 0 auto;
+  .logoImages{
+
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
   }
+a{
+  text-decoration: none;
+  color: #666;
+}
+}
 
   .site-header__wrapper {
     padding-top: 1.7rem;

@@ -5,6 +5,8 @@ class Users::InvitationsController < Devise::InvitationsController
 
   def create
     super
+    @user = current_user
+
   end
 
   def edit

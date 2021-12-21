@@ -63,7 +63,9 @@ Rails.application.routes.draw do
   get "introductions/:id/progresses",to:"progresses#new"
   get "progresses/index",to:"progresses#index"
   get "progresses/:id",to:"progresses#show"
+  get "progresses/news",to:"progresses#news"
 
   get "users/index",to:"users#index"
+  get "users/confirm",to:"users#confirm"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
