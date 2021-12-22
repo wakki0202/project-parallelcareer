@@ -355,6 +355,13 @@
     }
   }
 
+  .toWorks{
+    color: white;
+    background-color: #EB630D;
+    padding: 10px;
+    border-radius: 2rem;
+  }
+
  
   .Item-reward span{
     font-size: 18px;
@@ -369,7 +376,7 @@
     color: #fff;
     font-size: 16px;
     font-weight: bold;
-    background-color: #333;
+    background-color: #EB630D;
     padding: 18px 30px;
     border-radius: 6px;
     transition: 0.3s;
@@ -420,7 +427,7 @@
   }
 
   .stepFooter{
-    padding-top: 20px;
+    padding-top: 25px;
     font-size: 12px;
     text-align: center;
   }
@@ -465,7 +472,7 @@
     color: #fff;
     font-size: 16px;
     font-weight: bold;
-    background-color: #333;
+    background-color: #EB630D;
     padding: 18px 30px;
     border-radius: 6px;
     transition: 0.3s;
