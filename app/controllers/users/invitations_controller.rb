@@ -4,8 +4,14 @@ class Users::InvitationsController < Devise::InvitationsController
   end
 
   def create
-    super
     @user = current_user
+
+    if @user.save
+    redirect_to introductions_complete_path
+    else
+    redirect_to back
+    end
+    
 
   end
 

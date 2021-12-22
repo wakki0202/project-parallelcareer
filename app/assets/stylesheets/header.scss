@@ -154,6 +154,16 @@ a{
     display: none;
   }
 
+  .UserInfo{
+  display:none;
+  
+}
+input[type="checkbox"]:checked + .UserInfo{
+  display:block;
+  z-index: 12;
+}
+
+
  
 
   @media (max-width: 709px) {

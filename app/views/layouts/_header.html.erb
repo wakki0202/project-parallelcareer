@@ -45,7 +45,15 @@
                         
                         <li class="nav__item h-mypage"><%= link_to "マイページ" ,"/progresses/index" %></li>
                         <li class="nav__item h-logout"><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></li>
-                        <li class="nav__item userIcon"><i class="fas fa-user-circle fa-3x"></i></li>
+                        <li class="nav__item userIcon"><i class="fas fa-user-circle fa-3x"></i><input type="checkbox"><ul class="UserInfo">
+                          <li><%= link_to "マイページ" ,"/progresses/index" %></li>
+                          <li><%= link_to "友人を紹介する" ,"/users/invitation/new" %></li>
+                          <li><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></li>
+                        </ul></li>
+
+                        
+                        
+                        
                         
                         
                       <% else %>
