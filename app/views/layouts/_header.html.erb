@@ -2,7 +2,7 @@
  <div class="wrapper site-header__wrapper">
         <div class="header-logo">
 
-          <%= image_tag "logo.jpg",class:"logoImages"  %>
+          <a href="/tops/index"><%= image_tag "logo.jpg",class:"logoImages"  %></a>
         </div>
 
           <nav class="nav">
@@ -42,17 +42,16 @@
                       <% elsif provider_signed_in?  %>
                         <li class="nav__item h-mypage"><%= link_to "事業者ページ" ,"/works" %></li>
                       <% elsif user_signed_in?  %>
-
-                      <div class="menu">
-                      <label for="menu_bar01"><i class="fas fa-user-circle fa-3x"></i></label>
-                      <input type="checkbox" id="menu_bar01" />
-                      <ul id="links01">
+                        <li class="nav__item userIcon"><i class="fas fa-user-circle fa-3x"></i></li>
+                    <input type="checkbox">
+                      <div class="UserInfo">
                           <li><%= link_to "マイページ" ,"/progresses/index" %></li>
-                          <li><%= link_to "プロフィール設定" ,"/users/confirm" %></li>
                           <li><%= link_to "友人を紹介する" ,"/users/invitation/new" %></li>
+                          <li><%= link_to "プロフィール編集" ,"/users/confirm" %></li>
                           <li><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></li>
-                      </ul>                      
-                      </div>                
+                      </div>
+
+                                    
                         
                       <% else %>
                         <li class="nav__item h-log"><%= link_to "ログイン" ,"/users/sign_in" %></li>
