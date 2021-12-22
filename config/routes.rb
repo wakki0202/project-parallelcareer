@@ -21,6 +21,10 @@ Rails.application.routes.draw do
         registrations: 'users/registrations',
         invitations: 'users/invitations'
       }
+
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
     
   root "tops#index"
   get "tops/index",to:"tops#index"

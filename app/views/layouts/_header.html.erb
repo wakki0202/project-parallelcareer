@@ -21,8 +21,8 @@
                           <li class="nav__item"><%= link_to "　事業者ページ" ,"/works" %></li>
                       <% elsif user_signed_in?  %>
                                  
-                          <li class="nav__item"><%= link_to "　ユーザーページ" ,"/progresses/index" %></li>
-                          <li class="nav__item"><%= link_to "　ユーザー設定" ,"/progresses/index" %></li>
+                          <li class="nav__item"><%= link_to "　ユーザーページ" ,"/tops/index" %></li>
+                          <li class="nav__item"><%= link_to "　ユーザー設定" ,"/tops/index" %></li>
                           <li class="nav__item"><%= link_to '　ログアウト' , destroy_user_session_path, method: :delete %></li>
                         <% else %>
                           <li class=""><%= link_to "　ログイン" ,"/users/sign_in" %></li>
@@ -45,7 +45,7 @@
                         <li class="nav__item userIcon"><i class="fas fa-user-circle fa-3x"></i></li>
                     <input type="checkbox">
                       <div class="UserInfo">
-                          <li><%= link_to "マイページ" ,"/progresses/index" %></li>
+                          <li><%= link_to "マイページ" ,"/tops/index" %></li>
                           <li><%= link_to "友人を紹介する" ,"/users/invitation/new" %></li>
                           <li><%= link_to "プロフィール編集" ,"/users/confirm" %></li>
                           <li><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></li>
