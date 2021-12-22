@@ -173,7 +173,7 @@ a{
  
   
 }
-input[type="checkbox"]:checked + .UserInfo li{
+input[type="checkbox"]:checked + .UserInfo{
   visibility:hidden;
   margin-top: 30px;
    z-index: 12;
