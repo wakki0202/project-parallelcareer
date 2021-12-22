@@ -10,13 +10,11 @@ header {
 
 
 .header-logo{ 
-  width: 20%;
-  margin: 0 auto;
+  width: 10%;
   .logoImages{
 
-    margin: 0 auto;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
   }
 a{
   text-decoration: none;
@@ -25,9 +23,14 @@ a{
 }
 
   .site-header__wrapper {
-    padding-top: 1.7rem;
-    padding-bottom: 1.7rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
+
+
+
+
+  
 
   @media (min-width: 710px) {
     .site-header__wrapper {
@@ -51,12 +54,13 @@ a{
       top: 100%;
       right: 0;
       left: 0;
-      z-index: -1;
+      z-index: 8;
       background-color: #d9f0f7;
       visibility: hidden;
       opacity: 0;
       transform: translateY(-100%);
       transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+      
     }
 
     .nav__wrapper.active {
@@ -71,6 +75,11 @@ a{
       display: none;
     }
   }
+
+  .header-logo{ 
+  width: 10%;
+    text-align: center;
+}
 
   li.nav__item {
     background-color: #fff;
@@ -150,17 +159,25 @@ a{
     list-style-type: none;
   }
 
+  li{ 
+  padding: 1rem;
+  }
+
   .nav__toggle {
     display: none;
   }
 
   .UserInfo{
-  display:none;
+  visibility: hidden;
+  
+ 
   
 }
 input[type="checkbox"]:checked + .UserInfo{
-  display:block;
-  z-index: 12;
+
+  position: fixed;
+  
+  
 }
 
 

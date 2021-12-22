@@ -35,26 +35,24 @@
 
                       <ul class="nav__wrapper">
                         <li class="nav__item h-list "><%= link_to "案件一覧" ,"/posts/index" %></li>
+                         <li class="nav__item h-list "><%= link_to "よくあるご質問" ,"/tops/index#FAQ" %></li>
                         <li class="nav__item h-contact"><%= link_to "LINEでお問い合わせ" ,"https://page.line.me/892qodsr?openQrModal=true" %></li>
-                        <li class="nav__item h-invite"><%= link_to "友人を紹介する" ,"/users/invitation/new" %></li>
                       <% if admin_signed_in?  %> 
                         <li class="nav__item h-mypage"><%= link_to "管理者ページ" ,"/questions" %></li>
                       <% elsif provider_signed_in?  %>
                         <li class="nav__item h-mypage"><%= link_to "事業者ページ" ,"/works" %></li>
                       <% elsif user_signed_in?  %>
-                        
-                        <li class="nav__item h-mypage"><%= link_to "マイページ" ,"/progresses/index" %></li>
-                        <li class="nav__item h-logout"><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></li>
-                        <li class="nav__item userIcon"><i class="fas fa-user-circle fa-3x"></i><input type="checkbox"><ul class="UserInfo">
+
+                      <div class="menu">
+                      <label for="menu_bar01"><i class="fas fa-user-circle fa-3x"></i></label>
+                      <input type="checkbox" id="menu_bar01" />
+                      <ul id="links01">
                           <li><%= link_to "マイページ" ,"/progresses/index" %></li>
+                          <li><%= link_to "プロフィール設定" ,"/users/confirm" %></li>
                           <li><%= link_to "友人を紹介する" ,"/users/invitation/new" %></li>
                           <li><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></li>
-                        </ul></li>
-
-                        
-                        
-                        
-                        
+                      </ul>                      
+                      </div>                
                         
                       <% else %>
                         <li class="nav__item h-log"><%= link_to "ログイン" ,"/users/sign_in" %></li>
@@ -63,4 +61,7 @@
                       </ul>
             </nav>
   </div>
- </header>
+ </header> 
+
+
+ 
