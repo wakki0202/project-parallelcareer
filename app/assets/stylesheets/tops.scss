@@ -234,7 +234,7 @@
   .merit {
     padding-top: 200px;
     padding-left: 20%;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
 
   .merit-phrase {
@@ -255,10 +255,11 @@
     border-radius: 6px;
     letter-spacing: 0.05rem;
     box-shadow: 0 0 15px rgb(212, 212, 212);
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     h3 {
       font-weight: bold;
       font-size: 2.25rem;
+      color: rgb(255, 84, 16);
       text-align: center;
     }
     p {
@@ -275,6 +276,7 @@
   // --------ここから案件一覧---------------------------
   .Items-list {
     margin-bottom: 200px;
+    padding-top: 100px;
     padding: 100px 0 100px;
     background: #fceabb; /* fallback for old browsers */
     background: -webkit-linear-gradient(
@@ -299,6 +301,7 @@
 
       
     );
+    padding-bottom: 70px;
       }
   }
   .Items {
@@ -310,7 +313,7 @@
 
   .Item {
     width: 23%;
-    padding: 25px;
+    padding: 25px 25px 50px 25px;
     background-color: #fff;
     border-radius: 6px;
   }
@@ -332,7 +335,7 @@
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 0.05rem;
-    margin-top: 15px;
+    margin-top: 30px;
   }
 
   .border {
@@ -342,17 +345,19 @@
     padding: 10px 10px 0;
     text-align: left;
     & p {
-      font-size: 14px;
+      font-size: 16px;
+      line-height: 1.625;
     }
   }
 
+ 
   .Item-reward span{
-    font-size: 16px;
-    color: rgb(255, 63, 49);
+    font-size: 18px;
+    color: rgb(255, 97, 49);
   }
 
   .SeeMore {
-    margin-top: 60px;
+    margin-top: 100px;
   }
 
   .btn-more {
@@ -418,7 +423,7 @@
 
 .stepImage{
   width: 100%;
-  height: 150px;
+  height: 180px;
 }
 
 
@@ -530,44 +535,58 @@
   }
 
   // --------ここから利用者の声---------------
-  .Voices {
-    padding: 0 20%;
-    margin-bottom: 200px;
-  }
-  .Voice {
-    display: flex;
-  }
 
-  .Voice-user {
+.Voices{
+  padding-bottom: 100px;
+}
+
+  .flexVoice{
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 70px;
+
+}
+
+.Voice{
+  box-shadow:0px 0px 2px;
+  border-radius: 1rem;
+  width: 28%;
+  font-weight: bold;
+
+
+
+  h4{
     text-align: center;
+    font-weight: bold;
   }
 
-  .user-info {
-    padding-top: 10px;
+ 
+  .comment{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.625;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    color:#484c4c;
   }
 
-  .Voice-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: #d3d3d3 solid 1px;
-  }
-
-  .user-comment {
-    padding: 0 5%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    line-height: 1.5;
-    span {
-      background: linear-gradient(transparent 60%, #ffff66 60%);
+ 
+    .feature{
+      padding-left: 30px;
     }
-  }
-  .Voice-border {
-    border-bottom: #d3d3d3 solid 1px;
-    width: 100%;
-    margin: 50px 0;
-  }
+
+}
+
+.VoiceImage{
+  width: 100%;
+
+}
+
 }
 
 @media screen and (max-width: 480px) {
@@ -1041,6 +1060,7 @@
     display: flex;
     align-items: center;
     line-height: 1.5;
+    
     span {
       background: linear-gradient(transparent 60%, #ffff66 60%);
     }
