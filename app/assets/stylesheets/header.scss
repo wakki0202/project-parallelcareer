@@ -5,15 +5,15 @@ header {
   top: 0;
   background-color: white;
   width: 100%;
-  justify-content: space-between;
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
 
 
 .header-logo{ 
-  width: 10%;
+  width: 50%;
+  padding-top: 5px;
   .logoImages{
-
-    width: 40px;
+    
+    width: 50px;
     height: 40px;
   }
 a{
@@ -22,9 +22,23 @@ a{
 }
 }
 
-  .site-header__wrapper {
+nav{
+  width: 50%;
+}
+
+  #site-header__wrapper {
+    width: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .headerFlex{
+    display: flex;
+    align-items: center;
+    p{
+      margin-top: 20px;
+      font-weight: bold;
+    }
   }
 
 
@@ -33,10 +47,9 @@ a{
   
 
   @media (min-width: 710px) {
-    .site-header__wrapper {
+    #site-header__wrapper {
+      width: 100%;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       padding-top: 0;
       padding-bottom: 0;
     }
@@ -45,6 +58,7 @@ a{
   @media (min-width: 710px) {
     .nav__wrapper {
       display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -76,10 +90,7 @@ a{
     }
   }
 
-  .header-logo{ 
-  width: 10%;
-    text-align: center;
-}
+ 
 
   li.nav__item {
     background-color: #fff;

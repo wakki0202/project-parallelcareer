@@ -23,7 +23,7 @@
                 <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
                   <%= render "devise/shared/error_messages", resource: resource %>
                   <% resource.class.invite_key_fields.each do |field| -%>
-                    <div class="formSetInvite">
+                    <div class="formSet">
                       <div class="text-left">紹介する人のEメール</div>
                       <%= f.text_field :email %>
                     </div>

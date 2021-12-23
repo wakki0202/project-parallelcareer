@@ -1,39 +1,44 @@
-<header class="site-header lg:block z-9 w-full fixed bg-white border-b-2">
- <div class="wrapper site-header__wrapper">
+<header class="site-header">
+ <div id="site-header__wrapper">
         <div class="header-logo">
-
-          <a href="/tops/index"><%= image_tag "logo.jpg",class:"logoImages"  %></a>
+          <div class="headerFlex">
+            <div>
+            <a href="/tops/index"><%= image_tag "logo.jpg",class:"logoImages"  %></a>
+            </div>
+            <div><a href="/tops/index"><p>口コミ複業パラキャリ</p></a>
+            </div>
+          </div>
         </div>
 
           <nav class="nav">
             <div class="display-none">
-            <div class="hamburger-menu">
-                    <input type="checkbox" id="menu-btn-check">
-                    <label for="menu-btn-check" class="menu-btn"><span></span></label>
-                  <div class="menu-content">
-                          <ul>
-                          <li class=""><%= link_to "　案件一覧" ,"/posts/index" %></li>
-                          <li class=""><%= link_to "　LINEでお問い合わせ" ,"https://page.line.me/892qodsr?openQrModal=true" %></li>
-                          <li class="nav__item"><%= link_to "　友人を紹介する" ,"/users/invitation/new" %></li>   
-                      <% if admin_signed_in?  %> 
-                          <li class="nav__item"><%= link_to "　管理者ページ" ,"/works" %></li>
-                      <% elsif provider_signed_in?  %>
-                          <li class="nav__item"><%= link_to "　事業者ページ" ,"/works" %></li>
-                      <% elsif user_signed_in?  %>
-                                 
-                          <li class="nav__item"><%= link_to "　ユーザーページ" ,"/tops/index" %></li>
-                          <li class="nav__item"><%= link_to "　ユーザー設定" ,"/tops/index" %></li>
-                          <li class="nav__item"><%= link_to '　ログアウト' , destroy_user_session_path, method: :delete %></li>
-                        <% else %>
-                          <li class=""><%= link_to "　ログイン" ,"/users/sign_in" %></li>
-                          <li class=""><%= link_to "　会員登録" ,"/users/sign_up" %></li>
-                        <% end %>
-                          </ul>
-                    </div>
+                <div class="hamburger-menu">
+                        <input type="checkbox" id="menu-btn-check">
+                        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                      <div class="menu-content">
+                              <ul>
+                              <li class=""><%= link_to "　案件一覧" ,"/posts/index" %></li>
+                              <li class=""><%= link_to "　LINEでお問い合わせ" ,"https://page.line.me/892qodsr?openQrModal=true" %></li>
+                              <li class="nav__item"><%= link_to "　友人を紹介する" ,"/users/invitation/new" %></li>   
+                          <% if admin_signed_in?  %> 
+                              <li class="nav__item"><%= link_to "　管理者ページ" ,"/works" %></li>
+                          <% elsif provider_signed_in?  %>
+                              <li class="nav__item"><%= link_to "　事業者ページ" ,"/works" %></li>
+                          <% elsif user_signed_in?  %>
+                                    
+                              <li class="nav__item"><%= link_to "　ユーザーページ" ,"/tops/index" %></li>
+                              <li class="nav__item"><%= link_to "　ユーザー設定" ,"/tops/index" %></li>
+                              <li class="nav__item"><%= link_to '　ログアウト' , destroy_user_session_path, method: :delete %></li>
+                            <% else %>
+                              <li class=""><%= link_to "　ログイン" ,"/users/sign_in" %></li>
+                              <li class=""><%= link_to "　会員登録" ,"/users/sign_up" %></li>
+                            <% end %>
+                              </ul>
+                      </div>
                 </div>
-                </div>
+              </div>
 
-                      <ul class="nav__wrapper">
+                  <ul class="nav__wrapper">
                         <li class="nav__item h-list "><%= link_to "案件一覧" ,"/posts/index" %></li>
                          <li class="nav__item h-list "><%= link_to "よくあるご質問" ,"/tops/index#FAQ" %></li>
                         <li class="nav__item h-contact"><%= link_to "LINEでお問い合わせ" ,"https://page.line.me/892qodsr?openQrModal=true" %></li>
@@ -57,8 +62,8 @@
                         <li class="nav__item h-log"><%= link_to "ログイン" ,"/users/sign_in" %></li>
                         <li class="nav__item h-reg"><%= link_to "会員登録" ,"/users/sign_up" %></li>
                       <% end %>
-                      </ul>
-            </nav>
+                  </ul>
+          </nav>
   </div>
  </header> 
 
