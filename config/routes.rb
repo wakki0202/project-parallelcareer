@@ -71,5 +71,6 @@ Rails.application.routes.draw do
 
   get "users/index",to:"users#index"
   get "users/confirm",to:"users#confirm"
+  get "users/passedit",to:"users#passedit"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
