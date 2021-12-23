@@ -5,9 +5,9 @@
         <div class="sideEditMain">
         <h3 id="normalEdit">ユーザー設定</h3>
        
-          <p><a href="#normalEdit">基本情報</a></p>
-          <p><a href="#passEdit">パスワード設定</a></p>
-          <p><a href="#bankEdit">口座設定</a></p>
+          <p><a href="/users/basicedit">基本情報</a></p>
+          <p><a href="/users/edit">パスワード設定</a></p>
+          <p><a href="/users/bankedit">口座設定</a></p>
 
         <h3 id="normalEdit">その他</h3>
           <p><a href="/users/invitation/new">友達を招待する</a></p>
@@ -19,47 +19,19 @@
         <div class="edit-page">
               <div class="formEdit">
 
-              <h2 id="normalEdit">ユーザー基本情報</h2>
 
               <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
                 <%= render "devise/shared/error_messages", resource: resource %>
                 <p class="alert"><%= alert %></p>
 
-                <div class="formSet">
-                    <div class="text-left">お名前 <span>（必須）</span></div>
-                    <%= f.text_field :username, placeholder: '  原　キャリー' %>
-                  </div>
-
-                  <div class="formSet">
-                      <div class="text-left">電話番号 <span>（必須）</span></div>
-                      <%= f.text_field :phonenumber, autofocus: true, placeholder: '  09012345678' %>
-                  </div>
-
-                <div class="formSet">
-                  <div class="text-left">Eメール <span>（必須）</span></div>
-                  <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-                </div>
-
-                <div class="formSet">
-                  <div class="text-left">経歴（任意）</div>
-                  <%= f.text_area :career, autofocus: true, autocomplete: "email",size: "40x10" %>
-                </div>
-
-                <div class="formSet">
-                  <div class="text-left">自己PR（任意）</div>
-                  <%= f.text_area :appeal, autofocus: true, autocomplete: "email",size: "40x10" %>
-                </div>
-
-                <div class="formSet">
-                    <%= f.submit "基本情報を更新する",class:"button" %>
-                </div>
+                 <h2 id="passEdit">パスワード設定</h2>
 
                 <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
                   <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
                 <% end %>
 
                   <div>
-                  <h2 id="passEdit">パスワード設定</h2>
+                 
 
 
                         <div class="formSet">
@@ -81,45 +53,8 @@
                           <%= f.submit "パスワードを更新する",class:"button" %>
                         </div>
 
-                  </div>
-                  <div>
-                  <h2 id="bankEdit">振込先口座登録</h2>
-
-
-                        <div class="formSet">
-                          <div class="text-left">銀行 <span>（必須）</span></div>
-                          <%= f.text_field :bank %>
-                        </div>
-
-                        <div class="formSet">
-                          
-                          <div class="text-left">口座種別 <span>（必須）</span></div>
-                          <div class="flexKinds">
-                          <div>
-                          <%= f.radio_button :kinds, "普通" %>
-                          <%= f.label :kinds, "普通" %>
-                          </div>
-                          <div>
-                          <%= f.radio_button :kinds, "当座" %>
-                          <%= f.label :kinds, "当座" %>
-                          </div>
-                          </div>
-                        </div>
-
-                        <div class="formSet">
-                          <div class="text-left">支店コード <span>（必須）</span></div>
-                          <%= f.text_field :branch %>
-                        </div>
-
-                        <div class="formSet">
-                          <div class="text-left">口座番号 <span>（必須）</span></div>
-                          <%= f.text_field :banknumber %>
-                        </div>
-
-                      
-                        <div class="formSet">
-                          <%= f.submit "口座情報を更新する",class:"button" %>
-                        </div>
+                
+                
                   </div>
                   
               <% end %>

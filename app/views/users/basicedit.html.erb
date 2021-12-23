@@ -1,0 +1,64 @@
+<body class="userEdit">
+ <%= render '/layouts/header' %>
+<div class="editWrap">
+      <div class="sideEdit">
+        <div class="sideEditMain">
+        <h3 id="normalEdit">ユーザー設定</h3>
+       
+          <p><a href="/users/basicedit">基本情報</a></p>
+          <p><a href="/users/edit">パスワード設定</a></p>
+          <p><a href="/users/bankedit">口座設定</a></p>
+
+        <h3 id="normalEdit">その他</h3>
+          <p><a href="/users/invitation/new">友達を招待する</a></p>
+          <p><a href="/users/invitation/new">パラキャリを退会する</a></p>
+      
+        </div>
+      </div>
+      <div class="mainEdit">
+        <div class="edit-page">
+              <div class="formEdit">
+          <%= form_with(url: {controller: 'users', action: 'basicedit' }) do |f| %>
+                <p class="alert"><%= alert %></p>
+             
+             <h2 id="bankEdit">基本情報</h2>
+
+                  <div class="formSet">
+                    <div class="text-left">お名前 <span>（必須）</span></div>
+                    <%= f.text_field :username, placeholder: '  原　キャリー',value:  current_user.username %>
+                  </div>
+
+                  <div class="formSet">
+                      <div class="text-left">電話番号 <span>（必須）</span></div>
+                      <%= f.text_field :phonenumber, autofocus: true, placeholder: '  09012345678',value:  current_user.phonenumber %>
+                  </div>
+
+                <div class="formSet">
+                  <div class="text-left">Eメール <span>（必須）</span></div>
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email",value:  current_user.email %>
+                </div>
+
+                <div class="formSet">
+                  <div class="text-left">経歴（任意）</div>
+                  <%= f.text_area :career, autofocus: true, autocomplete: "email",size: "40x10",value:  current_user.career %>
+                </div>
+
+                <div class="formSet">
+                  <div class="text-left">自己PR（任意）</div>
+                  <%= f.text_area :appeal, autofocus: true, autocomplete: "email",size: "40x10",value:  current_user.appeal %>
+                </div>
+
+                <div class="formSet">
+                    <%= f.submit "基本情報を更新する",class:"button" %>
+                </div>
+                  
+              <% end %>
+
+
+              <%= link_to "Back", :back %>
+
+              </div>
+              </div>
+      </div>
+</div>
+</body>

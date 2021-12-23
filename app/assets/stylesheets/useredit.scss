@@ -36,39 +36,71 @@
   padding-top: 10px;
 }
 
+select#kinds{
+  border:gray 2px solid;
+    border-radius: 1rem;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .editWrap{
   display: flex;
   margin-top: 70px;
 }
 
 .sideEdit{
-  width: 30%;
+  width: 35%;
   padding: 8% 0 0;
+  
+  margin-left: 40px;
 }
 
 .sideEditMain{
    position: relative;
-
   z-index: 1;
   background: #FFFFFF;
-  width: 80%;
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
   padding: 45px;
-  text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   border-radius: 1rem;
+  ul{
+    text-align: center;
+    margin-right: 40px;
+    
+    
 
+    li{
+      text-align: left;
+      font-size: 20px;
+      padding: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+       display: flex;
+      align-items: center;
+      i{
+        margin-right: 20px;
+      }
+      
+      a{
+        color: black;
+        display: inline-flex;
+      }
+    }
+  }
  
 }
 
 .mainEdit{
-  width: 70%;
+  width: 60%;
+  margin-right: 30px;
 }
 
 
 .edit-page {
-  padding: 11% 0 0;
+  padding: 100px 0 0;
   width: 90%;
   margin: 0 auto;
 
