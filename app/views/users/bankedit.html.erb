@@ -1,18 +1,7 @@
 <body class="userEdit">
  <%= render '/layouts/header' %>
 <div class="editWrap">
-      <div class="sideEdit">
-        <div class="sideEditMain">
-       
-        <ul>
-         <li><a href="/users/basicedit">基本情報</a></li>
-          <li><a href="/users/edit">パスワード設定</a></li>
-          <li><a href="/users/bankedit">口座設定</a></li>
-          <li><a href="/users/invitation/new">友達を招待する</a></li>
-          <li><a href="/users/invitation/new">パラキャリを退会する</a></li>
-        </ul>
-        </div>
-      </div>
+      <%= render 'editside' %>
       <div class="mainEdit">
         <div class="edit-page">
               <div class="formEdit">

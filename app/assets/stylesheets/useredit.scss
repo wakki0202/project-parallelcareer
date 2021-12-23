@@ -88,6 +88,12 @@ select#kinds{
         color: black;
         display: inline-flex;
       }
+      a:hover{
+        background-color: rgba(0, 0, 0, 0);
+      }
+    }
+    li:hover{
+      background-color: rgba(0, 0, 0, 0.2);
     }
   }
  
