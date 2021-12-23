@@ -70,10 +70,10 @@ Rails.application.routes.draw do
   get "progresses/news",to:"progresses#news"
 
   get "users/index",to:"users#index"
-  get "users/confirm",to:"users#confirm"
   get "users/basicedit",to:"users#basicedit"
   get "users/bankedit",to:"users#bankedit"
   post "users/bankedit",to:"users#update"
   post "users/basicedit",to:"users#update"
+  get "users/destroy",to:"users#destroy"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

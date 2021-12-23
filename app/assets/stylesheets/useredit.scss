@@ -96,12 +96,28 @@ select#kinds{
       background-color: rgba(0, 0, 0, 0.2);
     }
   }
+
+ 
  
 }
 
 .mainEdit{
   width: 60%;
   margin-right: 30px;
+
+   .caution1{
+    color: red;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+  }
+
+  .caution2{
+    color: red;
+    text-align: left;
+    padding-bottom: 60px;
+  }
 }
 
 

@@ -1,5 +1,4 @@
  <body class="sidebar"> 
- <% if admin_signed_in? ||  provider_signed_in? %>  
 <ul class="nav flex-column">
 
         <div class="side-contents back-toppage">
@@ -26,7 +25,7 @@
           <span class="glyphicon glyphicon-envelope" aria-hidden="true"><li class="btn nav-item"><a href="#">お知らせ一覧 <span class="badge badge-primary badge-pill"><%= @introductionnumber %></span></a></li></span>
         </div>
 
-        <% if admin_signed_in? %>  
+  
 
        <!-- <% if current_admin.email == "ytk0202@outlook.jp"  %>  -->
   
@@ -35,15 +34,10 @@
 
         <!-- <% end %> -->
 
-         <% end %>
-
-        <% if provider_signed_in? %>  
 
         <li class="btn"><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></button>
 
-        <% end %>
-     
-<% end %>
+   
 </ul>
   
 <header class="site-header lg:block z-9 w-full fixed bg-white border-b-2">

@@ -54,5 +54,8 @@ class UsersController < ApplicationController
 
     params.permit(:bank, :branch, :banknumber, :kinds)
   end 
+  def destroy
+
+  end
 
 end
