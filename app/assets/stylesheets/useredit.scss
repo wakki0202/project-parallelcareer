@@ -8,6 +8,32 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;    
  
+
+  .formSet .button{
+    background-color: #ff5a3d;
+    margin-bottom: 100px;
+  }
+
+  .formSet input{
+    background-color: white;
+    border:gray 2px solid;
+  }
+
+  .formSet textarea{
+    background-color: white;
+    border:gray 2px solid;
+    border-radius: 1rem;
+    width: 100%;
+  }
+
+  span{
+    color: red;
+  }
+}
+
+.flexKinds{
+  display: flex;
+  padding-top: 10px;
 }
 
 .editWrap{
