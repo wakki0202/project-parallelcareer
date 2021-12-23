@@ -11,6 +11,7 @@ header {
 .header-logo{ 
   width: 50%;
   padding-top: 5px;
+  padding-left: 30px;
   .logoImages{
     
     width: 50px;
@@ -18,7 +19,8 @@ header {
   }
 a{
   text-decoration: none;
-  color: #666;
+  
+  color: black;
 }
 }
 
@@ -35,9 +37,12 @@ nav{
   .headerFlex{
     display: flex;
     align-items: center;
+    font-family: "ヒラギノ角ゴ ProN", sans-serif;
     p{
       margin-top: 20px;
+      font-size: 18px;
       font-weight: bold;
+      
     }
   }
 
