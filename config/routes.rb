@@ -25,6 +25,14 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
+
+  devise_scope :provider do
+    get '/providers/sign_out' => 'devise/sessions#destroy'
+  end
+
+  devise_scope :admin do
+    get '/admins/sign_out' => 'devise/sessions#destroy'
+  end
     
   root "tops#index"
   get "tops/index",to:"tops#index"
