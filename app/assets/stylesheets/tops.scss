@@ -307,9 +307,14 @@
       #fceabb
 
       
+      
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     text-align: center;
+
+    .border {
+    border-bottom: 2px solid beige;
+  }
 
     .subtitle{
         background: linear-gradient(
@@ -356,9 +361,7 @@
     margin-top: 30px;
   }
 
-  .border {
-    border-bottom: 2px solid beige;
-  }
+  
   .Item-bottom {
     padding: 10px 10px 0;
     text-align: left;
