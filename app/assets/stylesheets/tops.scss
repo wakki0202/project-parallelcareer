@@ -69,6 +69,7 @@
     background-color: rgba(0, 0, 0, 0.6);
     background-size: cover;
     min-height: 100vh;
+    margin-bottom: 120px;
   }
   .phrase {
     animation-name: phraseAnimeBase;
@@ -212,7 +213,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #333; /*伸びる背景色の設定*/
+    background-color: #eb6302; /*伸びる背景色の設定*/
   }
   @keyframes mpLRextendAnime {
     0% {
@@ -233,13 +234,13 @@
   }
 
   .title{
-    margin-top: 150px;
-    margin-bottom: 90px;
-    font-size: 40px;
+    font-size: 3.5em;
+    font-weight: bold;
   }
   .merit {
     padding-left: 20%;
-    margin-bottom: 100px;
+    margin-top: 80px;
+    margin-bottom: 80px;
   }
 
   .merit-phrase {
@@ -332,6 +333,7 @@
     flex-wrap: wrap;
     justify-content: center;
     justify-content: space-around;
+    margin-top: 70px;
   }
 
   .Item {
@@ -511,7 +513,16 @@
     gap: 2em;
     align-content: flex-start;
     padding: 0 20%;
+    margin-top: 50px;
     margin-bottom: 200px;
+
+      li {
+    display: block;
+    padding: 1.5em;
+    line-height: 2;
+    font-weight: bold;
+    font-size: 18px;
+  }
   }
 
   .Q-title {
@@ -535,10 +546,7 @@
   label:hover {
     color: rgba(0, 0, 0, 0.6);
   }
-  li {
-    display: block;
-    padding: 2em;
-  }
+
 .FAQ-item{
   input[type="checkbox"] {
     display: none;
