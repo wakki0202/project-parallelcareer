@@ -20,6 +20,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def after_sign_up_path_for(resource)
+ 
+   respond_to   users_complete_path
+  
+
+  end
+
   #def authenticate_any!
   #if admin_signed_in?
       #true

@@ -83,5 +83,6 @@ Rails.application.routes.draw do
   post "users/bankedit",to:"users#update"
   post "users/basicedit",to:"users#update"
   get "users/destroy",to:"users#destroy"
+  get "users/complete",to:"users#complete"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
