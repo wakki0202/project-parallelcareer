@@ -1,13 +1,31 @@
 
-<div class="provider-index">
-    <div class="side">
-      <%= render '/works/side' %>
+
+
+<body class="providerPage">
+  <div class="side">
+    <%= render '/works/side' %>
+  </div>
+ 
+  <div class="main">
+    <div class="mainHeader">
+    <ul>
+    <% if provider_signed_in? %>
+      <li class=""><span><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></span></li> 
+      <li><%= current_provider.email %></li>
+      <% else %>
+      <li class=""><span>ログアウト</span></li> 
+      <li>管理者名</li>
+    
+      <% end %>
+
+    </ul>
     </div>
+    
+        
+    <div class="userIndex">
+      <h3 class="text-center">口コミ一覧</h3>
 
-    <div class="bg_pattern Paper_v2"> 
-    <div class="providers">
-
-    <table class="border border-black w-7/12 m-auto">
+      <table class="table">
       
         
       <tr class="border font-bold ">
@@ -88,8 +106,7 @@
 
   
 <% end %>
-</div>
+      </div>
 
-</div>
-</div>
-</div>
+  </div>
+</body>
