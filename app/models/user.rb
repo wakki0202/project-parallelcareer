@@ -6,9 +6,10 @@ class User < ApplicationRecord
 
 
     has_many :introductions, dependent: :destroy
-    has_many :works, through: :introductions,through: :detail, dependent: :destroy
+    has_many :works, through: :introductions, dependent: :destroy
 
     has_many :details, dependent: :destroy
+    has_many :works,through: :details, dependent: :destroy
 
     validates :phonenumber, numericality: true
     #validates :banknumber, numericality: true

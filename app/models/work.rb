@@ -1,8 +1,9 @@
 class Work < ApplicationRecord
   has_many :introductions, dependent: :destroy
-  has_many :users, through: :introductions, through: :details
+  has_many :users, through: :introductions
 
   has_many :details, dependent: :destroy
+  has_many :users, through: :details
   accepts_nested_attributes_for :details
   belongs_to :provider, optional: true
   belongs_to :admin, optional: true

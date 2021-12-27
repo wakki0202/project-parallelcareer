@@ -1,25 +1,35 @@
 
 
-<div class="provider-index">
+
+
+<body class="providerPage">
   <div class="side">
-  <%= render 'side' %>
+    <%= render '/works/side' %>
   </div>
+ 
+  <div class="main">
+    <div class="mainHeader">
+    <ul>
+      <li class=""><span>ログアウト</span></li>
+      <li><%= current_provider.email %></li>
+    </ul>
+    </div>
+    
+        
+    <div class="userIndex">
+      <h3 class="text-center">案件一覧</h3>
+      <div class="providerTable">
+      <a href="news/new" class="toNew">＋ 新規作成</a>
 
+        <table class="table userTable">
 
-  <div class="providers">
-      <div class="header">
-      <%= render 'side_header'%>
-      </div>
-      <div class="cases-title">
-        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"><h1>案件一覧</h1></span>
-      </div>
-      <table class="table">
-
-        <thead>
-          <tr>
-            <th>会社名</th>
-            <th>案件名</th>
+        <thead class="heading">
+          <tr class="border">
+            <th class="border">会社名</th>
+            <th class="border">案件名</th>
             <th>ステータス</th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
 
@@ -36,7 +46,10 @@
           <% end %>
         </tbody>
       </table>
+      </div>
     </div>
 
+  </div>
+</body>
 
-</div>
+   
