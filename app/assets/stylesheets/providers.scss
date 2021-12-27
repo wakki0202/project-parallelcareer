@@ -84,6 +84,11 @@
       border:1px solid;
     }
   
+
+    td{
+      border:1px solid;
+       border-color: grey;
+    }
   }
 
 
@@ -99,7 +104,8 @@
     }
 
     .heading{
-      background-color: #e8ecec ;
+      background-color: #252d33;
+      color:white;
     }
 
     .providerTable{

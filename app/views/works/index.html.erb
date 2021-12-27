@@ -32,7 +32,6 @@
 
         <thead class="heading">
           <tr class="border">
-            <th class="border">会社名</th>
             <th class="border">案件名</th>
             <th>ステータス</th>
             <th></th>
@@ -42,10 +41,9 @@
 
         <tbody>
           <% @works.each do |work| %>
-            <tr class="provideredition">
-              <td class="provideredition"><%= work.company %></td>
-              <td class="provideredition"><%= work.title %></td>
-              <td class="provideredition"><%= work.status %></td>
+            <tr class="">
+              <td class=""><%= work.title %></td>
+              <td class=""><%= work.status %></td>
               <td class=""><%= link_to '詳細', work,class:"btn" %></td>
               <td class=""><%= link_to '編集', edit_work_path(work),class:"btn" %></td>
               
