@@ -17,7 +17,7 @@ ja:
         submit_button: 'パスワードを設定する'
     mailer:
       invitation_instructions:
-        subject: 'パラキャリの招待状が届いています！'
+        subject: '口コミ複業パラキャリの招待状が届いています！'
         hello: 'こんにちは、%{email}さん'
         someone_invited_you: '%{name}さんからパラキャリの招待状が届いています。以下のリンクから登録すると承認されます。'
         accept: '招待を承認する'

@@ -7,6 +7,7 @@ class Users::InvitationsController < Devise::InvitationsController
     @user = current_user
 
     if @user.save
+    user.invite!(current_user)
     redirect_to introductions_complete_path
     else
     redirect_to back
