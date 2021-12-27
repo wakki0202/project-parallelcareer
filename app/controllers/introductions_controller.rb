@@ -2,7 +2,7 @@ class IntroductionsController < ApplicationController
 #before_action :authenticate_provider!,only: [:index,:show,:edit,:update], unless: proc { admin_signed_in? }
 #before_action :authenticate_user!,only: [:new,:create]
   def index
-    @introductions = Introduction.all.order(id: :DESC)
+    @introductions = Introduction.all.page(params[:page]).per(10).order(id: :DESC)
     @introductionnumber = Introduction.all.count
     @questionnumber = Question.all.count
   end

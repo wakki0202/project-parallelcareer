@@ -3,7 +3,7 @@ class NewsController < ApplicationController
 
   # GET /news or /news.json
   def index
-    @news = News.all
+    @news = News.all.page(params[:page]).per(10)
     @questionnumber = Question.all.count
     @introductionnumber = Introduction.all.count
   end

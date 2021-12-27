@@ -4,7 +4,7 @@ class WorksController < ApplicationController
 
   # GET /works or /works.json
   def index
-    @works = Work.all
+    @works = Work.all.page(params[:page]).per(9)
     @questionnumber = Question.all.count
     @introductionnumber = Introduction.all.count
   end
