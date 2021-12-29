@@ -9,15 +9,6 @@
   </header>
 
   <section class="top-bg">
-    <div class="top">
-      <div class="top-catchcopy">
-        <div class="phrase p1"><div class="bgappear">あなたの口コミが複業になる</div></div>
-        <div class="phrase p2"><div class="bgappear">掲載企業から商品説明をきいてみたいあなたの知人の連絡先を送るだけ！</div></div>
-      </div>
-      <div class="start-top">
-        <%= link_to "無料ではじめる" ,"/users/sign_up",class: "btn-top" %></div>
-      </div>
-    </div>
   </section>
 
     <main class="top-page">
@@ -250,41 +241,41 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a5c533f20f.js" crossorigin="anonymous"></script>
-    <script>
-      var a = '.mpLRextendTrigger';
-      if (a == '.mpLRextendTrigger') {
-        b = 'mpLRextend';
-        c = '.mpapperTrigger';
-        d = 'mpapper'
-      }
+    # <script>
+    #   var a = '.mpLRextendTrigger';
+    #   if (a == '.mpLRextendTrigger') {
+    #     b = 'mpLRextend';
+    #     c = '.mpapperTrigger';
+    #     d = 'mpapper'
+    #   }
 
-      function BgFadeAnime(){
-          // 背景色が伸びて出現（左から右）
-        $(a).each(function(){ //bgLRextendTriggerというクラス名が
-          var elemPos = $(this).offset().top-50;//要素より、50px上の
-          var scroll = $(window).scrollTop();
-          var windowHeight = $(window).height();
-          if (scroll >= elemPos - windowHeight){
-            $(this).addClass(b);// 画面内に入ったらbgLRextendというクラス名を追記
-          }else{
-            $(this).removeClass(b);// 画面外に出たらbgLRextendというクラス名を外す
-          }
-        }); 
+    #   function BgFadeAnime(){
+    #       // 背景色が伸びて出現（左から右）
+    #     $(a).each(function(){ //bgLRextendTriggerというクラス名が
+    #       var elemPos = $(this).offset().top-50;//要素より、50px上の
+    #       var scroll = $(window).scrollTop();
+    #       var windowHeight = $(window).height();
+    #       if (scroll >= elemPos - windowHeight){
+    #         $(this).addClass(b);// 画面内に入ったらbgLRextendというクラス名を追記
+    #       }else{
+    #         $(this).removeClass(b);// 画面外に出たらbgLRextendというクラス名を外す
+    #       }
+    #     }); 
 
-        // 文字列を囲う子要素
-        $(c).each(function(){ //bgappearTriggerというクラス名が
-          var elemPos = $(this).offset().top-50;//要素より、50px上の
-          var scroll = $(window).scrollTop();
-          var windowHeight = $(window).height();
-          if (scroll >= elemPos - windowHeight){
-            $(this).addClass(d);// 画面内に入ったらbgappearというクラス名を追記
-          }else{
-            $(this).removeClass(d);// 画面外に出たらbgappearというクラス名を外す
-          }
-        });   
-      }
-      $(window).scroll(function (){
-        BgFadeAnime();
-      });
-    </script>
+    #     // 文字列を囲う子要素
+    #     $(c).each(function(){ //bgappearTriggerというクラス名が
+    #       var elemPos = $(this).offset().top-50;//要素より、50px上の
+    #       var scroll = $(window).scrollTop();
+    #       var windowHeight = $(window).height();
+    #       if (scroll >= elemPos - windowHeight){
+    #         $(this).addClass(d);// 画面内に入ったらbgappearというクラス名を追記
+    #       }else{
+    #         $(this).removeClass(d);// 画面外に出たらbgappearというクラス名を外す
+    #       }
+    #     });   
+    #   }
+    #   $(window).scroll(function (){
+    #     BgFadeAnime();
+    #   });
+    # </script>
 </body>
