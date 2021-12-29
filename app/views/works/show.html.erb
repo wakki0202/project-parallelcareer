@@ -1,11 +1,11 @@
-<div class="bg_pattern Paper_v2">
+
 <p id="notice"><%= notice %></p>
 
-
-<% @work.images.each do |image| %>
-<%= image_tag asset_path(image.to_s) %>
-<% end %>
-
+<div class="slider-images" style="text-align: center; width: 50%; height: 50%; margin: auto;">
+    <% @work.images.each do |img| %>
+    <%= image_tag img.to_s %>
+    <% end %>
+</div>
 
 <p>
   <strong>案件名:</strong>
@@ -60,4 +60,10 @@
 <button><%= link_to '◀トップへ戻る', works_path %></button>
 <button><%= link_to '削除する', @work, method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
 
-</div>
+<script>
+  $(function () {
+    $('.slider-images').slick({
+      dots: true,
+    });
+  });
+</script>

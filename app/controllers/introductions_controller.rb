@@ -4,7 +4,7 @@ class IntroductionsController < ApplicationController
   def index
     @introductions = Introduction.all.page(params[:page]).per(10).order(id: :DESC)
     @q = Introduction.all.ransack(params[:q])
-    @introductions = @q.result.page(params[:page]).order("created_at desc")
+    @introductions = @q.result.page(params[:page]).per(10).order("created_at desc")
     @introductionnumber = Introduction.all.count
     @questionnumber = Question.all.count
   end

@@ -1,7 +1,7 @@
 <body class="post-show">
   <%= render '/layouts/header' %>
 
-  <div class="slider-images" style="text-align: center; width: 70%; height: 70%; margin: auto;">
+  <div class="slider-images" style="text-align: center; width: 50%; height: 50%; margin: auto;">
     <% @work.images.each do |img| %>
     <%= image_tag img.to_s %>
     <% end %>

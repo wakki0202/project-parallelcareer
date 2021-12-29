@@ -6,7 +6,7 @@ class WorksController < ApplicationController
   def index
     @works = Work.all.page(params[:page]).per(9)
     @q = Work.ransack(params[:q])
-    @works = @q.result(distinct: true).page(params[:page]).order("created_at desc")
+    @works = @q.result(distinct: true).page(params[:page]).per(9).order("created_at desc")
     @questionnumber = Question.all.count
     @introductionnumber = Introduction.all.count
   end
