@@ -1,0 +1,22 @@
+<body class="userEdit">
+ <%= render '/layouts/header' %>
+<div class="editWrap">
+      <%= render 'editside' %>
+      <div class="mainEdit">
+        <div class="edit-page">
+              <div class="formEdit">
+             
+
+                  <h2 id="bankEdit">パラキャリの退会をご希望の方へ</h2>
+                  <h4 class="caution1">注：退会手続きは即時反映されます。</h4>
+                  <h4 class="caution2">注：一度退会するとアカウントの復活はできません。</h4>
+
+
+                    <%= link_to '退会する', "users", method: :delete, data: { confirm: '一度退会するとアカウントの復活はできません。よろしいですか？' },class:"button" %>
+
+
+              </div>
+              </div>
+      </div>
+</div>
+</body>

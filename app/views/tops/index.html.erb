@@ -3,19 +3,21 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body>
-  <header>
-  <p class="notice"><%= notice %></p>
+
   <%= render '/layouts/header' %>
-  </header>
+  
 
   <section class="top-bg">
   </section>
+  
+                  
 
     <main class="top-page">
 
+      <div class="parent"><div class="child"><h1 class="title mpextend mpLRextendTrigger mpapperTrigger ">パラキャリだから続けられる</h1></div></div>
     <section class="merit">
+      
       <div class="merit-phrase">
-        <div class="mpextend mpLRextendTrigger"><div class="mpapperTrigger">パラキャリだから続けられる</div></div>
       </div>
       <div class="merit-items">
         <div class="merit-item">
@@ -41,24 +43,25 @@
     </section>
 
     <section class="Items-list">
+    <div class="parent"><div class="child"><h1 class="title mpextend mpLRextendTrigger mpapperTrigger ">豊富な案件も！</h1></div></div>
     <div class="Items">
       <div class="Item">
           <div class="Item-top">
             <i class="fas fa-hand-holding-heart"></i>
-            <p class="Item-title">転職先企業紹介＆転職サポート</p><div class="border"></div>
+            <p class="Item-title">転職先企業紹介</p><div class="border"></div>
           </div>
           <div class="Item-bottom">
-            <p class="Item-reward">報酬：紹介料の20%</p>
+            <p class="Item-reward">報酬：紹介料の<span>20%</span></p>
             <p class="Item-content">転職もしくは就職をしたい方をご紹介ください。現在フリーター・無職の方でもOKです。</p>
           </div>
       </div>
       <div class="Item">
           <div class="Item-top">
             <i class="fas fa-coins"></i>
-            <p class="Item-title">補助金・助成金の申請サポート</p><div class="border"></div>
+            <p class="Item-title">補助金の申請サポート</p><div class="border"></div>
           </div>
           <div class="Item-bottom">
-            <p class="Item-reward">報酬：申請サポート手数料の20%</p>
+            <p class="Item-reward">報酬：申請手数料の<span>20%</span></p>
             <p class="Item-content">補助金・助成金の申請のサポートをさせていただける方を紹介してください。</p>
           </div>
       </div>
@@ -68,7 +71,7 @@
             <p class="Item-title">賃貸物件紹介</p><div class="border"></div>
           </div>
           <div class="Item-bottom">
-            <p class="Item-reward">報酬：家賃の50%</p>
+            <p class="Item-reward">報酬：家賃の<span>50%</span></p>
             <p class="Item-content">引越しする方をご紹介ください。 ネットに載ってる物件や未公開物件を安くご案内します。</p>
           </div>
       </div>
@@ -78,7 +81,7 @@
             <p class="Item-title">火災保険申請サポート</p><div class="border"></div>
           </div>
           <div class="Item-bottom">
-            <p class="Item-reward">報酬：約10万円/件</p>
+            <p class="Item-reward">報酬：約<span>10</span>万円/件</p>
             <p class="Item-content">プロによる物件の無料調査を受けたいお客様をご紹介ください。</p>
           </div>
       </div>
@@ -88,58 +91,10 @@
       <%= link_to "案件をもっとみる", "/posts/index" , class: "btn-more" %></div>
     </div>
     </section>
-      <section class="reward parent">
-      <div class="subtitle child">
-        <div class="mpextend mpLRextendTrigger"><div class="mpapperTrigger">報酬獲得までの流れ</div></div>
-      </div>
-        <div class="reward-flow">
-          <div class="step-nums">
-            <div class="step-num">1</div>
-            <p class="reward-border"></p>
-            <div class="step-num">2</div>
-            <p class="reward-border"></p>
-            <div class="step-num">3</div>
-            <p class="reward-border"></p>
-            <div class="step-num">4</div>
-          </div>
-
-          <div class="step-items">
-            <div class="step-item">
-              <div class="step-title">会員登録</div>
-              <div class="step-content">
-                会員登録後、紹介したい案件を見つけます。
-                （その際、パラキャリ公式LINEにも登録）
-              </div>
-            </div>
-            <div class="step-item">
-              <div class="step-title">知人に紹介</div>
-              <div class="step-content">
-              知人や友人に紹介します。知人が詳細をご希望されたら「掲載主から連絡が入る」と伝えます。
-              </div>
-            </div>
-            <div class="step-item">
-              <div class="step-title">入力作業</div>
-              <div class="step-content">
-              パラキャリに顧客情報を入力します。
-              </div>
-            </div>
-            <div class="step-item">
-              <div class="step-title">報酬発生</div>
-              <div class="step-content">
-              掲載主から紹介先に連絡が入り、契約になれば報酬発生します。
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="reward-start">
-          <%= link_to "無料ではじめる" ,"/users/sign_up",class: "btn-reward" %></div>
-        </div>
-      </section>
+    
       
-      <section class="FAQ parent">
-      <div class="subtitle child">
-        <div class="mpextend mpLRextendTrigger"><div class="mpapperTrigger">FAQ</div></div>
-      </div>
+      <section id="FAQ" class="FAQ ">
+      <div class="parent"><div class="child"><h1 class="title mpextend mpLRextendTrigger mpapperTrigger ">FAQ</h1></div></div>
       <div class="FAQ-items">
         
         <div class="FAQ-item">
@@ -199,38 +154,113 @@
       </div>
       </section>
 
-      <section>
-      <div class="parent">
-        <div class="subtitle child">
-          <div class="mpextend mpLRextendTrigger"><div class="mpapperTrigger">ユーザーの声</div></div>
-        </div>
+      <section class="reward parent">
+      <div class="subtitle child">
+        <div class="mpextend mpLRextendTrigger"><div class="mpapperTrigger">報酬獲得までの流れ</div></div>
       </div>
 
-      <div class="Voices">
-        <div class="Voice">
-          <div class="Voice-user">
-            <img src="../../assets/woman-second.png" class="Voice-img">
-            <div class="user-info">34歳 女性</div>
-          </div>
-          <div class="user-comment"><div>コロナでパートの収入が減って外出もできない中で不安な毎日でしたが、パラキャリで副業することで<span>金銭的な余裕</span>が生まれました。今ではパートを卒業して、パラキャリだけで自宅にいながら収入を得ることができるので、子供との時間を今まで以上にとることができて心にも余裕が生まれました。</div></div>
-        </div>
-        <div class="Voice-border"></div>
-        <div class="Voice">
-          <div class="Voice-user">
-            <img src="../../assets/man-second.png" class="Voice-img">
-            <div class="user-info">62歳 男性</div>
-          </div>
-          <div class="user-comment"><div>セカンドライフを見据えてもう少し収入を増やしたいと思ってましたが、特別な技術もパソコンスキルもなく副業は難しいと思っておりました。ただパラキャリはそんな私でも凄く<span>簡単に</span>使えました。困っている知人を紹介するだけで感謝もされるし収入もしっかりと稼げるので遣り甲斐を感じております。</div></div>
-        </div>
-        <div class="Voice-border"></div>
-        <div class="Voice">
-          <div class="Voice-user">
-            <img src="../../assets/man-first.png" class="Voice-img">
-            <div class="user-info">27歳 男性</div>
-          </div>
-          <div class="user-comment"><div>同僚に教えてもらってパラキャリに登録しました。この不安定な世の中、会社の収入だけに頼るのはリスクだと思い、今までに様々な副業に挑戦しました。ただ会社の仕事はかなりハードで、ヘトヘトで家に帰ってから副業をするのはとても大変で結局今まで１円も稼ぐことができませんでした。しかしこのサイトはお客様への説明などの手間のかかることは不要で、見込み顧客を紹介するだけであとは全て掲載主の方が行ってくれるので、忙しい私でも<span>初月から１０万円以上</span>稼ぐことができました。</div></div>
-        </div>
+      <div class="flex">
+
+      <div class="stepOne">
+      <p><span>step1</span></p>
+      <h4>案件を確認する</h4>
+      <div class="">
+      <%= image_tag "stepone.jpg",class:"stepImage" %>
       </div>
+        <p class="stepFooter">友人に紹介したい案件を見つけたら...</p>
+      </div>
+
+      <div class="arrow">
+    </div>
+
+      <div class="stepOne">
+      <p><span>step2</span></p>
+      <h4>知人に案件を紹介する</h4>
+      <div class="">
+      <%= image_tag "stepfour.jpg",class:"stepImage" %>
+      </div>
+        <p class="stepFooter">知人に口コミの許可をもらったら...</p>
+      </div>
+
+      <div class="arrow">
+    </div>
+
+    <div class="stepOne">
+      <p><span>step3</span></p>
+      <h4>知人の情報を口コミする</h4>
+      <div class="">
+      <%= image_tag "stepthree.jpg",class:"stepImage" %>
+      </div>
+        <p class="stepFooter">口コミした案件の契約が成功すれば...</p>
+      </div>
+
+      <div class="arrow">
+    </div>
+
+      <div class="stepOne">
+      <p><span>step4</span></p>
+      <h4>報酬発生！</h4>
+      <div class="">
+      <%= image_tag "stepsecond.jpg",class:"stepImage" %>
+      </div>
+        <p class="stepFooter"><a href="/posts/index" class="toWorks">案件一覧を見る</a></p>
+      </div>
+
+      </div>
+
+
+
+       
+        <div class="reward-start">
+          <%= link_to "無料ではじめる" ,"/users/sign_up",class: "btn-reward" %></div>
+        </div>
+      </section>
+
+      <section class="Voices">
+      <div class="parent">
+        <div class="subtitle child">
+          <div class="mpextend mpLRextendTrigger"><div class="mpapperTrigger">報酬獲得者もぞくぞく！</div></div>
+        </div>
+
+         <div class="flexVoice">
+
+      <div class="Voice">
+  
+      <div class="manPic">
+      <%= image_tag "manpic.jpg",class:"VoiceImage" %>
+      </div>
+        <div class="VoiceFooter">
+        <p class="comment">パラキャリは見込み顧客を紹介するだけであとは全て掲載主の方が行ってくれるので、忙しい私でも初月から１０万円以上稼ぐことができました。</p>
+        <p class="feature">27歳 男性</p>
+      </div>
+      </div>
+
+
+      <div class="Voice">
+    
+      <div class="">
+      <%= image_tag "manpic2.jpg",class:"VoiceImage" %>
+      </div>
+        <div class="VoiceFooter">
+        <p class="comment">パラキャリは見込み顧客を紹介するだけであとは全て掲載主の方が行ってくれるので、忙しい私でも初月から１０万円以上稼ぐことができました。</p>
+        <p class="feature">27歳 男性</p>
+      </div>
+      </div>
+
+
+    <div class="Voice">
+ 
+      <div class="">
+      <%= image_tag "manpic.jpg",class:"VoiceImage" %>
+      </div>
+      <div class="VoiceFooter">
+        <p class="comment">パラキャリは見込み顧客を紹介するだけであとは全て掲載主の方が行ってくれるので、忙しい私でも初月から１０万円以上稼ぐことができました。</p>
+        <p class="feature">27歳 男性</p>
+      </div>
+
+      </div>
+
+     
 
       </section>
     </main>

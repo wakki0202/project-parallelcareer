@@ -21,6 +21,18 @@ Rails.application.routes.draw do
         registrations: 'users/registrations',
         invitations: 'users/invitations'
       }
+
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+
+  devise_scope :provider do
+    get '/providers/sign_out' => 'devise/sessions#destroy'
+  end
+
+  devise_scope :admin do
+    get '/admins/sign_out' => 'devise/sessions#destroy'
+  end
     
   root "tops#index"
   get "tops/index",to:"tops#index"
@@ -66,6 +78,11 @@ Rails.application.routes.draw do
   get "progresses/news",to:"progresses#news"
 
   get "users/index",to:"users#index"
-  get "users/confirm",to:"users#confirm"
+  get "users/basicedit",to:"users#basicedit"
+  get "users/bankedit",to:"users#bankedit"
+  post "users/bankedit",to:"users#update"
+  post "users/basicedit",to:"users#update"
+  get "users/destroy",to:"users#destroy"
+  get "users/complete",to:"users#complete"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

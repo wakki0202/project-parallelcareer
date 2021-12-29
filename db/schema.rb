@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_001556) do
+ActiveRecord::Schema.define(version: 2021_12_23_132925) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -54,6 +54,12 @@ ActiveRecord::Schema.define(version: 2021_12_16_001556) do
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "progresses", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "step"
   end
 
   create_table "provider_files", force: :cascade do |t|
@@ -111,6 +117,8 @@ ActiveRecord::Schema.define(version: 2021_12_16_001556) do
     t.string "status"
     t.string "affiliater_id"
     t.string "referrer_id"
+    t.text "career"
+    t.text "appeal"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
     t.index ["invited_by_id"], name: "index_users_on_invited_by_id"

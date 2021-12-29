@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   private
     def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:username,:phonenumber,:bank,:branch,:kinds,:banknumber,:referrer_id])
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:username,:phonenumber])
       devise_parameter_sanitizer.permit(:invite, keys: [:email, :username, :phonenumber])
       devise_parameter_sanitizer.permit(:accept_invitation, keys: [:password, :password_confirmation, :username, :phonenumber])
     end
@@ -18,6 +18,13 @@ class ApplicationController < ActionController::Base
       works_path
 
     end
+  end
+
+  def after_sign_up_path_for(resource)
+ 
+   respond_to   users_complete_path
+  
+
   end
 
   #def authenticate_any!
