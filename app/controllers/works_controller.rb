@@ -5,6 +5,8 @@ class WorksController < ApplicationController
   # GET /works or /works.json
   def index
     @works = Work.all.page(params[:page]).per(9)
+    @q = Work.ransack(params[:q])
+    @works = @q.result(distinct: true).page(params[:page]).order("created_at desc")
     @questionnumber = Question.all.count
     @introductionnumber = Introduction.all.count
   end
@@ -60,6 +62,8 @@ class WorksController < ApplicationController
     end
   end
 
+  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_work
@@ -70,4 +74,6 @@ class WorksController < ApplicationController
     def work_params
       params.require(:work).permit(:title, :company, :link, :reward, :pcontent, :rday, :rcontent, :area, :appeal, :status, {images: []})
     end
+
+    
 end

@@ -10,4 +10,9 @@ class Work < ApplicationRecord
 
   mount_uploaders :images, ImgUploader
   serialize :images, JSON # SQLiteを使っているときはこの列を追記
+
+  def self.search(search)
+      return Work.all unless search
+      Work.where(['title LIKE ?', "%#{search}%"])
+    end
 end

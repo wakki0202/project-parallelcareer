@@ -4,6 +4,8 @@ class NewsController < ApplicationController
   # GET /news or /news.json
   def index
     @news = News.all.page(params[:page]).per(10)
+    @q = News.ransack(params[:q])
+    @news = @q.result(distinct: true).page(params[:page]).order("created_at desc")
     @questionnumber = Question.all.count
     @introductionnumber = Introduction.all.count
   end
@@ -58,6 +60,11 @@ class NewsController < ApplicationController
       format.html { redirect_to news_index_url, notice: "News was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def search
+    #Viewのformで取得したパラメータをモデルに渡す
+    @news = News.search(params[:search])
   end
 
   private

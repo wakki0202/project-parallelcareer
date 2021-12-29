@@ -3,6 +3,8 @@ class IntroductionsController < ApplicationController
 #before_action :authenticate_user!,only: [:new,:create]
   def index
     @introductions = Introduction.all.page(params[:page]).per(10).order(id: :DESC)
+    @q = Introduction.all.ransack(params[:q])
+    @introductions = @q.result.page(params[:page]).order("created_at desc")
     @introductionnumber = Introduction.all.count
     @questionnumber = Question.all.count
   end
@@ -58,6 +60,16 @@ class IntroductionsController < ApplicationController
    
   
   end
+
+  def search
+    #Viewのformで取得したパラメータをモデルに渡す
+    @introduction = Introduction.search(params[:introduction][:search])
+  end
+
+  
+  def complete
+
+  end
     
 
    private
@@ -76,18 +88,8 @@ class IntroductionsController < ApplicationController
   
 
 
-  def complete
 
-  end
-
-  def detail
-  if current_user == @user
-   DetailMailer.detail_introduction(work,current_user).deliver
-    redirect_to posts_index_path
-  else
-    redirect_to posts_index_path
-  end
-  end
+  
   
 
   

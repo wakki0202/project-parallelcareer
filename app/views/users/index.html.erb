@@ -23,6 +23,14 @@
     <div class="userIndex">
       <h3 class="text-center">ユーザー情報</h3>
       <div class="providerTable">
+      <div class="search-form">
+        <%= search_form_for @q, url: users_index_path do |f| %>
+            <%= f.label :username_or_phonenumber_or_email, "キーワード" %>
+            <%= f.search_field :username_or_phonenumber_or_email_cont %>
+
+            <%= f.submit "検索" %>
+        <% end %>
+      </div>
 
         <table class="table userTable">
         <tr class="heading"><th class="border border-black">名前</th><th class="border border-black">メールアドレス</th><th class="border border-black">電話番号</th><th class="border border-black">口座情報(銀行名/支店/口座種類/口座番号)</th><th class="border border-black">紹介者</th><th class="border border-black">紹介者アドレス</th></tr>

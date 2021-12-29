@@ -16,7 +16,7 @@
 
   .providersideMain{
     text-align: left;
-    margin-top: 100px;
+    margin-top: 30px;
 
     span{
       color: white;
@@ -24,11 +24,11 @@
 
     li{
       text-align: center;
-      padding-bottom: 20px;
+      padding-bottom: 30px;
 
       a{
         color: white;
-        font-size: 18px;
+        font-size: 16px;
       }
      
     }
@@ -41,6 +41,10 @@
   
     .side-contents{
 
+    }
+
+    .back-toppage{
+      margin-bottom: 100px;
     }
 
   }
@@ -115,19 +119,26 @@
     background-color: white;
 
     .toNew{
-      color: #3F8A83;
-      border: 2px solid #3F8A83;
+      color: white;
+      border: 1px solid #3F8A83;
+      background-color: #3F8A83;
       border-radius: 0.5rem;
       margin-left: 25px;
       padding: 3px;
-      font-weight: bold;
+    }
+
+    .search-form{
+      text-align: right;
+      margin-right: 25px;
+      
+
     }
     }
 
     .userTable{
       width: 95%;
       margin: 0 auto;
-      margin-top: 40px;
+      margin-top: 20px;
 
       td{
       color: #3F8A83;
