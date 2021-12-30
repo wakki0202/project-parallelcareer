@@ -50,9 +50,9 @@
             <% @news.each do |news| %>
               <tr>
                 <td><%= news.title %></td>
-                <td><%= link_to '詳細', news %></td>
-                <td><%= link_to '編集', edit_news_path(news) %></td>
-                <td><%= link_to '削除', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to '詳細', news,class:"morebtn" %></td>
+                <td><%= link_to '編集', edit_news_path(news),class:"editbtn" %></td>
+                <td><%= link_to '削除', news, method: :delete,class:"deletebtn", data: { confirm: 'Are you sure?' } %></td>
               </tr>
             <% end %>
           </tbody>

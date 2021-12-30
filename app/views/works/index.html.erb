@@ -59,8 +59,8 @@
             <tr class="">
               <td class=""><%= work.title %></td>
               <td class=""><% if work.status == nil %>審査待ち<% else %><%= work.status %><% end %></td>
-              <td class=""><%= link_to '詳細', work,class:"btn" %></td>
-              <td class=""><%= link_to '編集', edit_work_path(work),class:"btn" %></td>
+              <td class="more"><%= link_to '詳細', work,class:"morebtn" %></td>
+              <td class="edit"><%= link_to '編集', edit_work_path(work),class:"editbtn" %></td>
               
             </tr>
           <% end %>
