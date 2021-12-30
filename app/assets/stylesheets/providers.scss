@@ -33,7 +33,7 @@
      
     }
      ul:hover{
-        background-color: #181a1b;
+        background-color: #000000;
         transition: 0.5s;
         border-radius: 0.5rem;
         
@@ -47,6 +47,14 @@
       margin-bottom: 100px;
     }
 
+  }
+
+  .border .btn{
+    background-color: #3F8A83;
+
+    a{
+      color: white;
+    }
   }
 
 

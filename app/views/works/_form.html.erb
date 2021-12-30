@@ -62,11 +62,14 @@
       <%= form.file_field :images,multiple: true %>
   </div>
 
+  <!--<% if current_user.email == "" %>-->
+
   <div class="formSet">
     <div class="text-left">案件ステータス</div>
-    <%= form.select :status, [['公開'], ['非公開']], { include_blank: false }, { class: "form" } %>
+    <%= form.select :status, [['審査中'],['公開'], ['非公開'],  ['終了']], { include_blank: false }, { class: "form" } %>
   </div>
 
+<!--<% end %>-->
 
 
   <div class="actions">

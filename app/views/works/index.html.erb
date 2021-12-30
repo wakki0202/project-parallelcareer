@@ -28,6 +28,13 @@
       <div class="providerTable">
       <a href="works/new" class="toNew">＋ 新規作成</a>
         <div class="search-form">
+        <%= search_form_for @q, url: works_path do |f| %>
+            <%= f.label :name, "絞り込み" %>
+            <%= f.select :status_cont, [['公開'], ['審査中'], ['非公開'], ['公開終了']], { include_blank: 'すべて' }, { class: "form" } %>
+            <%= f.submit "検索" %>
+        <% end %>
+        </div>
+        <div class="search-form">
         <%= search_form_for @q do |f| %>
             <%= f.label :title, "キーワード" %>
             <%= f.search_field :title_cont %>
@@ -51,7 +58,7 @@
           <% @works.each do |work| %>
             <tr class="">
               <td class=""><%= work.title %></td>
-              <td class=""><%= work.status %></td>
+              <td class=""><% if work.status == nil %>審査待ち<% else %><%= work.status %><% end %></td>
               <td class=""><%= link_to '詳細', work,class:"btn" %></td>
               <td class=""><%= link_to '編集', edit_work_path(work),class:"btn" %></td>
               
@@ -59,7 +66,9 @@
           <% end %>
         </tbody>
       </table>
+      <div class="text-center pagenation">
       <%= paginate @works %>
+      </div>
       </div>
     </div>
 
