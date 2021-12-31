@@ -33,7 +33,15 @@
       </div>
 
         <table class="table userTable">
-        <tr class="heading"><th class="border border-black">名前</th><th class="border border-black">メールアドレス</th><th class="border border-black">電話番号</th><th class="border border-black">口座情報(銀行名/支店/口座種類/口座番号)</th><th class="border border-black">紹介者</th><th class="border border-black">紹介者アドレス</th></tr>
+        <tr class="heading ">
+          <th class="border border-black text-center">名前</th>
+          <th class="border border-black text-center">メールアドレス</th>
+          <th class="border border-black text-center">電話番号</th>
+          <th class="border border-black text-center">口座情報(銀行名/支店/口座種類/口座番号)</th>
+          <th class="border border-black text-center">紹介者</th>
+          <th class="border border-black text-center">紹介者アドレス</th>
+        </tr>
+
         <% @users.each do |user| %> 
         <tr class="border  text-center">
           <td class="border border-black"><%= user.username %></td>

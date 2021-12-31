@@ -3,5 +3,6 @@
 <%= render 'form', news: @news %>
 
 <div class="toTop">
+<%= link_to '削除', news, method: :delete,class:"deletebtn", data: { confirm: 'Are you sure?' } %>
 <%= link_to '一覧に戻る', news_index_path %>
 </div>
