@@ -1,70 +1,67 @@
-
 <body class="post-show">
-<%= render '/layouts/header' %>
+  <%= render '/layouts/header' %>
 
-<div class='carousel'>
-
-
-  <div class="img"><%= image_tag @work.images[0].to_s %></div>
-  <div class="img"><%= image_tag @work.images[1].to_s %></div>
-  <div class="img"><%= image_tag @work.images[2].to_s %></div>
-
-
-</div>
- <div class='btns'>
-    <button class='btn-prev'><</button>
-    <button class='btn-next'>></button>
+  <div class="slider-images" style="text-align: center; width: 70%; height: 70%; margin: auto;">
+    <% @work.images.each do |img| %>
+    <%= image_tag img.to_s %>
+    <% end %>
   </div>
-  
-  <script>${script}</script>
 
-<table class="office">
-<tr>
-<th>案件名</th>
-<td> <%= @work.title %></td>
-</tr>
-<tr>
-<th>事業名</th>
-<td><%= @work.company %></td>
-</tr>
-<tr>
-<% if @work.link == nil %>
-<% else %>
-<th>事業者ホームページ欄</th>
-<td><%= auto_link(simple_format(@work.link), html: {target: '_blank'}) %></td>
-<% end %>
-</tr>
-<tr>
-<th>報酬</th>
-<td><%= @work.reward %></td>
-</tr>
-<tr>
-<th>仕事内容</th>
-<td><%= auto_link(simple_format(@work.pcontent), html: {target: '_blank'}) %></td>
-</tr>
-<tr>
-<th>報酬支払日</th>
-<td><%= @work.rday %></td>
-</tr>
-<tr>
-<th>報酬内容</th>
-<td><%= simple_format(@work.rcontent) %></td>
-</tr>
-<tr>
-<th>対象地域</th>
-<td> <%= simple_format(@work.area) %></td>
-</tr>
-<tr>
-<th>アピールポイント</th>
-<td><%= simple_format(@work.appeal) %>
-</tr>
-</table>
+  <table class="office">
+    <tr>
+      <th>案件名</th>
+      <td> <%= @work.title %></td>
+    </tr>
+    <tr>
+      <th>事業名</th>
+      <td><%= @work.company %></td>
+    </tr>
+    <tr>
+      <% if @work.link == nil %>
+      <% else %>
+      <th>事業者ホームページ欄</th>
+      <td><%= auto_link(simple_format(@work.link), html: {target: '_blank'}) %></td>
+      <% end %>
+    </tr>
+    <tr>
+      <th>報酬</th>
+      <td><%= @work.reward %></td>
+    </tr>
+    <tr>
+      <th>仕事内容</th>
+      <td><%= auto_link(simple_format(@work.pcontent), html: {target: '_blank'}) %></td>
+    </tr>
+    <tr>
+      <th>報酬支払日</th>
+      <td><%= @work.rday %></td>
+    </tr>
+    <tr>
+      <th>報酬内容</th>
+      <td><%= simple_format(@work.rcontent) %></td>
+    </tr>
+    <tr>
+      <th>対象地域</th>
+      <td> <%= simple_format(@work.area) %></td>
+    </tr>
+    <tr>
+      <th>アピールポイント</th>
+      <td><%= simple_format(@work.appeal) %>
+    </tr>
+  </table>
 
 
-<div class="action">
-<%= link_to "口コミをする","/works/#{@work.id}/introductions/new" %>
-</div>
-</div>
-</div>
-<%= render '/layouts/footer' %>
+  <div class="action">
+    <%= link_to "口コミをする","/works/#{@work.id}/introductions/new" %>
+  </div>
+  </div>
+  </div>
+  <%= render '/layouts/footer' %>
 </body>
+
+<script>
+  $(function () {
+    $('.slider-images').slick({
+      dots: true,
+    });
+  });
+</script>

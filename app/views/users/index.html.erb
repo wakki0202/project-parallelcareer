@@ -4,11 +4,11 @@
   <div class="side">
     <%= render '/works/side' %>
   </div>
-  <div class="bg_pattern Paper_v2">
+ 
   <div class="users">
     
         <h1 class="text-center font-bold text-2xl p-6">ユーザー管理表</h1>
-        <table id="users-table" class="border border-black w-8/12 m-auto">
+        <table id="users-table" class="table">
         <tr class="border"><th class="border border-black">名前</th><th class="border border-black">メールアドレス</th><th class="border border-black">電話番号</th><th class="border border-black">口座情報(銀行名/支店/口座種類/口座番号)</th><th class="border border-black">紹介者</th><th class="border border-black">紹介者アドレス</th></tr>
         <% @users.each do |user| %> 
         <tr class="border  text-center">
@@ -22,6 +22,6 @@
         <% end %>
         
         </table>
-  </div>
+
   </div>
 </div>

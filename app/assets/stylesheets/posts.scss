@@ -15,6 +15,13 @@
     margin: 0 auto;
     padding-top: 50px;
     color: rgba(55, 65, 81, 1); 
+
+     a{
+    color: black;
+    font-size: 14px;
+    text-decoration:none;
+    font-weight: 580;
+  }
   }
 
   h1{
@@ -25,12 +32,7 @@
     margin-bottom: 30px;
     position: relative;
   }
-  a{
-    color: black;
-    font-size: 14px;
-    text-decoration:none;
-    font-weight: 580;
-  }
+ 
 
   a:hover{
     color: black;

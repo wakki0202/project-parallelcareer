@@ -4,9 +4,12 @@
   background-image: url("talk.jpg");
   background-size: cover;   
   background-repeat: no-repeat;
-  }
-  .blackBack{
-    background-color: rgba(0,0,0,0.7);
+  
+}
+
+
+  .Backblack{
+    background-color: rgba(0,0,0,0.6);
     background-size: cover;
   }
   .inviteArea{
@@ -70,19 +73,25 @@ p span{
     font-weight: 600;
     padding-bottom: 20px;
   }
+
+  .formSet{
+    width: 40%;
+    margin-bottom: -20px;
+  }
 }
 
-.formSet{
+.formSetInvite{
   width:40%;
-  margin-top: 20px;
-}
+  margin: 0 auto;
+
 
 .text-left{
   padding-bottom: 8px;
 }
 .button{
-  margin-top: 10px;
+  margin-top: 40px;
   margin-bottom: 100px;
+}
 }
 }
 

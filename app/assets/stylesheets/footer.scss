@@ -1,6 +1,5 @@
 #footer {
   position: relative;
-  margin-top: 40px;
   color: rgb(55, 65, 81);
   border-style: solid;
   border-color: rgb(231, 231, 231);
@@ -15,6 +14,8 @@
 }
 #footer a:hover {
   text-decoration: underline;
+  background-color: rgba(0,0,0,0.2);
+  padding: 5px;
 }
 #footer .primary {
   padding: 40px 20px;

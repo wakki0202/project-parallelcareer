@@ -1,0 +1,51 @@
+<body class="userEdit">
+ <%= render '/layouts/header' %>
+<div class="editWrap">
+      <%= render 'editside' %>
+      <div class="mainEdit">
+        <div class="edit-page">
+              <div class="formEdit">
+          <%= form_with(url: {controller: 'users', action: 'bankedit' }) do |f| %>
+                <p class="alert"><%= alert %></p>
+             
+
+                  <h2 id="bankEdit">振込先口座登録</h2>
+
+
+                        <div class="formSet">
+                          <div class="text-left">銀行 <span>（必須）</span></div>
+                          <%= f.text_field :bank,value:  current_user.bank  %>
+                        </div>
+
+                        <div class="formSet">
+                          
+                          <div class="text-left">口座種別 <span>（必須）</span></div>
+                          <%= f.select :kinds, [ ["普通","普通"], ["当座","当座"] ],selected: current_user.kinds,class:"kindsEdit" %>
+                        </div>
+
+                        <div class="formSet">
+                          <div class="text-left">支店コード <span>（必須）</span></div>
+                          <%= f.text_field :branch,value: current_user.branch %>
+                        </div>
+
+                        <div class="formSet">
+                          <div class="text-left">口座番号 <span>（必須）</span></div>
+                          <%= f.text_field :banknumber,value: current_user.banknumber %>
+                        </div>
+
+                      
+                        <div class="formSet">
+                          <%= f.submit "口座情報を更新する",class:"button" %>
+                        </div>
+                  </div>
+                  
+              <% end %>
+
+
+              <%= link_to "Back", :back %>
+
+              </div>
+              </div>
+      </div>
+</div>
+</body>

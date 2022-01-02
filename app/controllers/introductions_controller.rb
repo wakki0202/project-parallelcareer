@@ -23,8 +23,7 @@ class IntroductionsController < ApplicationController
    def create
       @work = Work.find(params[:work_id])
       @introduction = Introduction.new(
-        introduction_params )
-        @provider = Provider.find_by(email: @work.provider.email)  #provider=事業者 #work=案件undefined method `email' for nil:NilClass
+        introduction_params ) #provider=事業者 #work=案件undefined method `email' for nil:NilClass
       
   
       
