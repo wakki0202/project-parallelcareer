@@ -54,6 +54,7 @@
           </tr>
         </thead>
 
+    <% if current_provider.email == "ytk0202@outlook.jp" %>
         <tbody>
           <% @works.each do |work| %>
             <tr class="">
@@ -65,6 +66,25 @@
             </tr>
           <% end %>
         </tbody>
+
+      <% else %>
+
+        <tbody>
+          <% @works.each do |work| %>
+          <% if work.provider_id == current_provider.id %>
+            <tr class="">
+              <td class=""><%= work.title %></td>
+              <td class=""><% if work.status == nil %>審査待ち<% else %><%= work.status %><% end %></td>
+              <td class="more"><%= link_to '詳細', work,class:"morebtn" %></td>
+              <td class="edit"><%= link_to '編集', edit_work_path(work),class:"editbtn" %></td>
+              
+            </tr>
+          <% end %>
+          <% end %>
+        </tbody>
+
+
+      <% end %>
       </table>
       <div class="text-center pagenation">
       <%= paginate @works %>

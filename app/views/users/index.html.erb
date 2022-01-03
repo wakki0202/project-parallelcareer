@@ -52,8 +52,8 @@
           <% else %>
           <td class="border border-black"><%= user.bank %>/<%= user.branch %>/<%= user.kinds %>/<%= user.banknumber %></td>
           <% end %>
-          <td class="border border-black"></td> 
-          <td class="border border-black"></td>
+           <td class="border border-black"><%= user.invited_by.username %></td>
+           <td class="border border-black"><%= user.invited_by.email %></td>
         </tr>
         <% end %>
         

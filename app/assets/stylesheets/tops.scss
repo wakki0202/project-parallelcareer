@@ -48,129 +48,10 @@
     background-image: url("firstview.png");
     background-size: cover;
     background-repeat: no-repeat;
-
     min-height: 100vh;
-    // background-color: rgba(0, 0, 0, 0.6);
-
   }
 
-  // @keyframes phraseAnimeBase {
-  //   from {
-  //     opacity: 0;
-  //   }
-
-  //   to {
-  //     opacity: 1;
-  //   }
-  // }
-  // /*中の要素*/
-  // .bgappear {
-  //   animation-name: phraseAnimeBase;
-  //   animation-duration: 1s;
-  //   animation-delay: 0.6s;
-  //   animation-fill-mode: forwards;
-  //   opacity: 0;
-  // }
-  // .phrase::before {
-  //   animation-name: phraseAnime;
-  //   animation-duration: 1s;
-  //   animation-fill-mode: forwards;
-  //   content: "";
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-color: #333; /*伸びる背景色の設定*/
-  // }
-  // @keyframes phraseAnime {
-  //   0% {
-  //     transform-origin: left;
-  //     transform: scaleX(0);
-  //   }
-  //   50% {
-  //     transform-origin: left;
-  //     transform: scaleX(1);
-  //   }
-  //   50.001% {
-  //     transform-origin: right;
-  //   }
-  //   100% {
-  //     transform-origin: right;
-  //     transform: scaleX(0);
-  //   }
-  // }
-
-  // -----------ここからメリット----------------------
-
-  // .mpextend {
-  //   animation-name: mpextendAnimeBase;
-  //   animation-duration: 1s;
-  //   animation-fill-mode: forwards;
-  //   position: relative;
-  //   overflow: hidden; /*　はみ出た色要素を隠す　*/
-  //   opacity: 0;
-  // }
-
-
-  // @keyframes mpextendAnimeBase {
-  //   from {
-  //     opacity: 0;
-  //   }
-
-  //   to {
-  //     opacity: 1;
-  //   }
-  // }
-
-  // /*中の要素*/
-  // .mpappear {
-  //   animation-name: mpextendAnimeSecond;
-  //   animation-duration: 1s;
-  //   animation-delay: 0.6s;
-  //   animation-fill-mode: forwards;
-  //   opacity: 0;
-  // }
-
-  // @keyframes mpextendAnimeSecond {
-  //   0% {
-  //     opacity: 0;
-  //   }
-  //   100% {
-  //     opacity: 1;
-  //   }
-  // }
-
-
-  // /*左から右*/
-  // .mpLRextend::before {
-  //   animation-name: mpLRextendAnime;
-  //   animation-duration: 1s;
-  //   animation-fill-mode: forwards;
-  //   content: "";
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-color: #333; /*伸びる背景色の設定*/
-  // }
-  // @keyframes mpLRextendAnime {
-  //   0% {
-  //     transform-origin: left;
-  //     transform: scaleX(0);
-  //   }
-  //   50% {
-  //     transform-origin: left;
-  //     transform: scaleX(1);
-  //   }
-  //   50.001% {
-  //     transform-origin: right;
-  //   }
-  //   100% {
-  //     transform-origin: right;
-  //     transform: scaleX(0);
-  //   }
-  // }
-
-
-  .title{
+  .title {
     font-size: 3.5em;
     font-weight: bold;
   }
@@ -214,25 +95,30 @@
     }
   }
 
-@keyframes SlideIn {
-  0% {
-    opacity: 0;/*初期状態では透明に*/
-    transform: translateX(64px);
+  @keyframes SlideIn {
+    0% {
+      opacity: 0; /*初期状態では透明に*/
+      transform: translateX(64px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
   .move {
     margin-left: 30%;
   }
 
   // --------ここから案件一覧---------------------------
+  .slider {
+    .slick-slide {
+      margin: 0 20px; /*スライド左右の余白調整*/
+    }
+  }
+
   .Items-list {
-    margin-bottom: 100px;
-    padding-top: 100px;
+    margin-bottom: 200px;
     padding: 100px 0 100px;
     background: #fceabb; /* fallback for old browsers */
     background: -webkit-linear-gradient(
@@ -243,39 +129,17 @@
       to right,
       beige,
       #fceabb
-
-      
-      
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     text-align: center;
-
-    .border {
-    border-bottom: 2px solid beige;
-  }
-
-    .subtitle{
-        background: linear-gradient(
-      to right,
-      beige,
-      #fceabb
-
-      
-    );
-    padding-bottom: 70px;
-      }
-  }
-  .Items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-around;
-    margin-top: 70px;
   }
 
   .Item {
-    width: 23%;
-    padding: 25px 25px 50px 25px;
+    width: 350px;
+    height: 27rem;
+    padding: 25px;
+    margin-right: 20px;
+    margin-bottom: 30px;
     background-color: #fff;
     border-radius: 6px;
   }
@@ -287,7 +151,9 @@
   .fa-hand-holding-heart,
   .fa-coins,
   .fa-building,
-  .fa-file-alt {
+  .fa-file-alt,
+  .fa-tshirt,
+  .fa-shield-alt {
     color: #b8860b;
     font-size: 30px;
   }
@@ -297,41 +163,30 @@
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 0.05rem;
-    margin-top: 30px;
+    margin-top: 15px;
+    line-height: 1.1;
   }
 
-  
+  .border {
+    border-bottom: 2px solid beige;
+  }
   .Item-bottom {
     padding: 10px 10px 0;
     text-align: left;
     & p {
-      font-size: 16px;
-      line-height: 1.625;
+      font-size: 14px;
     }
   }
 
-  .toWorks{
-    color: white;
-    background-color: #EB630D;
-    padding: 10px 20px 10px 20px;
-    border-radius: 2rem;
-  }
-
- 
-  .Item-reward span{
-    font-size: 24px;
-    color: rgb(255, 97, 49);
-  }
-
   .SeeMore {
-    margin-top: 100px;
+    margin-top: 60px;
   }
 
   .btn-more {
     color: #fff;
     font-size: 16px;
     font-weight: bold;
-    background-color: #EB630D;
+    background-color: #333;
     padding: 18px 30px;
     border-radius: 6px;
     transition: 0.3s;
@@ -340,10 +195,6 @@
   .btn-more:hover {
     opacity: 0.6;
   }
-
-
-
-  
   // ----ここから報酬獲得の流れ------------------
   .parent {
     .child {
@@ -352,69 +203,64 @@
     }
   }
 
-.flex{
-  width: 95%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 50px;
-}
-
-.stepOne{
-  box-shadow:0px 0px 2px;
-  border-radius: 0.5rem;
-  width: 22%;
-  font-weight: 500;
-  padding-top: 10px;
-  padding-bottom: 20px;
-
-  
-  h4{
-    text-align: center;
-    font-weight: bold;
+  .flex {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
   }
 
-  span{
-    color: white;
-    font-weight: normal;
-    padding: 3px;
-    background-color: #ff9b3d;
+  .stepOne {
+    box-shadow: 0px 0px 2px;
+    border-radius: 0.5rem;
+    width: 22%;
+    font-weight: 500;
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    h4 {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    span {
+      color: white;
+      font-weight: normal;
+      padding: 3px;
+      background-color: #ff9b3d;
+    }
+
+    .stepFooter {
+      padding-top: 25px;
+      font-size: 12px;
+      text-align: center;
+    }
   }
 
-  .stepFooter{
-    padding-top: 25px;
-    font-size: 12px;
-    text-align: center;
+  .stepImage {
+    width: 100%;
+    height: 180px;
   }
-}
 
-.stepImage{
-  width: 100%;
-  height: 180px;
-}
-
-
-
-.arrow{
-  width: 20px;
-  margin: 0 auto;
-  margin-top: 120px;
-  height: 20px;
-  border: 3px solid;
-  border-color: #565656 #565656 transparent transparent;
-  transform: rotate(45deg);
-  justify-content: center;
-}
+  .arrow {
+    width: 20px;
+    margin: 0 auto;
+    margin-top: 120px;
+    height: 20px;
+    border: 3px solid;
+    border-color: #565656 #565656 transparent transparent;
+    transform: rotate(45deg);
+    justify-content: center;
+  }
 
   .subtitle {
-    background-color: #fff;
     font-size: 3.5em;
     font-weight: bold;
     // text-align: center;
     margin-bottom: 30px;
     // margin-left: 50%;
   }
-
 
   .reward-start {
     margin-bottom: 200px;
@@ -427,7 +273,7 @@
     color: #fff;
     font-size: 16px;
     font-weight: bold;
-    background-color: #EB630D;
+    background-color: #eb630d;
     padding: 18px 30px;
     border-radius: 6px;
     transition: 0.3s;
@@ -453,13 +299,13 @@
     margin-top: 50px;
     margin-bottom: 200px;
 
-      li {
-    display: block;
-    padding: 1.5em;
-    line-height: 2;
-    font-weight: bold;
-    font-size: 18px;
-  }
+    li {
+      display: block;
+      padding: 1.5em;
+      line-height: 2;
+      font-weight: bold;
+      font-size: 18px;
+    }
   }
 
   .Q-title {
@@ -484,11 +330,11 @@
     color: rgba(0, 0, 0, 0.6);
   }
 
-.FAQ-item{
-  input[type="checkbox"] {
-    display: none;
+  .FAQ-item {
+    input[type="checkbox"] {
+      display: none;
+    }
   }
-}
   #Q1:checked + .A1 {
     display: block;
   }
@@ -508,57 +354,49 @@
 
   // --------ここから利用者の声---------------
 
-.Voices{
-  padding-bottom: 100px;
-}
-
-  .flexVoice{
-  width: 95%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 70px;
-
-}
-
-.Voice{
-  box-shadow:0px 0px 2px;
-  border-radius: 1rem;
-  width: 28%;
-  font-weight: bold;
-
-
-
-  h4{
-    text-align: center;
-    font-weight: bold;
+  .Voices {
+    padding-bottom: 100px;
   }
 
- 
-  .comment{
-    width: 90%;
+  .flexVoice {
+    width: 95%;
     margin: 0 auto;
-    font-size: 16px;
-    line-height: 1.625;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 30px;
-    color:#484c4c;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
   }
 
- 
-    .feature{
-      padding-left: 30px;
+  .Voice {
+    box-shadow: 0px 0px 2px;
+    border-radius: 1rem;
+    width: 28%;
+    font-weight: bold;
+
+    h4 {
+      text-align: center;
+      font-weight: bold;
     }
 
-}
+    .comment {
+      width: 90%;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 1.625;
+      padding-top: 20px;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-bottom: 30px;
+      color: #484c4c;
+    }
 
-.VoiceImage{
-  width: 100%;
+    .feature {
+      padding-left: 30px;
+    }
+  }
 
-}
-
+  .VoiceImage {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -799,9 +637,15 @@
   }
 
   // --------ここから案件一覧---------------------------
+  .slider {
+    .slick-slide {
+      margin: 0 20px; /*スライド左右の余白調整*/
+    }
+  }
+
   .Items-list {
-    margin-bottom: 100px;
-    padding: 10% 0 10%;
+    margin-bottom: 200px;
+    padding: 100px 0 100px;
     background: #fceabb; /* fallback for old browsers */
     background: -webkit-linear-gradient(
       to right,
@@ -815,38 +659,38 @@
 
     text-align: center;
   }
-  .Items {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding-left: 15%;
-  }
 
   .Item {
-    width: 80%;
-    padding: 3%;
-    margin-bottom: 3%;
+    width: 350px;
+    height: 27rem;
+    padding: 25px;
+    margin-right: 20px;
+    margin-bottom: 30px;
     background-color: #fff;
     border-radius: 6px;
   }
 
   .Item-top {
-    padding: 2% 0 2%;
+    padding: 10px 0 10px;
   }
 
   .fa-hand-holding-heart,
   .fa-coins,
   .fa-building,
-  .fa-file-alt {
+  .fa-file-alt,
+  .fa-tshirt,
+  .fa-shield-alt {
     color: #b8860b;
-    font-size: 2em;
+    font-size: 30px;
   }
 
   .Item-title {
     color: #b8860b;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 20px;
     letter-spacing: 0.05rem;
-    margin-top: 1em;
+    margin-top: 15px;
+    line-height: 1.1;
   }
 
   .border {
@@ -877,7 +721,6 @@
   .btn-more:hover {
     opacity: 0.6;
   }
-
   // ----ここから報酬獲得の流れ------------------
   .parent {
     .child {
@@ -887,7 +730,6 @@
   }
 
   .subtitle {
-    background-color: #fff;
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 30px;
@@ -1031,7 +873,7 @@
     display: flex;
     align-items: center;
     line-height: 1.5;
-    
+
     span {
       background: linear-gradient(transparent 60%, #ffff66 60%);
     }

@@ -1,11 +1,10 @@
 class IntroductionMailer < ApplicationMailer
-  def complete_introduction(introduction, work, current_user, receiver: nil)
+  def complete_introduction(introduction, work, current_user)
     @introduction = introduction
     @work = work
     @current_user = current_user
-    @receiver = receiver ? receiver.email : 'ytk0202@outlook.jp'
     mail(
-      to: @receiver,
+      to: @work.provider.email,
       subject: '口コミのお知らせ'
     )
   end

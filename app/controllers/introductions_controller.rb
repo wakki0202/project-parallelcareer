@@ -30,7 +30,6 @@ class IntroductionsController < ApplicationController
   
       
       if  @introduction.save
-          IntroductionMailer.complete_introduction(@introduction,@work,@current_user,receiver: @provider ).deliver
           IntroductionMailer.complete_introduction(@introduction,@work,@current_user ).deliver
           redirect_to introductions_complete_path
       else

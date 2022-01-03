@@ -13,7 +13,8 @@ class WorksController < ApplicationController
 
   # GET /works/1 or /works/1.json
   def show
-
+    @work = Work.find(params[:id])
+    @provider = @work.provider 
   end
 
   # GET /works/new
@@ -28,6 +29,7 @@ class WorksController < ApplicationController
   # POST /works or /works.json
   def create
     @work = Work.new(work_params)
+    @work.provider_id = current_provider.id
 
     respond_to do |format|
       if @work.save
