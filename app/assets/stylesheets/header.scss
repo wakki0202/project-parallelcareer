@@ -155,10 +155,12 @@ header {
 
     &:hover {
       height: 0;
-      border-bottom: 80px solid #fff;
+      border-bottom: 80px solid #f8e12e;
       border-left: 30px solid transparent;
+      opacity: 0.6;
       a {
-        background-color: #fff;
+        background-color: #f8e12eff;
+        opacity: 0.6;
       }
     }
   }
