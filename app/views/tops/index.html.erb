@@ -6,7 +6,11 @@
 
   <%= render '/layouts/header' %>
   
-  <section class="top-bg">
+  <section>
+    <div class="top-bg">
+      <%= image_tag "first_view.png" %>
+      <p class="top-main-title">あなたの口コミが副業になる</p>
+    </div>
   </section>
 
     <main class="top-page">
@@ -41,8 +45,8 @@
 
     <section class="Items-list">
     <div class="subtitle child">
-        <div class="mpextend mpLRextendTrigger"><div class="mpapperTrigger">豊富な案件も！</div></div>
-      </div>
+      <div class="mpextend mpLRextendTrigger"><div class="mpapperTrigger">豊富な案件も！</div></div>
+    </div>
     <div class="slider">
       <li class="Item">
           <div class="Item-top">
@@ -282,6 +286,7 @@
     </main>
 
     <%= render '/layouts/footer' %>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/a5c533f20f.js" crossorigin="anonymous"></script>
     <script>
