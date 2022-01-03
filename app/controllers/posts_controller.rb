@@ -2,7 +2,7 @@ class PostsController < WorksController
 
   
   def index　#ユーザー側投稿一覧
-    @works = Work.all.page(params[:page]).per(9)
+    @works = Work.all
     
     
   end

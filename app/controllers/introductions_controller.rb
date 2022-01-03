@@ -75,7 +75,7 @@ class IntroductionsController < ApplicationController
 
   def introduction_params
 
-    params.require(:introduction).permit(:name, :phonenumber, :contents, :step, :work_id, :id).merge(user_id: current_user.id, work_id: params[:work_id]) #ストロングパラメーターで、
+    params.require(:introduction).permit(:name, :phonenumber, :contents, :step, :work_id, :id, :permission).merge(user_id: current_user.id, work_id: params[:work_id]) #ストロングパラメーターで、
   end 
 
 
