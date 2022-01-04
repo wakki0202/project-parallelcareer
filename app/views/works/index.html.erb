@@ -48,6 +48,7 @@
         <thead class="heading">
           <tr class="border">
             <th class="border">案件名</th>
+            <th>作成日</th>
             <th>ステータス</th>
             <th></th>
             <th></th>
@@ -59,6 +60,7 @@
           <% @works.each do |work| %>
             <tr class="">
               <td class=""><%= work.title %></td>
+              <td class=""><%= work.created_at.strftime('%Y年%m月%d日') %></td>
               <td class=""><% if work.status == nil %>審査待ち<% else %><%= work.status %><% end %></td>
               <td class="more"><%= link_to '詳細', work,class:"morebtn" %></td>
               <td class="edit"><%= link_to '編集', edit_work_path(work),class:"editbtn" %></td>

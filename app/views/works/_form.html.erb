@@ -13,8 +13,8 @@
   
 
   <div class="imageformSet">
-      <div class="text-left">画像</div>
-      <%= form.file_field :images,multiple: true  %>
+      <%= form.label :images, "画像をアップロード", class: "image_input_btn" %>
+      <%= form.file_field :images,multiple: true, class: "image_form"  %>
   </div>
 
   <div class="formSet">
@@ -53,7 +53,7 @@
   </div>
 
   <div class="formSet">
-    <<div class="text-left">地域</div>
+    <div class="text-left">地域</div>
     <%= form.text_area :area, class: "formB", :size => "40*10" %>
   </div>
 

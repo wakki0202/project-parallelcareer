@@ -24,7 +24,7 @@
                               <li class="nav__item"><%= link_to "　事業者ページ" ,"/works" %></li>
                           <% elsif user_signed_in?  %>
                                     
-                              <li class="nav__item"><%= link_to "　ユーザーページ" ,"/tops/index" %></li>
+                              <li class="nav__item"><%= link_to "　ユーザーページ" ,"/users/mypage" %></li>
                               <li class="nav__item"><%= link_to "　ユーザー設定" ,"/tops/index" %></li>
                               <li class="nav__item"><%= link_to '　ログアウト' , destroy_user_session_path, method: :delete %></li>
                             <% else %>
@@ -45,7 +45,7 @@
                         <li class="nav__item h-mypage"><%= link_to "事業者ページ" ,"/works" %></li>
                       <% elsif user_signed_in?  %>
                           <li class="nav__item h-mypage"><%= link_to "友人を紹介する" ,"/users/invitation/new" %></li>
-                          <li class="nav__item h-mypage"><%= link_to "マイページ" ,"/progresses/index" %></li>
+                          <li class="nav__item h-mypage"><%= link_to "マイページ" ,"/users/mypage" %></li>
                           <li class="nav__item h-mypage"><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></li>
                       </div>
 

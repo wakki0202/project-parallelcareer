@@ -43,6 +43,10 @@ class UsersController < ApplicationController
   
     end
 
+    def mypage
+
+    end
+
    
 
     private

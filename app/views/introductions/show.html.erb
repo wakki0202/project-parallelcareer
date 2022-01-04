@@ -49,6 +49,16 @@
         <td class="border border-black"><%= @introduction.phonenumber %></td>
       </tr>
       <tr class="border">
+        <td class="border border-black text-center py-3">口コミの許可</td>
+        <td class="border border-black">
+        <% if @introduction.permission == true %>
+          とっている
+          <% elsif @introduction.permission == false %>
+          とっていない
+          <% end %>
+        </td>
+      </tr>
+      <tr class="border">
         <td class="border border-black text-center py-3">内容</td>
         <td class="border border-black"><%= @introduction.contents %></td>
       </tr>
