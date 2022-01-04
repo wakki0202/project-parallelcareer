@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2022_01_04_142408) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 2022_01_04_142408) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "work_id"
+    t.bigint "work_id"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
     t.index ["work_id"], name: "index_admins_on_work_id"
@@ -30,8 +33,8 @@ ActiveRecord::Schema.define(version: 2022_01_04_142408) do
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
-    t.integer "work_id"
+    t.bigint "user_id"
+    t.bigint "work_id"
     t.index ["user_id"], name: "index_details_on_user_id"
     t.index ["work_id"], name: "index_details_on_work_id"
   end
@@ -42,10 +45,10 @@ ActiveRecord::Schema.define(version: 2022_01_04_142408) do
     t.string "name"
     t.string "phonenumber"
     t.text "contents"
-    t.integer "user_id", null: false
-    t.integer "work_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "work_id", null: false
     t.string "step"
-    t.boolean "permission"
+    t.boolean "permission", default: false, null: false
     t.index ["user_id"], name: "index_introductions_on_user_id"
     t.index ["work_id"], name: "index_introductions_on_work_id"
   end
@@ -55,12 +58,6 @@ ActiveRecord::Schema.define(version: 2022_01_04_142408) do
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "progresses", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "step"
   end
 
   create_table "provider_files", force: :cascade do |t|
@@ -77,7 +74,7 @@ ActiveRecord::Schema.define(version: 2022_01_04_142408) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "work_id"
+    t.bigint "work_id"
     t.index ["email"], name: "index_providers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_providers_on_reset_password_token", unique: true
     t.index ["work_id"], name: "index_providers_on_work_id"
@@ -113,7 +110,7 @@ ActiveRecord::Schema.define(version: 2022_01_04_142408) do
     t.datetime "invitation_accepted_at"
     t.integer "invitation_limit"
     t.string "invited_by_type"
-    t.integer "invited_by_id"
+    t.bigint "invited_by_id"
     t.integer "invitations_count", default: 0
     t.string "status"
     t.string "affiliater_id"
