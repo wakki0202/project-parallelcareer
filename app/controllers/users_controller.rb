@@ -33,7 +33,7 @@ class UsersController < ApplicationController
         update_bank_params
       )
 
-       render action: :bankdit
+       render action: :bankedit
 
     else
       redirect_back(fallback_location: users_edit_path)
@@ -55,12 +55,12 @@ class UsersController < ApplicationController
 
   def update_basic_params
 
-    params.permit(:username,:phonenumber,:email,:career,:appeal)
+    params.permit(:name,:tel,:email,:career,:appeal)
   end 
 
   def update_bank_params
 
-    params.permit(:bank, :branch, :banknumber, :kinds)
+    params.permit(:bank, :branch, :account_no, :account_type)
   end 
   def destroy
 

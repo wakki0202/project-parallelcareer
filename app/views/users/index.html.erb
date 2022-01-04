@@ -25,8 +25,8 @@
       <div class="providerTable">
       <div class="search-form">
         <%= search_form_for @q, url: users_index_path do |f| %>
-            <%= f.label :username_or_phonenumber_or_email, "キーワード" %>
-            <%= f.search_field :username_or_phonenumber_or_email_cont %>
+            <%= f.label :name_or_tel_or_email, "キーワード" %>
+            <%= f.search_field :name_or_tel_or_email_cont %>
 
             <%= f.submit "検索" %>
         <% end %>
@@ -44,16 +44,16 @@
 
         <% @users.each do |user| %> 
         <tr class="border  text-center">
-          <td class="border border-black"><%= user.username %></td>
+          <td class="border border-black"><%= user.name %></td>
           <td class="border border-black"><%= user.email %></td>
-          <td class="border border-black"><%= user.phonenumber %></td>
+          <td class="border border-black"><%= user.tel %></td>
           <% if user.bank == nil %>
           <td class="border border-black"></td>
           <% else %>
-          <td class="border border-black"><%= user.bank %>/<%= user.branch %>/<%= user.kinds %>/<%= user.banknumber %></td>
+          <td class="border border-black"><%= user.bank %>/<%= user.branch %>/<%= user.account_type %>/<%= user.account_no %></td>
           <% end %>
            <% if user.invited_by.present? %>
-           <td class="border border-black"><%= user.invited_by.username %></td>
+           <td class="border border-black"><%= user.invited_by.name %></td>
            <td class="border border-black"><%= user.invited_by.email %></td><% end %>
         </tr>
         <% end %>

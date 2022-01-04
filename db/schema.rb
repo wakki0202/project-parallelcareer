@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_03_105528) do
+ActiveRecord::Schema.define(version: 2022_01_04_142408) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -101,12 +101,12 @@ ActiveRecord::Schema.define(version: 2022_01_03_105528) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "username"
-    t.string "phonenumber"
+    t.string "name"
+    t.string "tel"
     t.string "bank"
     t.string "branch"
-    t.string "kinds"
-    t.string "banknumber"
+    t.string "account_type"
+    t.string "account_no"
     t.string "invitation_token"
     t.datetime "invitation_created_at"
     t.datetime "invitation_sent_at"
@@ -120,6 +120,7 @@ ActiveRecord::Schema.define(version: 2022_01_03_105528) do
     t.string "referrer_id"
     t.text "career"
     t.text "appeal"
+    t.string "user_type"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
     t.index ["invited_by_id"], name: "index_users_on_invited_by_id"
