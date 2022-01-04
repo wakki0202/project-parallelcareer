@@ -5,25 +5,25 @@
   --tw-gradient-to: #ffbd41;
   word-wrap: break-word;
   overflow-wrap: anywhere;
-  height: auto;
+  height: 1000px;
   width: auto;
   margin: 0 auto;
   .title {
     width: 100%;
     text-align: center;
     margin: 0 auto;
-    padding-top: 125px;
+    padding-top: 70px;
     color: aliceblue;
     h1 {
       font-weight: 600;
     }
   }
   .sidebar_main {
-    padding-top: 5%;
+    padding-top: 30px;
     position: fixed;
     height: 100%;
     .sidebar-toggle {
-      margin-left: -240px;
+      margin-left: -220px;
     }
     .sidebar {
       width: 220px;
@@ -70,8 +70,7 @@
               text-align: center;
               color: #333333;
               font-size: 17px;
-            }
-            // hover使いたい時はこれ使ってください
+            } // hover使いたい時はこれ使ってください
             // &:hover {
             //     color: white;
             //     background-color: orange;
@@ -108,6 +107,122 @@
           }
         }
       }
+    }
+  }
+  //カード
+  .post-main {
+    width: 80%;
+    text-align: center;
+    margin-left: 220px;
+    padding-top: 50px;
+    color: rgba(55, 65, 81, 1);
+    a {
+      color: black;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 580;
+    }
+    h1 {
+      text-align: center;
+      color: white;
+      font-size: 30px;
+      padding-top: 50px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    a:hover {
+      color: black;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 550;
+    }
+    .post-list {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card {
+      width: 330px;
+      min-height: 280px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px #ccc;
+      position: relative;
+      display: inline-block;
+      margin-left: 35px;
+      margin-right: 35px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .3);
+    } // .card-title {
+    //   font-size: 18px;
+    //   color: #333;
+    //   min-height:90px;
+    //   padding-left: 15px;
+    //   padding-right: 15px;
+    //   padding-top: 10px;
+    //   margin-bottom: 10px;
+    //   justify-content: center;
+    //   align-items: center;
+    //   display: flex;
+    //   // text-decoration: underline;
+    //   // text-decoration-color: #800000;
+    // }
+    .card-text {
+      font-size: 14px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      line-height: 1.5;
+      color: black;
+    }
+    .card-text :hover {
+      font-size: 14px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      line-height: 1.5;
+      color: black;
+    }
+    .card-link {
+      text-align: center;
+      padding: 20px;
+    }
+    .card-link a {
+      text-decoration: none;
+      color: #0bd;
+      text-align: center;
+      margin: 0 10px;
+    }
+    .card-link a:hover {
+      background-color: white;
+      color: #0090aa;
+    }
+    .card {
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s;
+    }
+    .card::before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      display: block;
+      width: 100%;
+      height: 30px;
+      content: "";
+      background: radial-gradient( 50% 30% at center center, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0));
+      transform: translate(0, 100%);
+      transition: transform 0.3s, opacity;
+    }
+    .card:hover {
+      transform: translate(0, -15px);
+    }
+    .card:hover::before {
+      opacity: 0.6;
+      transform: translate(0, calc(100% + 20px)) scale(0.7);
     }
   }
 }
