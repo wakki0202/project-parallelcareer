@@ -1,34 +1,32 @@
-.userMypage{
+.userMypage {
   background-image: linear-gradient(to left, var(--tw-gradient-stops));
-    --tw-gradient-from: #fa4c4c;
-    --tw-gradient-stops: var(--tw-gradient-from),
-      var(--tw-gradient-to, rgba(248, 113, 113, 0));
-    --tw-gradient-to: #ffbd41;
-    word-wrap: break-word;
-    overflow-wrap: anywhere;
-    height: 1500px;
-    width: auto;
+  --tw-gradient-from: #fa4c4c;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(248, 113, 113, 0));
+  --tw-gradient-to: #ffbd41;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  height: auto;
+  width: auto;
+  margin: 0 auto;
+  .title {
+    width: 100%;
+    text-align: center;
     margin: 0 auto;
-
-    .title{
-      width: 100%;
-      text-align: center;
-      margin: 0 auto;
-      padding-top: 125px;
-      color: aliceblue;
-      h1{
-        font-weight: 600;
-      }
+    padding-top: 125px;
+    color: aliceblue;
+    h1 {
+      font-weight: 600;
     }
-    .sidebar_main{
-      padding-top: 5%;
-      position: fixed;
-      height: 100%;
+  }
+  .sidebar_main {
+    padding-top: 5%;
+    position: fixed;
+    height: 100%;
     .sidebar-toggle {
       margin-left: -240px;
     }
     .sidebar {
-      width: 240px;
+      width: 220px;
       background: white;
       position: absolute;
       -webkit-transition: all .3s ease-in-out;
@@ -43,6 +41,42 @@
           padding: 0;
         }
         ul {
+          .user {
+            height: 130px;
+            list-style-type: none;
+            padding-top: 20px;
+            .images {
+              margin-left: auto;
+              margin-right: auto;
+              background: green;
+              /* 表示する画像 */
+              width: 60px;
+              /* ※縦横を同値に */
+              height: 60px;
+              /* ※縦横を同値に */
+              border-radius: 50%;
+              /* 角丸半径を50%にする(=円形にする) */
+              background-position: left top;
+              /* 横長画像の左上を基準に表示 */
+              display: block;
+              /* 複数の画像を横に並べたい場合 */
+            }
+            .username {
+              padding-top: 10px;
+              width: 130px;
+              margin-left: auto;
+              margin-right: auto;
+              display: block;
+              text-align: center;
+              color: #333333;
+              font-size: 17px;
+            }
+            // hover使いたい時はこれ使ってください
+            // &:hover {
+            //     color: white;
+            //     background-color: orange;
+            //   }
+          }
           li {
             list-style-type: none;
             a {
@@ -70,22 +104,6 @@
                   padding-top: 3px;
                 }
               }
-            }
-          }
-        }
-        ul ul {
-          display: none;
-          li {
-            background: white;
-            margin-bottom: 0;
-            margin-left: 0;
-            margin-right: 0;
-            border-bottom: none;
-            a {
-              font-size: 12px;
-              padding-top: 13px;
-              padding-bottom: 13px;
-              color: #aeb2b7;
             }
           }
         }
