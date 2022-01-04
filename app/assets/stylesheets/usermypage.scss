@@ -1,0 +1,95 @@
+.userMypage{
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+    --tw-gradient-from: #fa4c4c;
+    --tw-gradient-stops: var(--tw-gradient-from),
+      var(--tw-gradient-to, rgba(248, 113, 113, 0));
+    --tw-gradient-to: #ffbd41;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    height: 1500px;
+    width: auto;
+    margin: 0 auto;
+
+    .title{
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 125px;
+      color: aliceblue;
+      h1{
+        font-weight: 600;
+      }
+    }
+    .sidebar_main{
+      padding-top: 5%;
+      position: fixed;
+      height: 100%;
+    .sidebar-toggle {
+      margin-left: -240px;
+    }
+    .sidebar {
+      width: 240px;
+      background: white;
+      position: absolute;
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      -ms-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+      z-index: 100;
+      #leftside-navigation {
+        ul, ul ul {
+          margin: -2px 0 0;
+          padding: 0;
+        }
+        ul {
+          li {
+            list-style-type: none;
+            a {
+              color: #aeb2b7;
+              text-decoration: none;
+              display: block;
+              padding: 18px 0 18px 25px;
+              font-size: 12px;
+              outline: 0;
+              -webkit-transition: all 200ms ease-in;
+              -moz-transition: all 200ms ease-in;
+              -o-transition: all 200ms ease-in;
+              -ms-transition: all 200ms ease-in;
+              transition: all 200ms ease-in;
+              &:hover {
+                color: white;
+                background-color: orange;
+              }
+              span {
+                display: inline-block;
+              }
+              i {
+                width: 20px;
+                .fa-angle-left, .fa-angle-right {
+                  padding-top: 3px;
+                }
+              }
+            }
+          }
+        }
+        ul ul {
+          display: none;
+          li {
+            background: white;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            border-bottom: none;
+            a {
+              font-size: 12px;
+              padding-top: 13px;
+              padding-bottom: 13px;
+              color: #aeb2b7;
+            }
+          }
+        }
+      }
+    }
+  }
+}
