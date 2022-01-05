@@ -34,11 +34,11 @@
       </tr>
       <tr class="border">
         <td class="border border-black text-center py-3">紹介者名</td>
-        <td class="border border-black"><%= @introduction.user.username %>様</td>
+        <td class="border border-black"><%= @introduction.user.name %>様</td>
       </tr>
       <tr class="border">
         <td class="border border-black text-center py-3">紹介者口座情報(銀行名/支店/口座種類/口座番号)</td>
-        <td class="border border-black"><%= @introduction.user.bank %>/<%= @introduction.user.branch %>/<%= @introduction.user.kinds %>/<%= @introduction.user.banknumber %></td>
+        <td class="border border-black"><%= @introduction.user.bank %>/<%= @introduction.user.branch %>/<%= @introduction.user.account_type %>/<%= @introduction.user.account_no %></td>
       </tr>
       <tr class="border">
         <td class="border border-black text-center py-3">お客様名</td>

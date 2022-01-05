@@ -36,7 +36,7 @@
         <div class="search-form">
         <%= search_form_for @q, url: introductions_index_path do |f| %>
             <%= f.label :name, "キーワード" %>
-            <%= f.search_field :name_or_user_username_or_work_title_cont %>
+            <%= f.search_field :name_or_user_name_or_work_title_cont %>
             
 
             <%= f.submit "検索" %>
@@ -50,7 +50,7 @@
       <% @introductions.each do |introduction| %> 
       <tr class="border">
       <td class="border border-black"><%= introduction.work.title %></td> 
-      <td class="border border-black"><%= introduction.user.username %></td>
+      <td class="border border-black"><%= introduction.user.name %></td>
       <td class="border border-black"><%= introduction.name %></td>
       <td class=""><%= l introduction.created_at %></td>
       <% if introduction.step == nil %>

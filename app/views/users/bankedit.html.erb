@@ -20,7 +20,7 @@
                         <div class="formSet">
                           
                           <div class="text-left">口座種別 <span>（必須）</span></div>
-                          <%= f.select :account_type, [ ["普通","普通"], ["当座","当座"] ],selected: current_user.kinds,class:"kindsEdit" %>
+                          <%= f.select :account_type, [ ["普通","普通"], ["当座","当座"] ],selected: current_user.account_type,class:"kindsEdit" %>
                         </div>
 
                         <div class="formSet">
@@ -30,7 +30,7 @@
 
                         <div class="formSet">
                           <div class="text-left">口座番号 <span>（必須）</span></div>
-                          <%= f.text_field :account_no,value: current_user.banknumber %>
+                          <%= f.text_field :account_no,value: current_user.account_no %>
                         </div>
 
                       

@@ -14,12 +14,12 @@
 
                   <div class="formSet">
                     <div class="text-left">お名前 <span>（必須）</span></div>
-                    <%= f.text_field :name, placeholder: '  原　キャリー',value:  current_user.username %>
+                    <%= f.text_field :name, placeholder: '  原　キャリー',value:  current_user.name %>
                   </div>
 
                   <div class="formSet">
                       <div class="text-left">電話番号 <span>（必須）</span></div>
-                      <%= f.text_field :tel, autofocus: true, placeholder: '  09012345678',value:  current_user.phonenumber %>
+                      <%= f.text_field :tel, autofocus: true, placeholder: '  09012345678',value:  current_user.tel %>
                   </div>
 
                 <div class="formSet">
