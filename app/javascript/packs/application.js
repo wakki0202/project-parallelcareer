@@ -8,7 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require('jquery')
 import 'bootstrap';
-import '../stylesheets/application';
+import '../stylesheets/application.scss';
 
 Rails.start()
 Turbolinks.start()
