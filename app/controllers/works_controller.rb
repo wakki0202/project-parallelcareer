@@ -4,14 +4,17 @@ class WorksController < ApplicationController
 
   # GET /works or /works.json
   def index
-    @works = Work.all
+    @works = Work.all.page(params[:page])
+    @q = Work.ransack(params[:q])
+    @works = @q.result(distinct: true).order("created_at desc")
     @questionnumber = Question.all.count
     @introductionnumber = Introduction.all.count
   end
 
   # GET /works/1 or /works/1.json
   def show
-
+    @work = Work.find(params[:id])
+    @provider = @work.provider 
   end
 
   # GET /works/new
@@ -26,6 +29,7 @@ class WorksController < ApplicationController
   # POST /works or /works.json
   def create
     @work = Work.new(work_params)
+    @work.provider_id = current_provider.id
 
     respond_to do |format|
       if @work.save
@@ -60,6 +64,8 @@ class WorksController < ApplicationController
     end
   end
 
+  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_work
@@ -70,4 +76,6 @@ class WorksController < ApplicationController
     def work_params
       params.require(:work).permit(:title, :company, :link, :reward, :pcontent, :rday, :rcontent, :area, :appeal, :status, {images: []})
     end
+
+    
 end

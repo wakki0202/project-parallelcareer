@@ -2,6 +2,195 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @media (min-width: 710px) {
+.providerPage{
+  width: 100%;
+  display: flex;
+
+.side{
+  width: 20%;
+  height: 150vh;
+  background-color: #252d33;
+
+
+
+
+  .providersideMain{
+    text-align: left;
+    margin-top: 30px;
+
+    span{
+      color: white;
+    }
+
+    li{
+      text-align: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      a{
+        color: white;
+        font-size: 16px;
+      }
+     
+    }
+     ul:hover{
+        background-color: #000000;
+        transition: 0.5s;
+        border-radius: 0.5rem;
+        
+      }
+  
+    .side-contents{
+
+    }
+
+    .back-toppage{
+      margin-bottom: 100px;
+    }
+
+  }
+
+  .border .btn{
+    background-color: #3F8A83;
+
+    a{
+      color: white;
+    }
+  }
+
+  
+
+
+
+}
+
+.main{
+  width: 80%;
+  height: 150vh;
+  background-color: #e8ecec;
+
+  .mainHeader{
+    width: 100%;
+    background-color: #3F8A83;
+    color: white;
+    align-items: center;
+    
+
+    ul{
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+
+      li{
+        padding: 15px;
+
+        span{
+          background-color: white;
+          padding: 8px 10px 8px 10px ;
+          color: #3F8A83;
+          border-radius: 2rem;
+          font-weight: bold;
+        }
+      }
+
+    }
+
+    table{
+      border:1px solid;
+    }
+  
+
+    td{
+      border:1px solid;
+       border-color: grey;
+    
+
+  }
+
+
+  }
+
+
+
+  .userIndex{
+    width: 98%;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    h3{
+      text-align: left;
+    }
+
+    .heading{
+      background-color: #252d33;
+      color:white;
+    }
+
+    .providerTable{
+    padding-top: 20px;
+    border-radius: 0.5rem;
+    background-color: white;
+
+    .toNew{
+      color: white;
+      border: 1px solid #3F8A83;
+      background-color: #3F8A83;
+      border-radius: 0.5rem;
+      margin-left: 25px;
+      padding: 3px;
+    }
+
+    .search-form{
+      text-align: right;
+      margin-right: 25px;
+      
+
+    }
+    }
+
+    .userTable{
+      width: 95%;
+      margin: 0 auto;
+      margin-top: 20px;
+
+      td{
+      color: #3F8A83;
+      }
+      
+    background-color: white;
+    }
+
+
+  }
+
+  
+
+  }
+
+  .image_input_btn{
+        display: block;
+        background-color: #228B22;
+        width: 180px;
+        height: 30px;
+        margin-top: 10px;
+        margin-left: 10px;
+        border-radius: 5px;
+        padding-top: 2px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      .image_form{
+        display: none;
+      }
+
+}
+
+
+
+
 .provider-index{
   display: flex;
   width: 100%;
@@ -76,6 +265,31 @@
         color: black;
       }
     }
+
+.imageformSet{
+  width: 60%;
+  height: 200px;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  margin-bottom: 20px;
+
+ input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  height: 200px;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 1rem;
+}
+}
+
+
   }
 
   @media (max-width: 709px) {

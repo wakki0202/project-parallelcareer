@@ -1,37 +1,68 @@
 
 
 
-<div class="provider-index">
-<div class="side">
-  <%= render '/works/side' %>
-</div>
 
+<body class="providerPage">
+  <div class="side">
+    <%= render '/works/side' %>
+  </div>
+ 
+  <div class="main">
+    <div class="mainHeader">
+    <ul>
+    <% if provider_signed_in? %>
+      <li class=""><span><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></span></li> 
+      <li><%= current_provider.email %></li>
+      <% else %>
+      <li class=""><span>ログアウト</span></li> 
+      <li>管理者名</li>
+    
+      <% end %>
 
-<div class="bg_pattern Paper_v2">
-<div class="providers">
-<table>
-  <thead>
-    <tr>
-      <th>タイトル一覧</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    </ul>
+    </div>
+    
+        
+    <div class="userIndex">
+      <h3 class="text-center">お知らせ</h3>
+      <div class="providerTable">
+      <a href="news/new" class="toNew">＋ 新規作成</a>
+      <div class="search-form">
+        <%= search_form_for @q, url: news_index_path do |f| %>
+            <%= f.label :title, "キーワード" %>
+            <%= f.search_field :title_cont %>
 
-  <tbody>
-    <% @news.each do |news| %>
-      <tr>
-        <td><%= news.title %></td>
-        <td><%= link_to '詳細', news %></td>
-        <td><%= link_to '編集', edit_news_path(news) %></td>
-        <td><%= link_to '削除', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+            <%= f.submit "検索" %>
+        <% end %>
+      </div>
 
+        <table class="table userTable">
+          <thead class="heading">
+            <tr>
+              <th>タイトル</th>
+              <th>作成日</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
 
-<%= link_to 'お知らせを作成する', new_news_path %>
+          <tbody>
+            <% @news.each do |news| %>
+              <tr>
+                <td><%= news.title %></td>
+                <td><%= news.created_at.strftime('%Y年%m月%d日') %></td>
+                <td><%= link_to '詳細', news,class:"morebtn" %></td>
+                <td><%= link_to '編集', edit_news_path(news),class:"editbtn" %></td>
+                
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <div class="text-center pagenation">
+        <%= paginate @news %>
+        </div>
+        </div>
+      </div>
 
-</div>
-</div>
-</div>
+  </div>
+</body>

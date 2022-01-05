@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
 
   def index
-    @users = User.all
+    @users = User.all.page(params[:page]).per(10)
+    @q = User.ransack(params[:q])
+    @users = @q.result(distinct: true).page(params[:page]).order("created_at asc")
     @questionnumber = Question.all.count
     @introductionnumber = Introduction.all.count
   end
@@ -31,7 +33,7 @@ class UsersController < ApplicationController
         update_bank_params
       )
 
-       render action: :bankdit
+       render action: :bankedit
 
     else
       redirect_back(fallback_location: users_edit_path)
@@ -39,7 +41,13 @@ class UsersController < ApplicationController
     end
    
   
-  end
+    end
+
+    def mypage
+
+    end
+
+   
 
     private
 
@@ -47,12 +55,12 @@ class UsersController < ApplicationController
 
   def update_basic_params
 
-    params.permit(:username,:phonenumber,:email,:career,:appeal)
+    params.permit(:name,:tel,:email,:career,:appeal)
   end 
 
   def update_bank_params
 
-    params.permit(:bank, :branch, :banknumber, :kinds)
+    params.permit(:bank, :branch, :account_no, :account_type)
   end 
   def destroy
 

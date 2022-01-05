@@ -1,16 +1,50 @@
 
 
+    
 
-<div class="provider-index">
+<body class="providerPage">
   <div class="side">
-      <%= render '/works/side' %>
-    </div>
+    <%= render '/works/side' %>
+  </div>
  
-      <div class="providers">
-      <table class="table table-striped">
-      
-        <h1 class="text-center font-bold text-2xl pb-6">口コミ一覧</h1>
-      <tr class="border text-center"><th>案件名</th><th class="border border-black">紹介者名</th><th class="border border-black">お客様名</th><th class="border border-black">受信日時</th><th class="border border-black">進捗状況</th><th class="border border-black"></th></tr>
+  <div class="main">
+    <div class="mainHeader">
+    <ul>
+    <% if provider_signed_in? %>
+      <li class=""><span><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></span></li> 
+      <li><%= current_provider.email %></li>
+      <% else %>
+      <li class=""><span>ログアウト</span></li> 
+      <li>管理者名</li>
+    
+      <% end %>
+
+    </ul>
+    </div>
+    
+        
+    <div class="userIndex">
+      <h3 class="text-center">口コミ一覧</h3>
+      <div class="providerTable">
+      <div class="search-form">
+        <%= search_form_for @q, url: introductions_index_path do |f| %>
+            <%= f.label :name, "進捗度絞り込み" %>
+            <%= f.select :step_cont, [['口コミ確認完了'], ['お客様と繋がりませんでした'], ['断られました'], ['検討中'], ['進行中'], ['契約成立'], ['報酬振込完了']], { include_blank: 'すべて' }, { class: "form" } %>
+            <%= f.submit "検索" %>
+        <% end %>
+        </div>
+        <div class="search-form">
+        <%= search_form_for @q, url: introductions_index_path do |f| %>
+            <%= f.label :name, "キーワード" %>
+            <%= f.search_field :name_or_user_username_or_work_title_cont %>
+            
+
+            <%= f.submit "検索" %>
+        <% end %>
+      </div>
+
+        <table class="table userTable">
+      <tr class="border text-center heading"><th>案件名</th><th class="border border-black">紹介者名</th><th class="border border-black">お客様名</th><th class="border border-black">受信日時</th><th class="border border-black">進捗状況</th><th class="border border-black"></th></tr>
       
       
       <% @introductions.each do |introduction| %> 
@@ -24,11 +58,16 @@
         <% else %>
         <td class="border border-black"><%= introduction.step %></td>
         <% end %>
-        <td class="btn "><a href="<%= introduction.id %>" class=" text-white white-50">詳細</a></td></tr>
+        <td class="morebtn "><a href="<%= introduction.id %>" class=" text-white white-50">詳細</a></td></tr>
       <% end %>
   
       
       </table>
+      <div class="text-center pagenation">
+      <%= paginate @introductions %>
+      </div>
+      </div>
+      </div>
 
-</div>
-    
+  </div>
+</body>

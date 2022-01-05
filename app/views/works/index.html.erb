@@ -1,42 +1,97 @@
 
 
-<div class="provider-index">
+
+
+<body class="providerPage">
   <div class="side">
-  <%= render 'side' %>
+    <%= render '/works/side' %>
   </div>
+ 
+  <div class="main">
+    <div class="mainHeader">
+    <ul>
+    <% if provider_signed_in? %>
+      <li class=""><span><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></span></li> 
+      <li><%= current_provider.email %></li>
+      <% else %>
+      <li class=""><span>ログアウト</span></li> 
+      <li>管理者名</li>
+    
+      <% end %>
 
+    </ul>
+    </div>
+    
+        
+    <div class="userIndex">
+      <h3 class="text-center">案件一覧</h3>
+      <div class="providerTable">
+      <a href="works/new" class="toNew">＋ 新規作成</a>
+        <div class="search-form">
+        <%= search_form_for @q, url: works_path do |f| %>
+            <%= f.label :name, "絞り込み" %>
+            <%= f.select :status_cont, [['公開'], ['審査中'], ['非公開'], ['公開終了']], { include_blank: 'すべて' }, { class: "form" } %>
+            <%= f.submit "検索" %>
+        <% end %>
+        </div>
+        <div class="search-form">
+        <%= search_form_for @q do |f| %>
+            <%= f.label :title, "キーワード" %>
+            <%= f.search_field :title_cont %>
 
-  <div class="providers">
-      <div class="header">
-      <%= render 'side_header'%>
+            <%= f.submit "検索" %>
+        <% end %>
       </div>
-      <div class="cases-title">
-        <span class="glyphicon glyphicon-list-alt" aria-hidden="true"><h1>案件一覧</h1></span>
-      </div>
-      <table class="table">
 
-        <thead>
-          <tr>
-            <th>会社名</th>
-            <th>案件名</th>
+        <table class="table userTable">
+
+        <thead class="heading">
+          <tr class="border">
+            <th class="border">案件名</th>
+            <th>作成日</th>
             <th>ステータス</th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
 
+    <% if current_provider.email == "ytk0202@outlook.jp" %>
         <tbody>
           <% @works.each do |work| %>
-            <tr class="provideredition">
-              <td class="provideredition"><%= work.company %></td>
-              <td class="provideredition"><%= work.title %></td>
-              <td class="provideredition"><%= work.status %></td>
-              <td class=""><%= link_to '詳細', work,class:"btn" %></td>
-              <td class=""><%= link_to '編集', edit_work_path(work),class:"btn" %></td>
+            <tr class="">
+              <td class=""><%= work.title %></td>
+              <td class=""><%= work.created_at.strftime('%Y年%m月%d日') %></td>
+              <td class=""><% if work.status == nil %>審査待ち<% else %><%= work.status %><% end %></td>
+              <td class="more"><%= link_to '詳細', work,class:"morebtn" %></td>
+              <td class="edit"><%= link_to '編集', edit_work_path(work),class:"editbtn" %></td>
               
             </tr>
           <% end %>
         </tbody>
+
+      <% else %>
+
+        <tbody>
+          <% @works.each do |work| %>
+          <% if work.provider_id == current_provider.id %>
+            <tr class="">
+              <td class=""><%= work.title %></td>
+              <td class=""><% if work.status == nil %>審査待ち<% else %><%= work.status %><% end %></td>
+              <td class="more"><%= link_to '詳細', work,class:"morebtn" %></td>
+              <td class="edit"><%= link_to '編集', edit_work_path(work),class:"editbtn" %></td>
+              
+            </tr>
+          <% end %>
+          <% end %>
+        </tbody>
+
+
+      <% end %>
       </table>
+      </div>
     </div>
 
+  </div>
+</body>
 
-</div>
+   

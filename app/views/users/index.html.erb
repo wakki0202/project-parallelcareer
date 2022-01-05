@@ -1,27 +1,69 @@
 
-
-<div class="provider-index">
+<body class="providerPage">
   <div class="side">
     <%= render '/works/side' %>
   </div>
  
-  <div class="users">
+  <div class="main">
+    <div class="mainHeader">
+    <ul>
+    <% if provider_signed_in? %>
+      <li class=""><span><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></span></li> 
+      <li><%= current_provider.email %></li>
+      <% else %>
+      <li class=""><span>ログアウト</span></li> 
+      <li>管理者名</li>
     
-        <h1 class="text-center font-bold text-2xl p-6">ユーザー管理表</h1>
-        <table id="users-table" class="table">
-        <tr class="border"><th class="border border-black">名前</th><th class="border border-black">メールアドレス</th><th class="border border-black">電話番号</th><th class="border border-black">口座情報(銀行名/支店/口座種類/口座番号)</th><th class="border border-black">紹介者</th><th class="border border-black">紹介者アドレス</th></tr>
+      <% end %>
+
+    </ul>
+    </div>
+    
+        
+    <div class="userIndex">
+      <h3 class="text-center">ユーザー情報</h3>
+      <div class="providerTable">
+      <div class="search-form">
+        <%= search_form_for @q, url: users_index_path do |f| %>
+            <%= f.label :name_or_tel_or_email, "キーワード" %>
+            <%= f.search_field :name_or_tel_or_email_cont %>
+
+            <%= f.submit "検索" %>
+        <% end %>
+      </div>
+
+        <table class="table userTable">
+        <tr class="heading ">
+          <th class="border border-black text-center">名前</th>
+          <th class="border border-black text-center">メールアドレス</th>
+          <th class="border border-black text-center">電話番号</th>
+          <th class="border border-black text-center">口座情報(銀行名/支店/口座種類/口座番号)</th>
+          <th class="border border-black text-center">紹介者</th>
+          <th class="border border-black text-center">紹介者アドレス</th>
+        </tr>
+
         <% @users.each do |user| %> 
         <tr class="border  text-center">
-          <td class="border border-black"><%= user.username %></td>
+          <td class="border border-black"><%= user.name %></td>
           <td class="border border-black"><%= user.email %></td>
-          <td class="border border-black"><%= user.phonenumber %></td>
-          <td class="border border-black"><%= user.bank %>/<%= user.branch %>/<%= user.kinds %>/<%= user.banknumber %></td>
-          <td class="border border-black"><%= @users.find_by(affiliater_id: user.referrer_id)&.username %></td> 
-          <td class="border border-black"><%= @users.find_by(affiliater_id: user.referrer_id)&.email  %></td>
+          <td class="border border-black"><%= user.tel %></td>
+          <% if user.bank == nil %>
+          <td class="border border-black"></td>
+          <% else %>
+          <td class="border border-black"><%= user.bank %>/<%= user.branch %>/<%= user.account_type %>/<%= user.account_no %></td>
+          <% end %>
+           <% if user.invited_by.present? %>
+           <td class="border border-black"><%= user.invited_by.name %></td>
+           <td class="border border-black"><%= user.invited_by.email %></td><% end %>
         </tr>
         <% end %>
         
         </table>
+        <div class="text-center pagenation">
+        <%= paginate @users %>
+        </div>
+      </div>
+    </div>
 
   </div>
-</div>
+</body>

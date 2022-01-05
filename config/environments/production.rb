@@ -135,7 +135,8 @@ Rails.application.configure do
     #gmail２段階認証回避のためにアプリケーションでの利用パスワードを取得、必ずcredentials.yml.endに設定を！！
     password: 'tfvmrsvrtsodzfrc',
     #パスワードをBase64でエンコード
-    authentication: :login
+    authentication:       'plain',
+    enable_starttls_auto:  true
   }
 #中略#
 end

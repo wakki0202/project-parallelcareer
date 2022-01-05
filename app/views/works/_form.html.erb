@@ -12,59 +12,62 @@
   <% end %>
   
 
-  <div class="field">
-    <%= form.label :タイトル,class: 'label' %>
+  <div class="imageformSet">
+      <%= form.label :images, "画像をアップロード", class: "image_input_btn" %>
+      <%= form.file_field :images,multiple: true, class: "image_form"  %>
+  </div>
+
+  <div class="formSet">
+    <div class="text-left">タイトル</div>
     <%= form.text_field :title,class: "form" %>
   </div>
 
-  <div class="field">
-    <%= form.label :会社名,class: 'label' %>
+  <div class="formSet">
+    <div class="text-left">会社名</div>
     <%= form.text_field :company,class: "form" %>
   </div>
 
-   <div class="field">
-    <%= form.label :事業者ホームページ欄,class: 'label' %>
+   <div class="formSet">
+    <div class="text-left">事業者URL</div>
     <%= form.text_field :link,class: "form" %>
   </div>
 
-  <div class="field">
-    <%= form.label :報酬,class: 'label' %>
+  <div class="formSet">
+    <div class="text-left">報酬</div>
     <%= form.text_field :reward,class: "form" %>
   </div>
 
-  <div class="field">
-    <%= form.label :仕事内容,class: 'label' %>
-    <%= form.text_area :pcontent, :size => "75x5",class: "formB" %>
+  <div class="formSet">
+    <div class="text-left">仕事内容</div>
+    <%= form.text_area :pcontent, :size => "40*10" %>
   </div>
 
-  <div class="field">
-    <%= form.label :報酬支払日,class: 'label' %>
+  <div class="formSet">
+    <div class="text-left">報酬支払日</div>
     <%= form.text_field :rday,class: "form" %>
   </div>
 
-  <div class="field">
-    <%= form.label :報酬内容,class: 'label' %>
-    <%= form.text_area :rcontent, class: "formB", :size => "75x5" %>
+  <div class="formSet">
+    <div class="text-left">報酬内容</div>
+    <%= form.text_area :rcontent, :size => "40*10" %>
   </div>
 
-  <div class="field">
-    <%= form.label :地域,class: 'label' %>
-    <%= form.text_area :area, class: "formB", :size => "75x5" %>
+  <div class="formSet">
+    <div class="text-left">地域</div>
+    <%= form.text_area :area, class: "formB", :size => "40*10" %>
   </div>
 
-  <div class="field">
-    <%= form.label :アピールポイント,class: 'label' %>
-    <%= form.text_area :appeal, :size => "75x5",class: "formB" %>
+  <div class="formSet">
+    <div class="text-left">アピールポイント</div>
+    <%= form.text_area :appeal, :size => "40*10" %>
   </div>
 
-  <div class="field">
-      <%= form.label :写真を貼る,class: 'label' %>
-      <%= form.file_field :images,multiple: true %>
-  </div>
+  
 
-  <div class="field">
-    <%= form.label :案件ステータス,class: 'label' %>
-    <%= form.select :status, [['公開'], ['非公開']], { include_blank: false }, { class: "form" } %>
+
+  <div class="formSet">
+    <div class="text-left">案件ステータス</div>
+    <%= form.select :status, [['審査中'],['公開'], ['非公開'],  ['終了']], { include_blank: false }, { class: "form" } %>
   </div>
 
 

@@ -43,6 +43,7 @@ Rails.application.routes.draw do
     resources :details, only: [:create]
   end
 
+
   resources :news
   resources :questions
   

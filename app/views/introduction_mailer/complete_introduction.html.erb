@@ -5,4 +5,12 @@
 <p>■案件名 ：<%= @work.title %></p>
 <p>■お客様名 ：<%= @introduction.name %>様</p>
 <p>■お客様電話番号 ：<%= @introduction.phonenumber %></p>
+
+<p>■紹介する方から口コミの許可は貰っているか：
+<% if @introduction.permission == true %>
+貰っている
+<% elsif @introduction.permission == false %>
+貰っていない
+<% end %>
+</p>
 <p>■内容 ：<%= @introduction.contents %></p>

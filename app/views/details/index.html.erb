@@ -24,8 +24,8 @@
   <tbody>
     <% @details.each do |detail| %> 
       <tr>
+        <td class="border border-black"></td>
         <td class="border border-black"><%= detail.user.username %></td>
-        <td class="border border-black"><%= detail.user_id %></td>
         <td class="border border-black"><%= detail.content %></td>
         <td class="hoverwhite"><%= link_to '詳細を見る', detail %></td>
       </tr>

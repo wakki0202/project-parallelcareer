@@ -13,23 +13,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     #スーパークラス(devise)のcreateアクションを呼ぶ 
     # byebug
-    if params[:user][:referrer_id].present?
-      # byebug
-      p "bbbbbb"
-      super
-      if User.find_by(affiliater_id: params[:user][:referrer_id]).present?
-        current_user.update(affiliater_id:SecureRandom.hex(15),referrer_id: params[:user][:referrer_id])
-        
-      end
+   super
       ThanxMailer.complete_registration(params[:user][:email],params[:user][:username]).deliver
-      #WelcomeMailerクラスのsend_when_signupメソッドを呼び、POSTから受け取ったuserのemailとnameを渡す
-    else
-      # byebug
-      p "aaaaaaa"
-      super
-      current_user.update(affiliater_id:SecureRandom.hex(15),referrer_id: params[:user][:referrer_id])
-      ThanxMailer.complete_registration(params[:user][:email],params[:user][:username]).deliver
-    end
+  
   end
 
   # GET /resource/edit

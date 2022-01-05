@@ -5,7 +5,7 @@ class DetailsController < ApplicationController
 
   # GET /details or /details.json
   def index
-    @details = Detail.all
+    @details = Detail.all.page(params[:page]).per(10)
   end
 
   # GET /details/1 or /details/1.json

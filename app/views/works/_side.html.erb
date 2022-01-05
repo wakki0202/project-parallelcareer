@@ -1,56 +1,44 @@
- <body class="sidebar"> 
-<ul class="nav flex-column">
 
-        <div class="side-contents back-toppage">
-          <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"><li class="btn nav-item"><%= link_to "トップページに戻る","/tops/index" %></li></span>
-        </div>
+<div class="providersideMain">
 
-        <div class="side-contents all-cases">
-          <span class="glyphicon glyphicon-list-alt" aria-hidden="true"><li class="btn nav-item"><%= link_to "案件一覧","/works" %></li></span>
-        </div>
+        <ul class="side-contents back-toppage">
+          <li class="btn nav-item"><%= link_to "< トップページに戻る","/tops/index" %></li>
+        </ul>
 
-        <div class="side-contents cases-hopeful">
-          <span class="glyphicon glyphicon-info-sign" aria-hidden="true"><li class="btn nav-item"><%= link_to "案件詳細希望者","/details" %></li></span>
-        </div>
+        <ul class="side-contents all-cases">
+          <li class="btn nav-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"><%= link_to " 案件一覧","/works" %></span></li>
+        </ul>
 
-        <div class="side-contents all-user">
-          <span class="glyphicon glyphicon-user" aria-hidden="true"><li class="btn nav-item"><%= link_to "ユーザー一覧","#" %></li></span>
-        </div>
+        <ul class="side-contents all-user">
+          <li class="btn nav-item"><span class="glyphicon glyphicon-user" aria-hidden="true"><%= link_to " ユーザー一覧","/users/index" %></span></li>
+        </ul>
 
-        <div class="side-contents all-reviews">
-          <span class="glyphicon glyphicon-comment" aria-hidden="true"><li class="btn nav-item"><a href="/introductions/index">口コミ一覧 <span class="badge badge-primary badge-pill"><%= @introductionnumber %></span></a></li></span>        
-        </div>
+        <ul class="side-contents all-reviews">
+          <li class="btn nav-item"><span class="glyphicon glyphicon-comment" aria-hidden="true"><a href="/introductions/index"> 口コミ一覧 <span class="badge badge-primary badge-pill"><%= @introductionnumber %></span></a></span></li>
+        </ul>
 
-        <div class="side-contents all-notices">
-          <span class="glyphicon glyphicon-envelope" aria-hidden="true"><li class="btn nav-item"><a href="#">お知らせ一覧 <span class="badge badge-primary badge-pill"><%= @introductionnumber %></span></a></li></span>
-        </div>
+        <ul class="side-contents all-notices ">
+          <li class="btn nav-item"><span class="glyphicon glyphicon-envelope" aria-hidden="true"><a href="/news"> お知らせ一覧 <span class="badge badge-primary badge-pill"></span></a></span></li>
+        </ul>
 
   
-
-  
-
-        <li class="btn"><%= link_to '管理者ログアウト' , destroy_admin_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></button>
-
-
-
-        <li class="btn"><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></button>
 
    
-</ul>
+</div>
   
 <!-- <header class="site-header lg:block z-9 w-full fixed bg-white border-b-2">
 
- <div class="wrapper site-header__wrapper">
-        <div class="header-logo">
+ <ul class="wrapper site-header__wrapper">
+        <ul class="header-logo">
           <%= link_to "ロゴ" ,"/tops/index" %>
-        </div>
+        </ul>
 
           <nav class="nav">
-            <div class="display-none">
-            <div class="hamburger-menu">
+            <ul class="display-none">
+            <ul class="hamburger-menu">
                     <input type="checkbox" id="menu-btn-check">
                     <label for="menu-btn-check" class="menu-btn"><span></span></label>
-                  <div class="menu-content"> 
+                  <ul class="menu-content"> 
                           <ul>
                           <li class=""><%= link_to "トップページに戻る","/tops/index" %></li>
                           <li class=""><%= link_to "案件一覧","/works" %></li>
@@ -69,12 +57,11 @@
                     
 
                           </ul>
-                    </div>
-                </div>
-                </div>
+                    </ul>
+                </ul>
+                </ul>
 
                       
             </nav>
-  </div>
+  </ul>
  </header> -->
-</body>
