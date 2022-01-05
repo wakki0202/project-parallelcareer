@@ -1,24 +1,17 @@
 
 <body class="userMypage">
-  <%= render '/layouts/header' %>
-    <div class="title">
-      <h1>マイページ</h1>
-    </div>
+    
     <div class="sidebar_main">
       <aside class="sidebar">
         <div id="leftside-navigation" class="nano">
           <ul class="nano-content">
             <li class="user">
-              <p class="images"></p>
-              <p class="username">〇〇様</p>
+              <p class="username"><%= current_user.name %>様</p>
               <li> <a href="/"><span>トップページへ</span></a> </li>
               <li><a href="/">プロフィール編集</a> </li>
-              <li><a href="/l">sample</a> </li>
-              <li><a href="/l">sample</a> </li>
-              <li><a href="/">sample</a> </li>
-              <li><a href="/">sample</a> </li>
+              <li><a href="/l">案件一覧</a> </li>
               <li><a href="/">ログアウト</a> </li>
-              <li><a href="/">退会</a> </li>
+              <li><a href="/">退会ご希望の方はこちら</a> </li>
           </ul>
           </li>
           </li>
@@ -29,11 +22,14 @@
       </aside>
     </div>
     <div class="post-main">
+    <div class="title">
+      <h1>マイページ</h1>
+    </div>
       <div class="post-list-all">
         <div class="post-list">
           <section class="card">
             <a class=" font-bold">
-              <h1 class="card-title"></h1>
+              <h1 class="card-title">マイプロフィール</h1>
               <div class="card-content">
                 <p class="card-text"></p>
                 <p class="card-text"></p>
@@ -43,7 +39,7 @@
           </section>
           <section class="card">
             <a class=" font-bold">
-              <h1 class="card-title"></h1>
+              <h1 class="card-title">進捗状況</h1>
               <div class="card-content">
                 <p class="card-text"></p>
                 <p class="card-text"></p>
@@ -53,7 +49,7 @@
           </section>
           <section class="card">
             <a class=" font-bold">
-              <h1 class="card-title"></h1>
+              <h1 class="card-title">お知らせ</h1>
               <div class="card-content">
                 <p class="card-text"></p>
                 <p class="card-text"></p>
@@ -63,7 +59,7 @@
           </section>
           <section class="card">
             <a class=" font-bold">
-              <h1 class="card-title"></h1>
+              <h1 class="card-title">案件一覧</h1>
               <div class="card-content">
                 <p class="card-text"></p>
                 <p class="card-text"></p>
@@ -73,7 +69,7 @@
           </section>
           <section class="card">
             <a class=" font-bold">
-              <h1 class="card-title"></h1>
+              <h1 class="card-title">友人を招待する</h1>
               <div class="card-content">
                 <p class="card-text"></p>
                 <p class="card-text"></p>
@@ -83,7 +79,7 @@
           </section>
           <section class="card">
             <a class=" font-bold">
-              <h1 class="card-title"></h1>
+              <h1 class="card-title">LINEお問い合わせ</h1>
               <div class="card-content">
                 <p class="card-text"></p>
                 <p class="card-text"></p>
