@@ -55,6 +55,7 @@
           </tr>
         </thead>
 
+<% if current_provider.present? %>
     <% if current_provider.email == "ytk0202@outlook.jp" %>
         <tbody>
           <% @works.each do |work| %>
@@ -86,6 +87,7 @@
         </tbody>
 
 
+      <% end %>
       <% end %>
       </table>
       </div>
