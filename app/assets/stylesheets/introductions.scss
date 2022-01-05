@@ -97,11 +97,11 @@ textarea {
 [type="submit"] {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   width: 100%;
-  background:#2d69e9;
+  background:#fff;
   border-radius:5px;
   border:0;
   cursor:pointer;
-  color:white;
+  color:rgb(250, 155, 67);
   font-size:24px;
   padding-top:10px;
   padding-bottom:10px;
@@ -110,7 +110,7 @@ textarea {
   font-weight:700;
 }
 [type="submit"]:hover { 
-  background:#003ab8; 
+  background:rgb(192, 192, 192); 
 }
 }
 
