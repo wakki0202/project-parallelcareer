@@ -22,7 +22,6 @@ h2{
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-  padding-top: 60px;
   color: white;
 }
 
@@ -34,7 +33,6 @@ p{
 
 .title{
 color: white;
-line-height: 1.5;
 }
 
 form { 
@@ -52,7 +50,7 @@ form {
   border:2px solid white;
   transition: all 0.3s;
   padding: 13px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   width:100%;
   box-sizing: border-box;
   outline:0;
@@ -101,7 +99,7 @@ textarea {
   border-radius:5px;
   border:0;
   cursor:pointer;
-  color:rgb(250, 155, 67);
+  color:#484c4c;
   font-size:24px;
   padding-top:10px;
   padding-bottom:10px;
@@ -198,7 +196,7 @@ textarea {
   font-size: 23px;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   padding-top: 10px;
 }
 

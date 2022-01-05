@@ -113,7 +113,7 @@
 
 
   .userIndex{
-    width: 98%;
+    width: 95%;
     border-radius: 0.5rem;
     margin: 0 auto;
     margin-top: 50px;
@@ -290,6 +290,8 @@
 }
 
 
+
+
   }
 
   @media (max-width: 709px) {
@@ -311,4 +313,9 @@
 
     }
   }
+}
+  
+.modal-dialog-fluid {
+  max-width: inherit;
+  width: 80%;
 }

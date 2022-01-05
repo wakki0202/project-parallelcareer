@@ -30,10 +30,10 @@
           <div class="provider-index">
          
 
-          <div class="providers">
+          <div class="providers text-center">
           <p>
-            <strong>タイトル:</strong>
-            <%= @news.title %>
+            <strong><%= @news.title %></strong>
+            
           </p>
 
           <p>
@@ -54,13 +54,13 @@
               </div>
               <div class="modal-body">
 
-              <%= form_with(model: @newsedit, local: true) do |form| %>
-              <% if @newsedit.errors.any? %>
+              <%= form_with(model: @news, local: true) do |form| %>
+              <% if @news.errors.any? %>
                 <div id="error_explanation">
-                  <h2><%= pluralize(@newsedit.errors.count, "error") %> prohibited this news from being saved:</h2>
+                  <h2><%= pluralize(@news.errors.count, "error") %> prohibited this news from being saved:</h2>
 
                   <ul>
-                    <% @newsedit.errors.each do |error| %>
+                    <% @news.errors.each do |error| %>
                       <li><%= error.full_message %></li>
                     <% end %>
                   </ul>
@@ -82,7 +82,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
-                <%= form.submit "作成する",class:"btn btn-primary",data: { confirm:"作成しますか？"} %>    
+                <%= form.submit "更新する",data: { confirm: '更新しますか？'},class:"btn btn-primary" %>    
                 <% end %>
               </div>
             </div>

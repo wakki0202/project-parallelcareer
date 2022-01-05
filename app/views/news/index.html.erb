@@ -105,7 +105,7 @@
               <tr>
                 <td><%= news.title %></td>
                 <td><%= news.created_at.strftime('%Y年%m月%d日') %></td>
-                <td><%= link_to '詳細', news,class:"morebtn" %></td>
+                <td><%= link_to '詳細', news,class:"toNew" %></td>
                 <td><%= link_to '編集', edit_news_path(news),class:"editbtn" %></td>
                 
               </tr>

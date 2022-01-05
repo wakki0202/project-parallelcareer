@@ -1,7 +1,47 @@
 
 <p id="notice"><%= notice %></p>
 
-<div class="slider-images" style="text-align: center; width: 50%; height: 50%; margin: auto;">
+
+
+
+<script>
+  $(function () {
+    $('.slider-images').slick({
+      dots: true,
+    });
+  });
+</script>
+
+
+
+
+<body class="providerPage">
+  <div class="side">
+    <%= render '/works/side' %>
+  </div>
+ 
+  <div class="main">
+    <div class="mainHeader">
+    <ul>
+    <% if provider_signed_in? %>
+      <li class=""><span><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></span></li> 
+      <li><%= current_provider.email %></li>
+      <% else %>
+      <li class=""><span>ログアウト</span></li> 
+      <li>管理者名</li>
+    
+      <% end %>
+
+    </ul>
+    </div>
+    
+        
+    <div class="userIndex">
+      <h2 class="text-center">案件詳細</h2>
+      <div class="providerTable text-center">
+     
+
+       <div class="slider-images" style="text-align: center; width: 50%; height: 50%; margin: auto;">
     <% @work.images.each do |img| %>
     <%= image_tag img.to_s %>
     <% end %>
@@ -57,13 +97,113 @@
   <%= @work.status %>
 </p>
 
-<button><%= link_to '◀トップへ戻る', works_path %></button>
-<button><%= link_to '削除する', @work, method: :delete, data: { confirm: '本当に削除しますか?' } %></button>
+ <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary toNew" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          編集する
+        </button>
 
-<script>
-  $(function () {
-    $('.slider-images').slick({
-      dots: true,
-    });
-  });
-</script>
+
+         <!-- Modal -->
+        <div class="modal w-100 m-auto" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content ">
+              <div class="modal-header">
+                <h5 class="modal-title h4" id="staticBackdropLabel">案件編集</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+              <%= form_with(model: @work, local: true) do |form| %>
+              <% if @work.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@workn.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+                  <ul>
+                    <% @work.errors.each do |error| %>
+                      <li><%= error.full_message %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                    <%= form.label :images, "画像をアップロード", class: "h4" %>
+                    <%= form.file_field :images,multiple: true, class: "form-control",id:"exampleFormControlInput1"  %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :タイトル,class:"h4" %>
+                  <%= form.text_field :title,class: "form-control",id:"exampleFormControlInput1" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :会社名,class:"h4" %>                  <%= form.text_field :company,class: "form-control",id:"exampleFormControlInput1" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :事業者URL,class:"h4" %>
+                  <%= form.text_field :link,class: "form-control",id:"exampleFormControlInput1" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :報酬,class:"h4" %>                 <%= form.text_field :reward,class: "form-control",id:"exampleFormControlInput1" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :仕事内容,class:"h4" %>
+                  <%= form.text_area :pcontent,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :報酬支払日,class:"h4" %>
+                  <%= form.text_field :rday,class: "form-control",id:"exampleFormControlInput1" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :報酬内容,class:"h4" %>
+                  <%= form.text_area :rcontent,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :地域,class:"h4" %>                 <%= form.text_area :area, class: "formB",class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :アピールポイント,class:"h4" %>
+                  <%= form.text_area :appeal,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+                </div>
+
+                
+
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :ステータス,class:"h4" %>
+                  <%= form.select :status, [['審査中'],['公開'], ['非公開'],  ['終了']], { include_blank: false }, { class: "form-control",id:"exampleFormControlInput1" } %>
+                </div>
+           
+
+
+
+
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                <%= form.submit "更新する",class:"btn btn-primary",data: { confirm:"作成しますか？"} %>    
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <%= link_to '削除する', @work, method: :delete,class:"btn btn-primary toNew", data: { confirm: '本当に削除しますか?' } %>
+        
+
+       
+        </div>
+      </div>
+
+  </div>
+</body>

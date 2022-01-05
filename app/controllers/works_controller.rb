@@ -5,6 +5,7 @@ class WorksController < ApplicationController
   # GET /works or /works.json
   def index
     @works = Work.all.page(params[:page])
+    @worknew = Work.new
     @q = Work.ransack(params[:q])
     @works = @q.result(distinct: true).order("created_at desc")
     @questionnumber = Question.all.count
