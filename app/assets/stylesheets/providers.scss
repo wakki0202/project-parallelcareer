@@ -6,6 +6,14 @@
 .site-header{
   display: none;
 }
+.toLogout{
+  color: #3F8A83;
+}
+
+li .toLogout:hover{
+  color: #3F8A83;
+  background-color: rgb(206, 203, 203);
+}
 .providerPage{
   width: 100%;
   display: flex;

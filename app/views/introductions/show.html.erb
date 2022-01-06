@@ -7,24 +7,29 @@
   </div>
  
   <div class="main">
-    <div class="mainHeader">
-    <ul>
-    <% if provider_signed_in? %>
-      <li class=""><span><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></span></li> 
-      <li><%= current_provider.email %></li>
-      <% else %>
-      <li class=""><span>ログアウト</span></li> 
-      <li>管理者名</li>
-    
-      <% end %>
-
-    </ul>
-    </div>
+  
+  <%= render '/works/side_header' %>
       
         
     <div class="userIndex">
      
       <div class="providerTable text-center">
+      <div>
+        <%= form_with(model: [@introduction], local: true ) do |form| %>
+            
+          <div class="field text-right h5">
+              
+              
+                <%= form.select :step, [['口コミ確認完了'], ['お客様と繋がりませんでした'], ['断られました'], ['検討中'], ['進行中'], ['契約成立'], ['報酬振込完了']] %>
+              
+
+            
+            <%= form.submit '進捗更新',data: { confirm: '更新しますか？' },class: 'submit' %>
+  
+
+          
+        <% end %>
+      </div>
        <h1 class="text-center mb-5">口コミ内容</h1>
 
       <table class="table w-75 m-auto">
@@ -35,7 +40,7 @@
         <td class="border border-black text-center"><%= @introduction.work.title %></td>
       </tr>
       <tr class="border">
-        <td class="border border-black text-center py-3">口コミした方</td>
+        <td class="border border-black text-center py-3">紹介者</td>
         <td class="border border-black"><%= @introduction.user.name %>様</td>
       </tr>
       <tr class="border">
@@ -47,7 +52,7 @@
         <td class="border border-black"><%= @introduction.phonenumber %></td>
       </tr>
       <tr class="border">
-        <td class="border border-black text-center py-3">口コミした方の口座情報(銀行名/支店/口座種類/口座番号)</td>
+        <td class="border border-black text-center py-3">紹介者の口座情報(銀行名/支店/口座種類/口座番号)</td>
         <td class="border border-black"><%= @introduction.user.bank %>/<%= @introduction.user.branch %>/<%= @introduction.user.account_type %>/<%= @introduction.user.account_no %></td>
       </tr>
       
@@ -79,47 +84,6 @@
     </table>
  
 
-<%= form_with(model: [@introduction], local: true ) do |form| %>
-    
-  <div class="field">
-    <%= form.label :口コミ進捗度,class: 'label'  %>
-
-      <div>
-        口コミ確認完了<%= form.radio_button :step, '口コミ確認完了' %>
-      </div>
-
-      <div>
-        お客様と繋がりませんでした<%= form.radio_button :step, 'お客様と繋がりませんでした' %>
-      </div>
-
-      <div>
-        進行中<%= form.radio_button :step, '進行中' %>
-      </div>
-
-      <div>
-        断られました<%= form.radio_button :step, '断られました' %>
-      </div>
-
-      <div>
-        検討中<%= form.radio_button :step, '検討中' %>
-      </div>
-
-      <div>
-        契約成立<%= form.radio_button :step, '契約成立' %>
-      </div>
-
-      <div>
-        報酬振込完了<%= form.radio_button :step, '報酬振込完了' %>
-      </div>
-  
-
-  
-  <div class="actions">
-    <%= form.submit '進捗を更新する',data: { confirm: '更新しますか？' },class: 'submit' %>
-  </div>
-
-  
-<% end %>
       </div>
       </div>
 
