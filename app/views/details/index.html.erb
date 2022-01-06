@@ -12,7 +12,7 @@
     <ul>
     <% if provider_signed_in? %>
       <li class=""><span><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></span></li> 
-      <li><%= current_provider.email %></li>
+      <li class=""><%= current_provider.email %></li>
       <% else %>
       <li class=""><span>ログアウト</span></li> 
       <li>管理者名</li>
@@ -26,6 +26,21 @@
     <div class="userIndex">
       <h1 class="text-left">お問い合わせ（案件詳細希望者一覧)</h1>
       <div class="providerTable">
+      <div class="search-form">
+        <%= search_form_for @q, url: details_path do |f| %>
+            <%= f.label :name, "絞り込み" %>
+            <%= f.select :status_cont, [['未対応'], ['対応済み']], { include_blank: 'すべて' }, { class: "formleft" } %>
+            <%= f.submit "検索" %>
+        <% end %>
+        </div>
+        <div class="search-form">
+        <%= search_form_for @q do |f| %>
+            <%= f.label :title, "キーワード" %>
+            <%= f.search_field :work_title_cont %>
+
+            <%= f.submit "検索" %>
+        <% end %>
+      </div>
       
 
          <table class="table userTable">

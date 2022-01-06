@@ -6,6 +6,8 @@ class DetailsController < ApplicationController
   # GET /details or /details.json
   def index
     @details = Detail.all.page(params[:page]).per(10)
+    @q = Detail.all.ransack(params[:q])
+    @details = @q.result.page(params[:page]).per(10).order("created_at desc")
   end
 
   # GET /details/1 or /details/1.json

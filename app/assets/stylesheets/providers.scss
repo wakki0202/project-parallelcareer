@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @media (min-width: 710px) {
+
+.site-header{
+  display: none;
+}
 .providerPage{
   width: 100%;
   display: flex;
@@ -308,6 +312,13 @@
   }
 
   @media (max-width: 709px) {
+    .providersideMain{
+      display: none;
+    }
+    .site-header{
+      height: 80px;
+    }
+
     
     .providers{
       width: 70%;
