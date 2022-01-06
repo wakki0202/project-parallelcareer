@@ -9,9 +9,10 @@
           <li class="btn nav-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"><%= link_to " 案件一覧","/works",class:"text-decoration-none"  %></span></li>
         </ul>
 
-        <ul class="side-contents all-user">
-          <li class="btn nav-item"><span class="glyphicon glyphicon-user" aria-hidden="true"><%= link_to " ユーザー一覧","/users/index",class:"text-decoration-none" %></span></li>
+        <ul class="side-contents all-cases">
+          <li class="btn nav-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"><%= link_to " お問い合わせ一覧","/details",class:"text-decoration-none"  %></span></li>
         </ul>
+
 
         <ul class="side-contents all-reviews">
           <li class="btn nav-item"><span class="glyphicon glyphicon-comment" aria-hidden="true"><a href="/introductions/index" class="text-decoration-none"> 口コミ一覧 <span class="badge badge-primary badge-pill"><%= @introductionnumber %></span></a></span></li>
@@ -19,6 +20,10 @@
 
         <ul class="side-contents all-notices ">
           <li class="btn nav-item"><span class="glyphicon glyphicon-envelope" aria-hidden="true"><a href="/news" class="text-decoration-none"> お知らせ一覧 <span class="badge badge-primary badge-pill"></span></a></span></li>
+        </ul>
+
+        <ul class="side-contents all-user">
+          <li class="btn nav-item"><span class="glyphicon glyphicon-user" aria-hidden="true"><%= link_to " ユーザー一覧","/users/index",class:"text-decoration-none" %></span></li>
         </ul>
 
   

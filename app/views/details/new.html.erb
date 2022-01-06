@@ -7,10 +7,11 @@
       <h2>掲載主から詳細を聞く</h2>
       <p>あなたの連絡先が送られ掲載主から近日中に事業者が直接電話でお応えします！</p>
      
-     <%= form_with(model: [@work, @detail], local: true ) do |form| %>
+     <%= form_with(model: [@work, @detail] ) do |form| %>
 
       <form>      
       <%= form.text_area :content,class: 'form' , :autocomplete => "off",:class => "feedback-input" ,:placeholder => "具体的に聞きたい内容" %>
+      <%= form.hidden_field :status,value:"未対応" %>
       <%= form.submit '詳細を聞く',class: 'submit' %>
       </form>
 

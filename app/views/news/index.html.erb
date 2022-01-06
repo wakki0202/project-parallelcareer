@@ -24,7 +24,7 @@
     
         
     <div class="userIndex">
-      <h2 class="text-center">お知らせ</h2>
+      <h1 class="text-left">お知らせ</h1>
       <div class="providerTable">
      
 
@@ -90,12 +90,11 @@
         <% end %>
       </div>
 
-        <table class="table userTable">
+        <table class="table userTable ">
           <thead class="heading">
             <tr>
               <th>タイトル</th>
               <th>作成日</th>
-              <th></th>
               <th></th>
             </tr>
           </thead>
@@ -105,8 +104,7 @@
               <tr>
                 <td><%= news.title %></td>
                 <td><%= news.created_at.strftime('%Y年%m月%d日') %></td>
-                <td><%= link_to '詳細', news,class:"toNew" %></td>
-                <td><%= link_to '編集', edit_news_path(news),class:"editbtn" %></td>
+                <td><%= link_to '詳細', news,class:"toShow py-1 px-3 text-decoration-none" %></td>
                 
               </tr>
             <% end %>

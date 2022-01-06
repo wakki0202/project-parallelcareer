@@ -4,7 +4,7 @@ class DetailMailer < ApplicationMailer
     @current_user = current_user
     @detail = detail
     mail(
-    to: 'ytk0202@outlook.jp',
+    to: @work.provider.email,
     subject: '案件の詳細を求めてる方から連絡が来ました！'
     )
   end

@@ -13,8 +13,13 @@
   
 
   <div class="imageformSet">
+    
       <%= form.label :images, "画像をアップロード", class: "image_input_btn" %>
+  <% if work.images.present? %>
+      <%= form.file_field :images,multiple: true, class: "image_form",value: params[:images]  %>
+  <% elsif %>
       <%= form.file_field :images,multiple: true, class: "image_form"  %>
+  <% end %>
   </div>
 
   <div class="formSet">

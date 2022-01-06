@@ -38,7 +38,7 @@ class DetailsController < ApplicationController
   # PATCH/PUT /details/1 or /details/1.json
   def update
     respond_to do |format|
-      if @detail.update(detail_params)
+      if @detail.update(detail_update_params)
         format.html { redirect_to @detail, notice: "Detail was successfully updated." }
         format.json { render :show, status: :ok, location: @detail }
       else
@@ -65,6 +65,9 @@ class DetailsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def detail_params
-      params.require(:detail).permit(:content, :work_id).merge(user_id: current_user.id, work_id: params[:work_id])
+      params.require(:detail).permit(:id,:content,:user_id, :work_id, :status).merge(work_id: params[:work_id],user_id: current_user.id)
+    end
+    def detail_update_params
+      params.require(:detail).permit(:status)
     end
 end

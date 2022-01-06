@@ -20,36 +20,40 @@
 
     </ul>
     </div>
-    
-        
-    <div class="userIndex">
-      <h3 class="text-center">口コミ一覧</h3>
-
-      <table class="table">
       
         
-      <tr class="border font-bold ">
-        <td class="border border-black text-center py-3">案件名</td>
+    <div class="userIndex">
+     
+      <div class="providerTable text-center">
+       <h1 class="text-center mb-5">口コミ内容</h1>
+
+      <table class="table w-75 m-auto">
+      
+        
+      <tr class="border font-bold w-75 m-auto">
+        <td class="border border-black  py-3">案件名</td>
         <td class="border border-black text-center"><%= @introduction.work.title %></td>
       </tr>
       <tr class="border">
-        <td class="border border-black text-center py-3">紹介者名</td>
+        <td class="border border-black text-center py-3">口コミした方</td>
         <td class="border border-black"><%= @introduction.user.name %>様</td>
       </tr>
       <tr class="border">
-        <td class="border border-black text-center py-3">紹介者口座情報(銀行名/支店/口座種類/口座番号)</td>
-        <td class="border border-black"><%= @introduction.user.bank %>/<%= @introduction.user.branch %>/<%= @introduction.user.account_type %>/<%= @introduction.user.account_no %></td>
-      </tr>
-      <tr class="border">
-        <td class="border border-black text-center py-3">お客様名</td>
+        <td class="border border-black text-center py-3">口コミされた方</td>
         <td class="border border-black"><%= @introduction.name %>様</td>
       </tr>
       <tr class="border">
-        <td class="border border-black text-center py-3">お客様電話番号</td>
+        <td class="border border-black text-center py-3">口コミされた方の電話番号</td>
         <td class="border border-black"><%= @introduction.phonenumber %></td>
       </tr>
       <tr class="border">
-        <td class="border border-black text-center py-3">口コミの許可</td>
+        <td class="border border-black text-center py-3">口コミした方の口座情報(銀行名/支店/口座種類/口座番号)</td>
+        <td class="border border-black"><%= @introduction.user.bank %>/<%= @introduction.user.branch %>/<%= @introduction.user.account_type %>/<%= @introduction.user.account_no %></td>
+      </tr>
+      
+      
+      <tr class="border">
+        <td class="border border-black text-center py-3">口コミの確認</td>
         <td class="border border-black">
         <% if @introduction.permission == true %>
           とっている
@@ -59,11 +63,11 @@
         </td>
       </tr>
       <tr class="border">
-        <td class="border border-black text-center py-3">内容</td>
+        <td class="border border-black text-center py-3">口コミ内容</td>
         <td class="border border-black"><%= @introduction.contents %></td>
       </tr>
       <tr class="border">
-        <td class="border border-black text-center py-3">進捗状況</td>
+        <td class="border border-black text-center py-3">口コミ後の進捗状況</td>
         <% if @introduction.step == nil %>
         <td class="border border-black">口コミ完了</td>
         <% else %>
@@ -116,6 +120,7 @@
 
   
 <% end %>
+      </div>
       </div>
 
   </div>

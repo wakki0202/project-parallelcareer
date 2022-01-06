@@ -1,16 +1,8 @@
 
-<p id="notice"><%= notice %></p>
 
 
 
 
-<script>
-  $(function () {
-    $('.slider-images').slick({
-      dots: true,
-    });
-  });
-</script>
 
 
 
@@ -41,7 +33,7 @@
       <div class="providerTable text-center">
      
 
-       <div class="slider-images" style="text-align: center; width: 50%; height: 50%; margin: auto;">
+<div class="slider-images" style="text-align: center; width: 50%; height: 50%; margin: auto;">
     <% @work.images.each do |img| %>
     <%= image_tag img.to_s %>
     <% end %>
@@ -113,7 +105,7 @@
               </div>
               <div class="modal-body">
 
-              <%= form_with(model: @work, local: true) do |form| %>
+              <%= form_with(model: @work,:multipart => true, local: true) do |form| %>
               <% if @work.errors.any? %>
                 <div id="error_explanation">
                   <h2><%= pluralize(@workn.errors.count, "error") %> prohibited this news from being saved:</h2>
@@ -126,10 +118,16 @@
                 </div>
               <% end %>
 
-                <div class="w-75 m-auto mb-4 mt-2">
-                    <%= form.label :images, "画像をアップロード", class: "h4" %>
-                    <%= form.file_field :images,multiple: true, class: "form-control",id:"exampleFormControlInput1"  %>
-                </div>
+
+                  <div class="imageformSet">
+    
+                      <%= form.label :images, "画像をアップロード", class: "h4" %>
+                  <% if @work.images.present? %>
+                      <%= form.file_field :images,multiple: true, class: "form-control",id:"exampleFormControlInput1",value: params[:images]  %>
+                  <% elsif %>
+                      <%= form.file_field :images,multiple: true, class: "form-control",id:"exampleFormControlInput1" %>
+                  <% end %>
+                  </div>
 
                 <div class="w-75 m-auto mb-4 mt-2">
                   <%= form.label :タイトル,class:"h4" %>
@@ -206,4 +204,13 @@
       </div>
 
   </div>
+
+ 
 </body>
+ <script>
+  $(function () {
+    $('.slider-images').slick({
+      dots: true,
+    });
+  });
+</script>

@@ -141,6 +141,19 @@
       padding: 3px;
     }
 
+    .toShow{
+      color: white;
+      border: 1px solid #3F8A83;
+      background-color: #3F8A83;
+      border-radius: 0.5rem;
+      padding: 3px;
+
+    }
+
+    .toShow:hover{
+      background-color: #224b47;
+    }
+
     .search-form{
       text-align: right;
       margin-right: 25px;
