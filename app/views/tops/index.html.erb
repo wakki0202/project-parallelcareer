@@ -284,17 +284,16 @@
     </main>
 
     <%= render '/layouts/footer' %>
+    <script src="https://kit.fontawesome.com/a5c533f20f.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://kit.fontawesome.com/a5c533f20f.js" crossorigin="anonymous"></script>
     <script>
     $(function () {
       $(".slider").slick({
         arrows: false, //左右の矢印はなし
         autoplay: true, //自動的に動き出すか。初期値はfalse。
-        autoplaySpeed: 0, //自動的に動き出す待ち時間。初期値は3000ですが今回の見せ方では0
+        autoplaySpeed: 50, //自動的に動き出す待ち時間。初期値は3000ですが今回の見せ方では0
         speed: 6900, //スライドのスピード。初期値は300。
-        infinite: true, //スライドをループさせるかどうか。初期値はtrue。
         pauseOnHover: false, //オンマウスでスライドを一時停止させるかどうか。初期値はtrue。
         pauseOnFocus: false, //フォーカスした際にスライドを一時停止させるかどうか。初期値はtrue。
         cssEase: "linear", //動き方。初期値はeaseですが、スムースな動きで見せたいのでlinear
