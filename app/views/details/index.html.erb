@@ -33,16 +33,16 @@
       
 
          <table class="table userTable">
-        <tr class="heading ">
-          <th class="border border-black text-center">案件名</th>
-          <th class="border border-black text-center">お客様名</th>
-          <th class="border border-black text-center">受信日時</th>
-          <th class="border border-black text-center">対応チェック</th>
-          <th class="border border-black text-center"></th>
+        <tr class="heading text-left">
+          <th class="border border-black ">案件名</th>
+          <th class="border border-black ">お客様名</th>
+          <th class="border border-black ">受信日時</th>
+          <th class="border border-black ">対応チェック</th>
+          <th class="border border-black "></th>
         </tr>
 
        <% @details.each do |detail| %> 
-      <tr class="text-center">
+      <tr class="text-left">
         <td class="border border-black"><%= detail.work.title %></td>
         <td class="border border-black"><%= detail.user.name %></td>
         <td class="border border-black"><%= l detail.created_at %></td>
@@ -56,7 +56,7 @@
     <% end %>
         
         </table>
-        <div class="text-center pagenation">
+        <div class=" pagenation">
        
         </div>
       </div>

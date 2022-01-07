@@ -136,7 +136,7 @@
         <table class="table userTable">
 
         <thead class="heading">
-          <tr class="border">
+          <tr class="border text-left">
             <th>案件名</th>
             <th>作成日</th>
             <th>ステータス</th>
@@ -148,7 +148,7 @@
     <% if current_provider.email == "ytk0202@outlook.jp" %>
         <tbody>
           <% @works.each do |work| %>
-            <tr class="">
+            <tr class="text-left">
               <td class="border border-black"><%= work.title %></td>
               <td class="border border-black"><%= work.created_at.strftime('%Y年%m月%d日') %></td>
               <td class="border border-black"><% if work.status == nil %>審査待ち<% else %><%= work.status %><% end %></td>

@@ -33,7 +33,7 @@
       </div>
 
         <table class="table userTable">
-      <tr class="border text-center heading">
+      <tr class="border text-left heading">
       <th>案件名</th><th class="border border-black">紹介者名</th>
       <th class="border border-black">お客様名</th>
       <th class="border border-black">受信日時</th>
@@ -42,7 +42,7 @@
       
       
       <% @introductions.each do |introduction| %> 
-      <tr class="border">
+      <tr class="border text-left">
       <td class="border border-black"><%= introduction.work.title %></td> 
       <td class="border border-black"><%= introduction.user.name %></td>
       <td class="border border-black"><%= introduction.name %></td>
