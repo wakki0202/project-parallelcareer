@@ -1,16 +1,14 @@
 #footer {
   position: relative;
-  color: WHITE;
 }
 #footer a {
   text-decoration: none;
-  color: WHITE;
+  color:black;
 }
 #footer a:hover {
   text-decoration: underline;
-  background-color: white;
-  color:#000 ;
-  padding: 5px;
+  background-color: rgb(0, 0, 0);
+  color:rgb(255, 255, 255) ;
 }
 #footer .primary {
   padding: 20px 20px 60px 20px;
@@ -28,20 +26,16 @@
   justify-content: flex-end;
 }
 #footer .secondary {
-  color: #fff;
   display: flex;
   padding: 20px 20px;
-  background: rgb(55, 65, 81);
   border-style: solid;
-  border-color: rgb(34, 34, 34);
+  border-color: rgb(190, 190, 190);
   border-bottom: rgb(55, 65, 81);
   border-right: rgb(55, 65, 81);
   border-left: rgb(55, 65, 81);
   border-width: 1px;
   a {
     text-decoration: none;
-    color: #fff;
-    background-color: #374151;
   }
 }
 #footer li {
