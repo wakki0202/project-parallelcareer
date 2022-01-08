@@ -9,40 +9,37 @@
                 <p class="alert"><%= alert %></p>
              
 
-                  <h2 id="bankEdit">振込先口座登録</h2>
+                  <h1 id="bankEdit ">振込先口座登録</h1>
 
 
-                        <div class="formSet">
+                        <div class="formSetEdit mt-5">
                           <div class="text-left">銀行 <span>（必須）</span></div>
                           <%= f.text_field :bank,value:  current_user.bank  %>
                         </div>
 
-                        <div class="formSet">
+                        <div class="formSetEdit">
                           
                           <div class="text-left">口座種別 <span>（必須）</span></div>
                           <%= f.select :account_type, [ ["普通","普通"], ["当座","当座"] ],selected: current_user.account_type,class:"kindsEdit" %>
                         </div>
 
-                        <div class="formSet">
+                        <div class="formSetEdit">
                           <div class="text-left">支店コード <span>（必須）</span></div>
                           <%= f.text_field :branch,value: current_user.branch %>
                         </div>
 
-                        <div class="formSet">
+                        <div class="formSetEdit">
                           <div class="text-left">口座番号 <span>（必須）</span></div>
                           <%= f.text_field :account_no,value: current_user.account_no %>
                         </div>
 
                       
-                        <div class="formSet">
+                        <div class="formSetEdit">
                           <%= f.submit "口座情報を更新する",class:"button" %>
                         </div>
                   </div>
                   
               <% end %>
-
-
-              <%= link_to "Back", :back %>
 
               </div>
               </div>

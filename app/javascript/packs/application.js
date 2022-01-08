@@ -7,9 +7,18 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require('jquery')
+require("./slick")
 import "bootstrap"
 import "../stylesheets/application"
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+$(function () {
+  $('#slider').slick({
+    dots: true, //スライドの下にドットのナビゲーションを表示
+    autoplay: true, //自動再生
+    autoplaySpeed: 4000, //再生スピード
+  });
+});
