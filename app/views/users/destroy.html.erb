@@ -12,7 +12,7 @@
                   <h4 class="caution2">注：一度退会するとアカウントの復活はできません。</h4>
 
 
-                    <%= link_to '退会する', method: :delete, data: { confirm: '一度退会するとアカウントの復活はできません。よろしいですか？' },class:"button" %>
+                    <%= button_to '退会する',user_registration_path, method: :delete, data: { confirm: '一度退会するとアカウントの復活はできません。よろしいですか？' },class:"button" %>
 
 
               </div>
