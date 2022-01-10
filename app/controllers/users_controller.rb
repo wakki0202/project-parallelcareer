@@ -47,6 +47,8 @@ class UsersController < ApplicationController
   end
 
     def mypage
+      @user = User.find(params[:id])
+      redirect_to(tops_index_path) unless @user == current_user
       @news = News.first(3)
 
     end
