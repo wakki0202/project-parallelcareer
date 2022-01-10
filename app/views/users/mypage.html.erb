@@ -11,7 +11,7 @@
               <li><a href="/users/basicedit">プロフィール編集</a> </li>
               <li><a href="/posts/index">案件一覧</a> </li>
               <li><a href="/">ログアウト</a> </li>
-              <li><a href="/users/destroy">退会ご希望の方はこちら</a> </li>
+              <li><%= link_to "退会ご希望の方はこちら" ,"/users/destroy/#{current_user.id}" %> </li>
           </ul>
           </li>
           </li>
@@ -30,7 +30,7 @@
       <div class="post-list-all">
         <div class="post-list">
           <section class="card">
-            <a href="users/basicedit" class=" font-bold">
+            <a href="/users/basicedit" class=" font-bold">
               <h1 class="card-title">マイプロフィール</h1>
               <div class="card-content">
                 <p class="card-text"></p>
@@ -50,7 +50,7 @@
             <div class="card-link"> <a class=" bont-bold"></a> </div>
           </section>
           <section class="card">
-            <a href="users/news" class=" font-bold">
+            <a href="/users/news" class=" font-bold">
               <h1 class="card-title">お知らせ</h1>
               <div class="card-content">
                 <p class="card-text"></p>
