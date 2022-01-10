@@ -43,6 +43,7 @@ class UsersController < ApplicationController
   end
 
     def mypage
+      @news = News.first(3)
 
     end
 

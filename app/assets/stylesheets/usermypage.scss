@@ -107,6 +107,10 @@
       }
     }
   }
+
+  #newsList a{
+    color: #fff;
+  }
   //カード
   .post-main {
     width: 80%;
@@ -161,8 +165,6 @@
       justify-content: center;
       align-items: center;
       display: flex;
-      text-decoration: underline;
-      text-decoration-color: #800000;
     }
     .card-text {
       font-size: 14px;
@@ -221,4 +223,33 @@
       transform: translate(0, calc(100% + 20px)) scale(0.7);
     }
   }
+}
+
+
+@media (max-width: 768.98px) { 
+.userMypage .sidebar_main .sidebar{
+  display: none;
+}
+
+.userMypage .post-main {
+    width: 90%;
+    margin: 0 auto;
+
+    color: #374151;
+}
+
+.userMypage .post-main .card {
+    width: 40%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #ccc;
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0);
+}
+
 }

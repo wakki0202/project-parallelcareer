@@ -1,17 +1,17 @@
 
 <body class="userMypage">
     
-    <div class="sidebar_main">
+    <div class="sidebar_main ">
       <aside class="sidebar">
         <div id="leftside-navigation" class="nano">
           <ul class="nano-content">
             <li class="user">
               <p class="username"><% if current_user.present? %><%= current_user.name %><% end %>様</p>
-              <li> <a href="/"><span>トップページへ</span></a> </li>
-              <li><a href="/">プロフィール編集</a> </li>
-              <li><a href="/l">案件一覧</a> </li>
+              <li> <a href="/tops/index"><span>トップページへ</span></a> </li>
+              <li><a href="/users/basicedit">プロフィール編集</a> </li>
+              <li><a href="/posts/index">案件一覧</a> </li>
               <li><a href="/">ログアウト</a> </li>
-              <li><a href="/">退会ご希望の方はこちら</a> </li>
+              <li><a href="/users/destroy">退会ご希望の方はこちら</a> </li>
           </ul>
           </li>
           </li>
@@ -22,13 +22,15 @@
       </aside>
     </div>
     <div class="post-main">
+         
+        
     <div class="title">
       <h1>マイページ</h1>
     </div>
       <div class="post-list-all">
         <div class="post-list">
           <section class="card">
-            <a class=" font-bold">
+            <a href="users/basicedit" class=" font-bold">
               <h1 class="card-title">マイプロフィール</h1>
               <div class="card-content">
                 <p class="card-text"></p>
@@ -38,7 +40,7 @@
             <div class="card-link"> <a class=" bont-bold"></a> </div>
           </section>
           <section class="card">
-            <a class=" font-bold">
+            <a href="/progresses/index" class=" font-bold">
               <h1 class="card-title">進捗状況</h1>
               <div class="card-content">
                 <p class="card-text"></p>
@@ -48,7 +50,7 @@
             <div class="card-link"> <a class=" bont-bold"></a> </div>
           </section>
           <section class="card">
-            <a class=" font-bold">
+            <a href="users/news" class=" font-bold">
               <h1 class="card-title">お知らせ</h1>
               <div class="card-content">
                 <p class="card-text"></p>
@@ -89,4 +91,19 @@
           </section>
         </div>
       </div>
+      <div class="news  w-75 m-auto">
+       <h1 class="text-center font-bold text-2xl pb-6 main_title main_title_info">パラキャリからのお知らせ</h1>
+        
+        
+          <% @news.each do |news| %> 
+            <ul id="newsList" class="w-100 m-auto list-unstyled border-bottom border-top ">
+              
+              <a href="/news/<%= news.id %>"><li class=" text-decoration-none text-white text-left py-4"><%=  news.created_at.strftime('%Y.%m.%d') %>　　　　　　　　<%= news.title %></li></a>
+              
+            </ul>
+                      
+          <% end %>
+          <li class="text-right list-unstyled"> <a  href="">お知らせ一覧をみる＞</a> </li>
+        </div>
 </body>
+

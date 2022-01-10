@@ -9,8 +9,9 @@
 
   
 
-  <table class="office w-75 m-auto">
-    <tr>
+  <table class="office w-100 m-auto">
+  <tbody class="office w-75 m-auto">
+    <tr >
       <th>案件名</th>
       <td> <%= @work.title %></td>
     </tr>
@@ -50,6 +51,7 @@
       <th>アピールポイント</th>
       <td><%= simple_format(@work.appeal) %>
     </tr>
+    </tbody>
   </table>
 
 
