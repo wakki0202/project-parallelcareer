@@ -81,6 +81,7 @@ Rails.application.routes.draw do
   get "users/index",to:"users#index"
   get "users/basicedit",to:"users#basicedit"
   get "users/bankedit",to:"users#bankedit"
+  get "users/:id",to:"users#show"
   post "users/bankedit",to:"users#update"
   post "users/basicedit",to:"users#update"
   get "users/destroy",to:"users#destroy"

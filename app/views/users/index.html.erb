@@ -28,7 +28,7 @@
           <th class="border border-black text-center">電話番号</th>
           <th class="border border-black text-center">口座情報(銀行名/支店/口座種類/口座番号)</th>
           <th class="border border-black text-center">紹介者</th>
-          <th class="border border-black text-center">紹介者アドレス</th>
+          <th class="border border-black text-center"></th>
         </tr>
 
         <% @users.each do |user| %> 
@@ -43,10 +43,12 @@
           <% end %>
            <% if user.invited_by.present? %>
            <td class="border border-black"><%= user.invited_by.name %></td>
-           <td class="border border-black"><%= user.invited_by.email %></td><% end %>
+           <% else%>
+           <td class="border border-black"></td>
+            <% end %>
+            <td class="border border-black text-center"><%= link_to '詳細', "/users/#{user.id}",class:"toShow text-decoration-none px-3 py-1  " %></td>
         </tr>
         <% end %>
-        
         </table>
         <div class="text-center pagenation">
         <%= paginate @users %>
