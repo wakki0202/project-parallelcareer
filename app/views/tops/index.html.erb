@@ -14,7 +14,7 @@
   </section>
 
     <main class="top-page">
-    <div class="subtitle">パラキャリだから続けられる</div>
+    <div class="subtitle">パラキャリが選ばれる理由</div>
     <section class="merit">
       <div class="merit-items">
         <div class="merit-item">
@@ -111,11 +111,112 @@
     <!--/slider--></div>
     
     <div class="SeeMore">
-      <%= link_to "案件をもっとみる", "/posts/index" , class: "btn-more" %></div>
+      <%= link_to "案件をもっとみる", "/posts/index" , class: "btn-home" %></div>
     </div>
     </section>
     
       
+      
+
+    <section class="reward parent">
+      <div class="subtitle child">報酬獲得までの流れ</div>
+
+      <div class="flex">
+
+      <div class="stepOne">
+      <p><span>step1</span></p>
+      <h4>案件を確認する</h4>
+      <div class="">
+      <%= image_tag "stepone.jpg",class:"stepImage" %>
+      </div>
+        <p class="stepFooter">友人に紹介したい案件を見つけたら...</p>
+      </div>
+
+      <div class="arrow">
+    </div>
+
+      <div class="stepOne">
+      <p><span>step2</span></p>
+      <h4>知人に案件を紹介する</h4>
+      <div class="">
+      <%= image_tag "stepfour.jpg",class:"stepImage" %>
+      </div>
+        <p class="stepFooter">知人に口コミの許可をもらったら...</p>
+      </div>
+
+      <div class="arrow">
+    </div>
+
+    <div class="stepOne">
+      <p><span>step3</span></p>
+      <h4>知人の情報を口コミする</h4>
+      <div class="">
+      <%= image_tag "stepthree.jpg",class:"stepImage" %>
+      </div>
+        <p class="stepFooter">口コミした案件の契約が成功すれば...</p>
+      </div>
+
+      <div class="arrow">
+    </div>
+
+      <div class="stepOne">
+      <p><span>step4</span></p>
+      <h4>報酬発生！</h4>
+      <div class="">
+      <%= image_tag "stepsecond.jpg",class:"stepImage" %>
+      </div>
+        <p class="stepFooter"><a href="/posts/index" class="toWorks">案件一覧を見る</a></p>
+      </div>
+
+      </div>
+        <div class="reward-start">
+          <%= link_to "無料ではじめる" ,"/users/sign_up",class: "btn-home" %></div>
+        </div>
+    </section>
+
+    <div class="wave-wrapper">
+      <div class="wave"></div>
+    </div>
+    <section class="Voices">
+        <div class="parent">
+          <div class="subtitle child">
+            報酬獲得者もぞくぞく！
+          </div>
+        </div>
+
+        <div class="flexVoice">
+          <div class="Voice">
+            <div class="manPic">
+              <%= image_tag "manpic.jpg",class:"VoiceImage" %>
+            </div>
+            <div class="VoiceFooter">
+              <p class="comment">パラキャリは見込み顧客を紹介するだけであとは全て掲載主の方が行ってくれるので、忙しい私でも初月から１０万円以上稼ぐことができました。</p>
+              <p class="feature">27歳 男性</p>
+            </div>
+          </div>
+
+          <div class="Voice">
+            <div class="">
+            <%= image_tag "manpic2.jpg",class:"VoiceImage" %>
+            </div>
+            <div class="VoiceFooter">
+            <p class="comment">パラキャリは見込み顧客を紹介するだけであとは全て掲載主の方が行ってくれるので、忙しい私でも初月から１０万円以上稼ぐことができました。</p>
+            <p class="feature">27歳 男性</p>
+            </div>
+          </div>
+
+          <div class="Voice">
+            <div class="">
+            <%= image_tag "manpic.jpg",class:"VoiceImage" %>
+            </div>
+            <div class="VoiceFooter">
+              <p class="comment">パラキャリは見込み顧客を紹介するだけであとは全て掲載主の方が行ってくれるので、忙しい私でも初月から１０万円以上稼ぐことができました。</p>
+              <p class="feature">27歳 男性</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
       <section id="FAQ" class="FAQ">
       <div class="parent"><div class="subtitle child">FAQ</div></div>
       <div class="FAQ-items">
@@ -174,127 +275,21 @@
             <li>A.累計これまでに１００人以上の方にお支払いしています。中には月収で１００万円以上を達成された方も多くいらっしゃいます。</li>
           </ul>
         </div>
-      </div>
-      </section>
-
-      <section class="reward parent">
-      <div class="subtitle child">報酬獲得までの流れ</div>
-
-      <div class="flex">
-
-      <div class="stepOne">
-      <p><span>step1</span></p>
-      <h4>案件を確認する</h4>
-      <div class="">
-      <%= image_tag "stepone.jpg",class:"stepImage" %>
-      </div>
-        <p class="stepFooter">友人に紹介したい案件を見つけたら...</p>
-      </div>
-
-      <div class="arrow">
-    </div>
-
-      <div class="stepOne">
-      <p><span>step2</span></p>
-      <h4>知人に案件を紹介する</h4>
-      <div class="">
-      <%= image_tag "stepfour.jpg",class:"stepImage" %>
-      </div>
-        <p class="stepFooter">知人に口コミの許可をもらったら...</p>
-      </div>
-
-      <div class="arrow">
-    </div>
-
-    <div class="stepOne">
-      <p><span>step3</span></p>
-      <h4>知人の情報を口コミする</h4>
-      <div class="">
-      <%= image_tag "stepthree.jpg",class:"stepImage" %>
-      </div>
-        <p class="stepFooter">口コミした案件の契約が成功すれば...</p>
-      </div>
-
-      <div class="arrow">
-    </div>
-
-      <div class="stepOne">
-      <p><span>step4</span></p>
-      <h4>報酬発生！</h4>
-      <div class="">
-      <%= image_tag "stepsecond.jpg",class:"stepImage" %>
-      </div>
-        <p class="stepFooter"><a href="/posts/index" class="toWorks">案件一覧を見る</a></p>
-      </div>
-
-      </div>
-
-
-
-       
-        <div class="reward-start">
-          <%= link_to "無料ではじめる" ,"/users/sign_up",class: "btn-reward" %></div>
         </div>
-      </section>
-
-      <section class="Voices">
-      <div class="parent">
-        <div class="subtitle child">
-          <div class="mpextend mpLRextendTrigger"><div class="mpapperTrigger">報酬獲得者もぞくぞく！</div></div>
-        </div>
-
-         <div class="flexVoice">
-
-      <div class="Voice">
-  
-      <div class="manPic">
-      <%= image_tag "manpic.jpg",class:"VoiceImage" %>
-      </div>
-        <div class="VoiceFooter">
-        <p class="comment">パラキャリは見込み顧客を紹介するだけであとは全て掲載主の方が行ってくれるので、忙しい私でも初月から１０万円以上稼ぐことができました。</p>
-        <p class="feature">27歳 男性</p>
-      </div>
-      </div>
-
-
-      <div class="Voice">
-    
-      <div class="">
-      <%= image_tag "manpic2.jpg",class:"VoiceImage" %>
-      </div>
-        <div class="VoiceFooter">
-        <p class="comment">パラキャリは見込み顧客を紹介するだけであとは全て掲載主の方が行ってくれるので、忙しい私でも初月から１０万円以上稼ぐことができました。</p>
-        <p class="feature">27歳 男性</p>
-      </div>
-      </div>
-
-
-    <div class="Voice">
- 
-      <div class="">
-      <%= image_tag "manpic.jpg",class:"VoiceImage" %>
-      </div>
-      <div class="VoiceFooter">
-        <p class="comment">パラキャリは見込み顧客を紹介するだけであとは全て掲載主の方が行ってくれるので、忙しい私でも初月から１０万円以上稼ぐことができました。</p>
-        <p class="feature">27歳 男性</p>
-      </div>
-      </div>
-
       </section>
     </main>
 
     <%= render '/layouts/footer' %>
+    <script src="https://kit.fontawesome.com/a5c533f20f.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://kit.fontawesome.com/a5c533f20f.js" crossorigin="anonymous"></script>
     <script>
     $(function () {
       $(".slider").slick({
         arrows: false, //左右の矢印はなし
         autoplay: true, //自動的に動き出すか。初期値はfalse。
-        autoplaySpeed: 0, //自動的に動き出す待ち時間。初期値は3000ですが今回の見せ方では0
+        autoplaySpeed: 50, //自動的に動き出す待ち時間。初期値は3000ですが今回の見せ方では0
         speed: 6900, //スライドのスピード。初期値は300。
-        infinite: true, //スライドをループさせるかどうか。初期値はtrue。
         pauseOnHover: false, //オンマウスでスライドを一時停止させるかどうか。初期値はtrue。
         pauseOnFocus: false, //フォーカスした際にスライドを一時停止させるかどうか。初期値はtrue。
         cssEase: "linear", //動き方。初期値はeaseですが、スムースな動きで見せたいのでlinear

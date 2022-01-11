@@ -72,7 +72,7 @@
   .top-page {
     .subtitle {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
   }
   .merit {
@@ -123,14 +123,20 @@
 
   // --------ここから案件一覧---------------------------
   .slider {
-    .slick-slide {
-      margin: 0 20px; /*スライド左右の余白調整*/
-      height: 27rem;
+    display: none;
+
+    &.slick-initialized {
+      display: block;
     }
   }
 
+  .slick-slide {
+    margin: 0 20px; /*スライド左右の余白調整*/
+    height: 27rem;
+  }
+
   .Items-list {
-    margin-bottom: 200px;
+    margin-bottom: 150px;
     padding: 100px 0 100px;
     background: #fceabb; /* fallback for old browsers */
     background: -webkit-linear-gradient(
@@ -153,7 +159,7 @@
     margin-right: 20px;
     margin-bottom: 30px;
     background-color: #fff;
-    border-radius: 6px;
+    border-radius: 10px;
   }
 
   .Item-top {
@@ -194,19 +200,6 @@
     margin-top: 60px;
   }
 
-  .btn-more {
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #333;
-    padding: 18px 30px;
-    border-radius: 6px;
-    transition: 0.3s;
-    text-decoration: none !important;
-  }
-  .btn-more:hover {
-    opacity: 0.6;
-  }
   // ----ここから報酬獲得の流れ------------------
   .parent {
     .child {
@@ -220,7 +213,6 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding-top: 50px;
   }
 
   .stepOne {
@@ -269,36 +261,30 @@
   .subtitle {
     font-size: 3.5em;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 
   .reward-start {
-    margin-bottom: 200px;
+    margin-bottom: 150px;
     margin-top: 100px;
     display: flex;
     justify-content: center;
   }
 
-  .btn-reward {
+  .btn-home {
     color: #fff;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     background-color: #eb630d;
-    padding: 18px 30px;
-    border-radius: 6px;
+    padding: 28px 50px;
+    border-radius: 10px;
     transition: 0.3s;
     text-decoration: none !important;
   }
-  .btn-reward:hover {
+  .btn-home:hover {
     opacity: 0.6;
   }
   // --------ここからFAQ---------------------------
-  .FAQ {
-    & .subtitle {
-      margin-bottom: 60px;
-    }
-  }
-
   .FAQ-items {
     width: 100%;
     height: auto;
@@ -363,9 +349,24 @@
   }
 
   // --------ここから利用者の声---------------
-
   .Voices {
-    padding-bottom: 100px;
+    margin-bottom: 100px;
+    padding-bottom: 150px;
+    background-color: #f5f5f5;
+  }
+
+  .wave-wrapper {
+    overflow: hidden;
+    .wave {
+      background-color: #f5f5f5;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      height: 200px;
+      margin-left: -100px;
+      margin-right: -100px;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
   }
 
   .flexVoice {
@@ -373,7 +374,6 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding-top: 70px;
   }
 
   .Voice {
@@ -381,7 +381,7 @@
     border-radius: 1rem;
     width: 28%;
     font-weight: bold;
-
+    background-color: #fff;
     h4 {
       text-align: center;
       font-weight: bold;
@@ -483,7 +483,7 @@
   .top-page {
     .subtitle {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       padding: 0 17%;
     }
   }
@@ -523,14 +523,19 @@
   }
   // --------ここから案件一覧---------------------------
   .slider {
-    .slick-slide {
-      margin: 0 20px; /*スライド左右の余白調整*/
-      height: 27rem;
+    display: none;
+
+    &.slick-initialized {
+      display: block;
     }
   }
 
+  .slick-slide {
+    margin: 0 20px; /*スライド左右の余白調整*/
+    height: 27rem;
+  }
   .Items-list {
-    margin-bottom: 200px;
+    margin-bottom: 150px;
     padding: 100px 0 100px;
     background: #fceabb; /* fallback for old browsers */
     background: -webkit-linear-gradient(
@@ -553,7 +558,7 @@
     margin-right: 20px;
     margin-bottom: 30px;
     background-color: #fff;
-    border-radius: 6px;
+    border-radius: 10px;
   }
 
   .Item-top {
@@ -593,20 +598,6 @@
   .SeeMore {
     margin-top: 60px;
   }
-
-  .btn-more {
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #333;
-    padding: 18px 30px;
-    border-radius: 6px;
-    transition: 0.3s;
-    text-decoration: none !important;
-  }
-  .btn-more:hover {
-    opacity: 0.6;
-  }
   // ----ここから報酬獲得の流れ------------------
   .parent {
     margin-bottom: 150px;
@@ -626,7 +617,7 @@
   .subtitle {
     font-size: 2em;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 
   .reward-flow {
@@ -664,19 +655,20 @@
     justify-content: center;
   }
 
-  .btn-reward {
+  .btn-home {
     color: #fff;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
-    background-color: #333;
-    padding: 18px 30px;
-    border-radius: 6px;
+    background-color: #eb630d;
+    padding: 28px 50px;
+    border-radius: 10px;
     transition: 0.3s;
     text-decoration: none !important;
   }
-  .btn-reward:hover {
+  .btn-home:hover {
     opacity: 0.6;
   }
+
   .stepOne {
     border: 1px solid #828282;
     box-shadow: 6px 6px #828282;
@@ -712,7 +704,7 @@
     flex-direction: column;
     align-content: flex-start;
     padding: 0 20%;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
   }
 
   .Q-title {
@@ -763,8 +755,23 @@
 
   // --------ここから利用者の声---------------
   .Voices {
-    padding: 0 10%;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
+    padding-bottom: 150px;
+    background-color: #f5f5f5;
+  }
+
+  .wave-wrapper {
+    overflow: hidden;
+    .wave {
+      background-color: #f5f5f5;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      height: 200px;
+      margin-left: -100px;
+      margin-right: -100px;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
   }
 
   .Voice-user {
