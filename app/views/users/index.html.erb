@@ -28,12 +28,11 @@
           <th class="border border-black text-center">電話番号</th>
           <th class="border border-black text-center">口座情報(銀行名/支店/口座種類/口座番号)</th>
           <th class="border border-black text-center">紹介者</th>
-          <th class="border border-black text-center"></th>
         </tr>
 
         <% @users.each do |user| %> 
         <tr class="border  text-left">
-          <td class="border border-black"><%= user.name %></td>
+          <td class="border border-black"><a href="/users/<%= user.id %>"><%= user.name %></a></td>
           <td class="border border-black"><%= user.email %></td>
           <td class="border border-black"><%= user.tel %></td>
           <% if user.bank == nil %>
@@ -46,7 +45,6 @@
            <% else%>
            <td class="border border-black"></td>
             <% end %>
-            <td class="border border-black text-center"><%= link_to '詳細', "/users/#{user.id}",class:"toShow text-decoration-none px-3 py-1  " %></td>
         </tr>
         <% end %>
         </table>
