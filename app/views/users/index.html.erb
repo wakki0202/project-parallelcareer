@@ -23,11 +23,12 @@
 
         <table class="table userTable">
         <tr class="heading text-left">
-          <th class="border border-black text-center">名前</th>
-          <th class="border border-black text-center">メールアドレス</th>
-          <th class="border border-black text-center">電話番号</th>
-          <th class="border border-black text-center">口座情報(銀行名/支店/口座種類/口座番号)</th>
-          <th class="border border-black text-center">紹介者</th>
+          <th class="border border-black ">名前</th>
+          <th class="border border-black ">メールアドレス</th>
+          <th class="border border-black ">電話番号</th>
+          <th class="border border-black ">口座情報(銀行名/支店/口座種類/口座番号)</th>
+          <th class="border border-black ">紹介者</th>
+          <th class="border border-black ">ステータス</th>
         </tr>
 
         <% @users.each do |user| %> 
@@ -45,10 +46,15 @@
            <% else%>
            <td class="border border-black"></td>
             <% end %>
+            <% if user.deleted_at.present? %>
+            <td class="border border-black">退会済み</td>
+            <% else%>
+           <td class="border border-black"></td>
+            <% end %>
         </tr>
         <% end %>
         </table>
-        <div class="text-center pagenation">
+        <div class=" pagenation">
         <%= paginate @users %>
         </div>
       </div>

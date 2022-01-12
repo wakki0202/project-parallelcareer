@@ -82,7 +82,7 @@ class IntroductionsController < ApplicationController
 
   def update_introduction_params
 
-    params.require(:introduction).permit(:name, :phonenumber, :contents, :step, :id).merge(user_id: current_user.id) #ストロングパラメーターで、
+    params.require(:introduction).permit(:step) #ストロングパラメーターで、
   end 
   
 

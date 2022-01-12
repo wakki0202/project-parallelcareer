@@ -30,11 +30,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # DELETE /resource
    def destroy
-      resource.soft_delete
-    Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
-    set_flash_message :notice, :destroyed
-    yield resource if block_given?
-    respond_with_navigational(resource){ redirect_to after_sign_out_path_for(resource_name) }
+      # 論理削除処理
+    soft_delete(current_user)
+    # Deviceの論理削除後の後処理
+    respond_with_navigational do
+      # 強制ログアウト
+      sign_out current_user
+      # ログアウト後のページ遷移
+      redirect_to root_path
+    end
    
    end
 
@@ -56,6 +60,22 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def after_update_path_for(resource)
     edit_user_registration_path
+  end
+
+  private
+
+  def soft_delete(user)
+    # 同じメールアドレスでも登録できるように、
+    # メールアドレスを“hoge@example.com_deleted_**********”に変更する
+    deleted_email = user.email + '_deleted_' + Time.current.to_i.to_s
+    user.assign_attributes(email: deleted_email, deleted_at: Time.current)
+
+    # 通常メールアドレスが変更されると通知メールが飛ぶので、
+    # その通知メールをキャンセルする
+    user.skip_email_changed_notification!
+
+    # 保存処理
+    user.save
   end
    
   # def configure_sign_up_params

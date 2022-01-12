@@ -1,9 +1,12 @@
 class Providers::InvitationsController < Devise::InvitationsController
   def new
+    
+    @providers = Provider.all
     super
   end
 
   def create
+    @providers = Provider.all
     super
   end
 

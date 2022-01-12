@@ -7,11 +7,11 @@
   display: none;
 }
 .toLogout{
-  color: #3F8A83;
+  color: #ff6e35;
 }
 
 li .toLogout:hover{
-  color: #3F8A83;
+  color: #ff6e35;
   background-color: rgb(206, 203, 203);
 }
 .providerPage{
@@ -63,7 +63,7 @@ li .toLogout:hover{
   }
 
   .border .btn{
-    background-color: #3F8A83;
+    background-color: #ff6e35;
 
     a{
       color: white;
@@ -83,7 +83,7 @@ li .toLogout:hover{
 
   .mainHeader{
     width: 100%;
-    background-color: #3F8A83;
+    background-color: #ff6e35;
     color: white;
     align-items: center;
     
@@ -99,7 +99,7 @@ li .toLogout:hover{
         span{
           background-color: white;
           padding: 8px 10px 8px 10px ;
-          color: #3F8A83;
+          color: #ff6e35;
           border-radius: 2rem;
           font-weight: bold;
         }
@@ -135,7 +135,7 @@ li .toLogout:hover{
     }
 
     .heading{
-      background-color: #3F8A83;
+      background-color: #ff6e35;
       color:white;
     }
 
@@ -146,8 +146,8 @@ li .toLogout:hover{
 
     .toNew{
       color: white;
-      border: 1px solid #3F8A83;
-      background-color: #3F8A83;
+      border: 1px solid #ff6e35;
+      background-color: #ff6e35;
       border-radius: 0.5rem;
       margin-left: 25px;
       padding: 3px;
@@ -155,15 +155,15 @@ li .toLogout:hover{
 
     .toShow{
       color: white;
-      border: 1px solid #3F8A83;
-      background-color: #3F8A83;
+      border: 1px solid #ff6e35;
+      background-color: #ff6e35;
       border-radius: 0.5rem;
       padding: 3px;
 
     }
 
     .toShow:hover{
-      background-color: #224b47;
+      background-color: #bb5228;
     }
 
     .search-form{
@@ -255,7 +255,7 @@ li .toLogout:hover{
       padding-top: 21px;
       
       .header {
-        background-color: rgb(10, 117, 118);
+        background-color: #ff6e35;
       }
 
       .hoverwhite{
