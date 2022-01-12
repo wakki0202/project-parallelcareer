@@ -7,7 +7,7 @@ class NewsController < ApplicationController
     @newsnew = News.new
     @q = News.ransack(params[:q])
     @news = @q.result(distinct: true).page(params[:page]).order("created_at desc")
-    @questionnumber = Question.all.count
+    
     @introductionnumber = Introduction.all.count
   end
 
@@ -19,7 +19,7 @@ class NewsController < ApplicationController
   # GET /news/new
   def new
     @news = News.new
-    @questionnumber = Question.all.count
+    
     @introductionnumber = Introduction.all.count
   end
 

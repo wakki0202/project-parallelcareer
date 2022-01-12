@@ -2,6 +2,7 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
+/*global $*/
 
 require("@rails/ujs").start()
 require("turbolinks").start()
@@ -15,10 +16,6 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-$(function () {
-  $('#slider').slick({
-    dots: true, //スライドの下にドットのナビゲーションを表示
-    autoplay: true, //自動再生
-    autoplaySpeed: 4000, //再生スピード
-  });
-});
+
+
+ 

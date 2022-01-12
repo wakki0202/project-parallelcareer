@@ -1,12 +1,12 @@
 class IntroductionsController < ApplicationController
-#before_action :authenticate_provider!,only: [:index,:show,:edit,:update], unless: proc { admin_signed_in? }
+#before_action :authenticate_provider!,only: [:index,:show,:edit,:update]
 #before_action :authenticate_user!,only: [:new,:create]
   def index
     @introductions = Introduction.all.page(params[:page]).per(10).order(id: :DESC)
     @q = Introduction.all.ransack(params[:q])
     @introductions = @q.result.page(params[:page]).per(10).order("created_at desc")
     @introductionnumber = Introduction.all.count
-    @questionnumber = Question.all.count
+    
   end
 
   def show

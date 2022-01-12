@@ -3,18 +3,11 @@ Rails.application.routes.draw do
   
   
 
-  resources :questions
-
-  devise_for :admins, controllers: {
-    sessions: 'admins/sessions',
-    passwords: 'admins/passwords',
-    registrations: 'admins/registrations'
-  }
-  
   devise_for :providers, controllers: {
     sessions: 'providers/sessions',
     passwords: 'providers/passwords',
-    registrations: 'providers/registrations'
+    registrations: 'providers/registrations',
+    invitations: 'providers/invitations'
   }
   devise_for :users, controllers: {
         sessions: 'users/sessions',
@@ -30,9 +23,6 @@ Rails.application.routes.draw do
     get '/providers/sign_out' => 'devise/sessions#destroy'
   end
 
-  devise_scope :admin do
-    get '/admins/sign_out' => 'devise/sessions#destroy'
-  end
     
   root "tops#index"
   get "tops/index",to:"tops#index"

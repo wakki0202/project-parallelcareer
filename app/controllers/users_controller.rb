@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     @users = User.all.page(params[:page]).per(10)
     @q = User.ransack(params[:q])
     @users = @q.result(distinct: true).page(params[:page]).order("created_at asc")
-    @questionnumber = Question.all.count
+    
     @introductionnumber = Introduction.all.count
   end
 

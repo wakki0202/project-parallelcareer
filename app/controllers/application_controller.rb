@@ -12,8 +12,6 @@ class ApplicationController < ActionController::Base
     case resource
     when User
       tops_index_path
-    when Admin
-      works_path
     when Provider
       works_path
 
@@ -27,12 +25,5 @@ class ApplicationController < ActionController::Base
 
   end
 
-  #def authenticate_any!
-  #if admin_signed_in?
-      #true
-  #else
-      #authenticate_provider!
-  #end
-  #end
   
 end

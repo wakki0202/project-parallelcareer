@@ -198,7 +198,12 @@ text-align: left;
 
 
 // X-Small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) { 
+@media (max-width: 575.98px) {
+  .login-page {
+  width: 90%;
+  padding: 8% 0 0;
+  margin: auto;
+} 
   .formSession {
   position: relative;
   z-index: 1;

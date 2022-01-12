@@ -1,13 +1,14 @@
 <body class="post-show">
   <%= render '/layouts/header' %>
 
-  <div class="slider-images" style="text-align: center; width: 50%; height: 50%; margin: auto;">
-    <% @work.images.each do |img| %>
-    <%= image_tag img.to_s %>
-    <% end %>
-  </div>
 
-  
+<ul class="carousel">
+  <% @work.images.each do |img| %>
+    <li class="carousel">
+      <%= image_tag img.url %>
+    </li>
+  <% end %>
+</ul>
 
   <table class="office w-100 m-auto">
   <tbody class="office w-75 m-auto">
@@ -61,12 +62,7 @@
   </div>
   </div>
   <%= render '/layouts/footer' %>
+
+ 
 </body>
 
-<script>
-  $(function () {
-    $('.slider-images').slick({
-      dots: true,
-    });
-  });
-</script>
