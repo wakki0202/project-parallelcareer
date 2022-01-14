@@ -1,7 +1,7 @@
 @media (min-width: 710px) {
 
   .deviseInvite{
-  background-image: url("talk.jpg");
+  background-image: url(talk.jpg);
   background-size: cover;   
   background-repeat: no-repeat;
   
@@ -98,7 +98,11 @@ p span{
 @media (max-width: 709px) {
 
     .deviseInvite{
-    background-color: #F3F3F6;
+    background-image: url(talk.jpg);
+  }
+  .Backblack{
+    background-color: rgba(0,0,0,0.6);
+    background-size: cover;
   }
   .inviteArea{
     width: 90%;
@@ -144,7 +148,6 @@ p span{
   height: 300px;
   margin-top: 50px;
   margin-bottom: 50px;
-  background-image: url("talk.jpg");
   background-size: cover;   
   background-repeat: no-repeat;
   .orangeBack{

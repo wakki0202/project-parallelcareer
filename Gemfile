@@ -15,8 +15,8 @@ end
 group :production do
   gem 'pg'
 end
-
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets

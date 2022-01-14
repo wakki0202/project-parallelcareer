@@ -7,8 +7,10 @@
     --tw-gradient-stops: var(--tw-gradient-from),
       var(--tw-gradient-to, rgba(248, 113, 113, 0));
     --tw-gradient-to: #ffbd41;
+    background-repeat: no-repeat;
     word-wrap: break-word;
     overflow-wrap: anywhere;
+    margin: 0;
   .post-main{
     width: 100%;
     text-align: center;
@@ -169,6 +171,11 @@
       font-weight: bold;
       background-color: #dedede; 
       }
+    }
+
+    .carousel li{
+      width: 500px;
+      height: 700px;
     }
 
     

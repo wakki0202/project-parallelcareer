@@ -36,7 +36,7 @@ color: white;
 }
 
 form { 
-  max-width:420px; margin:50px auto; 
+  width:420px; margin:50px auto; 
 }
 
 .feedback-input {
@@ -217,3 +217,10 @@ textarea {
   margin-bottom: 20px;
 }
 
+
+@media (max-width: 709px) {
+
+.introduction-new form { 
+  width:80%; margin:50px auto; 
+}
+}
