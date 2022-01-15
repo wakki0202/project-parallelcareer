@@ -1,7 +1,7 @@
 <body class="post-show">
   <%= render '/layouts/header' %>
 
-
+<% if @work.images.present? %>
 <ul class="carousel w-50 m-auto">
   <% @work.images.each do |img| %>
     <li class="">
@@ -9,59 +9,58 @@
     </li>
   <% end %>
 </ul>
+<% end %>
 
-  <table class="office w-100 m-auto">
-  <tbody class="office w-75 m-auto">
-    <tr >
-      <th>案件名</th>
-      <td> <%= @work.title %></td>
-    </tr>
-    <tr>
-      <th>事業名</th>
-      <td><%= @work.company %></td>
-    </tr>
-    <tr>
-      <% if @work.link.present? %>
-      <th>事業者ホームページ欄</th>
-      <td><%= auto_link(simple_format(@work.link), html: {target: '_blank'}) %></td>
-      <% else %>
-      
+ 
+  <div class="postContent ">
+    <div class="mb-5">
+      <h3 class="pb-3 mb-3">案件名</h3>
+      <p><%= @work.title %></p>
+    </div>
+    <div class="mb-5">
+      <h3 class="pb-3 mb-3 ">事業者名</h3>
+      <p><%= @work.company %></p>
+    </div>
+    <div class="mb-5">
+    <% if @work.link.present? %>
+      <h3>事業者ホームページ欄</h3>
+      <p><%= auto_link(simple_format(@work.link), html: {target: '_blank'}) %></p>
       <% end %>
-    </tr>
-    <tr>
-      <th>報酬</th>
-      <td><%= @work.reward %></td>
-    </tr>
-    <tr>
-      <th>仕事内容</th>
-      <td><%= auto_link(simple_format(@work.pcontent), html: {target: '_blank'}) %></td>
-    </tr>
-    <tr>
-      <th>報酬支払日</th>
-      <td><%= @work.rday %></td>
-    </tr>
-    <tr>
-      <th>報酬内容</th>
-      <td><%= simple_format(@work.rcontent) %></td>
-    </tr>
-    <tr>
-      <th>対象地域</th>
-      <td> <%= simple_format(@work.area) %></td>
-    </tr>
-    <tr>
-      <th>アピールポイント</th>
-      <td><%= simple_format(@work.appeal) %>
-    </tr>
-    </tbody>
-  </table>
+    </div>
+    <div class="mb-5">
+      <h3 class="pb-3 mb-3 ">報酬</h3>
+      <p><%= @work.reward %></p>
+    </div>
+    <div class="mb-5">
+      <h3 class="pb-3 mb-3 ">仕事内容</h3>
+      <p><%= auto_link(simple_format(@work.pcontent), html: {target: '_blank'}) %></p>
+    </div>
+    <div class="mb-5">
+      <h3 class="pb-3 mb-3 ">報酬支払日</h3>
+      <p><%= @work.rday %></p>
+    </div>
+    <div class="mb-5">
+      <h3 class="pb-3 mb-3 ">報酬内容</h3>
+      <p><%= simple_format(@work.rcontent) %></p>
+    </div>
+    <div class="mb-5">
+      <h3 class="pb-3 mb-3 ">対象地域</h3>
+      <p><%= simple_format(@work.area) %></p>
+    </div>
+    <div class="mb-5">
+      <h3 class="pb-3 mb-3 ">アピールポイント</h3>
+      <p><%= simple_format(@work.appeal) %></p>
+    </div>
 
+  </div>
 
+<a href="/works/<%= @work.id %>/introductions/new">
   <div class="action">
-    <%= link_to "口コミをする","/works/#{@work.id}/introductions/new" %>
+    口コミをする
+  </div>
+</a>
   </div>
   </div>
-  </div>
-  <%= render '/layouts/footer' %>
   <script>
   $(".js-slider").slick({
   dots: true,
