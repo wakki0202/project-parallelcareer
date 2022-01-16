@@ -54,7 +54,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 130vh;
+    height: 160vh;
     .title-p {
       padding-top: 200px;
       padding-left: 10%;
@@ -65,7 +65,7 @@
       }
       .main-title {
         margin-bottom: 22px;
-        font-size: 5.9rem;
+        font-size: 5rem;
         font-weight: bold;
         line-height: 1.3;
         letter-spacing: 0.15rem;
@@ -82,6 +82,9 @@
     .devices {
       padding-top: 80px;
       text-align: center;
+      a:hover{
+        background-color: rgba(0, 0, 0, 0);
+      }
       .iPhone {
         width: 20%;
         height: 50%;
@@ -106,6 +109,9 @@
     h1 {
       margin: 0 auto 22px;
       text-align: center;
+      font-size: 35px;
+      font-weight: bold;
+       font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     }
     .movie-frame {
       margin: auto;
@@ -119,6 +125,7 @@
   // --------ここからメリット---------------------------------
   .top-page {
     .subtitle {
+       font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
       text-align: center;
       margin-bottom: 60px;
     }
@@ -145,6 +152,7 @@
       width: 120px;
     }
     h3 {
+       font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
       font-weight: bold;
       font-size: 2.5rem;
       // color: rgb(255, 84, 16);
@@ -152,6 +160,7 @@
       margin-bottom: 20px;
     }
     p {
+       font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
       font-size: 1.5rem;
       letter-spacing: 0.15rem;
       line-height: 1.7;
@@ -177,20 +186,10 @@
   }
 
   .Items-list {
-    margin-bottom: 150px;
     padding: 100px 0 100px;
-    background: #fceabb; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      beige #fceabb
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      beige,
-      #fceabb
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: #fceabb; 
     text-align: center;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 
   .Item {
@@ -200,6 +199,7 @@
     margin-bottom: 30px;
     background-color: #fff;
     border-radius: 10px;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 
   .Item-top {
@@ -217,6 +217,7 @@
   }
 
   .Item-title {
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     color: #b8860b;
     font-weight: bold;
     font-size: 20px;
@@ -241,6 +242,9 @@
   }
 
   // ----ここから報酬獲得の流れ------------------
+  .reward{
+    margin-top: 100px;
+  }
   .parent {
     .child {
       display: flex;
@@ -265,19 +269,23 @@
     padding-bottom: 20px;
 
     img {
-      border-radius: 1rem;
+      border-radius: 0.5rem;
     }
 
     h4 {
+      font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
       text-align: center;
       font-weight: bold;
+      padding-bottom: 10px;
     }
 
+    
     span {
+      font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
       color: white;
       font-weight: normal;
       padding: 3px;
-      background-color: #ff9b3d;
+      background-color: #eb630d;
     }
 
     a.toWorks {
@@ -349,10 +357,10 @@
 
     li {
       display: block;
-      padding: 1.5em;
-      line-height: 2;
+      padding: 1em;
+      line-height: 1.5;
       font-weight: bold;
-      font-size: 15px;
+      font-size: 20px;
       letter-spacing: 0.08rem;
     }
   }
@@ -362,8 +370,9 @@
     justify-content: space-between;
     align-items: center;
     background-color: #f5f5f5;
+    font-size: 14px;
     padding: 2em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .A {
@@ -382,19 +391,24 @@
   .FAQ-item {
     input[type="checkbox"] {
       display: none;
+      
     }
   }
   #Q1:checked + .A1 {
     display: block;
+     font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
   #Q2:checked + .A2 {
     display: block;
+     font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
   #Q3:checked + .A3 {
     display: block;
+     font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
   #Q4:checked + .A4 {
     display: block;
+     font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 
   #Q5:checked + .A5 {
@@ -455,12 +469,13 @@
       width: 90%;
       margin: 0 auto;
       font-size: 16px;
-      line-height: 1.625;
+      line-height: 1.5;
       padding-top: 20px;
       padding-right: 20px;
       padding-left: 20px;
       padding-bottom: 30px;
       color: #484c4c;
+      font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     }
 
     .feature {
@@ -541,7 +556,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 50vh;
+    height: 100vh;
     a {
       text-decoration: none;
       padding: 0 0;
@@ -651,18 +666,8 @@
     height: 27rem;
   }
   .Items-list {
-    margin-bottom: 150px;
     padding: 100px 0 100px;
     background: #fceabb; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      beige #fceabb
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      beige,
-      #fceabb
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     text-align: center;
   }
@@ -855,7 +860,7 @@
   label:hover {
     color: rgba(0, 0, 0, 0.6);
   }
-  li {
+  .FAQList {
     display: block;
     padding: 0 2em 2em 2em;
   }

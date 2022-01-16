@@ -11,6 +11,7 @@
 }
 
 .formSession {
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   position: relative;
   z-index: 1;
   background: #FFFFFF;
@@ -29,7 +30,7 @@
   }
 
   .button {
-  font-family: "Roboto", sans-serif;
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   outline: 0;
   background: #ff5a3d;
@@ -48,6 +49,7 @@
 }
 
 .formRegistration {
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   position: relative;
   z-index: 1;
   background: #FFFFFF;
@@ -59,7 +61,7 @@
   border-radius: 1rem;
 
   .button {
-  font-family: "Roboto", sans-serif;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   outline: 0;
   background: #ff5a3d;
@@ -84,7 +86,7 @@
   margin-bottom: 20px;
 
 input {
-  font-family: "Roboto", sans-serif;
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   outline: 0;
   background: #f2f2f2;
   width: 100%;
@@ -97,7 +99,7 @@ input {
 }
 }
 .button {
-  font-family: "Roboto", sans-serif;
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   outline: 0;
   background: #ff5a3d;
@@ -114,10 +116,15 @@ input {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-.checkbutton{
+.check{
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   width: 30px;
   margin: 0px;
   padding: 10px;
+}
+
+.checkbutton{
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
 }
 
 .button:hover,button:active,button:focus {
@@ -130,6 +137,7 @@ input {
   font-size: 12px;
 }
 .message a {
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   color: #f7901a;
   text-decoration: none;
 }

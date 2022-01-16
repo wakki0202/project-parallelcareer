@@ -24,7 +24,7 @@ header {
   .headerFlex {
     display: flex;
     align-items: center;
-    font-family: "ヒラギノ角ゴ ProN", sans-serif;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     p {
       margin-top: 20px;
       font-size: 18px;
@@ -85,6 +85,7 @@ header {
     font-weight: 800;
     font-size: 14px;
     text-decoration: none;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 
   .h-reg a {

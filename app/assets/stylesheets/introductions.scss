@@ -11,7 +11,7 @@
 }
 
 .introduction-new{
-
+font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     margin-top: 58px ;
     background-image: linear-gradient(to left, var(--tw-gradient-stops));
     --tw-gradient-from: #ff3434;
@@ -115,11 +115,13 @@ textarea {
 }
 
 .introduction-index{
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   display: flex;
   width: 100%;
   padding-top: 100px;
   
   .introductions{
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     width: 80%;
     margin: 0 auto;
   }
@@ -129,14 +131,18 @@ textarea {
     padding-bottom: 20px;
   }
 
-  
+  h1{
+    font-weight: bold;
+  }
 
   .posts_name{
     background-color: #82cddd;
+    font-weight: bold;
   }
 
   .progressing{
     background-color: #f18681;
+    font-weight: bold;
   }
 
   table{
@@ -180,6 +186,7 @@ textarea {
 
   .post_progress_th{
     background: #F0D0D0;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 
   .info_title{
@@ -208,8 +215,9 @@ textarea {
 }
 
 .introductionlink{
-  
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     color: black;
+    text-decoration: none;
   
 }
 

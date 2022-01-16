@@ -1,24 +1,21 @@
-<h2 class="text-center mb-3">お知らせ一覧</h2>
+<%= render "/layouts/header"%>
+<div class="newsIndex">
 
-<table class="table  w-50 m-auto userTable ">
-          <thead class="heading">
-            <tr class="text-left">
-              <th></th>
-              <th></th>
+
+
+
+<div class="newsWrap">
+<h2 class="text-center mb-4 fs-1">お知らせ</h2>
+          <% @news.each do |news| %>
+            
+            
+              <ul class="newsList">
               
-              <th></th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <% @news.each do |news| %>
-              <tr class="text-left">
-              <td><%= news.created_at.strftime('%Y年%m月%d日') %></td>
-                <td><%= news.title %></td>
-                
-                <td><a href="/tops/news/<%= news.id %>" class="py-1 px-3 text-decoration-none">詳細</a></td>
-                
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
+              <li class="border-bottom border-top pt-2"><a href="/tops/news/<%= news.id %>" class=" px-3 text-decoration-none text-black "><%= news.created_at.strftime('%Y年%m月%d日') %>
+                <div class="text-center fw-bold"><%= news.title %></div></a></li>
+               </ul>
+            
+          <% end %>
+</table>
+        
+</div>
