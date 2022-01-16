@@ -8,29 +8,119 @@
   </div>
  
   <div class="main">
-    <div class="mainHeader">
-    <ul>
-    <% if provider_signed_in? %>
-      <li class=""><span><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></span></li> 
-      <li><%= current_provider.email %></li>
-      <% else %>
-      <li class=""><span>ログアウト</span></li> 
-      <li>管理者名</li>
-    
-      <% end %>
-
-    </ul>
-    </div>
+   <%= render '/works/side_header' %>
     
         
     <div class="userIndex">
-      <h3 class="text-center">案件一覧</h3>
+      <h1 class="text-left h1">案件一覧</h1>
       <div class="providerTable">
-      <a href="works/new" class="toNew">＋ 新規作成</a>
+      
+           <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary toNew" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          ＋ 新規作成
+        </button>
+
+        <!-- Modal -->
+        <div class="modal w-100 m-auto" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content ">
+              <div class="modal-header">
+                <h5 class="modal-title h4" id="staticBackdropLabel">新規案件作成</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+              <%= form_with(model: @worknew,:multipart => true, local: true) do |form| %>
+              <% if @worknew.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@worknew.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+                  <ul>
+                    <% @worknew.errors.each do |error| %>
+                      <li><%= error.full_message %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                    <%= form.label :images, "画像をアップロード", class: "h4" %>
+                    <%= form.file_field :images,multiple: true, class: "form-control",id:"exampleFormControlInput1"  %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :タイトル,class:"h4" %>
+                  <%= form.text_field :title,class: "form-control",id:"exampleFormControlInput1" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :会社名,class:"h4" %>                  <%= form.text_field :company,class: "form-control",id:"exampleFormControlInput1" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :事業者URL,class:"h4" %>
+                  <%= form.text_field :link,class: "form-control",id:"exampleFormControlInput1" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :報酬,class:"h4" %>                 <%= form.text_field :reward,class: "form-control",id:"exampleFormControlInput1" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :仕事内容,class:"h4" %>
+                  <%= form.text_area :pcontent,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :報酬支払日,class:"h4" %>
+                  <%= form.text_field :rday,class: "form-control",id:"exampleFormControlInput1" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :報酬内容,class:"h4" %>
+                  <%= form.text_area :rcontent,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :地域,class:"h4" %>                 <%= form.text_area :area, class: "formB",class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+                </div>
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :アピールポイント,class:"h4" %>
+                  <%= form.text_area :appeal,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+                </div>
+
+                
+
+
+                <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :ステータス,class:"h4" %>
+                  <%= form.select :status, [['審査中'],['公開'], ['非公開'],  ['終了']], { include_blank: false }, { class: "form-control",id:"exampleFormControlInput1" } %>
+                </div>
+           
+
+
+
+
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                <%= form.submit "作成する",class:"btn btn-primary",data: { confirm:"作成しますか？"} %>    
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
         <div class="search-form">
         <%= search_form_for @q, url: works_path do |f| %>
             <%= f.label :name, "絞り込み" %>
-            <%= f.select :status_cont, [['公開'], ['審査中'], ['非公開'], ['公開終了']], { include_blank: 'すべて' }, { class: "form" } %>
+            <%= f.select :status_cont, [['公開'], ['審査中'], ['非公開'], ['公開終了']], { include_blank: 'すべて' }, { class: "formleft" } %>
             <%= f.submit "検索" %>
         <% end %>
         </div>
@@ -46,24 +136,23 @@
         <table class="table userTable">
 
         <thead class="heading">
-          <tr class="border">
-            <th class="border">案件名</th>
+          <tr class="border text-left">
+            <th>案件名</th>
             <th>作成日</th>
             <th>ステータス</th>
-            <th></th>
             <th></th>
           </tr>
         </thead>
 
+<% if current_provider.present? %>
     <% if current_provider.email == "ytk0202@outlook.jp" %>
         <tbody>
           <% @works.each do |work| %>
-            <tr class="">
-              <td class=""><%= work.title %></td>
-              <td class=""><%= work.created_at.strftime('%Y年%m月%d日') %></td>
-              <td class=""><% if work.status == nil %>審査待ち<% else %><%= work.status %><% end %></td>
-              <td class="more"><%= link_to '詳細', work,class:"morebtn" %></td>
-              <td class="edit"><%= link_to '編集', edit_work_path(work),class:"editbtn" %></td>
+            <tr class="text-left">
+              <td class="border border-black"><%= work.title %></td>
+              <td class="border border-black"><%= work.created_at.strftime('%Y年%m月%d日') %></td>
+              <td class="border border-black"><% if work.status == nil %>審査待ち<% else %><%= work.status %><% end %></td>
+              <td class="border border-black text-center"><%= link_to '詳細', work,class:"toShow text-decoration-none px-3 py-1  " %></td>
               
             </tr>
           <% end %>
@@ -86,6 +175,7 @@
         </tbody>
 
 
+      <% end %>
       <% end %>
       </table>
       </div>

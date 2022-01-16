@@ -10,6 +10,12 @@ padding-top: 100px;
  margin: 0 auto;
 }
 
+.table > tbody > tr > .userLabel{
+  background-color: #be3600;
+  color: white;
+
+}
+
 #users{
   text-align: center;
 
@@ -37,6 +43,10 @@ margin: 0 auto;
   width: 50%;
   margin: 0 auto;
 }
+
+ .userradius{
+   border-radius: 1rem;
+ }
 
 .bg_pattern {
   top: 0;
@@ -75,13 +85,22 @@ margin: 0 auto;
 
   }
   @media (max-width: 709px) {
+.table > tbody > tr > .userLabel{
+  background-color: #3F8A83;
+  color: white;
 
+}
 
   .user-index{
 display: flex;
 padding-top: 100px;
  width:80%; 
  margin: 0 auto;
+}
+
+.userLabel{
+  background-color: #3F8A83;
+  color: white;
 }
 
 #users{

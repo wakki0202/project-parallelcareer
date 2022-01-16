@@ -4,8 +4,12 @@ class UsersController < ApplicationController
     @users = User.all.page(params[:page]).per(10)
     @q = User.ransack(params[:q])
     @users = @q.result(distinct: true).page(params[:page]).order("created_at asc")
-    @questionnumber = Question.all.count
+    
     @introductionnumber = Introduction.all.count
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
  def confirm
@@ -23,30 +27,39 @@ class UsersController < ApplicationController
   end
 
   def update
-   
     if current_user.update(
         update_basic_params
       )
       
         render action: :basicedit
-    elsif current_user.update(
+
+    end
+    if current_user.update(
         update_bank_params
       )
 
-       render action: :bankedit
+       users_bankedit_path
 
-    else
-      redirect_back(fallback_location: users_edit_path)
 
     end
    
   
-    end
+  end
 
     def mypage
+      @user = User.find(params[:id])
+      redirect_to(tops_index_path) unless @user == current_user
+      @news = News.first(3)
 
     end
 
+      def destroy
+
+      end
+
+      def complete
+
+      end
    
 
     private
@@ -60,13 +73,7 @@ class UsersController < ApplicationController
 
   def update_bank_params
 
-    params.permit(:bank, :branch, :account_no, :account_type)
+    params.permit(:bank, :account_type, :branch, :account_no)
   end 
-  def destroy
 
-  end
-
-  def complete
-
-  end
 end

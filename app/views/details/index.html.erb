@@ -1,37 +1,66 @@
-<p id="notice"><%= notice %></p>
 
-<div class="provider-index">
-<div class="side">
-<%= render 'works/side' %>
-</div>
 
-<div class="bg_pattern Paper_v2">
-<div class="providers">
 
-<h1>案件の詳細を聞きたい方一覧</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>案件名</th>
-      <th>お客様名</th>
-      <th>対応チェック</th>
-      <th></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<body class="providerPage">
+  <div class="side">
+    <%= render '/works/side' %>
+  </div>
+ 
+  <div class="main">
+    
+  <%= render '/works/side_header' %>
+    
+        
+    <div class="userIndex">
+      <h1 class="text-left">お問い合わせ（案件詳細希望者一覧)</h1>
+      <div class="providerTable">
+      <div class="search-form">
+        <%= search_form_for @q, url: details_path do |f| %>
+            <%= f.label :name, "絞り込み" %>
+            <%= f.select :status_cont, [['未対応'], ['対応済み']], { include_blank: 'すべて' }, { class: "formleft" } %>
+            <%= f.submit "検索" %>
+        <% end %>
+        </div>
+        <div class="search-form">
+        <%= search_form_for @q do |f| %>
+            <%= f.label :title, "キーワード" %>
+            <%= f.search_field :work_title_cont %>
 
-  <tbody>
-    <% @details.each do |detail| %> 
-      <tr>
-        <td class="border border-black"></td>
-        <td class="border border-black"><%= detail.user.username %></td>
-        <td class="border border-black"><%= detail.content %></td>
-        <td class="hoverwhite"><%= link_to '詳細を見る', detail %></td>
+            <%= f.submit "検索" %>
+        <% end %>
+      </div>
+      
+
+         <table class="table userTable">
+        <tr class="heading text-left">
+          <th class="border border-black ">案件名</th>
+          <th class="border border-black ">お客様名</th>
+          <th class="border border-black ">受信日時</th>
+          <th class="border border-black ">対応チェック</th>
+          <th class="border border-black "></th>
+        </tr>
+
+       <% @details.each do |detail| %> 
+      <tr class="text-left">
+        <td class="border border-black"><%= detail.work.title %></td>
+        <td class="border border-black"><%= detail.user.name %></td>
+        <td class="border border-black"><%= l detail.created_at %></td>
+        <td class="border border-black"><%= detail.status %></td>
+        <td class="border border-black "><%= link_to '詳細', detail,class:"toShow text-decoration-none px-3 py-1  " %></td>
+    
+
+
+
       </tr>
     <% end %>
-  </tbody>
-</table>
-</div>
-</div>
-</div>
+        
+        </table>
+        <div class=" pagenation">
+       
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>

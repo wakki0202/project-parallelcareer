@@ -8,23 +8,12 @@
   </div>
  
   <div class="main">
-    <div class="mainHeader">
-    <ul>
-    <% if provider_signed_in? %>
-      <li class=""><span><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></span></li> 
-      <li><%= current_provider.email %></li>
-      <% else %>
-      <li class=""><span>ログアウト</span></li> 
-      <li>管理者名</li>
     
-      <% end %>
-
-    </ul>
-    </div>
+  <%= render '/works/side_header' %>
     
         
     <div class="userIndex">
-      <h3 class="text-center">口コミ一覧</h3>
+      <h1 class="text-left">口コミ一覧</h1>
       <div class="providerTable">
       <div class="search-form">
         <%= search_form_for @q, url: introductions_index_path do |f| %>
@@ -36,7 +25,7 @@
         <div class="search-form">
         <%= search_form_for @q, url: introductions_index_path do |f| %>
             <%= f.label :name, "キーワード" %>
-            <%= f.search_field :name_or_user_username_or_work_title_cont %>
+            <%= f.search_field :name_or_user_name_or_work_title_cont %>
             
 
             <%= f.submit "検索" %>
@@ -44,13 +33,18 @@
       </div>
 
         <table class="table userTable">
-      <tr class="border text-center heading"><th>案件名</th><th class="border border-black">紹介者名</th><th class="border border-black">お客様名</th><th class="border border-black">受信日時</th><th class="border border-black">進捗状況</th><th class="border border-black"></th></tr>
+      <tr class="border text-left heading">
+      <th>案件名</th><th class="border border-black">紹介者名</th>
+      <th class="border border-black">お客様名</th>
+      <th class="border border-black">受信日時</th>
+      <th class="border border-black">進捗状況</th>
+      <th class="border border-black"></th></tr>
       
       
       <% @introductions.each do |introduction| %> 
-      <tr class="border">
+      <tr class="border text-left">
       <td class="border border-black"><%= introduction.work.title %></td> 
-      <td class="border border-black"><%= introduction.user.username %></td>
+      <td class="border border-black"><%= introduction.user.name %></td>
       <td class="border border-black"><%= introduction.name %></td>
       <td class=""><%= l introduction.created_at %></td>
       <% if introduction.step == nil %>
@@ -58,7 +52,7 @@
         <% else %>
         <td class="border border-black"><%= introduction.step %></td>
         <% end %>
-        <td class="morebtn "><a href="<%= introduction.id %>" class=" text-white white-50">詳細</a></td></tr>
+        <td class="morebtn  text-center "><a href="<%= introduction.id %>" class="toShow text-decoration-none">詳細</a></td></tr>
       <% end %>
   
       

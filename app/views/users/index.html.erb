@@ -5,23 +5,12 @@
   </div>
  
   <div class="main">
-    <div class="mainHeader">
-    <ul>
-    <% if provider_signed_in? %>
-      <li class=""><span><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></span></li> 
-      <li><%= current_provider.email %></li>
-      <% else %>
-      <li class=""><span>ログアウト</span></li> 
-      <li>管理者名</li>
     
-      <% end %>
-
-    </ul>
-    </div>
+  <%= render '/works/side_header' %>
     
         
     <div class="userIndex">
-      <h3 class="text-center">ユーザー情報</h3>
+      <h1 class="text-left">ユーザー情報</h1>
       <div class="providerTable">
       <div class="search-form">
         <%= search_form_for @q, url: users_index_path do |f| %>
@@ -33,18 +22,18 @@
       </div>
 
         <table class="table userTable">
-        <tr class="heading ">
-          <th class="border border-black text-center">名前</th>
-          <th class="border border-black text-center">メールアドレス</th>
-          <th class="border border-black text-center">電話番号</th>
-          <th class="border border-black text-center">口座情報(銀行名/支店/口座種類/口座番号)</th>
-          <th class="border border-black text-center">紹介者</th>
-          <th class="border border-black text-center">紹介者アドレス</th>
+        <tr class="heading text-left">
+          <th class="border border-black ">名前</th>
+          <th class="border border-black ">メールアドレス</th>
+          <th class="border border-black ">電話番号</th>
+          <th class="border border-black ">口座情報(銀行名/支店/口座種類/口座番号)</th>
+          <th class="border border-black ">紹介者</th>
+          <th class="border border-black ">ステータス</th>
         </tr>
 
         <% @users.each do |user| %> 
-        <tr class="border  text-center">
-          <td class="border border-black"><%= user.name %></td>
+        <tr class="border  text-left">
+          <td class="border border-black"><a href="/users/<%= user.id %>"><%= user.name %></a></td>
           <td class="border border-black"><%= user.email %></td>
           <td class="border border-black"><%= user.tel %></td>
           <% if user.bank == nil %>
@@ -54,12 +43,18 @@
           <% end %>
            <% if user.invited_by.present? %>
            <td class="border border-black"><%= user.invited_by.name %></td>
-           <td class="border border-black"><%= user.invited_by.email %></td><% end %>
+           <% else%>
+           <td class="border border-black"></td>
+            <% end %>
+            <% if user.deleted_at.present? %>
+            <td class="border border-black">退会済み</td>
+            <% else%>
+           <td class="border border-black"></td>
+            <% end %>
         </tr>
         <% end %>
-        
         </table>
-        <div class="text-center pagenation">
+        <div class=" pagenation">
         <%= paginate @users %>
         </div>
       </div>

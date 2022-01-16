@@ -1,13 +1,14 @@
 class WorksController < ApplicationController
-  #before_action :authenticate_provider!,only: [:index,:show,:edit,:update], unless: proc { admin_signed_in? }
+  #before_action :authenticate_provider!,only: [:index,:show,:edit,:update]
   before_action :set_work, only: %i[ show edit update destroy ]
 
   # GET /works or /works.json
   def index
     @works = Work.all.page(params[:page])
+    @worknew = Work.new
     @q = Work.ransack(params[:q])
     @works = @q.result(distinct: true).order("created_at desc")
-    @questionnumber = Question.all.count
+    
     @introductionnumber = Introduction.all.count
   end
 
@@ -74,7 +75,7 @@ class WorksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def work_params
-      params.require(:work).permit(:title, :company, :link, :reward, :pcontent, :rday, :rcontent, :area, :appeal, :status, {images: []})
+      params.require(:work).permit(:title, :company, :link, :reward, :pcontent, :rday, :rcontent, :area, :appeal, :status, images: [])
     end
 
     

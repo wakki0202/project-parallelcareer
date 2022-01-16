@@ -1,11 +1,13 @@
 class DetailsController < ApplicationController
   #before_action :authenticate_user!,only: [:new]
-  #before_action :authenticate_provider!,only: [:index,:show,:edit,:update], unless: proc { admin_signed_in? }
+  #before_action :authenticate_provider!,only: [:index,:show,:edit,:update]
   before_action :set_detail, only: %i[ show edit update destroy ]
 
   # GET /details or /details.json
   def index
     @details = Detail.all.page(params[:page]).per(10)
+    @q = Detail.all.ransack(params[:q])
+    @details = @q.result.page(params[:page]).per(10).order("created_at desc")
   end
 
   # GET /details/1 or /details/1.json
@@ -38,7 +40,7 @@ class DetailsController < ApplicationController
   # PATCH/PUT /details/1 or /details/1.json
   def update
     respond_to do |format|
-      if @detail.update(detail_params)
+      if @detail.update(detail_update_params)
         format.html { redirect_to @detail, notice: "Detail was successfully updated." }
         format.json { render :show, status: :ok, location: @detail }
       else
@@ -65,6 +67,9 @@ class DetailsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def detail_params
-      params.require(:detail).permit(:content, :work_id).merge(user_id: current_user.id, work_id: params[:work_id])
+      params.require(:detail).permit(:id,:content,:user_id, :work_id, :status).merge(work_id: params[:work_id],user_id: current_user.id)
+    end
+    def detail_update_params
+      params.require(:detail).permit(:status)
     end
 end

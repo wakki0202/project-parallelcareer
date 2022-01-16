@@ -7,7 +7,13 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require('jquery')
+require("./slick")
+import $ from 'jquery';
+import "bootstrap"
+import "../stylesheets/application"
+import 'slick-carousel'
 
-Rails.start()
-Turbolinks.start()
-ActiveStorage.start()
+
+
+
+ 

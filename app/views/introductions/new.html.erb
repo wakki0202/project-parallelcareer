@@ -4,7 +4,6 @@
   <div class="sign-up-main ">
   <p class="alert"><%= alert %></p>
 
-<h2>口コミをする</h2>
   
 <%= form_with(model: [@work, @introduction], local: true ) do |form| %>
   <div class="workTitle">
@@ -13,8 +12,8 @@
 <form>      
   <%= form.text_field :name,class: 'form' , :autocomplete => "off",:class => "feedback-input" , :placeholder => "紹介するお客様名"  %>
   <%= form.text_field :phonenumber,class: 'form'  , :autocomplete => "off",:class => "feedback-input" ,:placeholder => "紹介するお客様電話番号" %>
-  <%= form.text_area :contents,class: 'form' , :autocomplete => "off",:class => "feedback-input" ,:placeholder => "口コミ内容" %>
-  <div class="check text-center">口コミの許可を貰いましたか？<%= form.check_box :permission,:as => :boolean, checked:false %></div>
+  <%= form.text_area :contents,class: 'form' , :autocomplete => "off",:class => "feedback-input" ,:placeholder => "口コミ内容（任意）" %>
+  <div class="check text-center">案件掲載企業から連絡がいくことを伝えていますか？<%= form.check_box :permission,:as => :boolean, checked:false %></div>
   <%= form.submit '口コミする',data: { confirm: '口コミを送信しますか？' },class: 'submit' %>
 </form>
 <% end %>

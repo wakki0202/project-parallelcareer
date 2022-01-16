@@ -8,10 +8,10 @@ class Work < ApplicationRecord
   has_many :details, dependent: :destroy
   has_many :users, through: :details
   accepts_nested_attributes_for :details
-  belongs_to :admin, optional: true
 
   mount_uploaders :images, ImgUploader
   serialize :images, JSON # SQLiteを使っているときはこの列を追記
+  has_many_attached :images
 
   def self.search(search)
       return Work.all unless search

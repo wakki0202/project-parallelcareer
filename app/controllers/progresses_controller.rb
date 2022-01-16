@@ -2,8 +2,8 @@ class ProgressesController < IntroductionsController
 
 
   def index
-    @introductions = Introduction.first(3)
-    @news = News.first(3)
+    @introductions = Introduction.all
+
   end
 
   def news

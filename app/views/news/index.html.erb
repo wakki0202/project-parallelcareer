@@ -8,25 +8,68 @@
   </div>
  
   <div class="main">
-    <div class="mainHeader">
-    <ul>
-    <% if provider_signed_in? %>
-      <li class=""><span><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></span></li> 
-      <li><%= current_provider.email %></li>
-      <% else %>
-      <li class=""><span>ログアウト</span></li> 
-      <li>管理者名</li>
     
-      <% end %>
-
-    </ul>
-    </div>
+  <%= render '/works/side_header' %>
     
         
     <div class="userIndex">
-      <h3 class="text-center">お知らせ</h3>
+      <h1 class="text-left">お知らせ</h1>
       <div class="providerTable">
-      <a href="news/new" class="toNew">＋ 新規作成</a>
+     
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary toNew" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          ＋ 新規作成
+        </button>
+
+        <!-- Modal -->
+        <div class="modal w-75 m-auto" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title h4" id="staticBackdropLabel">新規お知らせ作成</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+              <%= form_with(model: @newsnew, local: true) do |form| %>
+              <% if @newsnew.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@newsnew.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+                  <ul>
+                    <% @newsnew.errors.each do |error| %>
+                      <li><%= error.full_message %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+              <div class="w-75 m-auto mb-4 mt-2">
+                <%= form.label :タイトル,class:"h4" %>
+                <%= form.text_field :title,class:"form-control",id:"exampleFormControlInput1" %>
+              </div>
+
+              <div class="w-75 m-auto mb-4">
+                <%= form.label :内容,class:"h4" %>
+                <%= form.text_area :content,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+                
+              </div>
+
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                <%= form.submit "作成する",class:"btn btn-primary",data: { confirm:"作成しますか？"} %>    
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
       <div class="search-form">
         <%= search_form_for @q, url: news_index_path do |f| %>
             <%= f.label :title, "キーワード" %>
@@ -36,23 +79,21 @@
         <% end %>
       </div>
 
-        <table class="table userTable">
+        <table class="table userTable ">
           <thead class="heading">
-            <tr>
+            <tr class="text-left">
               <th>タイトル</th>
               <th>作成日</th>
-              <th></th>
               <th></th>
             </tr>
           </thead>
 
           <tbody>
             <% @news.each do |news| %>
-              <tr>
+              <tr class="text-left">
                 <td><%= news.title %></td>
                 <td><%= news.created_at.strftime('%Y年%m月%d日') %></td>
-                <td><%= link_to '詳細', news,class:"morebtn" %></td>
-                <td><%= link_to '編集', edit_news_path(news),class:"editbtn" %></td>
+                <td><%= link_to '詳細', news,class:"toShow py-1 px-3 text-decoration-none" %></td>
                 
               </tr>
             <% end %>

@@ -12,17 +12,16 @@
 
     margin-top: 58px ;
     background-image: linear-gradient(to left, var(--tw-gradient-stops));
-    --tw-gradient-from: #fa4c4c;
+    --tw-gradient-from: #ff3434;
     --tw-gradient-stops: var(--tw-gradient-from),
       var(--tw-gradient-to, rgba(248, 113, 113, 0));
-    --tw-gradient-to: #ffbd41;
+    --tw-gradient-to: #ffde4d;
 
 
 h2{
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-  padding-top: 60px;
   color: white;
 }
 
@@ -34,11 +33,10 @@ p{
 
 .title{
 color: white;
-line-height: 1.5;
 }
 
 form { 
-  max-width:420px; margin:50px auto; 
+  width:420px; margin:50px auto; 
 }
 
 .feedback-input {
@@ -52,7 +50,7 @@ form {
   border:2px solid white;
   transition: all 0.3s;
   padding: 13px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   width:100%;
   box-sizing: border-box;
   outline:0;
@@ -97,11 +95,11 @@ textarea {
 [type="submit"] {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   width: 100%;
-  background:#2d69e9;
+  background:#fff;
   border-radius:5px;
   border:0;
   cursor:pointer;
-  color:white;
+  color:#484c4c;
   font-size:24px;
   padding-top:10px;
   padding-bottom:10px;
@@ -110,7 +108,7 @@ textarea {
   font-weight:700;
 }
 [type="submit"]:hover { 
-  background:#003ab8; 
+  background:rgb(192, 192, 192); 
 }
 }
 
@@ -198,7 +196,7 @@ textarea {
   font-size: 23px;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   padding-top: 10px;
 }
 
@@ -219,3 +217,10 @@ textarea {
   margin-bottom: 20px;
 }
 
+
+@media (max-width: 709px) {
+
+.introduction-new form { 
+  width:80%; margin:50px auto; 
+}
+}

@@ -3,18 +3,11 @@ Rails.application.routes.draw do
   
   
 
-  resources :questions
-
-  devise_for :admins, controllers: {
-    sessions: 'admins/sessions',
-    passwords: 'admins/passwords',
-    registrations: 'admins/registrations'
-  }
-  
   devise_for :providers, controllers: {
     sessions: 'providers/sessions',
     passwords: 'providers/passwords',
-    registrations: 'providers/registrations'
+    registrations: 'providers/registrations',
+    invitations: 'providers/invitations'
   }
   devise_for :users, controllers: {
         sessions: 'users/sessions',
@@ -30,9 +23,6 @@ Rails.application.routes.draw do
     get '/providers/sign_out' => 'devise/sessions#destroy'
   end
 
-  devise_scope :admin do
-    get '/admins/sign_out' => 'devise/sessions#destroy'
-  end
     
   root "tops#index"
   get "tops/index",to:"tops#index"
@@ -81,10 +71,12 @@ Rails.application.routes.draw do
   get "users/index",to:"users#index"
   get "users/basicedit",to:"users#basicedit"
   get "users/bankedit",to:"users#bankedit"
+  get "users/:id",to:"users#show"
   post "users/bankedit",to:"users#update"
   post "users/basicedit",to:"users#update"
-  get "users/destroy",to:"users#destroy"
+  
   get "users/complete",to:"users#complete"
-  get "users/mypage",to:"users#mypage"
+  get "users/mypage/:id",to:"users#mypage"
+  get "users/destroy/:id",to:"users#destroy"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

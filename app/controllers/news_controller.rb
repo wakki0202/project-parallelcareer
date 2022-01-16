@@ -4,20 +4,22 @@ class NewsController < ApplicationController
   # GET /news or /news.json
   def index
     @news = News.all.page(params[:page]).per(10)
+    @newsnew = News.new
     @q = News.ransack(params[:q])
     @news = @q.result(distinct: true).page(params[:page]).order("created_at desc")
-    @questionnumber = Question.all.count
+    
     @introductionnumber = Introduction.all.count
   end
 
   # GET /news/1 or /news/1.json
   def show
+    @news = News.find(params[:id])
   end
 
   # GET /news/new
   def new
     @news = News.new
-    @questionnumber = Question.all.count
+    
     @introductionnumber = Introduction.all.count
   end
 
@@ -32,7 +34,7 @@ class NewsController < ApplicationController
     respond_to do |format|
       if @news.save
         format.html { redirect_to @news, notice: "News was successfully created." }
-        format.json { render :show, status: :created, location: @news }
+        format.json { render :index, status: :created, location: @news }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @news.errors, status: :unprocessable_entity }

@@ -1,8 +1,14 @@
 <body class="post-index">
   <%= render '/layouts/header' %>
   <div class="post-main">
-    <h1>案件一覧</h1>
+    <h1 class="my-5 ">案件一覧</h1>
+<div class="search-form form-inline text-right w-75 m-auto mb-5">
+        <%= search_form_for @q, url: posts_index_path  do |f| %>
+            <%= f.search_field :title_cont,:class => "form-control pr-5" , :placeholder => "キーワード" %>
 
+            <%= f.submit "検索",class:"btn btn-primary py-3 px-4" %>
+        <% end %>
+      </div>
 <div class="post-list-all">
 <div class="post-list">
 <% @works.each do |work| %>
@@ -13,8 +19,8 @@
 
       <a  class="link" href="/posts/<%= work.id %>" class=" font-bold">
         <h1 class="card-title"><%= work.title %></h1>
-        <div class="card-content">
-          <p class="card-text">報酬：<%= work.reward %></p>
+        <div class="card-content py-5 ">
+          <p class="card-text ">報酬：<%= work.reward %></p>
           <p class="card-text">地域：<%= work.area %></p>
         </div>
       </a>
@@ -33,6 +39,5 @@
       
   </div>
   </div>
-  <%= render '/layouts/footer' %>
 </body>
 

@@ -1,5 +1,4 @@
-
-<p><%= t("devise.mailer.invitation_instructions.someone_invited_you", name: @user.invited_by.username) %></p>
+<p><%= t("devise.mailer.invitation_instructions.someone_invited_you", name: @user.invited_by.name) %></p>
 
 <p><%= link_to t("devise.mailer.invitation_instructions.accept"), accept_invitation_url(@resource, invitation_token: @token) %></p>
 
@@ -8,3 +7,4 @@
 <% end %>
 
 <p><%= t("devise.mailer.invitation_instructions.ignore") %></p>
+

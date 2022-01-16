@@ -249,6 +249,7 @@
   .stepOne {
     border: 1px solid #828282;
     box-shadow: 6px 6px #828282;
+    border-radius: 1rem;
     width: 22%;
     font-weight: 500;
     padding-top: 10px;
@@ -315,6 +316,8 @@
   .btn-home:hover {
     opacity: 0.6;
   }
+
+
   // --------ここからFAQ---------------------------
   .FAQ-items {
     padding: 0 15%;
@@ -818,7 +821,6 @@
   }
 
   input[type="checkbox"] {
-    display: none;
   }
 
   #Q1:checked + .A1 {

@@ -14,7 +14,8 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap-sprockets";
+@import "slick-theme"; 
+@import "slick";
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 html {
@@ -83,4 +84,9 @@ body {
 .pagination>li>a:hover {        
   background: #326e68;
   color: white;    /*角を丸くする*/
+}
+
+img.sized {
+  width: 80%;
+  height: 80%;
 }
