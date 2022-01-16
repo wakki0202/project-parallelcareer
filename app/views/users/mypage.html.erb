@@ -24,23 +24,24 @@
     <div class="post-main">
          
         
-    <div class="title">
-      <h1>マイページ</h1>
-    </div>
       <div class="post-list-all">
         <div class="post-list">
           <section class="card">
+          <img src="https://img.icons8.com/office/64/000000/settings.png"/>
             <a href="/users/basicedit" class=" font-bold">
             
-              <h1 class="card-title">マイプロフィール</h1>
+              <h1 class="card-title border-bottom text-left">マイプロフィール</h1>
               <div class="card-content">
                 <p class="card-text">メールアドレス・パスワード・銀行口座の確認・編集</p>
               </div>
             </a>
-            <div class="card-link"> <a class=" bont-bold"></a> </div>
           </section>
+
+
+
           <section class="card">
             <a href="/progresses/index" class=" font-bold">
+            <img src="https://img.icons8.com/dusk/64/000000/in-progress.png"/>
               <h1 class="card-title">進捗状況</h1>
               <div class="card-content">
                 <p class="card-text">口コミ後の進捗状況を確認</p>
@@ -50,6 +51,7 @@
           </section>
           <section class="card">
             <a href="/users/news" class=" font-bold">
+            <img src="https://img.icons8.com/office/64/000000/appointment-reminders--v1.png"/>
               <h1 class="card-title">お知らせ</h1>
               <div class="card-content">
                 <p class="card-text"></p>
@@ -60,6 +62,7 @@
           </section>
           <section class="card">
             <a class=" font-bold">
+            <img src="https://img.icons8.com/dusk/64/000000/contract-job.png"/>
               <h1 class="card-title">案件一覧</h1>
               <div class="card-content">
                 <p class="card-text">案件</p>
@@ -70,16 +73,17 @@
           </section>
           <section class="card">
             <a class=" font-bold">
+            <img src="https://img.icons8.com/dusk/64/000000/friends.png"/>
               <h1 class="card-title">友人を招待する</h1>
               <div class="card-content">
-                <p class="card-text">パラキャリを一緒にする仲間を招待しよう</p>
-                <p class="card-text">招待するとメリットも！</p>
+                <p class="card-text">パラキャリを一緒にする仲間を招待しよう<br>招待するとメリットも！</p>
               </div>
             </a>
             <div class="card-link"> <a class=" bont-bold"></a> </div>
           </section>
           <section class="card">
             <a class=" font-bold">
+            <img src="https://img.icons8.com/plasticine/64/000000/line-me.png"/>
               <h1 class="card-title">LINEお問い合わせ</h1>
               <div class="card-content">
                 <p class="card-text"></p>
@@ -90,19 +94,6 @@
           </section>
         </div>
       </div>
-      <div class="news  w-75 m-auto">
-       <h1 class="text-center font-bold text-2xl pb-6 main_title main_title_info">パラキャリからのお知らせ</h1>
-        
-        
-          <% @news.each do |news| %> 
-            <ul id="newsList" class="w-100 m-auto list-unstyled border-bottom border-top ">
-              
-              <a href="/news/<%= news.id %>"><li class=" text-decoration-none  text-left py-4">　　<%=  news.created_at.strftime('%Y.%m.%d') %>　　　　　　　　　　　<%= news.title %></li></a>
-              
-            </ul>
-                      
-          <% end %>
-          <li class="text-right list-unstyled"> <a class="text-white" href="/news">お知らせ一覧をみる＞</a> </li>
-        </div>
+  
 </body>
 

@@ -1,13 +1,15 @@
 
 <%= render '/layouts/header' %>
 
-<div id="introduction-show" class="flex w-12/12">
+<div id="introduction-show" class="w-75 m-auto">
 
     <div id="center">
 
-    <table class="table">
+    <table class="table ">
       
-        
+      <tr class="">
+      <td class="">口コミ日時</td><td class=""><%= l @introduction.created_at %></td>
+      </tr>
       <tr class="">
       <td class="">案件名</td><td class=""><%= @introduction.work.title %></td>
       </tr>
@@ -33,66 +35,49 @@
       
     </table>
 
-  <% if @introduction.step == nil %>
-    <ol class="progress-bar">
-        <li class="is-active"><span>口コミ送信完了</span></li>  
-        <li class=""><span>口コミ確認完了</span></li>  
-        <li class=""><span>進行中</span></li>
-        <li class=""><span>検討中</span></li>  
-        <li class=""><span>契約成立</span></li>
-        <li class=""><span>報酬振込完了！</span></li>
-      </ol>
-
-  <% elsif @introduction.step == "口コミ確認完了" %>
-      <ol class="progress-bar">
-        <li class="is-complete"><span>口コミ送信完了</span></li>  
-        <li class="is-active"><span>口コミ確認完了</span></li>  
-        <li class=""><span>進行中</span></li>
-        <li class=""><span>検討中</span></li>  
-        <li><span>契約成立</span></li>
-        <li><span>報酬振込完了！</span></li>
-      </ol>
-
-  <% elsif @introduction.step == "進行中" %>
-      <ol class="progress-bar">
-        <li class="is-complete"><span>口コミ送信完了</span></li>  
-        <li class="is-complete"><span>口コミ確認完了</span></li>  
-        <li class="is-active"><span>進行中</span></li>
-        <li class=""><span>検討中</span></li>  
-        <li><span>契約成立</span></li>
-        <li><span>報酬振込完了！</span></li>
-      </ol>
-
-    <% elsif @introduction.step == "検討中" %>
-      <ol class="progress-bar">
-        <li class="is-complete"><span>口コミ送信完了</span></li>  
-        <li class="is-complete"><span>口コミ確認完了</span></li>  
-        <li class="is-complete"><span>進行中</span></li>
-        <li class="is-active"><span>検討中</span></li>  
-        <li><span>契約成立</span></li>
-        <li><span>報酬振込完了！</span></li>
-      </ol>
-
-    <% elsif @introduction.step == "契約成立" %>
-      <ol class="progress-bar">
-        <li class="is-complete"><span>口コミ送信完了</span></li>  
-        <li class="is-complete"><span>口コミ確認完了</span></li>  
-        <li class="is-complete"><span>進行中</span></li>
-        <li class="is-complete"><span>検討中</span></li>  
-        <li class="is-active"><span>契約成立</span></li>
-        <li><span>報酬振込完了！</span></li>
-      </ol>
-
-  <% elsif @introduction.step == "検討中" %>
-      <ol class="progress-bar">
-        <li class="is-complete"><span>口コミ送信完了</span></li>  
-        <li class="is-complete"><span>口コミ確認完了</span></li>  
-        <li class="is-complete"><span>進行中</span></li>
-        <li class="is-complete"><span>検討中</span></li>  
-        <li class="is-complete"><span>契約成立</span></li>
-        <li class="is-active"><span>報酬振込完了！</span></li>
-      </ol>
- <% end %>
     </div>
+    
 </div>
-<%= render '/layouts/footer' %>
+
+
+<div class="container-fluid">
+  <br /><br />
+  <ul class="list-unstyled multi-steps">
+  <% if @introduction.step == nil %>
+    <li class="is-active">口コミ送信完了</li>
+    <% else %>
+    <li>口コミ送信完了</li>
+  <% end %>
+
+  <% if @introduction.step == "口コミ確認完了"%>
+    <li class="is-active">口コミ確認完了</li>
+  <% else %>
+    <li>口コミ確認完了</li>
+  <% end %>
+
+  <% if @introduction.step == "検討中" %>
+    <li class="is-active">検討中</li>
+    <% else %> 
+    <li>検討中</li>
+    <% end %>
+
+  <% if @introduction.step == "進行中" %>  
+    <li class="is-active">進行中</li>
+    <% else %>
+    <li>進行中</li>
+    <% end %>
+
+  <% if @introduction.step == "契約成立"%>
+    <li class="is-active">契約成立</li>
+    <% else %>
+    <li>契約成立</li>
+    <% end %>
+
+  <% if @introduction.step == "報酬振込完了"%>
+    <li class="is-active">報酬振込完了</li>
+    <% else %>
+    <li>報酬振込完了</li>
+    <% end %>
+
+  </ul>
+</div>

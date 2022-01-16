@@ -45,7 +45,7 @@
               </div>
               <div class="modal-body">
 
-              <%= form_with(model: @news, local: true) do |form| %>
+              <%= form_with(model: @news, url: news_path, local: true) do |form| %>
               <% if @news.errors.any? %>
                 <div id="error_explanation">
                   <h2><%= pluralize(@news.errors.count, "error") %> prohibited this news from being saved:</h2>
@@ -70,11 +70,12 @@
               </div>
 
                 
-              </div>
+              
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
                 <%= form.submit "更新する",data: { confirm: '更新しますか？'},class:"btn btn-primary" %>    
                 <% end %>
+              </div>
               </div>
             </div>
           </div>

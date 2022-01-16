@@ -11,6 +11,7 @@ class NewsController < ApplicationController
     @introductionnumber = Introduction.all.count
   end
 
+
   # GET /news/1 or /news/1.json
   def show
     @news = News.find(params[:id])

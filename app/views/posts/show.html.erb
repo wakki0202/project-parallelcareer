@@ -4,7 +4,7 @@
 <% if @work.images.present? %>
 <ul class="carousel w-50 m-auto">
   <% @work.images.each do |img| %>
-    <li class="">
+    <li>
       <%= image_tag img.url   %>
     </li>
   <% end %>
@@ -62,9 +62,12 @@
   </div>
   </div>
   <script>
-  $(".js-slider").slick({
-  dots: true,
-  speed: 500
+$(function() {
+  $('.carousel').slick({
+    arrows: true,
+    infinite: false,
+    dots: true,
+  });
 });
   </script>
 

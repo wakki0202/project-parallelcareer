@@ -172,6 +172,23 @@ li .toLogout:hover{
       
 
     }
+
+    .postContent{
+      padding-top: 100px;
+      width:60%; 
+      margin:0 auto;
+    }
+
+  .postContent  h3{
+      color:#fa4c4c ;
+      border-bottom:1px solid #fa4c4c;
+      font-size: 20px;
+    }
+
+    .postContent p{
+      line-height: normal;
+      font-size: 18px;
+    }
     }
 
     .userTable{

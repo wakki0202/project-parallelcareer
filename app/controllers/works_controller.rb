@@ -45,6 +45,7 @@ class WorksController < ApplicationController
 
   # PATCH/PUT /works/1 or /works/1.json
   def update
+     @work = Work.find(params[:id])
     respond_to do |format|
       if @work.update(work_params)
         format.html { redirect_to @work, notice: "work was successfully updated." }

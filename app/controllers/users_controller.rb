@@ -49,11 +49,15 @@ class UsersController < ApplicationController
     def mypage
       @user = User.find(params[:id])
       redirect_to(tops_index_path) unless @user == current_user
-      @news = News.first(3)
+      @works = Work.order("RANDOM()").limit(6)
 
     end
 
       def destroy
+
+      end
+
+      def news
 
       end
 
