@@ -6,4 +6,8 @@ class TopsController < ApplicationController
     @news = News.all.page(params[:page])
   end
 
+  def newsshow
+    @news = News.find(params[:id])
+  end
+
 end

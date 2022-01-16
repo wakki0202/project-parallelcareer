@@ -1,0 +1,9 @@
+<div class="w-75 m-auto">
+          <p class="border-bottom pb-3 text-left fw-bold fs-2">
+            <%= @news.title %>
+          </p>
+
+          <p class="fs-3">
+            <%= auto_link(simple_format(@news.content), html: {target: '_blank'}) %>
+          </p>
+          </div>

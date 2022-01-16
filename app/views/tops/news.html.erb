@@ -16,7 +16,7 @@
               <td><%= news.created_at.strftime('%Y年%m月%d日') %></td>
                 <td><%= news.title %></td>
                 
-                <td><%= link_to '詳細', news,class:" py-1 px-3 text-decoration-none" %></td>
+                <td><a href="/tops/news/<%= news.id %>" class="py-1 px-3 text-decoration-none">詳細</a></td>
                 
               </tr>
             <% end %>

@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   root "tops#index"
   get "tops/index",to:"tops#index"
   get "tops/news",to:"tops#news"
+  get "tops/news/:id",to:"tops#newsshow"
 
 
   resources :works do
