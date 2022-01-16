@@ -5,12 +5,15 @@ class IntroductionsController < ApplicationController
     @introductions = Introduction.all.page(params[:page]).per(10).order(id: :DESC)
     @q = Introduction.all.ransack(params[:q])
     @introductions = @q.result.page(params[:page]).per(10).order("created_at desc")
-    @introductionnumber = Introduction.all.count
+    @introductionnumber = Introduction.where(step: nil).count
+    @detailnumber = Detail.where(status: "未対応").count
     
   end
 
   def show
     @introduction = Introduction.find(params[:id])
+    @introductionnumber = Introduction.where(step: nil).count
+    @detailnumber = Detail.where(status: "未対応").count
   end
 
  

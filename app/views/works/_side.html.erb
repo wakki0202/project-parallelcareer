@@ -10,7 +10,7 @@
         </ul>
 
         <ul class="side-contents all-cases">
-          <li class="btn nav-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"><%= link_to " お問い合わせ一覧","/details",class:"text-decoration-none"  %></span></li>
+          <li class="btn nav-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"><a href="/details" class="text-decoration-none"> お問い合わせ一覧 <span class="badge badge-primary badge-pill"><%= @detailnumber %></span></a></span></li>
         </ul>
 
 
@@ -51,7 +51,7 @@
                           <ul>
                           <li class=""><%= link_to "トップページに戻る","/tops/index" %></li>
                           <li class=""><%= link_to "案件一覧","/works" %></li>
-                          <li><%= link_to " お問い合わせ一覧","/details",class:"text-decoration-none"  %></li>
+                          <li><%= link_to " お問い合わせ一覧(#{ @detailnumber }件)","/details",class:"text-decoration-none"  %></li>
 
                           <li class=""><%= link_to "口コミ一覧(#{ @introductionnumber }件)","/introductions/index" %></button>
 

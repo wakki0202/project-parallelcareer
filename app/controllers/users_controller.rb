@@ -6,10 +6,14 @@ class UsersController < ApplicationController
     @users = @q.result(distinct: true).page(params[:page]).order("created_at asc")
     
     @introductionnumber = Introduction.all.count
+    @introductionnumber = Introduction.where(step: nil).count
+    @detailnumber = Detail.where(status: "未対応").count
   end
 
   def show
     @user = User.find(params[:id])
+    @introductionnumber = Introduction.where(step: nil).count
+    @detailnumber = Detail.where(status: "未対応").count
   end
 
  def confirm

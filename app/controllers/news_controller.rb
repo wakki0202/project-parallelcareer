@@ -7,14 +7,16 @@ class NewsController < ApplicationController
     @newsnew = News.new
     @q = News.ransack(params[:q])
     @news = @q.result(distinct: true).page(params[:page]).order("created_at desc")
-    
-    @introductionnumber = Introduction.all.count
+    @introductionnumber = Introduction.where(step: nil).count
+    @detailnumber = Detail.where(status: "未対応").count
   end
 
 
   # GET /news/1 or /news/1.json
   def show
     @news = News.find(params[:id])
+    @introductionnumber = Introduction.where(step: nil).count
+    @detailnumber = Detail.where(status: "未対応").count
   end
 
   # GET /news/new

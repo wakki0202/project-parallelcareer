@@ -8,14 +8,16 @@ class WorksController < ApplicationController
     @worknew = Work.new
     @q = Work.ransack(params[:q])
     @works = @q.result(distinct: true).order("created_at desc")
-    
-    @introductionnumber = Introduction.all.count
+    @introductionnumber = Introduction.where(step: nil).count
+    @detailnumber = Detail.where(status: "未対応").count
   end
 
   # GET /works/1 or /works/1.json
   def show
     @work = Work.find(params[:id])
     @provider = @work.provider 
+    @introductionnumber = Introduction.where(step: nil).count
+    @detailnumber = Detail.where(status: "未対応").count
   end
 
   # GET /works/new

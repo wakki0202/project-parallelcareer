@@ -8,11 +8,15 @@ class DetailsController < ApplicationController
     @details = Detail.all.page(params[:page]).per(10)
     @q = Detail.all.ransack(params[:q])
     @details = @q.result.page(params[:page]).per(10).order("created_at desc")
+    @introductionnumber = Introduction.where(step: nil).count
+    @detailnumber = Detail.where(status: "未対応").count
   end
 
   # GET /details/1 or /details/1.json
   def show
     @detail = Detail.find(params[:id])
+    @introductionnumber = Introduction.where(step: nil).count
+    @detailnumber = Detail.where(status: "未対応").count
   end
 
   # GET /details/new
