@@ -1,76 +1,18 @@
-
-
-
-
-
-
-
-
-
 <body class="providerPage">
   <div class="side">
     <%= render '/works/side' %>
   </div>
  
   <div class="main">
-  <%= render '/works/side_header' %>
-    
-        
+    <%= render '/works/side_header' %>  
     <div class="userIndex">
       <h2 class="">案件詳細</h2>
       <div class="providerTable ">
-     
-
-
- <div class="postContent ">
-    <div class="mb-5">
-      <h3 class="pb-3 mb-3">案件名</h3>
-      <p><%= @work.title %></p>
-    </div>
-    <div class="mb-5">
-      <h3 class="pb-3 mb-3 ">事業者名</h3>
-      <p><%= @work.company %></p>
-    </div>
-    <div class="mb-5">
-    <% if @work.link.present? %>
-      <h3>事業者ホームページ欄</h3>
-      <p><%= auto_link(simple_format(@work.link), html: {target: '_blank'}) %></p>
-      <% end %>
-    </div>
-    <div class="mb-5">
-      <h3 class="pb-3 mb-3 ">報酬</h3>
-      <p><%= @work.reward %></p>
-    </div>
-    <div class="mb-5">
-      <h3 class="pb-3 mb-3 ">仕事内容</h3>
-      <p><%= auto_link(simple_format(@work.pcontent), html: {target: '_blank'}) %></p>
-    </div>
-    <div class="mb-5">
-      <h3 class="pb-3 mb-3 ">報酬支払日</h3>
-      <p><%= @work.rday %></p>
-    </div>
-    <div class="mb-5">
-      <h3 class="pb-3 mb-3 ">報酬内容</h3>
-      <p><%= simple_format(@work.rcontent) %></p>
-    </div>
-    <div class="mb-5">
-      <h3 class="pb-3 mb-3 ">対象地域</h3>
-      <p><%= simple_format(@work.area) %></p>
-    </div>
-    <div class="mb-5">
-      <h3 class="pb-3 mb-3 ">アピールポイント</h3>
-      <p><%= simple_format(@work.appeal) %></p>
-    </div>
-
-  </div>
-
-
- <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary toNew" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary toNew px-3 py-1 fs-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
           編集する
         </button>
-
-
+        <%= link_to '削除する', @work, method: :delete,class:"btn btn-primary toNew px-3 py-1 fs-5", data: { confirm: '本当に削除しますか?' } %>
          <!-- Modal -->
         <div class="modal w-100 m-auto" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
@@ -80,12 +22,10 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-
               <%= form_with(model: @work, url: work_path, local: true) do |form| %>
               <% if @work.errors.any? %>
                 <div id="error_explanation">
                   <h2><%= pluralize(@workn.errors.count, "error") %> prohibited this news from being saved:</h2>
-
                   <ul>
                     <% @work.errors.each do |error| %>
                       <li><%= error.full_message %></li>
@@ -95,72 +35,66 @@
               <% end %>
 
 
-                  <div class="imageformSet">
-    
+              <div class="imageformSet">
                       <%= form.label :images, "画像をアップロード", class: "h4" %>
                   <% if @work.images.present? %>
                       <%= form.file_field :images,multiple: true, class: "form-control",id:"exampleFormControlInput1",value: params[:images]  %>
                   <% elsif %>
                       <%= form.file_field :images,multiple: true, class: "form-control",id:"exampleFormControlInput1" %>
                   <% end %>
-                  </div>
+              </div>
 
-                <div class="w-75 m-auto mb-4 mt-2">
+              <div class="w-75 m-auto mb-4 mt-2">
                   <%= form.label :タイトル,class:"h4" %>
                   <%= form.text_field :title,class: "form-control",id:"exampleFormControlInput1" %>
-                </div>
+              </div>
 
-                <div class="w-75 m-auto mb-4 mt-2">
-                  <%= form.label :会社名,class:"h4" %>                  <%= form.text_field :company,class: "form-control",id:"exampleFormControlInput1" %>
-                </div>
+              <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :会社名,class:"h4" %>                  
+                  <%= form.text_field :company,class: "form-control",id:"exampleFormControlInput1" %>
+              </div>
 
-                <div class="w-75 m-auto mb-4 mt-2">
+              <div class="w-75 m-auto mb-4 mt-2">
                   <%= form.label :事業者URL,class:"h4" %>
                   <%= form.text_field :link,class: "form-control",id:"exampleFormControlInput1" %>
-                </div>
+              </div>
 
-                <div class="w-75 m-auto mb-4 mt-2">
-                  <%= form.label :報酬,class:"h4" %>                 <%= form.text_field :reward,class: "form-control",id:"exampleFormControlInput1" %>
-                </div>
+              <div class="w-75 m-auto mb-4 mt-2">
+                  <%= form.label :報酬,class:"h4" %>                 
+                  <%= form.text_field :reward,class: "form-control",id:"exampleFormControlInput1" %>
+              </div>
 
-                <div class="w-75 m-auto mb-4 mt-2">
+              <div class="w-75 m-auto mb-4 mt-2">
                   <%= form.label :仕事内容,class:"h4" %>
                   <%= form.text_area :pcontent,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
-                </div>
+              </div>
 
-                <div class="w-75 m-auto mb-4 mt-2">
+              <div class="w-75 m-auto mb-4 mt-2">
                   <%= form.label :報酬支払日,class:"h4" %>
                   <%= form.text_field :rday,class: "form-control",id:"exampleFormControlInput1" %>
-                </div>
+              </div>
 
-                <div class="w-75 m-auto mb-4 mt-2">
-                  <%= form.label :報酬内容,class:"h4" %>
-                  <%= form.text_area :rcontent,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
-                </div>
+              <div class="w-75 m-auto mb-4 mt-2">
+                <%= form.label :報酬内容,class:"h4" %>
+                <%= form.text_area :rcontent,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+              </div>
 
-                <div class="w-75 m-auto mb-4 mt-2">
-                  <%= form.label :地域,class:"h4" %>                 <%= form.text_area :area, class: "formB",class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
-                </div>
+              <div class="w-75 m-auto mb-4 mt-2">
+                <%= form.label :地域,class:"h4" %>                 
+                <%= form.text_area :area, class: "formB",class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+              </div>
 
-                <div class="w-75 m-auto mb-4 mt-2">
-                  <%= form.label :アピールポイント,class:"h4" %>
-                  <%= form.text_area :appeal,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
-                </div>
+              <div class="w-75 m-auto mb-4 mt-2">
+                <%= form.label :アピールポイント,class:"h4" %>
+                <%= form.text_area :appeal,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+              </div>
 
-                
+    
+              <div class="w-75 m-auto mb-4 mt-2">
+                <%= form.label :ステータス,class:"h4" %>
+                <%= form.select :status, [['審査中'],['公開'], ['非公開'],  ['終了']], { include_blank: false }, { class: "form-control",id:"exampleFormControlInput1" } %>
+              </div>
 
-
-                <div class="w-75 m-auto mb-4 mt-2">
-                  <%= form.label :ステータス,class:"h4" %>
-                  <%= form.select :status, [['審査中'],['公開'], ['非公開'],  ['終了']], { include_blank: false }, { class: "form-control",id:"exampleFormControlInput1" } %>
-                </div>
-           
-
-
-
-
-                
-              
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
                 <%= form.submit "更新する",class:"btn btn-primary",data: { confirm:"作成しますか？"} %>    
@@ -170,17 +104,52 @@
             </div>
           </div>
         </div>
-
-
-
-        <%= link_to '削除する', @work, method: :delete,class:"btn btn-primary toNew", data: { confirm: '本当に削除しますか?' } %>
         
 
-       
-        </div>
-      </div>
 
+        <div class="postContent ">
+            <div class="mb-5">
+              <h3 class="pb-3 mb-3">案件名</h3>
+              <p><%= @work.title %></p>
+            </div>
+            <div class="mb-5">
+              <h3 class="pb-3 mb-3 ">事業者名</h3>
+              <p><%= @work.company %></p>
+            </div>
+            <div class="mb-5">
+            <% if @work.link.present? %>
+              <h3>事業者ホームページ欄</h3>
+              <p><%= auto_link(simple_format(@work.link), html: {target: '_blank'}) %></p>
+              <% end %>
+            </div>
+            <div class="mb-5">
+              <h3 class="pb-3 mb-3 ">報酬</h3>
+              <p><%= @work.reward %></p>
+            </div>
+            <div class="mb-5">
+              <h3 class="pb-3 mb-3 ">仕事内容</h3>
+              <p><%= auto_link(simple_format(@work.pcontent), html: {target: '_blank'}) %></p>
+            </div>
+            <div class="mb-5">
+              <h3 class="pb-3 mb-3 ">報酬支払日</h3>
+              <p><%= @work.rday %></p>
+            </div>
+            <div class="mb-5">
+              <h3 class="pb-3 mb-3 ">報酬内容</h3>
+              <p><%= simple_format(@work.rcontent) %></p>
+            </div>
+            <div class="mb-5">
+              <h3 class="pb-3 mb-3 ">対象地域</h3>
+              <p><%= simple_format(@work.area) %></p>
+            </div>
+            <div class="mb-5">
+              <h3 class="pb-3 mb-3 ">アピールポイント</h3>
+              <p><%= simple_format(@work.appeal) %></p>
+            </div>
+          </div>
+   
+      </div>
+    </div>
   </div>
- 
 </body>
  

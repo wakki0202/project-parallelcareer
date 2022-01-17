@@ -33,7 +33,7 @@
 
         <% @users.each do |user| %> 
         <tr class="border  text-left">
-          <td class="border border-black"><a href="/users/<%= user.id %>"><%= user.name %></a></td>
+          <td class="border border-black"><a href="/users/<%= user.id %>" class="text-decoration-none"><%= user.name %></a></td>
           <td class="border border-black"><%= user.email %></td>
           <td class="border border-black"><%= user.tel %></td>
           <% if user.bank == nil %>
