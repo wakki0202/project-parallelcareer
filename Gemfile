@@ -88,3 +88,7 @@ gem 'font-awesome-rails'
 gem 'kaminari'
 
 gem 'ransack'
+
+gem 'fog-aws'
+
+gem 'dotenv-rails'
