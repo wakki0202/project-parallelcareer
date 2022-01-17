@@ -1,6 +1,5 @@
  <div class="mainHeader">
     <ul>
-    <% if provider.present? %>
     <% if provider_signed_in? %>
       
       <li class="toproviderLogout">
@@ -15,7 +14,6 @@
       <li><%= current_provider.email %></li>
       
     
-    <% end %>
     <% end %>
 
     </ul>
