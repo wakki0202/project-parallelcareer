@@ -12,7 +12,7 @@
 
 .introduction-new{
 font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
-    margin-top: 58px ;
+    margin-top: 100px ;
     background-image: linear-gradient(to left, var(--tw-gradient-stops));
     --tw-gradient-from: #ff3434;
     --tw-gradient-stops: var(--tw-gradient-from),
@@ -21,6 +21,7 @@ font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Y
 
 
 h2{
+  color: white;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
