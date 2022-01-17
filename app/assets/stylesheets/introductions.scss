@@ -24,7 +24,6 @@ h2{
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-  color: white;
 }
 
 p{
@@ -42,14 +41,14 @@ form {
 }
 
 .feedback-input {
-  color:white;
+  color:black;
   font-family: Helvetica, Arial, sans-serif;
   font-weight:500;
   font-size: 18px;
   border-radius: 5px;
   line-height: 22px;
-  background-color: transparent;
-  border:2px solid white;
+  border:0px solid rgb(41, 41, 41);
+  background-color: rgb(252, 252, 252);
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 20px;
@@ -60,11 +59,11 @@ form {
 }
 
 ::placeholder {
-  color: whitesmoke;
+  color: rgb(145, 143, 143);
 }
 /* 旧Edge対応 */
 ::-ms-input-placeholder {
-  color: whitesmoke;
+  color: rgb(168, 168, 168);
 }
 /* IE対応 */
 :-ms-input-placeholder {
@@ -78,14 +77,13 @@ textarea {
   height: 150px;
   line-height: 150%;
   resize:vertical;
-  color:white;
+  color:rgb(0, 0, 0);
   font-family: Helvetica, Arial, sans-serif;
   font-weight:500;
   font-size: 18px;
   border-radius: 5px;
   line-height: 22px;
-  background-color: transparent;
-  border:2px solid white;
+  border:2px solid black;
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 15px;
