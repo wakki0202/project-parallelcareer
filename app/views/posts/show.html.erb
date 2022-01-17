@@ -1,15 +1,17 @@
 <body class="post-show">
   <%= render '/layouts/header' %>
 
+<div class="">
 <% if @work.images.present? %>
-<ul class="slider w-75 m-auto">
+<ul class="slider ">
   <% @work.images.each do |img| %>
     <li>
-      <%= image_tag img.url   %>
+      <%= image_tag img.url ,class:"imageslide mt-5"   %>
     </li>
   <% end %>
 </ul>
 <% end %>
+</div>
 
  
   <div class="postContent ">

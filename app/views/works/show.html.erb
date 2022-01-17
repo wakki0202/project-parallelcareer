@@ -89,12 +89,12 @@
                 <%= form.text_area :appeal,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
               </div>
 
-    
+    <% if current_provider.email == "tanachu_78@yahoo.co.jp" %>
               <div class="w-75 m-auto mb-4 mt-2">
                 <%= form.label :ステータス,class:"h4" %>
                 <%= form.select :status, [['審査中'],['公開'], ['非公開'],  ['終了']], { include_blank: false }, { class: "form-control",id:"exampleFormControlInput1" } %>
               </div>
-
+    <% end %>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
                 <%= form.submit "更新する",class:"btn btn-primary",data: { confirm:"作成しますか？"} %>    
