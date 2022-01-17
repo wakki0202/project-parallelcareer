@@ -5,7 +5,7 @@
       <%= render 'editside' %>
 
       <div class="mainEdit">
-        <div class="edit-page">
+        <div class="edit-page fs-3">
               <div class="formEdit">
           <%= form_with(url: {controller: 'users', action: 'basicedit' }) do |f| %>
                 <p class="alert"><%= alert %></p>
@@ -36,6 +36,8 @@
                   <div class="text-left">自己PR（任意）</div>
                   <%= f.text_area :appeal, autofocus: true, autocomplete: "email",size: "40x10",value:  current_user.appeal %>
                 </div>
+
+                <div class=" text-center">掲載主からのスカウトを許可しますか？<%= f.check_box :scout,:as => :boolean ,checked:  current_user.scout %></div>
 
                 <div class="formSetEdit">
                     <%= f.submit "基本情報を更新する",class:"button" %>

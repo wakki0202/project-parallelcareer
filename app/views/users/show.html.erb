@@ -53,6 +53,14 @@
           <td class="">未記入</td>
         <% end %>
       </tr>
+      <tr class="border">
+        <td class=" userLabel py-3">掲載主からのスカウト連絡</td>
+        <% if @user.scout == false %>
+        <td class="">許可しない</td>
+        <% else %>
+        <td class="">許可する</td>
+        <% end %>
+      </tr>
        <% if @user.invited_by.present? %>
       <tr class="border">
         <td class=" userLabel py-3">紹介者名</td>
