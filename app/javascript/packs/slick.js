@@ -1,8 +1,8 @@
 
-$(document).on('turbolinks:load', function () {
-  $('.carousel').slick({
-    arrows: true,
-    infinite: false,
-    dots: true
+$(function () {
+  $('.slider').slick({
+    arrows: true,  //ボタン非表示
+    autoplay: true, //自動再生
+    autoplaySpeed: 4000, //再生スピード
   });
 });

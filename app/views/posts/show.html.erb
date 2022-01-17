@@ -2,7 +2,7 @@
   <%= render '/layouts/header' %>
 
 <% if @work.images.present? %>
-<ul class="carousel w-50 m-auto">
+<ul class="slider w-75 m-auto">
   <% @work.images.each do |img| %>
     <li>
       <%= image_tag img.url   %>
@@ -53,12 +53,22 @@
     </div>
 
   </div>
+<div class="flex w-75 m-auto mt-5">
 
-<a href="/works/<%= @work.id %>/introductions/new" class="text-decoration-none">
-  <div class="action">
-    口コミをする
+
+  <div class="action p-3 mt-4">
+  <a href="/works/<%= @work.id %>/details/new" class="text-white text-decoration-none py-2">
+    詳細を聞く
+    </a>
   </div>
-</a>
+
+  <div class="action p-3 mt-4">
+  <a href="/works/<%= @work.id %>/introductions/new" class="text-white text-decoration-none py-2">
+    口コミをする
+    </a>
+  </div>
+
+</div>
   </div>
   </div>
   <script>
