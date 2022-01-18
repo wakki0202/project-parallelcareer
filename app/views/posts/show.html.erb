@@ -5,8 +5,8 @@
 <% if @work.images.present? %>
 <ul class="slider ">
   <% @work.images.each do |img| %>
-    <li>
-      <%= image_tag img.url ,class:"imageslide mt-5"   %>
+    <li class="">
+      <%= image_tag img.url ,class:"m-auto  mt-5"   %>
     </li>
   <% end %>
 </ul>
