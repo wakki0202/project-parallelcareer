@@ -33,7 +33,7 @@
 
                         <div class="formSetEdit">
                           <div class="text-left">現在のパスワード</div>
-                          <%= f.password_field :current_password, autocomplete: "current-password" %>
+                          <%= f.password_field :current_password, autocomplete: "current-password",value: current_user.password %>
                         </div>
 
                         <div class="formSetEdit">

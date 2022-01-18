@@ -42,7 +42,7 @@ class UsersController < ApplicationController
         update_bank_params
       )
 
-       render action: :basicedit
+       users_bankedit_path
 
 
     end
