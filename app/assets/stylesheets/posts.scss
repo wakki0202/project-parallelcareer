@@ -165,12 +165,11 @@
   .post-show{
     background-color: white;
   
-    .imageslide{
-      margin-top: 50px;
-      width: 60%;
-      height: 700px;
-      margin: 0 auto;
+    .imageList{
+      margin-top: 100px;
     }
+
+    
 
     .carousel li{
       width: 500px;
@@ -178,7 +177,7 @@
     }
 
     .postContent{
-      padding-top: 100px;
+      padding-top: 30px;
       width:60%; 
       margin:0 auto;
     }
@@ -378,6 +377,13 @@
 
 }
 
+  .imageList{
+      margin-top: 130px;
+    }
+
+    
+
+
  .post-show{
     background-color: white;
   
@@ -388,7 +394,7 @@
     }
 
     .postContent{
-      padding-top: 100px;
+      padding-top: 30px;
       width:80%; 
       margin:0 auto;
     }

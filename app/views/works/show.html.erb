@@ -35,7 +35,7 @@
               <% end %>
 
 
-              <div class="imageformSet">
+              <div class="imageformSet w-75 m-auto mb-3">
                       <%= form.label :images, "画像をアップロード", class: "h4" %>
                   <% if @work.images.present? %>
                       <%= form.file_field :images,multiple: true, class: "form-control",id:"exampleFormControlInput1",value: params[:images]  %>
@@ -43,6 +43,20 @@
                       <%= form.file_field :images,multiple: true, class: "form-control",id:"exampleFormControlInput1" %>
                   <% end %>
               </div>
+
+        <div class="w-75 m-auto mt-3">
+              
+          <% if @work.images.present? %>
+          <%= form.label :images, "変更前の画像", class: "h4" %>
+          <ul class="slider ">
+            <% @work.images.each do |img| %>
+              <li class="">
+                <%= image_tag img.url ,class:"m-auto  mt-5"   %>
+              </li>
+            <% end %>
+          </ul>
+          <% end %>
+        </div>
 
               <div class="w-75 m-auto mb-4 mt-2">
                   <%= form.label :タイトル,class:"h4" %>
@@ -108,6 +122,17 @@
 
 
         <div class="postContent ">
+        <div class="">
+          <% if @work.images.present? %>
+          <ul class="slider ">
+            <% @work.images.each do |img| %>
+              <li class="">
+                <%= image_tag img.url ,class:"m-auto  mt-5"   %>
+              </li>
+            <% end %>
+          </ul>
+          <% end %>
+        </div>
             <div class="mb-5">
               <h3 class="pb-3 mb-3">案件名</h3>
               <p><%= @work.title %></p>
