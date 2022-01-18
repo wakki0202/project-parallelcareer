@@ -39,4 +39,6 @@
 yarn-debug.log*
 .yarn-integrity
 
-/.env # 追記
+/.env 
+
+# 追記
