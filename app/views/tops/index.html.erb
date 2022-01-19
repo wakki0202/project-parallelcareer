@@ -66,7 +66,7 @@
     <div class="subtitle child">
       <div class="mpextend mpLRextendTrigger"><div class="mpapperTrigger">豊富な案件も！</div></div>
     </div>
-    <div class="slider">
+    <div class="slide">
       <div class="Item">
           <div class="Item-top">
             <i class="fas fa-hand-holding-heart"></i>
@@ -309,8 +309,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
+    document.addEventListener("turbolinks:load", function () {
     $(function () {
-      $(".slider").slick({
+      $(".slide").slick({
         arrows: false, //左右の矢印はなし
         autoplay: true, //自動的に動き出すか。初期値はfalse。
         autoplaySpeed: 50, //自動的に動き出す待ち時間。初期値は3000ですが今回の見せ方では0
@@ -323,5 +324,6 @@
         variableWidth: true,
       });
     });
+      });
     </script>
 </body>
