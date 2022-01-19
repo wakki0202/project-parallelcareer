@@ -50,15 +50,15 @@ p span{
 }
 
 .inviteImages{
-  height: 300px;
+  height: 250px;
   margin-top: 30px;
   margin-bottom: 50px;
  
   .orangeBack{
     position: relative;
-     background-color: #fff;
+    background-color: rgba(253,131,71,0.9);
     background-size: cover;
-    height: 300px;
+    height: 250px;
     width: 70%;
     margin: 0 auto;
 
@@ -111,6 +111,8 @@ p span{
   .Backblack{
     background-color: rgba(0,0,0,0.6);
     background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   .inviteArea{
     width: 90%;
@@ -118,8 +120,7 @@ p span{
     padding-bottom: 80px;
     margin: 0 auto;
     background-color: white;
-    margin-top: 200px;
-    margin-bottom: 150px;
+    
     border-radius: 0.75rem;
   
   .invitePhrase{
@@ -176,14 +177,15 @@ p span{
 }
 
 .formSet{
-  width:100%;
-}
+  width:80%;
+  margin-bottom: 0px;
 
 .text-left{
   padding-bottom: 8px;
 }
 .button{
   margin-top: 20px;
+}
 }
 
 .formArea{
@@ -195,4 +197,16 @@ p span{
   }
 }
 
+.formSetInvite{
+  width:80%;
+  margin: 0 auto;
+
+
+.text-left{
+  padding-bottom: 8px;
 }
+.button{
+}
+}
+}
+

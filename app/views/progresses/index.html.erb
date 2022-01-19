@@ -1,18 +1,9 @@
-
 <%= render '/layouts/header' %>
-
-    <div class="introduction-index w-full ">
-      <div class="introductions">
-
-
-        
-
-
-
-      <table class="border border-black progressTable">
-
-        <h1 class="text-center font-bold text-2xl pb-6 main_title">口コミの進捗状況確認表</h1>
-         <tr class="border"><th class="border border-black posts_name">案件名</th><th class="border border-black progressing">進捗状況</th></tr>
+<div class="introduction-index w-full ">
+  <div class="introductions">
+    <table class="border border-black progressTable">
+      <h1 class="text-center font-bold text-2xl pb-6 main_title">口コミの進捗状況確認表</h1>
+        <tr class="border"><th class="border border-black posts_name">案件名</th><th class="border border-black progressing">進捗状況</th></tr>
         <% @introductions.each do |introduction| %> 
         <% if introduction.user_id == current_user.id %>
         <tr class="border  text-center posts">
@@ -29,17 +20,6 @@
         </tr>
         <% end %>
         <% end %>
-      </table>
-
-
-
-
-    
-      
-      
-
-     
-
-    </div>
-
+    </table>
+  </div>
 </div>
