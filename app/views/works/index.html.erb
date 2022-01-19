@@ -16,7 +16,7 @@
       <div class="providerTable">
       
            <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary toNew" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <button type="button" class="btn btn-primary toNew fs-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
           ＋ 新規作成
         </button>
 
@@ -50,44 +50,47 @@
 
                 <div class="w-75 m-auto mb-4 mt-2">
                   <%= form.label :タイトル,class:"h4" %>
-                  <%= form.text_field :title,class: "form-control",id:"exampleFormControlInput1" %>
+                  <%= form.text_field :title,class: "form-control fs-4",id:"exampleFormControlInput1" %>
                 </div>
 
                 <div class="w-75 m-auto mb-4 mt-2">
-                  <%= form.label :会社名,class:"h4" %>                  <%= form.text_field :company,class: "form-control",id:"exampleFormControlInput1" %>
+                  <%= form.label :会社名,class:"h4" %>                  
+                  <%= form.text_field :company,class: "form-control fs-4",id:"exampleFormControlInput1" %>
                 </div>
 
                 <div class="w-75 m-auto mb-4 mt-2">
                   <%= form.label :事業者URL,class:"h4" %>
-                  <%= form.text_field :link,class: "form-control",id:"exampleFormControlInput1" %>
+                  <%= form.text_field :link,class: "form-control fs-4",id:"exampleFormControlInput1" %>
                 </div>
 
                 <div class="w-75 m-auto mb-4 mt-2">
-                  <%= form.label :報酬,class:"h4" %>                 <%= form.text_field :reward,class: "form-control",id:"exampleFormControlInput1" %>
+                  <%= form.label :報酬,class:"h4" %>                 
+                  <%= form.text_field :reward,class: "form-control fs-4",id:"exampleFormControlInput1" %>
                 </div>
 
                 <div class="w-75 m-auto mb-4 mt-2">
                   <%= form.label :仕事内容,class:"h4" %>
-                  <%= form.text_area :pcontent,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+                  <%= form.text_area :pcontent,class:"form-control fs-4",id:"exampleFormControlTextarea1", size: "20x10" %>
                 </div>
 
                 <div class="w-75 m-auto mb-4 mt-2">
                   <%= form.label :報酬支払日,class:"h4" %>
-                  <%= form.text_field :rday,class: "form-control",id:"exampleFormControlInput1" %>
+                  <%= form.text_field :rday,class: "form-control fs-4",id:"exampleFormControlInput1" %>
                 </div>
 
                 <div class="w-75 m-auto mb-4 mt-2">
                   <%= form.label :報酬内容,class:"h4" %>
-                  <%= form.text_area :rcontent,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+                  <%= form.text_area :rcontent,class:"form-control fs-4",id:"exampleFormControlTextarea1", size: "20x10" %>
                 </div>
 
                 <div class="w-75 m-auto mb-4 mt-2">
-                  <%= form.label :地域,class:"h4" %>                 <%= form.text_area :area, class: "formB",class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+                  <%= form.label :地域,class:"h4" %>                 
+                  <%= form.text_area :area, class: "formB",class:"form-control fs-4",id:"exampleFormControlTextarea1", size: "20x10" %>
                 </div>
 
                 <div class="w-75 m-auto mb-4 mt-2">
                   <%= form.label :アピールポイント,class:"h4" %>
-                  <%= form.text_area :appeal,class:"form-control ",id:"exampleFormControlTextarea1", size: "20x10" %>
+                  <%= form.text_area :appeal,class:"form-control fs-4",id:"exampleFormControlTextarea1", size: "20x10" %>
                 </div>
 
                 
@@ -95,7 +98,7 @@
               <% if current_provider.email == "tanachu_78@yahoo.co.jp" %>
                 <div class="w-75 m-auto mb-4 mt-2">
                   <%= form.label :ステータス,class:"h4" %>
-                  <%= form.select :status, [['審査中'],['公開'], ['非公開'],  ['終了']], { include_blank: false }, { class: "form-control",id:"exampleFormControlInput1" } %>
+                  <%= form.select :status, [['審査中'],['公開'], ['非公開'],  ['終了']], { include_blank: false }, { class: "form-control fs-4",id:"exampleFormControlInput1" } %>
                 </div>
            
                 <% end %>
@@ -105,8 +108,8 @@
                 
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
-                <%= form.submit "作成する",class:"btn btn-primary",data: { confirm:"作成しますか？"} %>    
+                <button type="button" class="btn btn-secondary fs-4" data-bs-dismiss="modal">閉じる</button>
+                <%= form.submit "作成する",class:"btn btn-primary fs-4",data: { confirm:"作成しますか？"} %>    
                 <% end %>
               </div>
             </div>
@@ -119,17 +122,17 @@
 
         <div class="search-form">
         <%= search_form_for @q, url: works_path do |f| %>
-            <%= f.label :name, "絞り込み" %>
-            <%= f.select :status_cont, [['公開'], ['審査中'], ['非公開'], ['公開終了']], { include_blank: 'すべて' }, { class: "formleft" } %>
-            <%= f.submit "検索" %>
+            <%= f.label :name, "絞り込み",class:"fs-4" %>
+            <%= f.select :status_cont, [['公開'], ['審査中'], ['非公開'], ['公開終了']], { include_blank: 'すべて' }, { class: "rounded formleft fs-4" } %>
+            <%= f.submit "検索",id:"btn",class:"fs-4 " %>
         <% end %>
         </div>
         <div class="search-form">
         <%= search_form_for @q do |f| %>
-            <%= f.label :title, "キーワード" %>
-            <%= f.search_field :title_cont %>
+            <%= f.label :title, "キーワード",class:"fs-4" %>
+            <%= f.search_field :title_cont,class:"border border-dark rounded fs-4" %>
 
-            <%= f.submit "検索" %>
+            <%= f.submit "検索",id:"btn",class:"fs-4" %>
         <% end %>
       </div>
 

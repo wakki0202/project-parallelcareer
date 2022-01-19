@@ -73,10 +73,10 @@
 
       <div class="search-form">
         <%= search_form_for @q, url: news_index_path do |f| %>
-            <%= f.label :title, "キーワード" %>
-            <%= f.search_field :title_cont %>
+            <%= f.label :title, "キーワード",class:"fs-4 " %>
+            <%= f.search_field :title_cont,class:"fs-4 rounded border border-dark" %>
 
-            <%= f.submit "検索" %>
+            <%= f.submit "検索",id:"btn",class:"fs-4 " %>
         <% end %>
       </div>
 

@@ -17,17 +17,17 @@
       <div class="providerTable">
       <div class="search-form">
         <%= search_form_for @q, url: details_path do |f| %>
-            <%= f.label :name, "絞り込み" %>
-            <%= f.select :status_cont, [['未対応'], ['対応済み']], { include_blank: 'すべて' }, { class: "formleft" } %>
-            <%= f.submit "検索" %>
+            <%= f.label :name, "絞り込み",class:"fs-4" %>
+            <%= f.select :status_cont, [['未対応'], ['対応済み']], { include_blank: 'すべて' }, { class: "formleft rounded border border-dark fs-4" } %>
+            <%= f.submit "検索",id:"btn",class:"fs-4 " %>
         <% end %>
         </div>
         <div class="search-form">
         <%= search_form_for @q do |f| %>
-            <%= f.label :title, "キーワード" %>
-            <%= f.search_field :work_title_cont %>
+            <%= f.label :title, "キーワード",class:"fs-4" %>
+            <%= f.search_field :work_title_cont,class:"fs-4 rounded border border-dark" %>
 
-            <%= f.submit "検索" %>
+            <%= f.submit "検索",id:"btn",class:"fs-4 " %>
         <% end %>
       </div>
       

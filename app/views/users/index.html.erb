@@ -14,10 +14,10 @@
       <div class="providerTable">
       <div class="search-form">
         <%= search_form_for @q, url: users_index_path do |f| %>
-            <%= f.label :name_or_tel_or_email, "キーワード" %>
-            <%= f.search_field :name_or_tel_or_email_cont %>
+            <%= f.label :name_or_tel_or_email, "キーワード",class:"fs-4 " %>
+            <%= f.search_field :name_or_tel_or_email_cont,class:"fs-4 rounded border border-dark" %>
 
-            <%= f.submit "検索" %>
+            <%= f.submit "検索",id:"btn",class:"fs-4 " %>
         <% end %>
       </div>
 
