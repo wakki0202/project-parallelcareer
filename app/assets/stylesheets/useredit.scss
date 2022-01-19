@@ -56,6 +56,13 @@ select#kinds{
   margin-left: 40px;
 }
 
+select{
+  border:gray 2px solid;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+}
+
 .sideEditMain{
    position: relative;
   z-index: 1;

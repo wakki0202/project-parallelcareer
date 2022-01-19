@@ -10,11 +10,7 @@ class UsersController < ApplicationController
     @detailnumber = Detail.where(status: "未対応").count
   end
 
-  def show
-    @user = User.find(params[:id])
-    @introductionnumber = Introduction.where(step: nil).count
-    @detailnumber = Detail.where(status: "未対応").count
-  end
+  
 
  def confirm
 
@@ -56,6 +52,12 @@ class UsersController < ApplicationController
       @works = Work.order("RANDOM()").limit(6)
 
     end
+
+    def show
+    @user = User.find(params[:id])
+    @introductionnumber = Introduction.where(step: nil).count
+    @detailnumber = Detail.where(status: "未対応").count
+  end
 
       def destroy
 

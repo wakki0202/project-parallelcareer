@@ -123,6 +123,7 @@ textarea {
     font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     width: 80%;
     margin: 0 auto;
+    
   }
 
   .main_title{
@@ -150,6 +151,10 @@ textarea {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 80px;
+  }
+
+  .rounded{
+    border-radius: 1rem;
   }
   
   .posts{
