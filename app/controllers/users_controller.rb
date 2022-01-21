@@ -5,9 +5,10 @@ class UsersController < ApplicationController
     @q = User.ransack(params[:q])
     @users = @q.result(distinct: true).page(params[:page]).order("created_at asc")
     
-    @introductionnumber = Introduction.all.count
-    @introductionnumber = Introduction.where(step: nil).count
-    @detailnumber = Detail.where(status: "未対応").count
+    @introductionnumber = Introduction.where(work_id: current_provider.id,step: nil).count
+    @introductionall = Introduction.where(step: nil).count
+    @detailnumber = Detail.where(work_id: current_provider.id,status: "未対応").count
+    @detailnumberall = Detail.where(status: "未対応").count
   end
 
   
@@ -55,8 +56,10 @@ class UsersController < ApplicationController
 
     def show
     @user = User.find(params[:id])
-    @introductionnumber = Introduction.where(step: nil).count
-    @detailnumber = Detail.where(status: "未対応").count
+    @introductionnumber = Introduction.where(work_id: current_provider.id,step: nil).count
+    @introductionall = Introduction.where(step: nil).count
+    @detailnumber = Detail.where(work_id: current_provider.id,status: "未対応").count
+    @detailnumberall = Detail.where(status: "未対応").count
   end
 
       def destroy

@@ -18,7 +18,7 @@
       <div class="search-form">
         <%= search_form_for @q, url: introductions_index_path do |f| %>
             <%= f.label :name, "進捗度絞り込み",class:"fs-4" %>
-            <%= f.select :step_cont, [['口コミ確認完了'], ['お客様と繋がりませんでした'], ['断られました'], ['検討中'], ['進行中'], ['契約成立'], ['報酬振込完了']], { include_blank: 'すべて' }, { class: "form rounded border border-dark fs-4" } %>
+            <%= f.select :step_cont, [['口コミ確認完了'], ['お客様と繋がりませんでした'], ['断られました'], ['検討中'], ['進行中'], ['契約成立'], ['報酬振込完了']], { include_blank: 'すべて' }, { class: "form rounded border border-dark fs-4 w-25" } %>
             <%= f.submit "検索",id:"btn",class:"fs-4 " %>
         <% end %>
         </div>

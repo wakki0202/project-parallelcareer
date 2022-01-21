@@ -10,12 +10,12 @@
         </ul>
 
         <ul class="side-contents all-cases">
-          <li class="btn nav-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"><a href="/details" class="text-decoration-none"> お問い合わせ一覧 <span class="badge badge-primary badge-pill"><%= @detailnumber %></span></a></span></li>
+          <li class="btn nav-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"><a href="/details" class="text-decoration-none"> お問い合わせ一覧 <span class="badge badge-primary badge-pill"><% if current_provider.email == "tanachu_78@yahoo.co.jp"   %><%= @detailnumberall %><% else %><%= @detailnumber %><% end %></span></a></span></li>
         </ul>
 
 
         <ul class="side-contents all-reviews">
-          <li class="btn nav-item"><span class="glyphicon glyphicon-comment" aria-hidden="true"><a href="/introductions/index" class="text-decoration-none"> 口コミ一覧 <span class="badge badge-primary badge-pill"><%= @introductionnumber %></span></a></span></li>
+          <li class="btn nav-item"><span class="glyphicon glyphicon-comment" aria-hidden="true"><a href="/introductions/index" class="text-decoration-none"> 口コミ一覧 <span class="badge badge-primary badge-pill"><% if current_provider.email == "tanachu_78@yahoo.co.jp"   %><%= @introductionall %><% else %><%= @introductionnumber %><% end %></span></a></span></li>
         </ul>
         
 <% if current_provider.email == "tanachu_78@yahoo.co.jp"   %>
