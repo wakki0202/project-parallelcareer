@@ -1,6 +1,8 @@
  <div class="mainHeader">
-    <ul>
+ 
+    <ul class="d-flex">
     <% if provider_signed_in? %>
+      
       
       <li class="toproviderLogout">
         <span>
@@ -12,6 +14,7 @@
         </span>
       </li> 
       <li><%= current_provider.email %></li>
+      <li class=" p-0"><%= image_tag "logo4.jpg",width:"130" %></li>
       
     
     <% end %>

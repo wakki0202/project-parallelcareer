@@ -36,11 +36,12 @@
                   <div class="nav__wrapper">
                         <li class="nav__item h-list "><%= link_to "案件一覧" ,"/posts/index" %></li>
                          <li class="nav__item h-list "><%= link_to "よくあるご質問" ,"/tops/index#FAQ" %></li>
+                         <li class="nav__item h-mypage"><%= link_to "友人を招待する" ,"/users/invitation/new" %></li>
                         <li class="nav__item h-contact"><%= link_to "LINEでお問い合わせ" ,"https://page.line.me/892qodsr?openQrModal=true" %></li>
                       <% if provider_signed_in?  %>
                         <li class="nav__item h-mypage"><%= link_to "事業者ページ" ,"/works" %></li>
                       <% elsif user_signed_in?  %>
-                          <li class="nav__item h-mypage"><%= link_to "友人を招待する" ,"/users/invitation/new" %></li>
+                          
                           <li class="nav__item h-mypage"><%= link_to "マイページ" ,"/users/mypage/#{current_user.id}" %></li>
                           <li class="nav__item h-mypage"><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></li>
                       </div>

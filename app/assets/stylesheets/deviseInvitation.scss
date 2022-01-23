@@ -54,16 +54,16 @@ p span{
 }
 
 .inviteImages{
-  height: 250px;
+  height: 500px;
   margin-top: 30px;
   margin-bottom: 50px;
- 
+  color:black;
   .orangeBack{
     position: relative;
-    background-color: rgba(253,131,71,0.9);
+    background-color: white;
     background-size: cover;
-    height: 250px;
-    width: 70%;
+    height: 500px;
+    width: 80%;
     margin: 0 auto;
 
     p span{
