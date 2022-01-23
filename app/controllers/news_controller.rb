@@ -7,9 +7,9 @@ class NewsController < ApplicationController
     @newsnew = News.new
     @q = News.ransack(params[:q])
     @news = @q.result(distinct: true).page(params[:page]).order("created_at desc")
-    @introductionnumber = Introduction.where(work_id: current_provider.id,step: nil).count
+    @introductionnumber = current_provider.works.joins(:introductions).where(introductions: {step: nil}).count
     @introductionall = Introduction.where(step: nil).count
-    @detailnumber = Detail.where(work_id: current_provider.id,status: "未対応").count
+    @detailnumber = current_provider.works.joins(:details).where(details: {status: "未対応"}).count
     @detailnumberall = Detail.where(status: "未対応").count
   end
 
@@ -17,9 +17,9 @@ class NewsController < ApplicationController
   # GET /news/1 or /news/1.json
   def show
     @news = News.find(params[:id])
-    @introductionnumber = Introduction.where(work_id: current_provider.id,step: nil).count
+    @introductionnumber = current_provider.works.joins(:introductions).where(introductions: {step: nil}).count
     @introductionall = Introduction.where(step: nil).count
-    @detailnumber = Detail.where(work_id: current_provider.id,status: "未対応").count
+    @detailnumber = current_provider.works.joins(:details).where(details: {status: "未対応"}).count
     @detailnumberall = Detail.where(status: "未対応").count
   end
 

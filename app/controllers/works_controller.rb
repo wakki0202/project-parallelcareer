@@ -10,9 +10,9 @@ class WorksController < ApplicationController
     @q = Work.ransack(params[:q])
     @works = @q.result(distinct: true).order("created_at desc")
     if current_provider.present?
-    @introductionnumber = Introduction.where(work_id: current_provider.work_id,step: nil).count
+    @introductionnumber = current_provider.works.joins(:introductions).where(introductions: {step: nil}).count
     @introductionall = Introduction.where(step: nil).count
-    @detailnumber = Detail.where(work_id: current_provider ).count
+    @detailnumber = current_provider.works.joins(:details).where(details: {status: "未対応"}).count
     @detailnumberall = Detail.where(status: "未対応").count
     end
   end
@@ -21,10 +21,12 @@ class WorksController < ApplicationController
   def show
     @work = Work.find(params[:id])
     @provider = @work.provider 
-    @introductionnumber = Introduction.where(work_id: current_provider.id,step: nil).count
+    if current_provider.present?
+    @introductionnumber = current_provider.works.joins(:introductions).where(introductions: {step: nil}).count
     @introductionall = Introduction.where(step: nil).count
-    @detailnumber = Detail.where(work_id: current_provider.id,status: "未対応").count
-    @detailnumber = Detail.where(status: "未対応").count
+    @detailnumber = current_provider.works.joins(:details).where(details: {status: "未対応"}).count
+    @detailnumberall = Detail.where(status: "未対応").count
+    end
   end
 
   # GET /works/new

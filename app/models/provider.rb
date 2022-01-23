@@ -5,4 +5,6 @@ class Provider < ApplicationRecord
          :recoverable, :rememberable, :validatable, invite_for: 24.hours
 
         has_many :works
+        has_many :introduction, through: :works
+        has_many :detail, through: :works
 end
