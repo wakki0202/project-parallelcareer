@@ -4,6 +4,8 @@
 <div class="Backblack">
     
     <div class="inviteArea">
+      <div class="inviteFlex">
+      <div class="inviteFirst">
         <div class="invitePhrase">
               <h2>友達や同僚にも</h2>
               <h1><span>パラキャリをおすすめしてみませんか？</span></h1>
@@ -11,14 +13,8 @@
               <p>招待された方は初回報酬振込時に<span>1000円プラスで支払われます！</span></p>
         </div>
 
-        <div class="inviteImages">
-          <div class="orangeBack">
-            <p><span>伝え方の例</span></p>
-          </div>
-        </div>
-
-          <div class="formArea">
-              <h3>さっそく招待用リンクを送りましょう！</h3>
+          <div class="formArea mt-5">
+              <h3 class="h2">さっそく招待用リンクを送りましょう！</h3>
 
                   <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
                     <%= render "devise/shared/error_messages", resource: resource %>
@@ -27,7 +23,7 @@
                         <div class="text-left">招待する人のEメール</div>
                         <%= f.text_field :email,class:"inviteField" %>
                       </div>
-                    <% end -%>
+                    <% end %>
 
 
                     <div class="formSetInvite">
@@ -35,8 +31,16 @@
                     </div>
                   <% end %>
           </div>
-      </div>
-        
+        </div>
+        <div  class="inviteSecond">
+          <div class="text-center">
+            <h3>招待メールを送信後</h3>
+            <p>こんなメールが届きます！</p>
+            <div><%= image_tag "invite.jpg",class:"w-50 rounded" %></div>
+          </div>
+        </div>
+
+    </div>
 </div>
 
 </body>
