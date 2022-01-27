@@ -48,21 +48,20 @@
         <td class="border border-black text-center py-3">対応チェック</td>
         <td class="border border-black"><%= @detail.status %></td>
       </tr>
-      <%= form_with(model: [@detail], local: true ) do |form| %>
-     <tr class="border">
-     <td class="border border-black text-center py-3">対応チェック編集</td>
+      
+    <tr class="border">
+     <td class="border border-black text-center py-3">
+     対応チェック編集</td>
+
      <td class="border border-black">
+     <%= form_with(model: [@detail], local: true ) do |form| %>
+
       <div class="field">
-
-      <div>
+      
         未対応<%= form.radio_button :status, '未対応' %>
-      </div>
-
-      <div>
         対応済み<%= form.radio_button :status, '対応済み' %>
-      </div>
-
-  
+     
+    </div>
       <div class="actions">
         <%= form.submit '更新する',data: { confirm: '更新しますか？' },class: 'submit' %>
       </div>
@@ -70,6 +69,7 @@
   
       <% end %>
       </td>
+    </tr>
       
     
 

@@ -4,84 +4,102 @@
   background-image: url(talk.jpg);
   background-size: cover;   
   background-repeat: no-repeat;
+
   
 }
 
 
   .Backblack{
-    background-color: rgba(0,0,0,0.6);
     background-size: cover;
   }
   .inviteArea{
     padding-top: 200px;
     color: white;
    
+    .inviteFlex{
+      display: flex;
+    }
+
+    .inviteFirst{
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .inviteSecond{
+      width: 50%;
+      margin: 0 auto;
+    }
   
   .invitePhrase{
     text-align: center;
+    margin-bottom: 30px;
     p{
-      font-size: 18px;
+      font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+      font-size: 15px;
       
-      padding:5px;
+      padding:3px;
     }
+  }
+
+  input#user_email{
+    color: black;
   }
 
   h1{
     font-weight: 600;
     padding-bottom: 30px;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 
   h2{
     font-weight: 600;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 
   h1 span{
     border-bottom: 5px solid #ff5a3d;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 }
 p span{
   font-weight: 600;
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
 }
 
 .inviteImages{
-  height: 300px;
+  background-color: white;
+  width: 80%;
+  margin: auto;
   margin-top: 30px;
   margin-bottom: 50px;
  
-  .orangeBack{
-    position: relative;
-     background-color: #fff;
-    background-size: cover;
-    height: 300px;
-    width: 70%;
-    margin: 0 auto;
+  color:black;
 
-    p span{
-      position: absolute;
-      color:white;
-      background-color: #ff5a3d;
-      padding: 5px;
-      margin: 20px;
-    }
-  }
+
+
+  
   
 }
 
 .formArea{
+  
+
   h3{
     text-align: center;
     font-weight: 600;
     padding-bottom: 20px;
+    margin-top: 60px;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 
   .formSet{
-    width: 40%;
+    width: 70%;
     margin-bottom: -20px;
   }
 }
 
 .formSetInvite{
-  width:40%;
+  width:70%;
   margin: 0 auto;
 
 
@@ -97,94 +115,106 @@ p span{
 
 @media (max-width: 709px) {
 
-    .deviseInvite{
-    background-image: url(talk.jpg);
-  }
+     .deviseInvite{
+  background-image: url(talk.jpg);
+  background-size: cover;   
+  background-repeat: no-repeat;
+      
+}
+
+
   .Backblack{
-    background-color: rgba(0,0,0,0.6);
     background-size: cover;
   }
   .inviteArea{
-    width: 90%;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    margin: 0 auto;
-    background-color: white;
-    margin-top: 200px;
-    margin-bottom: 150px;
-    border-radius: 0.75rem;
+    padding-top: 200px;
+    color: white;
+   
+    .inviteFlex{
+      display: flex;
+      flex-direction: column;
+    }
   
   .invitePhrase{
     text-align: center;
+    margin-bottom: 30px;
     p{
-      width:80%;
-      margin: 0 auto;
-      padding-bottom: 15px;
-      text-align: left;
+      font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      
+      padding:3px;
     }
+  }
+
+  input#user_email{
+    color: black;
   }
 
   h1{
     font-weight: 600;
-    font-size: 18px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 
   h2{
-    font-size: 18px;
     font-weight: 600;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 
   h1 span{
     border-bottom: 5px solid #ff5a3d;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 }
 p span{
-  font-size: 12px;
   font-weight: 600;
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
 }
 
 .inviteImages{
-  height: 300px;
-  margin-top: 50px;
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
   margin-bottom: 50px;
-  background-size: cover;   
-  background-repeat: no-repeat;
-  .orangeBack{
-    position: relative;
-     background-color: rgba(253,131,71,0.7);
-    background-size: cover;
-    height: 300px;
+ 
+  color:black;
 
-    p span{
-      position: absolute;
-      color:white;
-      background-color: #ff5a3d;
-      padding: 5px;
-      margin: 20px;
-    }
-  }
+
+
+  
   
 }
 
-.formSet{
-  width:100%;
+.formArea{
+  
+
+  h3{
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 20px;
+    margin-top: 60px;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  }
+
+  .formSet{
+    width: 70%;
+    margin-bottom: -20px;
+  }
 }
+
+.formSetInvite{
+  width:70%;
+  margin: 0 auto;
+
 
 .text-left{
   padding-bottom: 8px;
 }
 .button{
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+}
 }
 
-.formArea{
-  h3{
-    text-align: center;
-    font-size: 16px;
-    font-weight: 600;
-    padding-bottom: 20px;
-  }
-}
-
-}

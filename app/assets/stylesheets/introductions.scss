@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+
+
 .toTop{
   a{
     color: black;
@@ -9,8 +11,8 @@
 }
 
 .introduction-new{
-
-    margin-top: 58px ;
+font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+    margin-top: 100px ;
     background-image: linear-gradient(to left, var(--tw-gradient-stops));
     --tw-gradient-from: #ff3434;
     --tw-gradient-stops: var(--tw-gradient-from),
@@ -19,10 +21,10 @@
 
 
 h2{
+  color: white;
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-  color: white;
 }
 
 p{
@@ -40,14 +42,14 @@ form {
 }
 
 .feedback-input {
-  color:white;
+  color:black;
   font-family: Helvetica, Arial, sans-serif;
   font-weight:500;
   font-size: 18px;
   border-radius: 5px;
   line-height: 22px;
-  background-color: transparent;
-  border:2px solid white;
+  border:0px solid rgb(41, 41, 41);
+  background-color: rgb(252, 252, 252);
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 20px;
@@ -58,11 +60,11 @@ form {
 }
 
 ::placeholder {
-  color: whitesmoke;
+  color: rgb(145, 143, 143);
 }
 /* 旧Edge対応 */
 ::-ms-input-placeholder {
-  color: whitesmoke;
+  color: rgb(168, 168, 168);
 }
 /* IE対応 */
 :-ms-input-placeholder {
@@ -76,14 +78,13 @@ textarea {
   height: 150px;
   line-height: 150%;
   resize:vertical;
-  color:white;
+  color:rgb(0, 0, 0);
   font-family: Helvetica, Arial, sans-serif;
   font-weight:500;
   font-size: 18px;
   border-radius: 5px;
   line-height: 22px;
-  background-color: transparent;
-  border:2px solid white;
+  border:2px solid black;
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 15px;
@@ -113,13 +114,16 @@ textarea {
 }
 
 .introduction-index{
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   display: flex;
   width: 100%;
   padding-top: 100px;
   
   .introductions{
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     width: 80%;
     margin: 0 auto;
+    
   }
 
   .main_title{
@@ -127,14 +131,18 @@ textarea {
     padding-bottom: 20px;
   }
 
-  
+  h1{
+    font-weight: bold;
+  }
 
   .posts_name{
     background-color: #82cddd;
+    font-weight: bold;
   }
 
   .progressing{
     background-color: #f18681;
+    font-weight: bold;
   }
 
   table{
@@ -143,6 +151,10 @@ textarea {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 80px;
+  }
+
+  .rounded{
+    border-radius: 1rem;
   }
   
   .posts{
@@ -178,6 +190,7 @@ textarea {
 
   .post_progress_th{
     background: #F0D0D0;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 
   .info_title{
@@ -206,17 +219,21 @@ textarea {
 }
 
 .introductionlink{
-  
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     color: black;
+    text-decoration: none;
   
 }
 
-.check{
-  font-size: 18px;
+.checkIntro{
+  font-size: 16px;
   color: white;
   margin-bottom: 20px;
 }
 
+select#introduction_step{
+  width: 20%;
+}
 
 @media (max-width: 709px) {
 

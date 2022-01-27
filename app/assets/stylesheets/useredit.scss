@@ -56,6 +56,13 @@ select#kinds{
   margin-left: 40px;
 }
 
+select{
+  border:gray 2px solid;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+}
+
 .sideEditMain{
    position: relative;
   z-index: 1;
@@ -110,13 +117,11 @@ select#kinds{
     text-align: left;
     padding-top: 20px;
     padding-bottom: 20px;
-
   }
 
   .caution2{
     color: red;
     text-align: left;
-    padding-bottom: 60px;
   }
 }
 
@@ -254,7 +259,6 @@ input {
   .caution2{
     color: red;
     text-align: left;
-    padding-bottom: 60px;
   }
 }
 

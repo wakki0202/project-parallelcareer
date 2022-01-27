@@ -17,18 +17,18 @@
       <div class="providerTable">
       <div class="search-form">
         <%= search_form_for @q, url: introductions_index_path do |f| %>
-            <%= f.label :name, "進捗度絞り込み" %>
-            <%= f.select :step_cont, [['口コミ確認完了'], ['お客様と繋がりませんでした'], ['断られました'], ['検討中'], ['進行中'], ['契約成立'], ['報酬振込完了']], { include_blank: 'すべて' }, { class: "form" } %>
-            <%= f.submit "検索" %>
+            <%= f.label :name, "進捗度絞り込み",class:"fs-4" %>
+            <%= f.select :step_cont, [['口コミ確認完了'], ['お客様と繋がりませんでした'], ['断られました'], ['検討中'], ['進行中'], ['契約成立'], ['報酬振込完了']], { include_blank: 'すべて' }, { class: "form rounded border border-dark fs-4 w-25" } %>
+            <%= f.submit "検索",id:"btn",class:"fs-4 " %>
         <% end %>
         </div>
         <div class="search-form">
         <%= search_form_for @q, url: introductions_index_path do |f| %>
-            <%= f.label :name, "キーワード" %>
-            <%= f.search_field :name_or_user_name_or_work_title_cont %>
+            <%= f.label :name, "キーワード",class:"fs-4" %>
+            <%= f.search_field :name_or_user_name_or_work_title_cont,class:"rounded border border-dark fs-4" %>
             
 
-            <%= f.submit "検索" %>
+            <%= f.submit "検索",id:"btn",class:"fs-4 " %>
         <% end %>
       </div>
 
@@ -42,17 +42,31 @@
       
       
       <% @introductions.each do |introduction| %> 
-      <tr class="border text-left">
-      <td class="border border-black"><%= introduction.work.title %></td> 
-      <td class="border border-black"><%= introduction.user.name %></td>
-      <td class="border border-black"><%= introduction.name %></td>
-      <td class=""><%= l introduction.created_at %></td>
-      <% if introduction.step == nil %>
-        <td class="border border-black">口コミ完了</td>
-        <% else %>
-        <td class="border border-black"><%= introduction.step %></td>
+        <% if current_provider.email == "tanachu_78@yahoo.co.jp" %>
+        <tr class="border text-left">
+        <td class="border border-black"><%= introduction.work.title %></td> 
+        <td class="border border-black"><%= introduction.user.name %></td>
+        <td class="border border-black"><%= introduction.name %></td>
+        <td class=""><%= l introduction.created_at %></td>
+        <% if introduction.step == nil %>
+          <td class="border border-black">口コミ完了</td>
+          <% else %>
+          <td class="border border-black"><%= introduction.step %></td>
         <% end %>
-        <td class="morebtn  text-center "><a href="<%= introduction.id %>" class="toShow text-decoration-none">詳細</a></td></tr>
+          <td class="morebtn  text-center "><a href="<%= introduction.id %>" class="toShow text-decoration-none">詳細</a></td></tr>
+        <% elsif introduction.work.provider_id == current_provider.id %>
+        <tr class="border text-left">
+        <td class="border border-black"><%= introduction.work.title %></td> 
+        <td class="border border-black"><%= introduction.user.name %></td>
+        <td class="border border-black"><%= introduction.name %></td>
+        <td class=""><%= l introduction.created_at %></td>
+        <% if introduction.step == nil %>
+          <td class="border border-black">口コミ完了</td>
+          <% else %>
+          <td class="border border-black"><%= introduction.step %></td>
+        <% end %>
+          <td class="morebtn  text-center "><a href="<%= introduction.id %>" class="toShow text-decoration-none">詳細</a></td></tr>
+        <% end %>
       <% end %>
   
       

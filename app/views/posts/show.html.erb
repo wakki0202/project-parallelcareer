@@ -1,15 +1,17 @@
 <body class="post-show">
   <%= render '/layouts/header' %>
 
+<div class="imageList">
 <% if @work.images.present? %>
-<ul class="carousel w-50 m-auto">
+<ul class="slider text-center">
   <% @work.images.each do |img| %>
-    <li class="">
-      <%= image_tag img.url   %>
+    <li class="text-center">
+      <%= image_tag img.url ,class:"m-auto  text-center"   %>
     </li>
   <% end %>
 </ul>
 <% end %>
+</div>
 
  
   <div class="postContent ">
@@ -53,18 +55,31 @@
     </div>
 
   </div>
+<div class="flex w-75 m-auto mt-5">
 
-<a href="/works/<%= @work.id %>/introductions/new">
-  <div class="action">
-    口コミをする
+
+  <div class="action p-3 mt-4">
+  <a href="/works/<%= @work.id %>/details/new" class="text-white text-decoration-none py-2">
+    掲載主に詳細を聞く
+    </a>
   </div>
-</a>
+
+  <div class="action p-3 mt-4">
+  <a href="/works/<%= @work.id %>/introductions/new" class="text-white text-decoration-none py-2">
+    口コミをする
+    </a>
+  </div>
+
+</div>
   </div>
   </div>
   <script>
-  $(".js-slider").slick({
-  dots: true,
-  speed: 500
+$(function() {
+  $('.carousel').slick({
+    arrows: true,
+    infinite: false,
+    dots: true,
+  });
 });
   </script>
 

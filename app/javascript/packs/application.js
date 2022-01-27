@@ -14,6 +14,12 @@ import "../stylesheets/application"
 import 'slick-carousel'
 
 
-
+$(function () {
+  $('.carousel').slick({
+    arrows: true,
+    infinite: false,
+    dots: true,
+  });
+});
 
  

@@ -52,9 +52,6 @@ li .toLogout:hover{
         
       }
   
-    .side-contents{
-
-    }
 
     .back-toppage{
       margin-bottom: 100px;
@@ -170,7 +167,30 @@ li .toLogout:hover{
       text-align: right;
       margin-right: 25px;
       
+      #btn{
+        background-color: #ff6e35;
+        color: white;
+        border-radius: 0.5rem;
+        border:1px solid rgb(192, 191, 191);
+      }
 
+    }
+
+    .postContent{
+      padding-top: 100px;
+      width:60%; 
+      margin:0 auto;
+    }
+
+  .postContent  h3{
+      color:#fa4c4c ;
+      border-bottom:1px solid #fa4c4c;
+      font-size: 20px;
+    }
+
+    .postContent p{
+      line-height: normal;
+      font-size: 18px;
     }
     }
 
@@ -179,8 +199,6 @@ li .toLogout:hover{
       margin: 0 auto;
       margin-top: 20px;
 
-      td{
-      }
       
     background-color: white;
     }
@@ -301,7 +319,7 @@ li .toLogout:hover{
  input {
   font-family: "Roboto", sans-serif;
   outline: 0;
-  height: 200px;
+  height: 100px;
   background: #f2f2f2;
   width: 100%;
   border: 0;

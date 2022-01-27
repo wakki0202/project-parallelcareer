@@ -14,7 +14,7 @@ class Users::SessionsController < Devise::SessionsController
     if user.nil?
       # メールアドレスに該当がない場合は、新規登録画面に遷移
       #   ユーザー登録されていない旨のフラッシュメッセージを仕込むならこのセクション
-      redirect_to new_user_registration_path
+      set_flash_message :notice, :errors
     else
       # パスワードの確認と、deleted_atにデータたが入っていないか
       #   deleted_atに日付が入っていれば再度ログイン画面へ遷移させる。
@@ -30,7 +30,7 @@ class Users::SessionsController < Devise::SessionsController
         # ログイン失敗時の遷移
         # ---
         #   ログイン失敗のフラッシュメッセージを仕込むならこのセクション
-        set_flash_message :notice, :destroyed
+        set_flash_message :notice, :errors
         redirect_to new_user_session_path
       end
     end

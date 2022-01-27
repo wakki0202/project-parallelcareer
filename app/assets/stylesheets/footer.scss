@@ -1,10 +1,12 @@
 #footer {
   position: relative;
   color: WHITE;
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
 }
 #footer a {
   text-decoration: none;
   color: WHITE;
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
 }
 #footer a:hover {
   text-decoration: underline;
@@ -42,11 +44,9 @@
     text-decoration: none;
     color: #fff;
     background-color: #374151;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 }
-#footer li {
-}
-
 .footerlogo{
   width: 50%;
 
@@ -219,6 +219,9 @@
     text-align: center;
     font-size: 12px;
   }
+  #footer .primary {
+ display: none;
+}
 }
 
 body {

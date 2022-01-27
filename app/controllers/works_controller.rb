@@ -5,17 +5,28 @@ class WorksController < ApplicationController
   # GET /works or /works.json
   def index
     @works = Work.all.page(params[:page])
+    @details = Detail.all
     @worknew = Work.new
     @q = Work.ransack(params[:q])
     @works = @q.result(distinct: true).order("created_at desc")
-    
-    @introductionnumber = Introduction.all.count
+    if current_provider.present?
+    @introductionnumber = current_provider.works.joins(:introductions).where(introductions: {step: nil}).count
+    @introductionall = Introduction.where(step: nil).count
+    @detailnumber = current_provider.works.joins(:details).where(details: {status: "未対応"}).count
+    @detailnumberall = Detail.where(status: "未対応").count
+    end
   end
 
   # GET /works/1 or /works/1.json
   def show
     @work = Work.find(params[:id])
     @provider = @work.provider 
+    if current_provider.present?
+    @introductionnumber = current_provider.works.joins(:introductions).where(introductions: {step: nil}).count
+    @introductionall = Introduction.where(step: nil).count
+    @detailnumber = current_provider.works.joins(:details).where(details: {status: "未対応"}).count
+    @detailnumberall = Detail.where(status: "未対応").count
+    end
   end
 
   # GET /works/new
@@ -45,6 +56,7 @@ class WorksController < ApplicationController
 
   # PATCH/PUT /works/1 or /works/1.json
   def update
+     @work = Work.find(params[:id])
     respond_to do |format|
       if @work.update(work_params)
         format.html { redirect_to @work, notice: "work was successfully updated." }

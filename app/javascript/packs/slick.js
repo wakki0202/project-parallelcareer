@@ -1,8 +1,10 @@
-
-$(document).on('turbolinks:load', function () {
-  $('.carousel').slick({
-    arrows: true,
-    infinite: false,
-    dots: true,
+document.addEventListener("turbolinks:load", function () {
+$(function () {
+  $('.slider').slick({
+    arrows: true,  //ボタン非表示
+    dots: true, 
+    autoplay: false, //自動再生
+    autoplaySpeed: 4000, //再生スピード
   });
+});
 });

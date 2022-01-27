@@ -3,10 +3,20 @@
 <div class="login-page mb-5">
   <div class="formSession  m-auto mt-5">
   <p class="alert"><%= alert %></p>
-  <h2 class="h1 font-weight-bold">ログイン</h2>
+  <h2 class="h1 font-weight-bold">ユーザーログイン</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <form class="login-form  m-auto">
+
+    <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
     <div class="formSet  m-auto">
       <div class="text-left">メールアドレス</div>
@@ -14,7 +24,7 @@
       
     </div>
 
-    <div class="formSet ">
+    <div class="formSet mt-4">
       <div class="text-left">パスワード</div>
       <%= f.password_field :password, autocomplete: "current-password", placeholder: ' Password' %>
 
@@ -26,13 +36,12 @@
 
       <% if devise_mapping.rememberable? %>
           
-            <p><%= f.check_box :remember_me,class:"checkbutton" %>ログインを記憶する</p>
+            <p class="checkbutton"><%= f.check_box :remember_me,class:"check" %>ログインを記憶する</p>
         <% end %>
 
       <% end %>
   
       <p class="message"><a href="/users/sign_up">まだ登録されてない方はこちら</a></p>
-      <p class="message"><%= link_to "パスワードをお忘れの方はこちら", new_password_path(resource_name) %></p>
     </form>
   </div>
 </div>

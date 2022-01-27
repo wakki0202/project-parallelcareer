@@ -17,10 +17,10 @@
       <div>
         <%= form_with(model: [@introduction], local: true ) do |form| %>
             
-          <div class="field text-right h5">
+          <div class="field text-right h5 ">
               
               
-                <%= form.select :step, [['口コミ確認完了'], ['お客様と繋がりませんでした'], ['断られました'], ['検討中'], ['進行中'], ['契約成立'], ['報酬振込完了']] %>
+                <%= form.select :step, [['口コミ確認完了'], ['お客様と繋がりませんでした'], ['断られました'], ['検討中'], ['進行中'], ['契約成立'], ['報酬振込完了']],class:"introductionSelect" %>
               
 
             

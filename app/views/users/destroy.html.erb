@@ -8,8 +8,10 @@
              
 
                   <h2 id="bankEdit">パラキャリの退会をご希望の方へ</h2>
-                  <h4 class="caution1">注：退会手続きは即時反映されます。</h4>
-                  <h4 class="caution2">注：一度退会するとアカウントの復活はできません。</h4>
+                  <ul>
+                  <li class="caution1">※退会手続きは即時反映されます。</li>
+                  <li class="caution2">※一度退会するとアカウントの復活はできません。</li>
+                  </ul>
 
 
                     <%= button_to '退会する',user_registration_path, method: :delete, data: { confirm: '一度退会するとアカウントの復活はできません。よろしいですか？' },class:"button" %>
