@@ -44,19 +44,19 @@
        <% @details.each do |detail| %> 
        <% if current_provider.email == "tanachu_78@yahoo.co.jp" %>
       <tr class="text-left">
-        <td style="width:60%" class="border border-black"><%= detail.work.title %></td>
-        <td class="border border-black"><%= detail.user.name %></td>
-        <td class="border border-black"><%= l detail.created_at %></td>
-        <td class="border border-black"><%= detail.status %></td>
-        <td class="border border-black text-center"><%= link_to '詳細', detail,class:"toShow text-decoration-none px-3 py-1  " %></td>
+        <td style="width:40%" class="border border-black"><%= detail.work.title %></td>
+        <td style="width:10%" class="border border-black"><%= detail.user.name %></td>
+        <td style="width:25%" class="border border-black"><%= l detail.created_at %></td>
+        <td style="width:10%" class="border border-black"><%= detail.status %></td>
+        <td style="width:8%" class="border border-black text-center"><%= link_to '詳細', detail,class:"toShow text-decoration-none px-3 py-1  " %></td>
       </tr>
       <% elsif detail.work.provider_id == current_provider.id %>
       <tr class="text-left">
-        <td style="width:60%" class="border border-black"><%= detail.work.title %></td>
-        <td class="border border-black"><%= detail.user.name %></td>
-        <td class="border border-black"><%= l detail.created_at %></td>
-        <td class="border border-black"><%= detail.status %></td>
-        <td class="border border-black text-center"><%= link_to '詳細', detail,class:"toShow text-decoration-none px-3 py-1  " %></td>
+        <td style="width:40%" class="border border-black"><%= detail.work.title %></td>
+        <td style="width:10%" class="border border-black"><%= detail.user.name %></td>
+        <td style="width:25%" class="border border-black"><%= l detail.created_at %></td>
+        <td style="width:10%" class="border border-black"><%= detail.status %></td>
+        <td style="width:8%" class="border border-black text-center"><%= link_to '詳細', detail,class:"toShow text-decoration-none px-3 py-1  " %></td>
       </tr>
     <% end %>
     <% end %>
