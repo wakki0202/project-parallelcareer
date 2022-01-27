@@ -44,7 +44,7 @@
        <% @details.each do |detail| %> 
        <% if current_provider.email == "tanachu_78@yahoo.co.jp" %>
       <tr class="text-left">
-        <td class="border border-black"><%= detail.work.title %></td>
+        <td style="width:60%" class="border border-black"><%= detail.work.title %></td>
         <td class="border border-black"><%= detail.user.name %></td>
         <td class="border border-black"><%= l detail.created_at %></td>
         <td class="border border-black"><%= detail.status %></td>
@@ -52,7 +52,7 @@
       </tr>
       <% elsif detail.work.provider_id == current_provider.id %>
       <tr class="text-left">
-        <td class="border border-black"><%= detail.work.title %></td>
+        <td style="width:60%" class="border border-black"><%= detail.work.title %></td>
         <td class="border border-black"><%= detail.user.name %></td>
         <td class="border border-black"><%= l detail.created_at %></td>
         <td class="border border-black"><%= detail.status %></td>
