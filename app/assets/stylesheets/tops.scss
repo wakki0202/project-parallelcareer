@@ -79,10 +79,8 @@
       }
     }
     .devices {
-      padding-top: 40px;
-      padding-bottom: 60px;
-      display: flex;
-      justify-content: center;
+      padding-top: 80px;
+      text-align: center;
       .iPhone {
         width: 20%;
         height: 50%;
@@ -287,13 +285,17 @@
 
     a.toWorks {
       text-decoration: none !important;
-      background-color: #fff;
+      background-color: #eb630d;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      color:white;
     }
 
     .stepFooter {
       padding-top: 25px;
-      font-size: 1em;
+      font-size: 1.25em;
       text-align: center;
+      font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     }
   }
 
