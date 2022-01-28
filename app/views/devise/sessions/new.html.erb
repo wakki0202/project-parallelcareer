@@ -7,15 +7,10 @@
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <form class="login-form  m-auto">
-
+  <p class="notice"><%= notice %></p>
     <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    
   <% end %>
 
     <div class="formSet  m-auto">

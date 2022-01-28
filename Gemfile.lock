@@ -103,6 +103,7 @@ GEM
       warden (~> 1.2.3)
     devise-i18n (1.10.1)
       devise (>= 4.8.0)
+    devise-i18n-views (0.3.7)
     devise_invitable (2.0.6)
       actionmailer (>= 5.0)
       devise (>= 4.6)
@@ -113,6 +114,7 @@ GEM
     erubi (1.10.0)
     excon (0.90.0)
     execjs (2.8.1)
+    ffi (1.15.5)
     ffi (1.15.5-x64-mingw32)
     fog-aws (3.12.0)
       fog-core (~> 2.1)
@@ -176,13 +178,20 @@ GEM
     mime-types-data (3.2022.0105)
     mini_magick (4.11.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.7.1)
     minitest (5.15.0)
     msgpack (1.4.2)
     multi_json (1.15.0)
     nio4r (2.5.8)
+    nokogiri (1.13.1)
+      mini_portile2 (~> 2.7.0)
+      racc (~> 1.4)
     nokogiri (1.13.1-x64-mingw32)
       racc (~> 1.4)
+    nokogiri (1.13.1-x86_64-darwin)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.2.3)
     pg (1.2.3-x64-mingw32)
     pry (0.14.1)
       coderay (~> 1.1)
@@ -258,6 +267,8 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sassc (2.4.0-x64-mingw32)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -324,6 +335,7 @@ DEPENDENCIES
   carrierwave (~> 2.0)
   devise
   devise-i18n
+  devise-i18n-views
   devise_invitable
   dotenv-rails
   fog-aws

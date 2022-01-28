@@ -1,13 +1,17 @@
 
 
 <body class="devise">
-<p class="alert"><%= alert %></p>
 <div class="login-page">
   <div class="formSession">
   <h2>ログイン</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <form class="login-form">
+    <p class="notice"><%= alert %></p>
+    <% if @provider.errors.any? %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    
+  <% end %>
 
     <div class="formSet">
     <div class="text-left">メールアドレス</div>

@@ -58,6 +58,7 @@ gem 'devise'
 
 #devise日本語化
 gem 'devise-i18n'
+gem 'devise-i18n-views'
 
 #友人招待
 gem 'devise_invitable'
