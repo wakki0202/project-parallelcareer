@@ -48,10 +48,10 @@
   // ---------ここからメイン------------------
   .top-bg {
     position: relative;
-    margin-bottom: 150px;
     background-image: image-url("FV_bg.png");
     background-size: cover;
     background-repeat: no-repeat;
+    padding-bottom: 20px;
     width: 100%;
     height: 100%;
     .title-p {
@@ -101,7 +101,10 @@
 
   // --------ここから動画---------------------------------
   .movie {
-    padding: 0 15%;
+    padding-top: 100px;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: #fceabb;
     h1 {
       margin: 0 auto 22px;
       text-align: center;
@@ -111,10 +114,8 @@
     }
     .movie-frame {
       margin: auto;
-      width: 100%;
+      width: 80%;
       height: 70vh;
-      border: 1px solid black;
-      margin-bottom: 150px;
     }
   }
 
@@ -518,6 +519,7 @@
       text-align: center;
       padding-bottom: 30px;
       font-size: 20px;
+      font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     }
     .footer-list {
       text-align: center;
@@ -561,7 +563,6 @@
   // ---------ここからメイン------------------
   .top-bg {
     position: relative;
-    margin-bottom: 150px;
     background-image: image-url("FV_bg.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -576,6 +577,7 @@
       padding-left: 10%;
       display: flex;
       flex-direction: column;
+      font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
       li {
         list-style: none;
         padding: 0 0;
@@ -587,6 +589,7 @@
         line-height: 1.3;
         letter-spacing: 0.15rem;
         color: #484c4c;
+        font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
       }
       .sub-title {
         width: 80%;
@@ -605,17 +608,22 @@
 
   // --------ここから動画---------------------------------
   .movie {
-    padding: 0 15%;
+    
+    background-color: #fceabb;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+
     h1 {
       font-size: 2rem;
       text-align: center;
+      padding-bottom: 10px;
+      font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     }
     .movie-frame {
       margin: auto;
       width: 100%;
-      height: 70vh;
-      border: 1px solid black;
-      margin-bottom: 150px;
     }
   }
   // -----------ここからメリット----------------------
@@ -623,6 +631,7 @@
     .subtitle {
       text-align: center;
       padding: 0 15%;
+      font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     }
   }
   .merit {
@@ -651,12 +660,14 @@
       // color: rgb(255, 84, 16);
       text-align: left;
       margin-bottom: 20px;
+      font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     }
     p {
       font-size: 1.5rem;
       letter-spacing: 0.15rem;
       line-height: 1.7;
       text-align: left;
+      font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     }
   }
   // --------ここから案件一覧---------------------------
@@ -711,6 +722,7 @@
     font-size: 20px;
     letter-spacing: 0.05rem;
     margin-top: 15px;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     line-height: 1.1;
   }
 
@@ -722,6 +734,7 @@
     text-align: left;
     & p {
       font-size: 14px;
+      font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     }
   }
 
@@ -774,6 +787,7 @@
   }
   .step-title {
     font-weight: bold;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
   .step-content {
     margin-top: 10px;
@@ -812,6 +826,7 @@
     h4 {
       text-align: center;
       font-weight: bold;
+      font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     }
 
     span {
@@ -819,6 +834,7 @@
       font-weight: normal;
       padding: 3px;
       background-color: #ff9b3d;
+      font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     }
 
     .stepFooter {
@@ -856,6 +872,7 @@
     background-color: #f5f5f5;
     padding: 2em;
     margin-bottom: 30px;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 
   .A {
