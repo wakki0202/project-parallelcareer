@@ -5,6 +5,8 @@ class Introduction < ApplicationRecord
 
 has_one    :master,  through: :child 
 
+validates :permission, presence: true
+
   def self.search(search)
       return Introduction.all unless search
       Introduction.where(['name LIKE ?', "%#{search}%"])

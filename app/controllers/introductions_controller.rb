@@ -41,7 +41,7 @@ class IntroductionsController < ApplicationController
           redirect_to introductions_complete_path
       else
           redirect_back(fallback_location: works_path)  #同上
-          flash.now.alert = '入力に誤りがあります。入力必須項目を確認して下さい。'
+          flash[:alert] = "※連絡がいくことをお伝えください"
       end
     end
   
