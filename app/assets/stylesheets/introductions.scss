@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-
+@media (min-width: 710px) {
 .toTop{
   a{
     color: black;
@@ -146,11 +146,14 @@ textarea {
   }
 
   table{
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 80%;
+    
+    border-spacing:5px 0;
+    border-collapse: separate;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 80px;
+    border-radius: 6px;
+    
   }
 
   .rounded{
@@ -166,12 +169,28 @@ textarea {
     border-bottom: solid 2px #d3d3d3;
     cursor: pointer;
   }
+  tr:nth-child(even) {
+	background: #eee;
+}
+
+#heading{
+  background-color: #ff6e35;
+  color: white;
+  font-size: 15px;
+  border:1px solid #484c4c;
+}
 
   table th,table td{
     text-align: center;
-    width: 25%;
     padding: 15px 0;
     line-height: 1;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  }
+  table th{
+    border-radius: 0.5rem 0.5rem 0  0;
+  }
+  table tr:last-child td{
+    border-radius:0  0 0.5rem 0.5rem ;
   }
 
   table td{
@@ -238,9 +257,98 @@ select#introduction_step{
   width: 20%;
 }
 
+}
+
+
 @media (max-width: 709px) {
 
 .introduction-new form { 
   width:80%; margin:50px auto; 
+}
+
+.introduction-index{
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  display: flex;
+  width: 100%;
+  padding-top: 100px;
+  
+  .introductions{
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+    width: 95%;
+    margin: 0 auto;
+    
+  }
+
+  .main_title{
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  h1{
+    font-weight: bold;
+  }
+
+  .posts_name{
+    background-color: #82cddd;
+    font-weight: bold;
+  }
+
+  .progressing{
+    background-color: #f18681;
+    font-weight: bold;
+  }
+
+  table{
+    
+    border-spacing:3px 0;
+    border-collapse: separate;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    border-radius: 6px;
+    
+  }
+
+  .rounded{
+    border-radius: 1rem;
+  }
+  
+  .posts{
+    border-bottom: solid 2px white;
+    cursor: pointer;
+  }
+
+  .infos{
+    border-bottom: solid 2px #d3d3d3;
+    cursor: pointer;
+  }
+  tr:nth-child(even) {
+	background: #eee;
+}
+
+#heading{
+  background-color: #ff6e35;
+  color: white;
+  font-size: 12px;
+  border:1px solid #484c4c;
+}
+
+  table th,table td{
+    text-align: center;
+    padding: 15px 0;
+    line-height: 1;
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  }
+  table th{
+    border-radius: 0.5rem 0.5rem 0  0;
+  }
+  table tr:last-child td{
+    border-radius:0  0 0.5rem 0.5rem ;
+  }
+
+  table td{
+    font-weight: 550;
+    font-size: 12px;
+  }
 }
 }
