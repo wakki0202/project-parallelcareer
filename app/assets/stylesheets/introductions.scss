@@ -189,6 +189,9 @@ textarea {
   table th{
     border-radius: 0.5rem 0.5rem 0  0;
   }
+  .workNameth{
+    width: 30%;
+  }
   table tr:last-child td{
     border-radius:0  0 0.5rem 0.5rem ;
   }
@@ -201,6 +204,12 @@ textarea {
   table td a:hover{
     background: none;
     color: black;
+  }
+
+  #textLimit{
+    white-space: nowrap;  
+	overflow: hidden;  
+	text-overflow: ellipsis;  
   }
 
   .post_title_th{
@@ -351,4 +360,6 @@ select#introduction_step{
     font-size: 12px;
   }
 }
+
+
 }

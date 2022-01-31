@@ -5,9 +5,9 @@
     <table class="table userTable  ">
     <thead>
       <tr id="heading" class="border text-left heading">
-      <th class="border ">案件名</th>
-      <th class="border ">口コミ内容</th>
-      <th class="border ">進捗状況</th>
+      <th id="workNameth" class="border ">案件名</th>
+      <th id="" class="border ">口コミ内容</th>
+      <th id="" class="border ">進捗状況</th>
       
       <th class="border "></th></tr>
     </thead>
@@ -16,8 +16,8 @@
       <% @introductions.each do |introduction| %> 
        <% if introduction.user_id == current_user.id %>
         <tr class="border text-left">
-        <td  class="border "><%= introduction.work.title %></td> 
-        <td  class="border "><%= introduction.contents %></td>
+        <td id="textLimit" class="border "><%= introduction.work.title %></td> 
+        <td id="textLimit"  class="border "><%= introduction.contents %></td>
         <% if introduction.step == nil %>
           <td  class="border ">口コミ完了</td>
           <% else %>
