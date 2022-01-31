@@ -217,7 +217,12 @@
       transform: translate(0, 100%);
       transition: transform 0.3s, opacity;
     }
-    .card:hover {
+    
+  }
+}
+@media (min-width: 768.99px) { 
+  .post-main {
+.card:hover {
       transform: translate(0, -15px);
     }
     .card:hover::before {
@@ -226,7 +231,6 @@
     }
   }
 }
-
 
 @media (max-width: 768.98px) { 
 .userMypage .sidebar_main .sidebar{
