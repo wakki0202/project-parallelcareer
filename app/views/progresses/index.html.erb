@@ -47,7 +47,8 @@
 <% @introductions.each do |introduction| %> 
   <% if introduction.user_id == current_user.id %>
     <ul>
-      <li class="border progCard m-auto">
+    <li class="border progCard m-auto">
+      <a href="/progresses/<%= introduction.id %>" class="text-decoration-none text-black">
       <div class="fs-3 fw-bold pb-4">案件名:<%= introduction.work.title %></div>
       <div class="fs-3 fw-bold pb-5">口コミ内容:<%= introduction.contents %></div>
       <div><% if introduction.step == nil %>
@@ -55,6 +56,7 @@
           <% else %>
           <td  class="border text-red"><span><%= introduction.step %></span></td>
         <% end %></div>
+        </a>
       </li>
     </ul>
   <% end %>
