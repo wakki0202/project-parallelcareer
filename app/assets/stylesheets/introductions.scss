@@ -4,6 +4,10 @@
 
 
 @media (min-width: 710px) {
+
+  .SMAHOdesgin{
+    display: none;
+  }
 .toTop{
   a{
     color: black;
@@ -277,6 +281,10 @@ select#introduction_step{
 
 @media (max-width: 709px) {
 
+  .PCdesign{
+    display: none;
+  }
+
 .introduction-new form { 
   width:80%; margin:50px auto; 
 }
@@ -301,6 +309,10 @@ select#introduction_step{
 
   h1{
     font-weight: bold;
+  }
+
+  p{
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   }
 
   .posts_name{
@@ -389,5 +401,7 @@ padding-right: 2rem;
     border-radius: 0.5rem;
   }
 }
+
+
 
 }
