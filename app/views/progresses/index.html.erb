@@ -2,39 +2,56 @@
 <div class="introduction-index w-full ">
   <div class="introductions">
   <h1>進捗状況確認表</h1>
+  <div class="table-scroll">
     <table class="table userTable  ">
     <thead>
       <tr id="heading" class="border text-left heading">
-      <th id="workNameth" class="border ">案件名</th>
+      <th id="workNameth" class="border w-25">案件名</th>
       <th id="" class="border ">口コミ内容</th>
-      <th id="" class="border ">進捗状況</th>
+      <th id="steptd" class="border ">進捗状況</th>
       
-      <th class="border "></th></tr>
+      <th id="pctd" class="border "></th></tr>
     </thead>
       
       <tbody class="table-striped">
       <% @introductions.each do |introduction| %> 
        <% if introduction.user_id == current_user.id %>
         <tr class="border text-left">
-        <td id="textLimit" class="border "><%= introduction.work.title %></td> 
+        <td id="textLimit" class="border w-25"><%= introduction.work.title %></td> 
         <td id="textLimit"  class="border "><%= introduction.contents %></td>
         <% if introduction.step == nil %>
-          <td  class="border ">口コミ完了</td>
+          <td id="steptd" class="border ">口コミ完了</td>
           <% else %>
           <td  class="border "><%= introduction.step %></td>
         <% end %>
           
-          <td class="morebtn  text-center border"><a href="/progresses/<%= introduction.id %>" class="toShow text-decoration-none">詳細</a></td></tr>
+          <td id="pctd" class="morebtn  text-center border"><a href="/progresses/<%= introduction.id %>" class="toShow text-decoration-none">詳細</a></td></tr>
       
       <% end %>
       <% end %>
   
       </tbody>    
       </table>
+      </div>
 
 
   </div>
 </div>
 
+<% @introductions.each do |introduction| %> 
+  <% if introduction.user_id == current_user.id %>
+    <ul>
+      <li class="border progCard m-auto">
+      <div class="fs-3 fw-bold pb-4">案件名:<%= introduction.work.title %></div>
+      <div class="fs-3 fw-bold pb-5">口コミ内容:<%= introduction.contents %></div>
+      <div><% if introduction.step == nil %>
+          <td id="steptd" class="border "><span>口コミ完了</span></td>
+          <% else %>
+          <td  class="border text-red"><span><%= introduction.step %></span></td>
+        <% end %></div>
+      </li>
+    </ul>
+  <% end %>
+<% end %>
 
 
