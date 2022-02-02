@@ -1,6 +1,49 @@
 
 <%= render '/layouts/header' %>
 
+<div class="progressbar">
+<div class="container-fluid">
+  <br /><br />
+  <ul class="list-unstyled multi-steps">
+  <% if @introduction.step == nil %>
+    <li class="is-active">口コミ送信完了</li>
+    <% else %>
+    <li>口コミ送信完了</li>
+  <% end %>
+
+  <% if @introduction.step == "口コミ確認完了"%>
+    <li class="is-active">口コミ確認完了</li>
+  <% else %>
+    <li>口コミ確認完了</li>
+  <% end %>
+
+  <% if @introduction.step == "検討中" %>
+    <li class="is-active">検討中</li>
+    <% else %> 
+    <li>検討中</li>
+    <% end %>
+
+  <% if @introduction.step == "進行中" %>  
+    <li class="is-active">進行中</li>
+    <% else %>
+    <li>進行中</li>
+    <% end %>
+
+  <% if @introduction.step == "契約成立"%>
+    <li class="is-active">契約成立</li>
+    <% else %>
+    <li>契約成立</li>
+    <% end %>
+
+  <% if @introduction.step == "報酬振込完了"%>
+    <li class="is-active">報酬振込完了</li>
+    <% else %>
+    <li>報酬振込完了</li>
+    <% end %>
+
+  </ul>
+</div>
+</div>
 <div id="introduction-show" class="w-75 m-auto">
 
  
@@ -52,44 +95,3 @@
 
 
 
-<div class="container-fluid">
-  <br /><br />
-  <ul class="list-unstyled multi-steps">
-  <% if @introduction.step == nil %>
-    <li class="is-active">口コミ送信完了</li>
-    <% else %>
-    <li>口コミ送信完了</li>
-  <% end %>
-
-  <% if @introduction.step == "口コミ確認完了"%>
-    <li class="is-active">口コミ確認完了</li>
-  <% else %>
-    <li>口コミ確認完了</li>
-  <% end %>
-
-  <% if @introduction.step == "検討中" %>
-    <li class="is-active">検討中</li>
-    <% else %> 
-    <li>検討中</li>
-    <% end %>
-
-  <% if @introduction.step == "進行中" %>  
-    <li class="is-active">進行中</li>
-    <% else %>
-    <li>進行中</li>
-    <% end %>
-
-  <% if @introduction.step == "契約成立"%>
-    <li class="is-active">契約成立</li>
-    <% else %>
-    <li>契約成立</li>
-    <% end %>
-
-  <% if @introduction.step == "報酬振込完了"%>
-    <li class="is-active">報酬振込完了</li>
-    <% else %>
-    <li>報酬振込完了</li>
-    <% end %>
-
-  </ul>
-</div>

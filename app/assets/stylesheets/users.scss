@@ -29,9 +29,15 @@ width: 80%;
 margin: 0 auto;
 }
 
+.progressbar{
+  padding-top: 100px;
+
+  
+}
+
 #introduction-show{
   font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
-  padding-top: 100px;
+  padding-top: 50px;
 
   p{
     font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
@@ -89,6 +95,14 @@ margin: 0 auto;
 
   }
   @media (max-width: 709px) {
+.progressbar{
+  padding-top: 100px;
+ul {
+     padding-right: 0.01rem; 
+}
+  
+}
+
 .table > tbody > tr > .userLabel{
   background-color: #3F8A83;
   color: white;
