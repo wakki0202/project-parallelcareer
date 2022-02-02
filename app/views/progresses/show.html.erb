@@ -3,41 +3,53 @@
 
 <div id="introduction-show" class="w-75 m-auto">
 
-    <div id="center" class="progresses">
+ 
 
-    <table class="table ">
-      
-      <tr class="">
-      <td class="">口コミ日時</td><td class=""><%= l @introduction.created_at %></td>
-      </tr>
-      <tr class="">
-      <td class="">案件名</td><td class=""><%= @introduction.work.title %></td>
-      </tr>
-
-      <tr class="">
-      <td class="">お客様名</td><td class=""><%= @introduction.name %>様</td>
-      </tr>
-
-      <tr class="">
-      <td class="">お客様電話番号</td><td class=""><%= @introduction.phonenumber %></td>
-
-      </tr>
-      <tr class=""><td class="">口コミ内容</td><td class=""><%= @introduction.contents %></td>
-      </tr>
-
-      <tr class=""><td class="">進捗状況</td>  
-        <% if @introduction.step == nil %>
-        <td class="">口コミ送信完了</td>
-        <% else %>
-        <td class=""><%= @introduction.step %></td>
-        <% end %>
-      </tr>
-      
-    </table>
-
+   <div>
+    <div class="mb-5">
+      <h3 class="pb-3 mb-3 border-bottom border-danger fw-bold fs-2">口コミ日時</h3>
+      <p class="fs-4"><%= l @introduction.created_at %></p>
     </div>
+    <div class="mb-5">
+      <h3 class="pb-3 mb-3 border-bottom border-danger fw-bold fs-2">案件名</h3>
+      <p class="fs-4"><%= @introduction.work.title %></p>
+    </div>
+    <div class="mb-5">
+      <h3 class="pb-3 mb-3 border-bottom border-danger fw-bold fs-2">お客様名</h3>
+      <p class="fs-4"><%= @introduction.name %></p>
+    </div>
+    <div class="mb-5">
+      <h3 class="pb-3 mb-3 border-bottom border-danger fw-bold fs-2 ">お客様電話番号</h3>
+      <p class="fs-4"><%= @introduction.phonenumber %></p>
+    </div>
+    <div class="mb-5">
+      <h3 class="pb-3 mb-3 border-bottom border-danger fw-bold fs-2">口コミ内容</h3>
+      <p class="fs-4"><%= @introduction.contents %></p>
+    </div>
+    <div class="mb-5">
+      <h3 class="pb-3 mb-3 border-bottom border-danger fw-bold fs-2">進捗状況</h3>
+      <% if @introduction.step == nil %>
+        <p class="fs-4">口コミ送信完了</p>
+        <% else %>
+        <p class="fs-4"><%= @introduction.step %></p>
+        <% end %>
+    </div>
+    <div class="mb-5">
+      <h3 class="pb-3 mb-3 border-bottom border-danger fw-bold fs-2">掲載主からのコメント</h3>
+      <p class="fs-4"></p>
+    </div>
+
+</div>
+  
     
 </div>
+
+
+
+
+
+
+
 
 
 <div class="container-fluid">

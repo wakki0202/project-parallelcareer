@@ -30,8 +30,12 @@ margin: 0 auto;
 }
 
 #introduction-show{
-  display: flex;
+  font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
   padding-top: 100px;
+
+  p{
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  }
 }
 
 #sidebar{
@@ -167,4 +171,11 @@ table td{
   background-color: #eee;
   padding: 10px 0;
 }
+
+
+
+  p{
+    font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  }
+
   }
