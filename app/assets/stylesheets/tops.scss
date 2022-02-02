@@ -62,6 +62,9 @@
       li {
         list-style: none;
       }
+      .subtitleImage{
+        width: 60%;
+      }
       .main-title {
         margin-bottom: 22px;
         font-size: 4.5rem;
@@ -607,13 +610,17 @@
     }
     .title-p {
       padding-top: 300px;
-      padding-left: 10%;
+      padding-left: 5%;
+      padding-right: 5%;
       display: flex;
       flex-direction: column;
       font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
       li {
         list-style: none;
         padding: 0 0;
+      }
+      .subtitleImage{
+        width: 100%;
       }
       .main-title {
         margin-bottom: 22px;
@@ -625,10 +632,9 @@
         font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
       }
       .css-br{
-        font-size: 3.5rem;
+        font-size: 4rem;
       }
       .sub-title {
-        width: 80%;
         line-height: 1.3;
         font-size: 2rem;
         color: #484c4c;

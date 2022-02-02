@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     case resource
     when User
-      tops_index_path
+      users_mypage_path
     when Provider
       works_path
 
