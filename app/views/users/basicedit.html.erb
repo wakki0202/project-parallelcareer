@@ -37,7 +37,7 @@
                   <%= f.text_area :appeal, autocomplete: "email",size: "40x10",value:  current_user.appeal %>
                 </div>
 
-                <div class=" text-center">掲載主からのスカウトを許可しますか？<%= f.check_box :scout,:as => :boolean ,checked:  current_user.scout %></div>
+                <div class=" text-center">掲載主からのスカウトを許可しますか？<%= f.check_box :headhunt,:as => :boolean ,checked:  current_user.headhunt %></div>
 
                 <div class="formSetEdit">
                     <%= f.submit "基本情報を更新する",class:"button",data: { confirm: '更新しますか？' } %>

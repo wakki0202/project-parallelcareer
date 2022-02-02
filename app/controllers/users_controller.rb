@@ -81,7 +81,7 @@ class UsersController < ApplicationController
 
   def update_basic_params
 
-    params.permit(:name,:tel,:email,:career,:appeal,:scout)
+    params.permit(:name,:tel,:email,:career,:appeal,:headhunt)
   end 
 
   def update_bank_params
