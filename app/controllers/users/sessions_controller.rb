@@ -25,7 +25,7 @@ class Users::SessionsController < Devise::SessionsController
         # ログイン情報をユーザー側に記録
         sign_in user
         # ログイン成功時の遷移
-        redirect_to root_path
+        redirect_to "/users/mypage/#{current_user.id}"
       else
         # ログイン失敗時の遷移
         # ---
