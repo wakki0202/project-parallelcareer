@@ -1,0 +1,1 @@
+INSERT INTO users (id, name, email, email_verified_at, password, remember_token, created_at, updated_at, user_type) VALUES (1,'田中 瑶介','tanachu_78@yahoo.co.jp','2020-11-25 02:32:36','$2y$10$IYcEiXk4AKR.MMsHCppLLuy1304ADCKTJ5pNHkkp20D3SznJKScxa','bhDpglagnK6EHrvSE35bt97kkhN3mfC9gYoUvsUv0nFBNfvGlEVHu5vtPXAM','2020-11-05 05:39:45','2020-11-26 03:31:59',3);
