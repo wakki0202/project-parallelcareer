@@ -28,6 +28,10 @@
     .inviteSecond{
       width: 50%;
       margin: 0 auto;
+      img{
+    width: 50%;
+    border-radius: 0.5rem;
+  }
     }
   
   .invitePhrase{
@@ -232,6 +236,11 @@ p span{
 }
 
 .inviteSecond{
+  margin-bottom: 50px;
+  img{
+    width: 75%;
+    border-radius: 0.5rem;
+  }
   h3{
     font-weight: bold;
     font-size: 20px;
