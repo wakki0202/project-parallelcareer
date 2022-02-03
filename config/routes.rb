@@ -28,7 +28,8 @@ Rails.application.routes.draw do
   get "tops/index",to:"tops#index"
   get "tops/news",to:"tops#news"
   get "tops/news/:id",to:"tops#newsshow"
-
+  get "tops/policy",to:"tops#policy"
+  get "tops/terms",to:"tops#terms"
 
   resources :works do
     resources :introductions, only: [:create, :edit, :update]

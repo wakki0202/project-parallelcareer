@@ -10,4 +10,10 @@ class TopsController < ApplicationController
     @news = News.find(params[:id])
   end
 
+  def terms
+  end
+
+  def policy
+  end
+
 end
