@@ -15,20 +15,23 @@
                         <label for="menu-btn-check" class="menu-btn"><span></span></label>
                       <div class="menu-content">
                               <ul>
-                              <li class="nav__item"><%= link_to "案件一覧" ,"/posts/index" %></li>
-                              <li class="nav__item"><%= link_to "LINEでお問い合わせ" ,"https://page.line.me/892qodsr?openQrModal=true" %></li>
-                              <li class="nav__item"><%= link_to "友人を招待する" ,"/users/invitation/new" %></li>   
+                              <li class="nav__item"><%= link_to "案件一覧" ,"/posts/index" %></li>                             
                           <% if provider_signed_in?  %>
                               <li class="nav__item"><%= link_to "事業者ページ" ,"/works" %></li>
                           <% elsif user_signed_in?  %>
                                     
                               <li class="nav__item"><%= link_to "マイページ" ,"/users/mypage/#{current_user.id}" %></li>
                               <li class="nav__item"><%= link_to "個人情報設定" ,"/users/basicedit" %></li>
-                              <li class="nav__item"><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></li>
+                              
                             <% else %>
                               <li class="nav__item"><%= link_to "ログイン" ,"/users/sign_in" %></li>
                               <li class="nav__item"><%= link_to "会員登録" ,"/users/sign_up" %></li>
                             <% end %>
+                              <li class="nav__item"><%= link_to "LINEでお問い合わせ" ,"https://page.line.me/892qodsr?openQrModal=true" %></li>
+                              <li class="nav__item"><%= link_to "友人を招待する" ,"/users/invitation/new" %></li>
+                              <% if user_signed_in?  %>
+                              <li class="nav__item"><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></li>
+                              <% end %>
                               </ul>
                       </div>
                 </div>
