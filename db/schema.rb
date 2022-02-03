@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_02_054011) do
+ActiveRecord::Schema.define(version: 2022_02_03_053646) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 2022_02_02_054011) do
     t.bigint "work_id", null: false
     t.string "step"
     t.boolean "permission", default: false, null: false
+    t.text "comment"
     t.index ["user_id"], name: "index_introductions_on_user_id"
     t.index ["work_id"], name: "index_introductions_on_work_id"
   end
