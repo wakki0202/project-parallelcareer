@@ -22,8 +22,8 @@
                               <li class="nav__item"><%= link_to "事業者ページ" ,"/works" %></li>
                           <% elsif user_signed_in?  %>
                                     
-                              <li class="nav__item"><%= link_to "ユーザーページ" ,"/users/mypage/#{current_user.id}" %></li>
-                              <li class="nav__item"><%= link_to "ユーザー設定" ,"/tops/index" %></li>
+                              <li class="nav__item"><%= link_to "マイページ" ,"/users/mypage/#{current_user.id}" %></li>
+                              <li class="nav__item"><%= link_to "個人情報設定" ,"/users/basicedit" %></li>
                               <li class="nav__item"><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></li>
                             <% else %>
                               <li class="nav__item"><%= link_to "ログイン" ,"/users/sign_in" %></li>

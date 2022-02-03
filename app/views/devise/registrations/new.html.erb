@@ -54,7 +54,7 @@
           <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
       </div>
 
-      <%= f.check_box :headhunt,{checked:  true}, "スカウトを受け付ける", "スカウトを受け付けない" %>
+      <%= f.check_box :headhunt,checked:  true,class:"hidden" %>
 
       <div class="formSet">
       <%= f.submit "会員登録する",class:"button" %>
