@@ -9,19 +9,19 @@
       </div>
       <div class="right">
         <div class="navi-section">
-          <p class="parent"><a href="#">案件情報</a></p>
+          <p class="parent"><a href="#works">案件情報</a></p>
           <ul class="navi">
             <p class="parent"><a href="/posts/index">案件一覧</a></p>
-            <p class="parent"><a href="#">報酬獲得の流れ</a></p>
+            <p class="parent"><a href="#rewardFlow">報酬獲得の流れ</a></p>
           </ul>
         </div>
         <% if user_signed_in?  %>
         <div class="navi-section">
-          <p class="parent"><%= link_to "ユーザーページ" ,"/users/mypage/#{current_user.id}" %></p>
+          <p class="parent"><%= link_to "マイページ" ,"/users/mypage/#{current_user.id}" %></p>
           
           <ul class="navi">
             <p class="parent"><a href="/progresses/index">進捗状況確認</a></p>
-            <p class="parent"><a href="/users/basicedit">ユーザー編集</a></p>
+            <p class="parent"><a href="/users/basicedit">個人情報詳細設定</a></p>
             <p class="parent"><%= link_to "退会ご希望の方はこちら" ,"/users/destroy/#{current_user.id}" %></p>
           </ul>
         </div>
