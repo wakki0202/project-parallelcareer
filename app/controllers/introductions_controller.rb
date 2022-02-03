@@ -89,7 +89,7 @@ class IntroductionsController < ApplicationController
 
   def update_introduction_params
 
-    params.require(:introduction).permit(:step) #ストロングパラメーターで、
+    params.require(:introduction).permit(:step, :comment) #ストロングパラメーターで、
   end 
   
 
