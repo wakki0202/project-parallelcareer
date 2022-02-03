@@ -27,6 +27,7 @@
           <th class="border border-black ">メールアドレス</th>
           <th class="border border-black ">電話番号</th>
           <th class="border border-black ">口座情報(銀行名/支店/口座種類/口座番号)</th>
+          <th class="border border-black ">スカウト</th>
           <th class="border border-black ">紹介者</th>
           <th class="border border-black ">ステータス</th>
         </tr>
@@ -41,6 +42,11 @@
           <% else %>
           <td class="border border-black"><%= user.bank %>/<%= user.branch %>/<%= user.account_type %>/<%= user.account_no %></td>
           <% end %>
+            <% if user.headhunt == false %>
+            <td class="">不要</td>
+            <% else %>
+            <td class="">必要</td>
+            <% end %>
            <% if user.invited_by.present? %>
            <td class="border border-black"><%= user.invited_by.name %></td>
            <% else%>
