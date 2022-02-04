@@ -21,6 +21,7 @@
         </button>
 
         <!-- Modal -->
+        <%= form_with(model: @worknew,:multipart => true, local: true) do |form| %>
         <div class="modal w-100 m-auto" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
             <div class="modal-content ">
@@ -30,7 +31,7 @@
               </div>
               <div class="modal-body">
 
-              <%= form_with(model: @worknew,:multipart => true, local: true) do |form| %>
+              
               <% if @worknew.errors.any? %>
                 <div id="error_explanation">
                   <h2><%= pluralize(@worknew.errors.count, "error") %> prohibited this news from being saved:</h2>
@@ -109,12 +110,12 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary fs-4" data-bs-dismiss="modal">閉じる</button>
-                <%= form.submit "作成する",class:"btn btn-primary fs-4",data: { confirm:"作成しますか？"} %>    
-                <% end %>
+                <%= form.submit "作成する",class:"btn btn-primary fs-4",data: { confirm:"作成しますか？"} %>                 
               </div>
             </div>
           </div>
         </div>
+        <% end %>
 
 
 
