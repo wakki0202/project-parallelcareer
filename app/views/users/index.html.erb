@@ -26,7 +26,6 @@
           <th class="border border-black ">名前</th>
           <th class="border border-black ">メールアドレス</th>
           <th class="border border-black ">電話番号</th>
-          <th class="border border-black ">口座情報(銀行名/支店/口座種類/口座番号)</th>
           <th class="border border-black ">スカウト</th>
           <th class="border border-black ">紹介者</th>
           <th class="border border-black ">ステータス</th>
@@ -37,11 +36,6 @@
           <td class="border border-black"><a href="/users/<%= user.id %>" class="text-decoration-none"><%= user.name %></a></td>
           <td class="border border-black"><%= user.email %></td>
           <td class="border border-black"><%= user.tel %></td>
-          <% if user.bank == nil %>
-          <td class="border border-black"></td>
-          <% else %>
-          <td class="border border-black"><%= user.bank %>/<%= user.branch %>/<%= user.account_type %>/<%= user.account_no %></td>
-          <% end %>
             <% if user.headhunt == false %>
             <td class="">不要</td>
             <% else %>
