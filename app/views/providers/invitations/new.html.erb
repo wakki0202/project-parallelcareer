@@ -33,12 +33,14 @@
 
           <table class="table userTable">
         <tr class="heading text-left">
+        <th class="border border-black ">ID</th>
         <th class="border border-black ">名前</th>
           <th class="border border-black ">メールアドレス</th>
         </tr>
 
         <% @providers.each do |provider| %> 
         <tr class="border  text-left">
+        <td class="border border-black"><%= provider.id %></td>
         <td class="border border-black"><%= provider.name %></td>
           <td class="border border-black"><%= provider.email %></td>
         </tr>
