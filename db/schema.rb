@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_04_094556) do
+ActiveRecord::Schema.define(version: 2022_02_04_122656) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -155,6 +155,12 @@ ActiveRecord::Schema.define(version: 2022_02_04_094556) do
     t.string "images"
     t.integer "provider_id"
     t.string "company_name"
+    t.string "sheet_id"
+    t.string "google_account"
+    t.string "work_overview"
+    t.string "form_overview"
+    t.string "form_detail"
+    t.string "display_order"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
