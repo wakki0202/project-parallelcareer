@@ -74,6 +74,19 @@
         <td class=" userLabel py-3">紹介者電話番号</td>
         <td class=""><%= @user.invited_by.tel %>
       </tr>
+      <% elsif @user.invitername.present? %>
+      <tr class="border">
+        <td class=" userLabel py-3">紹介者名</td>
+        <td class=""><%= @user.invitername %>
+      </tr>
+      <tr class="border">
+        <td class=" userLabel py-3">紹介者アドレス</td>
+        <td class=""><%= @user.inviteremail %>
+      </tr>
+      <tr class="border">
+        <td class=" userLabel py-3">紹介者電話番号</td>
+        <td class=""><%= @user.invitertel %>
+      </tr>
       <% end %>
       <% if @user.deleted_at.present? %>
       <tr class="border">

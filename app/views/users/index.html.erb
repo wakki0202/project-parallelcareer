@@ -43,7 +43,9 @@
             <% end %>
            <% if user.invited_by.present? %>
            <td class="border border-black"><%= user.invited_by.name %></td>
-           <% else%>
+           <% elsif user.invitername.present? %>
+           <td class="border border-black"><%= user.invitername %></td>
+           <% else %>
            <td class="border border-black"></td>
             <% end %>
             <% if user.deleted_at.present? %>
