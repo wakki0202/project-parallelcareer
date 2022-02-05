@@ -15,7 +15,7 @@
             ＋ 進捗設定する
           </button>
 
-          <%= form_with(model: [@introduction], local: true ) do |form| %>  
+          <%= form_with(model: @introduction, url: introduction_path, local: true ) do |form| %>  
             <div class="modal w-100 m-auto" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content ">
