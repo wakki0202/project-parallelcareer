@@ -32,8 +32,14 @@ Rails.application.routes.draw do
   get "tops/terms",to:"tops#terms"
 
   resources :works do
+    member do
+      get :move_higher
+      get :move_lower
+    end
     resources :introductions, only: [:create, :edit, :update]
     resources :details, only: [:create]
+
+    
   end
 
 

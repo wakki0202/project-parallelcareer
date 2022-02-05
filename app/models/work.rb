@@ -1,4 +1,5 @@
 class Work < ApplicationRecord
+  acts_as_list
   has_many :introductions, dependent: :destroy
   has_many :users, through: :introductions
 
@@ -13,6 +14,7 @@ class Work < ApplicationRecord
   serialize :images, JSON # SQLiteを使っているときはこの列を追記
   has_many_attached :images
 
+  
   def self.search(search)
       return Work.all unless search
       Work.where(['title LIKE ?', "%#{search}%"])

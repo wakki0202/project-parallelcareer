@@ -4,17 +4,27 @@ class WorksController < ApplicationController
 
   # GET /works or /works.json
   def index
-    @works = Work.all.page(params[:page])
+    @works = Work.all.page(params[:page]).order(:position)
     @details = Detail.all
     @worknew = Work.new
     @q = Work.ransack(params[:q])
-    @works = @q.result(distinct: true).order("created_at desc")
+    @works = @q.result(distinct: true).order(:position)
     if current_provider.present?
     @introductionnumber = current_provider.works.joins(:introductions).where(introductions: {step: nil}).count
     @introductionall = Introduction.where(step: nil).count
     @detailnumber = current_provider.works.joins(:details).where(details: {status: "未対応"}).count
     @detailnumberall = Detail.where(status: "未対応").count
     end
+  end
+
+  def move_higher
+    @work = Work.find(params[:id]).move_higher #move_higherメソッドでpositionを上に
+    redirect_to action: :index
+  end
+
+  def move_lower
+    @work = Work.find(params[:id]).move_lower
+    redirect_to action: :index
   end
 
   # GET /works/1 or /works/1.json

@@ -2,9 +2,9 @@ class PostsController < WorksController
 
   
   def index　#ユーザー側投稿一覧
-    @works = Work.all
+    @works = Work.all.page(params[:page]).order(:position)
     @q = Work.ransack(params[:q])
-    @works = @q.result(distinct: true).order("created_at desc")
+    @works = @q.result(distinct: true).order(:position)
     
   end
 

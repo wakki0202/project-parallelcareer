@@ -13,7 +13,7 @@
         <div class="post-list-all">
         <div class="post-list">
           <% @works.each do |work| %>  
-            <% if work.status == "公開" %>
+            <% if work.status == "公開中" %>
               <section class="card">
 
                 <a  class="link" href="/posts/<%= work.id %>" class=" font-bold">

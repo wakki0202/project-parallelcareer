@@ -85,3 +85,5 @@ gem 'ransack'
 gem 'fog-aws'
 
 gem 'dotenv-rails'
+
+gem 'acts_as_list'
