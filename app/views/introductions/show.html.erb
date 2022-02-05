@@ -7,47 +7,40 @@
   </div>
  
   <div class="main">
-  
-  <%= render '/works/side_header' %>
-      
-        
+    <%= render '/works/side_header' %>
     <div class="userIndex">
-    <div class="providerTable text-right ">
-      <div>
-        <button type="button" class="btn btn-primary toNew fs-5 mr-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-          ＋ 進捗設定する
-        </button>
-          <div class="modal w-100 m-auto" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content ">
-              <div class="modal-header">
-                <h5 class="modal-title h4" id="staticBackdropLabel">新規案件作成</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="providerTable text-right ">
+        <div>
+          <button type="button" class="btn btn-primary toNew fs-5 mr-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            ＋ 進捗設定する
+          </button>
+
+          <%= form_with(model: [@introduction], local: true ) do |form| %>  
+            <div class="modal w-100 m-auto" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content ">
+                  <div class="modal-header">
+                     <h5 class="modal-title h4" id="staticBackdropLabel">新規案件作成</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+              
+                  <div class="modal-body">
+                    <div class="w-75 m-auto mb-4 mt-2 text-left">
+                    <%= form.label :進捗編集,class:"h4 text-left" %>
+                    <%= form.select :step, [['口コミ確認完了'], ['お客様と繋がりませんでした'], ['断られました'], ['検討中'], ['進行中'], ['契約成立'], ['報酬振込完了']] %>
+                  </div>
+                  <div class="w-75 m-auto mb-4 mt-2 text-left">
+                    <%= form.label :掲載主からのコメント,class:"h4 text-left" %>
+                    <%= form.text_area :comment ,class:"form-control fs-4", size: "20x10" %>                    
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary fs-4" data-bs-dismiss="modal">閉じる</button>
+                    <%= form.submit '進捗更新',data: { confirm: '更新しますか？' },class: 'submit btn btn-primary fs-4' %>                 
+                  </div>
+                </div>
               </div>
-              <%= form_with(model: [@introduction], local: true ) do |form| %>  
-              <div class="modal-body">
-                         
-                
-                
-                <div class="w-75 m-auto mb-4 mt-2 text-left">
-                <%= form.label :進捗編集,class:"h4 text-left" %>
-                <%= form.select :step, [['口コミ確認完了'], ['お客様と繋がりませんでした'], ['断られました'], ['検討中'], ['進行中'], ['契約成立'], ['報酬振込完了']] %>
-                     
-              </div>
-              <div class="w-75 m-auto mb-4 mt-2 text-left">
-                <%= form.label :掲載主からのコメント,class:"h4 text-left" %>
-                <%= form.text_area :comment ,class:"form-control fs-4", size: "20x10" %>
-                     
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary fs-4" data-bs-dismiss="modal">閉じる</button>
-                <%= form.submit '進捗更新',data: { confirm: '更新しますか？' },class: 'submit btn btn-primary fs-4' %>        
-                
-              </div>
-              <% end %>
             </div>
-          </div>
-        </div>
+          <% end %>
       </div>
      
      
