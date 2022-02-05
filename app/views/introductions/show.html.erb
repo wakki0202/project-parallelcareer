@@ -24,8 +24,9 @@
                 <h5 class="modal-title h4" id="staticBackdropLabel">新規案件作成</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
+              <%= form_with(model: [@introduction], local: true ) do |form| %>  
               <div class="modal-body">
-               <%= form_with(model: [@introduction], local: true ) do |form| %>            
+                         
                 
                 
                 <div class="w-75 m-auto mb-4 mt-2 text-left">
@@ -41,8 +42,9 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary fs-4" data-bs-dismiss="modal">閉じる</button>
                 <%= form.submit '進捗更新',data: { confirm: '更新しますか？' },class: 'submit btn btn-primary fs-4' %>        
-                <% end %>
+                
               </div>
+              <% end %>
             </div>
           </div>
         </div>
