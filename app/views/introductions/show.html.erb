@@ -28,20 +28,20 @@
                     <div class="w-75 m-auto mb-4 mt-2 text-left">
                     <%= form.label :進捗編集,class:"h4 text-left" %>
                     <%= form.select :step, [['口コミ確認完了'], ['お客様と繋がりませんでした'], ['断られました'], ['検討中'], ['進行中'], ['契約成立'], ['報酬振込完了']] %>
-                  </div>
-                  <div class="w-75 m-auto mb-4 mt-2 text-left">
+                    </div>
+                    <div class="w-75 m-auto mb-4 mt-2 text-left">
                     <%= form.label :掲載主からのコメント,class:"h4 text-left" %>
                     <%= form.text_area :comment ,class:"form-control fs-4", size: "20x10" %>                    
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary fs-4" data-bs-dismiss="modal">閉じる</button>
-                    <%= form.submit '進捗更新',data: { confirm: '更新しますか？' },class: 'submit btn btn-primary fs-4' %>                 
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary fs-4" data-bs-dismiss="modal">閉じる</button>
+                      <%= form.submit '進捗更新',data: { confirm: '更新しますか？' },class: 'submit btn btn-primary fs-4' %>                 
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           <% end %>
-      </div>
      
      
 
