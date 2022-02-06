@@ -33,8 +33,10 @@ Rails.application.routes.draw do
 
   resources :works do
     member do
+      get :move_top
       get :move_higher
       get :move_lower
+      get :move_bottom
     end
     resources :introductions, only: [:create, :edit, :update]
     resources :details, only: [:create]

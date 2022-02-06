@@ -17,6 +17,11 @@ class WorksController < ApplicationController
     end
   end
 
+  def move_top
+    @work = Work.find(params[:id]).move_to_top #move_higherメソッドでpositionを上に
+    redirect_to action: :index
+  end
+
   def move_higher
     @work = Work.find(params[:id]).move_higher #move_higherメソッドでpositionを上に
     redirect_to action: :index
@@ -24,6 +29,11 @@ class WorksController < ApplicationController
 
   def move_lower
     @work = Work.find(params[:id]).move_lower
+    redirect_to action: :index
+  end
+
+  def move_bottom
+    @work = Work.find(params[:id]).move_to_bottom
     redirect_to action: :index
   end
 

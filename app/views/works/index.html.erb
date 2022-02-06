@@ -142,6 +142,8 @@
 
         <thead class="heading">
           <tr class="border text-left">
+          <th></th>
+            <th></th>
             <th></th>
             <th></th>
             <th>案件名</th>
@@ -155,12 +157,14 @@
           <% @works.each do |work| %>
           <% if current_provider.email == "tanachu_78@yahoo.co.jp" %>
           <tr class="text-left">
-              <td><%= link_to "∧", {:controller => :works, :action => :move_higher, :id => work},class:"text-decoration-none fw-bold" %></td>
-              <td><%= link_to "∨",{:controller => :works, :action => :move_lower, :id => work},class:"text-decoration-none fw-bold" %></td>
+              <td class="border border-black"><%= link_to "↑↑", {:controller => :works, :action => :move_top, :id => work},class:"text-decoration-none fw-bold" %></td>
+              <td class="border border-black"><%= link_to "↑", {:controller => :works, :action => :move_higher, :id => work},class:"text-decoration-none fw-bold" %></td>
+              <td class="border border-black"><%= link_to "↓",{:controller => :works, :action => :move_lower, :id => work},class:"text-decoration-none fw-bold" %></td>
+              <td class="border border-black"><%= link_to "↓↓",{:controller => :works, :action => :move_bottom, :id => work},class:"text-decoration-none fw-bold" %></td>
               <td style="width:60%" class="border border-black text-break overflow-hidden text-ellipsis" ><%= work.title %></td>
               <td class="border border-black"><%= work.created_at.strftime('%Y年%m月%d日') %></td>
               <td class="border border-black"><% if work.status == nil %>審査待ち<% else %><%= work.status %><% end %></td>
-              <td class="border border-black text-center"><%= link_to '詳細', work,class:"toShow text-decoration-none px-3 py-1  " %></td>
+              <td style="width:10%" class="border border-black text-center"><%= link_to '詳細', work,class:"toShow text-decoration-none px-3 py-1  " %></td>
               
             </tr>
           <% elsif work.provider_id == current_provider.id %>
