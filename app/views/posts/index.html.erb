@@ -2,7 +2,7 @@
 
   <%= render '/layouts/header' %>
   <div class="post-main">
-        <h1 class="my-5 ">案件一覧</h1>
+        <h1 class="my-5 text-center">案件一覧</h1>
         <div class="search-form form-inline text-right w-75 m-auto mb-5">
           <%= search_form_for @q, url: posts_index_path  do |f| %>
               <%= f.search_field :title_cont,:class => "form-control  fs-4" , :placeholder => "キーワード" %>
