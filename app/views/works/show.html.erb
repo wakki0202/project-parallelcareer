@@ -47,14 +47,19 @@
         <div class="w-75 m-auto mt-3">
               
           <% if @work.images.present? %>
+          <div class="fs-4 mb-3">
+            <%= form.check_box :remove_images %>
+            画像を削除する
+          </div>
           <%= form.label :images, "変更前の画像", class: "h4" %>
-          <ul class="slider ">
+          <ul class="slider text-center">
             <% @work.images.each do |img| %>
-              <li class="">
-                <%= image_tag img.url ,class:"m-auto  mt-5"   %>
+              <li class="text-center">
+                <%= image_tag img.url ,class:"m-auto  text-center"   %>
               </li>
             <% end %>
           </ul>
+          
           <% end %>
         </div>
 
