@@ -282,6 +282,125 @@ textarea {
     display: none;
   }
 
+  .checkIntro{
+  font-size: 16px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+
+.workTitle{
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+  .introduction-new{
+font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+    margin-top: 100px ;
+    background-image: linear-gradient(to left, var(--tw-gradient-stops));
+    --tw-gradient-from: #ff3434;
+    --tw-gradient-stops: var(--tw-gradient-from),
+      var(--tw-gradient-to, rgba(248, 113, 113, 0));
+    --tw-gradient-to: #ffde4d;
+
+
+h2{
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+p{
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+.title{
+color: white;
+}
+
+form { 
+  width:420px; margin:50px auto; 
+}
+
+.feedback-input {
+  color:black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  border:0px solid rgb(41, 41, 41);
+  background-color: rgb(252, 252, 252);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 20px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+  
+}
+
+::placeholder {
+  color: rgb(145, 143, 143);
+}
+/* 旧Edge対応 */
+::-ms-input-placeholder {
+  color: rgb(168, 168, 168);
+}
+/* IE対応 */
+:-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+.feedback-input:focus { border:2px solid blue;
+ }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+  color:rgb(0, 0, 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  border:2px solid black;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#fff;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:#484c4c;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { 
+  background:rgb(192, 192, 192); 
+}
+}
+
 .introduction-new form { 
   width:80%; margin:50px auto; 
 }
