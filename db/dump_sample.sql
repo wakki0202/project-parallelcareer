@@ -1,1 +1,1 @@
-INSERT INTO users (id, name, email, encrypted_password, created_at, updated_at) VALUES (11,'田中瑶介','tanachu_78@yahoo.co.jp','$2y$10$9VmsSGwH/jzpG6eA6Qp4keqnKsCdW55SPYN8qTZL7u3fJZ8zL82yG','2020-11-25 02:50:42','2020-11-25 02:51:06');
+INSERT INTO users (id, name,tel, email, encrypted_password, created_at, updated_at,bank, branch, account_type, account_no) VALUES (11,'田中瑶介','tanachu_78@yahoo.co.jp','090-1079-6830','$2y$10$9VmsSGwH/jzpG6eA6Qp4keqnKsCdW55SPYN8qTZL7u3fJZ8zL82yG','2020-11-25 02:50:42','2020-11-25 02:51:06','三井住友銀行','浅草',0,'5248753');
