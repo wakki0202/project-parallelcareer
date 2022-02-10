@@ -7,7 +7,7 @@ class Users::InvitationsController < Devise::InvitationsController
     super
 
     if @user.save
-    introductions_complete_path
+    redirect_to introductions_complete_path
     else
       introductions_complete_path
     end
