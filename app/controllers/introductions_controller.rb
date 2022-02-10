@@ -1,5 +1,5 @@
 class IntroductionsController < ApplicationController
-#before_action :authenticate_provider!,only: [:index,:show,:edit,:update]
+before_action :authenticate_provider!,only: [:index,:show,:edit,:update]
 before_action :authenticate_user!,only: [:new,:create]
   def index
     @introductions = Introduction.all.page(params[:page]).per(10).order(id: :DESC)

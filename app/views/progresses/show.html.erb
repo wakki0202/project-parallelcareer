@@ -5,6 +5,7 @@
 <div class="container-fluid">
   <br /><br />
   <ul class="list-unstyled multi-steps">
+  
   <% if @introduction.step == nil %>
     <li class="is-active">口コミ送信完了</li>
     <% else %>
@@ -22,6 +23,13 @@
     <% else %> 
     <li>検討中</li>
     <% end %>
+  
+  <% if @introduction.step == "断られました" %>
+    <li class="is-active">断られました</li>
+  <% elsif @introduction.step == "お客様と繋がりませんでした" %>
+    <li class="is-active">お客様と繋がりませんでした</li>
+  <% else %>
+  <% end %>
 
   <% if @introduction.step == "進行中" %>  
     <li class="is-active">進行中</li>
@@ -40,6 +48,8 @@
     <% else %>
     <li>報酬振込完了</li>
     <% end %>
+
+    
 
   </ul>
 </div>

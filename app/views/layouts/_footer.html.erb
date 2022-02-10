@@ -27,9 +27,11 @@
         </div>
         <% end %>
         <div class="navi-section">
+        <% if user_signed_in?  %>
           <p class="parent"><a href="/progresses/index">お知らせ一覧</a></p>
+        <% end %>
           <p class="parent"><a href="#FAQ">よくある質問</a></p>
-          <p class="parent"><a href="/users/invitation/new">友人を紹介する</a></p>
+          <p class="parent"><a href="/users/invitation/new">友人を招待する</a></p>
           <p class="parent"><a href="https://page.line.me/892qodsr?openQrModal=true">LINEでお問い合わせ</a></p>
         </div>
       </div>

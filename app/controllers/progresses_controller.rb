@@ -1,11 +1,8 @@
 class ProgressesController < IntroductionsController
-
+before_action :authenticate_provider!,except: [:index,:show]
+before_action :authenticate_user!,only: [:index,:show]
   def index
     @introductions = Introduction.all
-  end
-
-  def news
-    @news = News.find(params[:id])
   end
 
   def show

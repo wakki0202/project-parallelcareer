@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-before_action :authenticate_user!,only: [:index]
+before_action :authenticate_provider!,only: [:index,:show]
+before_action :authenticate_user!,only: [:news,:destroy,:mypage,:basicedit,:bankedit]
 
   def index
     @users = User.all.page(params[:page]).per(10)

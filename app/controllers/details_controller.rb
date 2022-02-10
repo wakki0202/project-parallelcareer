@@ -1,5 +1,5 @@
 class DetailsController < ApplicationController
-  before_action :authenticate_user!,only: [:new,:news,:show]
+  before_action :authenticate_user!,only: [:new]
   before_action :authenticate_provider!,only: [:index,:show,:edit,:update]
   before_action :set_detail, only: %i[ show edit update destroy ]
 
