@@ -80,11 +80,11 @@ Rails.application.routes.draw do
   get "progresses/news",to:"progresses#news"
 
   get "users/index",to:"users#index"
-  get "users/basicedit",to:"users#basicedit"
-  get "users/bankedit",to:"users#bankedit"
+  get "users/:id/basicedit",to:"users#basicedit"
+  get "users/:id/bankedit",to:"users#bankedit"
   get "users/:id",to:"users#show"
-  post "users/bankedit",to:"users#update"
-  post "users/basicedit",to:"users#update"
+  post "users/:id/bankedit",to:"users#update"
+  post "users/:id/basicedit",to:"users#update"
   
   get "users/complete",to:"users#complete"
   get "users/mypage/:id",to:"users#mypage"

@@ -5,8 +5,7 @@ before_action :authenticate_user!,only: [:news,:destroy,:mypage,:basicedit,:bank
   def index
     @users = User.all.page(params[:page]).per(10)
     @q = User.ransack(params[:q])
-    @users = @q.result(distinct: true).page(params[:page]).order("created_at asc")
-    
+    @users = @q.result(distinct: true).page(params[:page]).order("created_at asc")    
     @introductionnumber = current_provider.works.joins(:introductions).where(introductions: {step: nil}).count
     @introductionall = Introduction.where(step: nil).count
     @detailnumber = current_provider.works.joins(:details).where(details: {status: "未対応"}).count
@@ -20,28 +19,27 @@ before_action :authenticate_user!,only: [:news,:destroy,:mypage,:basicedit,:bank
  end
 
  def basicedit
-    @user = current_user
+    @user = User.find(params[:id])
   end
 
 
 
   def bankedit
-    @user = current_user
+    @user = User.find(params[:id])
   end
 
   def update
-    if current_user.update(
+     @user = User.find(params[:id])
+    if @user.update(
         update_basic_params
       )
       
-        render action: :basicedit
 
     end
-    if current_user.update(
+  
+  if @user.update(
         update_bank_params
       )
-
-       users_bankedit_path
 
 
     end
