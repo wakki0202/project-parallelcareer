@@ -29,21 +29,14 @@ before_action :authenticate_user!,only: [:news,:destroy,:mypage,:basicedit,:bank
     @user = current_user
   end
 
-  def basicupdate
+  def update
     if current_user.update(
         update_basic_params
       )
       
         render action: :basicedit
 
-
-
     end
-   
-  
-  end
-
-  def bankupdate
     if current_user.update(
         update_bank_params
       )
@@ -58,7 +51,8 @@ before_action :authenticate_user!,only: [:news,:destroy,:mypage,:basicedit,:bank
 
     def mypage
       @user = User.find(params[:id])
-      
+      redirect_to(tops_index_path) unless @user == current_user
+      @works = Work.order("RANDOM()").limit(6)
 
     end
 
