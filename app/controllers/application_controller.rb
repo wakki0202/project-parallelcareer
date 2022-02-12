@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   private
     def configure_permitted_parameters
       devise_parameter_sanitizer.permit(:sign_up, keys: [:name,:tel,:headhunt])
-      devise_parameter_sanitizer.permit(:account_update, keys: [:name,:tel,:email,:career,:appeal,:headhunt,:bank,:branch,:account_type,:account_no])
+      devise_parameter_sanitizer.permit(:account_update, keys: [:name,:tel,:email,:line_id,:residence,:birth_date,:career,:appeal,:headhunt,:bank,:branch,:account_type,:account_no])
       devise_parameter_sanitizer.permit(:invite, keys: [:email, :name, :tel,:headhunt])
       devise_parameter_sanitizer.permit(:accept_invitation, keys: [:password, :password_confirmation, :name, :tel])
     end

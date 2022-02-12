@@ -25,18 +25,39 @@
         <td class=" userLabel py-3">メールアドレス</td>
         <td class=""><%= @user.email %></td>
       </tr>
+
       <tr class="border">
         <td class=" userLabel py-3">電話番号</td>
         <td class=""><%= @user.tel %>
       </tr>
+
       <tr class="border">
-        <td class=" userLabel py-3">口座情報(銀行名/支店/口座種類/口座番号)</td>
-        <% if @user.bank == nil %>
-          <td class="">未記入</td>
+        <td class=" userLabel py-3">LINE ID</td>
+        <% if @user.line_id.present? %>
+          <td class=""><%= @user.line_id %>
         <% else %>
-          <td class=""><%= @user.bank %>/<%= @user.branch %>/<%= @user.account_type %>/<%= @user.account_no %></td>
+          <td class="">未記入</td>
         <% end %>
       </tr>
+
+      <tr class="border">
+        <td class=" userLabel py-3">生年月日</td>
+        <% if @user.birth_date.present? %>
+          <td class=""><%= @user.birth_date %>
+        <% else %>
+          <td class="">未記入</td>
+        <% end %>
+      </tr>
+
+      <tr class="border">
+        <td class=" userLabel py-3">居住地</td>
+        <% if @user.residence.present? %>
+          <td class=""><%= @user.residence %>
+        <% else %>
+          <td class="">未記入</td>
+        <% end %>
+      </tr>
+
       <tr class="border">
         <td class=" userLabel py-3">経歴</td>
         <% if @user.career.present? %>
@@ -45,6 +66,7 @@
           <td class="">未記入</td>
         <% end %>
       </tr>
+
       <tr class="border">
         <td class=" userLabel py-3">アピールポイント</td>
         <% if @user.appeal.present? %>
@@ -59,6 +81,14 @@
         <td class="">許可しない</td>
         <% else %>
         <td class="">許可する</td>
+        <% end %>
+      </tr>
+      <tr class="border">
+        <td class=" userLabel py-3">口座情報(銀行名/支店/口座種類/口座番号)</td>
+        <% if @user.bank == nil %>
+          <td class="">未記入</td>
+        <% else %>
+          <td class=""><%= @user.bank %>/<%= @user.branch %>/<%= @user.account_type %>/<%= @user.account_no %></td>
         <% end %>
       </tr>
        <% if @user.invited_by.present? %>
