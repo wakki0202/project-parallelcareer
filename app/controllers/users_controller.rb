@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-before_action :authenticate_provider!,only: [:index,:show]
 before_action :authenticate_user!,only: [:news,:destroy,:mypage,:basicedit,:bankedit]
 
   def index

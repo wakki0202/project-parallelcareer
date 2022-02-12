@@ -5,7 +5,7 @@
         <li><%= link_to "マイページへ戻る" ,"/users/mypage/#{current_user.id}" %></li>
 
          <li><a href="/users/edit" class="text-decoration-none">基本情報</a></li>
-          <li><a href="/users/edit_password" class="text-decoration-none">パスワード設定</a></li>
+          <li><a href="/registrations/<%= current_user.id %>/edit_password" class="text-decoration-none">パスワード設定</a></li>
           <li><a href="/users/edit#bankArea" class="text-decoration-none">口座設定</a></li>
           
         </ul>
