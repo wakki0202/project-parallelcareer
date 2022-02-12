@@ -59,10 +59,9 @@
               </li>
             <% end %>
           </ul>
-          
-          <% end %>
+                
         </div>
-
+        <% end %>
               <div class="w-75 m-auto mb-4 mt-2">
                   <%= form.label :タイトル,class:"h4" %>
                   <%= form.text_field :title,class: "form-control fs-4",id:"exampleFormControlInput1" %>
@@ -127,16 +126,17 @@
 
 
         <div class="postContent ">
-        <div class="">
-          <% if @work.images.present? %>
-          <ul class="slider ">
-            <% @work.images.each do |img| %>
-              <li class="">
-                <%= image_tag img.url ,class:"m-auto  mt-5"   %>
-              </li>
-            <% end %>
-          </ul>
+        
+        <div class="imageList">
+        <% if @work.images.present? %>
+        <ul class="slider text-center">
+          <% @work.images.each do |img| %>
+            <li class="text-center">
+              <%= image_tag img.url ,class:"m-auto  mt-5"   %>
+            </li>
           <% end %>
+        </ul>
+        <% end %>
         </div>
             <div class="mb-5">
               <h3 class="pb-3 mb-3">案件名</h3>
