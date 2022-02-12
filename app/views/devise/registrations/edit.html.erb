@@ -11,6 +11,15 @@
                 <p class="alert"><%= alert %></p>
              
              <h1 id="bankEdit ">基本情報</h1>
+             <% if @user.errors.any? %>
+              <div id="error_explanation">
+                <ul>
+                <% @user.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
 
                   <div class="formSetEdit mt-5">
                     <div class="text-left">お名前 <span>（必須）</span></div>

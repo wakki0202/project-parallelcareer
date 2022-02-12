@@ -5,6 +5,8 @@ class Introduction < ApplicationRecord
 
 has_one    :master,  through: :child 
 
+validates :name, presence: { message: "名前が入力されていません" }
+validates :phonenumber, presence: { message: "電話番号が入力されていません" }
 validates :permission, presence: true
 
   def self.search(search)

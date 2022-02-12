@@ -11,6 +11,8 @@ class User < ApplicationRecord
     has_many :details, dependent: :destroy
     has_many :works,through: :details, dependent: :destroy
 
+    attr_accessor :current_password
+
 
     validates :name, presence: true
     validates :tel, length: { maximum: 14 } 

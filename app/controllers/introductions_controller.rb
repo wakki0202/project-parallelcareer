@@ -1,6 +1,7 @@
 class IntroductionsController < ApplicationController
 before_action :authenticate_provider!,only: [:index,:show,:edit,:update]
 before_action :authenticate_user!,only: [:new,:create]
+
   def index
     @introductions = Introduction.all.page(params[:page]).per(10).order(id: :DESC)
     @q = Introduction.all.ransack(params[:q])
@@ -41,7 +42,7 @@ before_action :authenticate_user!,only: [:new,:create]
           redirect_to introductions_complete_path
       else
           redirect_back(fallback_location: works_path)  #同上
-          flash[:alert] = "※連絡がいくことをお伝えください"
+          flash[:alert] = "※必須部分の入力またはチェックしてください"
       end
     end
   

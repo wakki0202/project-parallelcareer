@@ -15,12 +15,14 @@ class RegistrationsController < Devise::RegistrationsController
       set_flash_message_for_update(resource, prev_unconfirmed_email)
       bypass_sign_in resource, scope: resource_name if sign_in_after_change_password?
       respond_with resource, location: after_update_path_for(resource)
+      
     else
       clean_up_passwords resource
       set_minimum_password_length
       #この1行を書き換えた
-      flash.now[:alert] = 'パスワード変更しました'
+      
       render 'edit_password'
+
     end
   end
 
@@ -35,6 +37,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def after_update_path_for(resource)
+    
     edit_password_path
   end
 end
