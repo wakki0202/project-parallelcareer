@@ -19,6 +19,7 @@ class RegistrationsController < Devise::RegistrationsController
       clean_up_passwords resource
       set_minimum_password_length
       #この1行を書き換えた
+      flash.now[:alert] = 'パスワード変更しました'
       render 'edit_password'
     end
   end
