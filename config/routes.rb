@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
+    get 'registrations/:id/edit_password', to: 'registrations#edit_password', as: 'edit_password'
+    put 'registrations/:id/update_password', to: 'registrations#update_password', as: 'update_password'
   end
 
   devise_scope :provider do

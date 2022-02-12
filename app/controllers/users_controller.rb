@@ -19,29 +19,27 @@ before_action :authenticate_user!,only: [:news,:destroy,:mypage,:basicedit,:bank
  end
 
  def basicedit
-    @user = User.find(params[:id])
+  @user = User.find(params[:id])
+    unless @user == current_user
+    redirect_to tops_index_path
+   end
   end
 
 
 
   def bankedit
     @user = User.find(params[:id])
+    unless @user == current_user
+    redirect_to tops_index_path
+   end
   end
 
   def update
      @user = User.find(params[:id])
-    if @user.update(
-        update_basic_params
-      )
-      
-
-    end
-  
-  if @user.update(
-        update_bank_params
-      )
-
-
+    if @user.update(user_params)
+      redirect_to edit_user_registration_path
+    else
+      redirect_to tops_index_path
     end
    
   
@@ -79,14 +77,9 @@ before_action :authenticate_user!,only: [:news,:destroy,:mypage,:basicedit,:bank
 
 
 
-  def update_basic_params
+  def user_params
 
-    params.permit(:name,:tel,:email,:career,:appeal,:headhunt)
-  end 
-
-  def update_bank_params
-
-    params.permit(:bank, :account_type, :branch, :account_no)
+     params.permit(:name,:tel,:email,:career,:appeal,:headhunt,:bank,:branch,:account_type,:account_no)
   end 
 
 end

@@ -11,10 +11,13 @@ class User < ApplicationRecord
     has_many :details, dependent: :destroy
     has_many :works,through: :details, dependent: :destroy
 
-    validates :tel, numericality: true
-    #validates :banknumber, numericality: true
+
+    validates :name, presence: true
+    validates :tel, numericality: true, length: { maximum: 12 } 
+    validates :account_no, numericality: true
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :email, {presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }}
+    validates :password, presence: true, on: :create
 
      def self.search(search)
       return User.all unless search
