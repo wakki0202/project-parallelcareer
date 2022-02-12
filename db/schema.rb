@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_10_131832) do
+ActiveRecord::Schema.define(version: 2022_02_12_100058) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -129,7 +129,6 @@ ActiveRecord::Schema.define(version: 2022_02_10_131832) do
     t.datetime "deleted_at"
     t.boolean "scout"
     t.boolean "headhunt"
-    t.datetime "email_verified_at"
     t.string "remember_token"
     t.string "invitername"
     t.string "inviteremail"
