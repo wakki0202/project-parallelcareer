@@ -3,13 +3,15 @@
 
 
 <body class="providerPage">
+
+    
   <div class="side">
     <%= render '/works/side' %>
   </div>
  
   <div class="main">
    <%= render '/works/side_header' %>
-    
+    <p class="text-center fs-2 fw-bold"><%= flash[:notice] %></p>
         
     <div class="userIndex">
       <h1 class="text-left h1">案件一覧</h1>

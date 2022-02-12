@@ -87,3 +87,5 @@ gem 'fog-aws'
 gem 'dotenv-rails'
 
 gem 'acts_as_list'
+
+gem 'devise-security'

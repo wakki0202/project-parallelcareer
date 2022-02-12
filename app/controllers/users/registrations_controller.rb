@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
+   include Accessible
+  skip_before_action :check_user, except: [:new, :create]
   # before_action :configure_sign_up_params, only: [:create]
    before_action :configure_account_update_params, only: [:update]
    prepend_before_action :authenticate_scope!, only: [:edit, :update, :destroy]
    prepend_before_action :set_minimum_password_length, only: [:new, :edit]
+   
   # GET /resource/sign_up
   # def new
   #   super
