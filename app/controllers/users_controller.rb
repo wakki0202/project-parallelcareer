@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-before_action :authenticate_user!,only: [:news,:destroy,:mypage,:basicedit,:bankedit]
+before_action :authenticate_user!,only: [:news,:destroy,:mypage]
 
   def index
     @users = User.all.page(params[:page]).per(10)
@@ -17,32 +17,6 @@ before_action :authenticate_user!,only: [:news,:destroy,:mypage,:basicedit,:bank
 
  end
 
- def basicedit
-  @user = User.find(params[:id])
-    unless @user == current_user
-    redirect_to tops_index_path
-   end
-  end
-
-
-
-  def bankedit
-    @user = User.find(params[:id])
-    unless @user == current_user
-    redirect_to tops_index_path
-   end
-  end
-
-  def update
-     @user = User.find(params[:id])
-    if @user.update(user_params)
-      redirect_to edit_user_registration_path
-    else
-      redirect_to tops_index_path
-    end
-   
-  
-  end
 
     def mypage
       @user = User.find(params[:id])
@@ -59,9 +33,7 @@ before_action :authenticate_user!,only: [:news,:destroy,:mypage,:basicedit,:bank
     @detailnumberall = Detail.where(status: "未対応").count
   end
 
-      def destroy
-
-      end
+      
 
       def news
 
@@ -71,14 +43,17 @@ before_action :authenticate_user!,only: [:news,:destroy,:mypage,:basicedit,:bank
 
       end
    
+      def destroy
+
+      end
+
+      def destroycomp
+
+      end
 
     private
 
 
 
-  def user_params
-
-     params.permit(:name,:tel,:email,:career,:appeal,:headhunt,:bank,:branch,:account_type,:account_no)
-  end 
 
 end

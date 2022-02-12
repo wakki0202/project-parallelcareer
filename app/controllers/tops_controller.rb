@@ -16,4 +16,6 @@ class TopsController < ApplicationController
   def policy
   end
 
+  def destroycomp
+  end
 end

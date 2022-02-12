@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get "tops/news/:id",to:"tops#newsshow"
   get "tops/policy",to:"tops#policy"
   get "tops/terms",to:"tops#terms"
+  get "tops/destroycomp",to: "tops#destroycomp"
 
   resources :works do
     member do
@@ -82,14 +83,11 @@ Rails.application.routes.draw do
   get "progresses/news",to:"progresses#news"
 
   get "users/index",to:"users#index"
-  get "users/:id/basicedit",to:"users#basicedit"
-  get "users/:id/bankedit",to:"users#bankedit"
   get "users/:id",to:"users#show"
-  post "users/:id/bankedit",to:"users#update"
-  post "users/:id/basicedit",to:"users#update"
   
   get "users/complete",to:"users#complete"
   get "users/mypage/:id",to:"users#mypage"
   get "users/destroy/:id",to:"users#destroy"
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -50,7 +50,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       # 強制ログアウト
       sign_out current_user
       # ログアウト後のページ遷移
-      redirect_to root_path
+      redirect_to tops_destroycomp_path
     end
    
    end
@@ -95,6 +95,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
     # 保存処理
     user.save
+    tops_destroycomp_path
   end
    
   # def configure_sign_up_params

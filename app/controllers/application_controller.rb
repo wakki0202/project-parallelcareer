@@ -26,5 +26,9 @@ class ApplicationController < ActionController::Base
 
   end
 
+  def after_invite_path_for(resource)
+    introductions_complete_path
+  end
+
   
 end

@@ -1,3 +1,4 @@
+
 <header class="topsite-header">
  <div id="site-header__wrapper">
         <div class="header-logo">
@@ -21,7 +22,7 @@
                           <% elsif user_signed_in?  %>
                                     
                               <li class="nav__item"><%= link_to "マイページ" ,"/users/mypage/#{current_user.id}" %></li>
-                              <li class="nav__item"><%= link_to "個人情報設定" ,"/users/basicedit" %></li>
+                              <li class="nav__item"><%= link_to "個人情報設定" ,"/users/edit" %></li>
                               
                             <% else %>
                               <li class="nav__item"><%= link_to "ログイン" ,"/users/sign_in" %></li>

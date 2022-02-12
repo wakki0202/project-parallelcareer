@@ -5,12 +5,8 @@ class Users::InvitationsController < Devise::InvitationsController
 
   def create
     super
-
-    if @user.save
-    redirect_to introductions_complete_path
-    else
-      introductions_complete_path
-    end
+   introductions_complete_path
+    
     
 
   end

@@ -8,7 +8,7 @@
           <ul class="nano-content">
             <li class="user">
               <li> <a href="/tops/index"><span>トップページへ</span></a> </li>
-              <li><a href="/users/basicedit">プロフィール編集</a> </li>
+              <li><a href="/users/edit">プロフィール編集</a> </li>
               <li><a href="/posts/index">案件一覧</a> </li>
               <li><a href="/">ログアウト</a> </li>
               <li><%= link_to "退会ご希望の方はこちら" ,"/users/destroy/#{current_user.id}" %> </li>
@@ -28,7 +28,7 @@
         <div class="post-list">
 
           <section class="card pt-3">
-          <a href="/users/<%= current_user.id %>/basicedit" class=" font-bold">
+          <a href="/users/edit" class=" font-bold">
           <div class="text-center">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" stroke-width="1.5" stroke="#000" fill="none" class="duration-300 transform transition-all" style="width: 48px; height: 48px;"><circle cx="32" cy="18.14" r="11.14"></circle><path d="M54.55 56.85A22.55 22.55 0 0032 34.3h0A22.55 22.55 0 009.45 56.85z"></path></svg>
           </div>
