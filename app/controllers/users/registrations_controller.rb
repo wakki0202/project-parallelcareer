@@ -18,7 +18,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     #スーパークラス(devise)のcreateアクションを呼ぶ 
     # byebug
    super
-      ThanxMailer.complete_registration(params[:user][:email],params[:user][:name]).deliver
+      ThanxMailer.complete_registration(params[:user][:email],params[:user][:name]).deliver 
   
   end
 
@@ -27,10 +27,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  def 
-    edit_password;
-  
-  end
 
   # PUT /resource
    def update
