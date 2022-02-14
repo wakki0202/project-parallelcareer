@@ -144,12 +144,14 @@
 
         <thead class="heading">
           <tr class="border text-left">
+          <% if current_provider.email == "tanachu_78@yahoo.co.jp" %>
             <th>順番</th>
+          <% end %>
             <th>案件名</th>
             <th>作成日</th>
             <th></th>
-            <% if current_provider.email == "tanachu_78@yahoo.co.jp" %>
             <th></th>
+          <% if current_provider.email == "tanachu_78@yahoo.co.jp" %>
             <th></th>
             <th></th>
             <th></th>
