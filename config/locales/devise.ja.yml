@@ -31,6 +31,10 @@ ja:
         user:
           name: "名前"
           tel: "電話番号"
+        introduction:
+          name: "名前"
+          phonenumber: "電話番号"
+          permission: "チェックボックス"
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
