@@ -172,18 +172,10 @@
       font-size: 12px;
       justify-content: center;
       align-items: center;
-      display: flex;
       color: black;
       font-family:  "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
     }
-    .card-text :hover {
-      font-size: 14px;
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      line-height: 1.5;
-      color: black;
-    }
+   
     .card-link {
       text-align: center;
       padding: 20px;
@@ -218,6 +210,13 @@
       transition: transform 0.3s, opacity;
     }
     
+  }
+
+  .scoutred{
+    color: red;
+  }
+  .scoutred:hover{
+    color: red;
   }
 }
 @media (min-width: 768.99px) { 
