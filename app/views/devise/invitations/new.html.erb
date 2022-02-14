@@ -52,7 +52,7 @@
     <% @users.each do |user| %>
      <tr class="border  text-left">
            <% if user.invited_by.present? %>
-           <% if user.invited_by.name = current_user.name %>
+           <% if user.invited_by_id = current_user.id %>
            <td class="border border-black"><%= user.name %></td>
            <% end%>
            <% elsif user.invitername.present? %>
