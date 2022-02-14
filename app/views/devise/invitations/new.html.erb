@@ -54,9 +54,11 @@
            <% if user.invited_by.present? %>
            <% if user.invited_by.name = current_user.name %>
            <td class="border border-black"><%= user.name %></td>
-           <% elsif user.invitername = current_user.name %>
-           <td class="border border-black"><%= user.name %></td>
            <% end%>
+           <% elsif user.invitername.present? %>
+            <% if user.invitername = current_user.name %>
+            <td class="border border-black"><%= user.name %></td>
+            <% end%>
            <% end%>
       </tr>
         <% end %>
