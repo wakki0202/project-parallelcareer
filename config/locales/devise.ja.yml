@@ -27,6 +27,10 @@ ja:
         updated_at: 更新日
     models:
       user: ユーザー
+      attributes:
+        user:
+          name: "名前"
+          tel: "電話番号"
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。

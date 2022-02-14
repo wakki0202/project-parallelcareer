@@ -32,6 +32,7 @@
                               <li class="nav__item"><%= link_to "友人を招待する" ,"/users/invitation/new" %></li>
                               <% if user_signed_in?  %>
                               <li class="nav__item"><%= link_to 'ログアウト' , destroy_user_session_path, method: :delete %></li>
+                              <li><%= link_to "　退会ご希望の方はこちら" ,"/users/destroy/#{current_user.id}" %> </li>
                               <% end %>
                               </ul>
                       </div>

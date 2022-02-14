@@ -41,7 +41,7 @@ before_action :authenticate_user!,only: [:new,:create]
           IntroductionMailer.complete_introduction(@introduction,@work,@current_user ).deliver
           redirect_to introductions_complete_path
       else
-          redirect_back(fallback_location: works_path)  #同上
+          render :new  #同上
           flash[:alert] = "※必須部分の入力またはチェックしてください"
       end
     end
