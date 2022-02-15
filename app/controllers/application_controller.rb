@@ -27,7 +27,12 @@ class ApplicationController < ActionController::Base
   end
 
   def after_invite_path_for(resource)
+    case resource
+    when User
     introductions_complete_path
+    when Provider
+    tops_addprovidercomp_path
+    end
   end
 
   

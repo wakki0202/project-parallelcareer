@@ -41,7 +41,11 @@
         <% @providers.each do |provider| %> 
         <tr class="border  text-left">
         <td class="border border-black"><%= provider.id %></td>
+        <% if provider.name.present? %>
         <td class="border border-black"><%= provider.name %></td>
+        <% else %>
+        <td class="border border-black">未登録</td>
+        <% end %>
           <td class="border border-black"><%= provider.email %></td>
         </tr>
         <% end %>

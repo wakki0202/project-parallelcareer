@@ -10,8 +10,8 @@ class Providers::InvitationsController < Devise::InvitationsController
   end
 
   def create
-    @providers = Provider.all
     super
+    
   end
 
   def edit

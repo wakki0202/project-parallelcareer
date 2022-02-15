@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get "tops/news/:id",to:"tops#newsshow"
   get "tops/policy",to:"tops#policy"
   get "tops/terms",to:"tops#terms"
+  get "tops/addprovidercomp",to:"tops#addprovidercomp"
   get "tops/destroycomp",to: "tops#destroycomp"
 
   resources :works do
