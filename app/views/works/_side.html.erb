@@ -59,7 +59,10 @@
                     <label for="menu-btn-check" class="menu-btn"><span></span></label>
                   <div class="menu-content"> 
                           <ul>
+                          <% if current_provider.email == "tanachu_78@yahoo.co.jp" %>
+                          <% else %>
                           <li class=""><%= link_to "トップページに戻る","/tops/index" %></li>
+                          <% end %>
                           <li class=""><%= link_to "案件一覧","/works" %></li>
                           <li><%= link_to " お問い合わせ一覧(#{ @detailnumber }件)","/details",class:"text-decoration-none"  %></li>
 
