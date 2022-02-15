@@ -6,8 +6,14 @@ class Users::InvitationsController < Devise::InvitationsController
   end
 
   def create
+    @users = User.all
     super
+ if @user.save
    introductions_complete_path
+ elsif 
+   new_user_invitation_path
+ end
+   
     
     
 

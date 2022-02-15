@@ -25,16 +25,12 @@ ja:
         unconfirmed_email: 未確認Eメール
         unlock_token: ロック解除用トークン
         updated_at: 更新日
-    models:
-      user: ユーザー
-      attributes:
-        user:
-          name: "名前"
-          tel: "電話番号"
-        introduction:
-          name: "名前"
-          phonenumber: "電話番号"
-          permission: "チェックボックス"
+        name: "名前"
+        tel: "電話番号"
+      introduction:
+        name: "紹介するお客様名"
+        phonenumber: "紹介するお客様の電話番号"
+        permission: "チェックボックス"
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。

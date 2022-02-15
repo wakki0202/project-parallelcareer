@@ -42,7 +42,6 @@ before_action :authenticate_user!,only: [:new,:create]
           redirect_to introductions_complete_path
       else
           render :new  #同上
-          flash[:alert] = "※必須部分の入力またはチェックしてください"
       end
     end
   

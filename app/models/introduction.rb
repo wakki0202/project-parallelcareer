@@ -7,7 +7,7 @@ has_one    :master,  through: :child
 
 validates :name, presence: { message: "が入力されていません" }
 validates :phonenumber, presence: { message: "が入力されていません" }
-validates :permission, presence: true
+validates :permission, presence: { message: "にチェックを入れてください" }
 
   def self.search(search)
       return Introduction.all unless search

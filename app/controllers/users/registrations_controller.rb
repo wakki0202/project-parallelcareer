@@ -18,7 +18,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     #スーパークラス(devise)のcreateアクションを呼ぶ 
     # byebug
    super
+    if  @user.save
       ThanxMailer.complete_registration(params[:user][:email],params[:user][:name]).deliver 
+    else
+      new_user_registration_path
+    end
   
   end
 

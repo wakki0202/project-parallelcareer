@@ -62,6 +62,12 @@ form {
   outline:0;
   
 }
+#introductionerror{
+
+.field_with_errors {
+  display: none;
+}
+}
 
 ::placeholder {
   color: rgb(145, 143, 143);

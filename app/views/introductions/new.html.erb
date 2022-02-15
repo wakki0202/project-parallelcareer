@@ -4,10 +4,10 @@
   <div class="sign-up-main ">
  <p class="fs-2"><%= alert %></p>
   <% if @introduction.errors.any? %>
-  <div class = "alert">
+  <div id="introductionerror" class="alert">
     <ul>
       <% @introduction.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li class="text-center text-white fw-bold fs-4 pb-3">※<%= message %></li>
       <% end %>
     </ul>
   </div>
