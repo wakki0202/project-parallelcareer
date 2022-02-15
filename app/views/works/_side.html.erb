@@ -41,19 +41,23 @@
    
 </div>
   
-<header class="site-header lg:block z-9 w-full fixed bg-white border-b-2">
+<header class="topsite-header">
 
- <ul class="wrapper site-header__wrapper">
-        <ul class="header-logo">
-          <%= link_to "ロゴ" ,"/tops/index" %>
-        </ul>
+ <div id="site-header__wrapper">
+        <div class="header-logo">
+          <div class="headerFlex">
+            <div>
+            <a href="/tops/index"><%= image_tag "logo2.jpg",width:"50%",class:"logoImages"  %></a>
+            </div>
+          </div>
+        </div>
 
           <nav class="nav">
-            <ul class="display-none">
-            <ul class="hamburger-menu">
+            <div class="display-none">
+            <div class="hamburger-menu">
                     <input type="checkbox" id="menu-btn-check">
                     <label for="menu-btn-check" class="menu-btn"><span></span></label>
-                  <ul class="menu-content"> 
+                  <div class="menu-content"> 
                           <ul>
                           <li class=""><%= link_to "トップページに戻る","/tops/index" %></li>
                           <li class=""><%= link_to "案件一覧","/works" %></li>
@@ -63,9 +67,11 @@
 
                       
              
-                          <li class="nav__item"><%= link_to "お知らせ一覧","/news" %></li>
+                          <li class=""><%= link_to "お知らせ一覧","/news" %></li>
                       
                           <li class=""><%= link_to "ユーザー一覧","/users/index" %></li>
+                          
+                          <li><%= link_to " 事業者一覧","/providers/invitation/new",class:"text-decoration-none" %></li>
 
                           <% if provider_signed_in? %>
                           <li class=""><span><%= link_to '事業者ログアウト' , destroy_provider_session_path, method: :delete,data: { confirm: 'ログアウトしますか？' } %></span></li> 
@@ -79,11 +85,11 @@
                     
 
                           </ul>
-                    </ul>
-                </ul>
-                </ul>
+                    </div>
+                </div>
+                </div>
 
                       
             </nav>
-  </ul>
+  </div>
  </header> -->

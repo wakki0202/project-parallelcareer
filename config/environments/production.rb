@@ -131,9 +131,9 @@ Rails.application.configure do
     domain: 'gmail.com',
     port:587,
     #gmailのユーザアカウント（xxxx@gmail.com)※念のため、credentials.yml.enc行き
-    user_name: 'ytk.jagaimo@gmail.com',
+    user_name: 'parallelcareer0000@gmail.com',
     #gmail２段階認証回避のためにアプリケーションでの利用パスワードを取得、必ずcredentials.yml.endに設定を！！
-    password: 'tfvmrsvrtsodzfrc',
+    password: 'udydfvzclxwuzuep',
     #パスワードをBase64でエンコード
     authentication:       'plain',
     enable_starttls_auto:  true
