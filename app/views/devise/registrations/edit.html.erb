@@ -10,7 +10,7 @@
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
                 <p class="alert"><%= alert %></p>
              
-             <h1 id="bankEdit ">基本情報</h1>
+             <h1 id="bankEdit ">プロフィール・スカウト設定</h1>
              <% if @user.errors.any? %>
               <div id="error_explanation">
                 <ul>
@@ -71,7 +71,7 @@
                     <%= f.submit "情報を更新する",class:"button",data: { confirm: '更新しますか？' } %>
                 </div>
               <div id="bankArea">
-               <h1 id="bankEdit ">振込先口座登録</h1>
+               <h1 id="bankEdit " class="pt-5 border-top">報酬口座設定</h1>
 
                <div class="formSetEdit mt-5">
                           <div class="text-left">銀行 <span>（必須）</span></div>
