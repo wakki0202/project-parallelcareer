@@ -14,15 +14,18 @@ class ApplicationController < ActionController::Base
     when User
        "/users/mypage/#{current_user.id}"
     when Provider
-      works_path
+      "/works"
 
     end
   end
 
   def after_sign_up_path_for(resource)
- 
-   respond_to   users_complete_path
-  
+  case resource
+    when User
+      respond_to   users_complete_path
+    when Provider
+      "/works"
+    end
 
   end
 
@@ -32,6 +35,14 @@ class ApplicationController < ActionController::Base
     introductions_complete_path
     when Provider
     tops_addprovidercomp_path
+    end
+  end
+
+  def after_update_path_for(resource)
+    case resource
+    when Provider
+    # 自分で設定した「マイページ」へのパス
+    "/works"
     end
   end
 
