@@ -117,6 +117,16 @@
     text-align: center;
     border-top: 1px solid #eee;
     padding: 20px;
+
+    span{
+      border-radius: 0.5rem;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      color: #fff;
+      background-color: #F68A16;
+    }
   }
 
   .card-link a {
