@@ -27,7 +27,7 @@
                   <div class="modal-body">
                     <div class="w-75 m-auto mb-4 mt-2 text-left">
                     <%= form.label :進捗編集,class:"h4 text-left" %>
-                    <%= form.select :step, [['口コミ確認完了'], ['お客様と繋がりませんでした'], ['断られました'], ['検討中'], ['進行中'], ['契約成立'], ['報酬振込完了']], {:controller => :introductions, :action => :update, :id => @introduction} %>
+                    <%= form.select :step, [['お客様紹介確認完了'], ['お客様と繋がりませんでした'], ['断られました'], ['検討中'], ['進行中'], ['契約成立'], ['報酬振込完了']], {:controller => :introductions, :action => :update, :id => @introduction} %>
                     </div>
                     <div class="w-75 m-auto mb-4 mt-2 text-left">
                     <%= form.label :掲載主からのコメント,class:"h4 text-left" %>
