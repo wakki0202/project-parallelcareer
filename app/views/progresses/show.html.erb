@@ -28,8 +28,11 @@
     <li class="is-active">断られました</li>
   <% elsif @introduction.step == "お客様と繋がりませんでした" %>
     <li class="is-active">お客様と繋がりませんでした</li>
+  <% elsif @introduction.step == "キャンセル" %>
+    <li class="is-active">キャンセル</li>
   <% else %>
   <% end %>
+  
 
   <% if @introduction.step == "進行中" %>  
     <li class="is-active">進行中</li>
