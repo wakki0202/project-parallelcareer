@@ -35,3 +35,7 @@ INSERT INTO details (id, user_id, work_id, status, created_at, updated_at) VALUE
 INSERT INTO details (id, user_id, work_id, status, created_at, updated_at) VALUES (47,152,21,'未対応','2022-01-29 04:17:42','2022-01-29 04:17:42');
 INSERT INTO details (id, user_id, work_id, status, created_at, updated_at) VALUES (48,152,21,'対応済み','2022-01-29 04:30:41','2022-02-01 02:00:34');
 INSERT INTO details (id, user_id, work_id, status, created_at, updated_at) VALUES (49,225,33,'未対応','2022-02-01 16:23:39','2022-02-01 16:23:39');
+
+INSERT INTO introductions (id, user_id, work_id,name, phonenumber,content, created_at, updated_at) VALUES (48,380,43,'陽山新一','090-1249-4534','車を購入したい','2022-02-01 16:23:39','2022-02-01 16:23:39');
+
+UPDATE introductions SET permission = true WHERE id = 48;
