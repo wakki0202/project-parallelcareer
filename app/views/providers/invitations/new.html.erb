@@ -39,6 +39,7 @@
         </tr>
 
         <% @providers.each do |provider| %> 
+        <% if provider.name.present? %>
         <tr class="border  text-left">
         <td class="border border-black"><%= provider.id %></td>
         <% if provider.name.present? %>
@@ -48,6 +49,7 @@
         <% end %>
           <td class="border border-black"><%= provider.email %></td>
         </tr>
+        <% end %>
         <% end %>
         </table>
     </div>

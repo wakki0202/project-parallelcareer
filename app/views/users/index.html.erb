@@ -33,6 +33,7 @@
         </tr>
 
         <% @users.each do |user| %> 
+        <% if user.name.present? %>
         <tr class="border  text-left">
           <td class="border border-black"><%= l user.created_at %></td>
           <td class="border border-black"><a href="/users/<%= user.id %>" class="text-decoration-none"><%= user.name %></a></td>
@@ -52,10 +53,11 @@
             <% end %>
             <% if user.deleted_at.present? %>
             <td class="border border-black">退会済み</td>
-            <% else%>
+            <% else %>
            <td class="border border-black"></td>
             <% end %>
         </tr>
+        <% end %>
         <% end %>
         </table>
         <div class=" pagenation">
