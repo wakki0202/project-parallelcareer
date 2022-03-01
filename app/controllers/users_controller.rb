@@ -17,6 +17,9 @@ before_action :authenticate_user!,only: [:news,:destroy,:mypage]
 
  end
 
+    def complete
+        @user = User.find(params[:id])
+    end
 
     def mypage
       @user = User.find(params[:id])
@@ -39,9 +42,7 @@ before_action :authenticate_user!,only: [:news,:destroy,:mypage]
 
       end
 
-      def complete
-
-      end
+      
    
       def destroy
 

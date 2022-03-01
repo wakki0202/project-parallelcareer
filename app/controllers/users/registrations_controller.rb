@@ -20,6 +20,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
    super
     if  @user.save
       ThanxMailer.complete_registration(params[:user][:email],params[:user][:name]).deliver 
+      "/users/complete/#{current_user.id}"
     else
       new_user_registration_path
     end

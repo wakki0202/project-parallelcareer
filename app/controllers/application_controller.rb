@@ -9,24 +9,25 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:accept_invitation, keys: [:password, :password_confirmation, :name, :tel])
     end
 
-  def after_sign_in_path_for(resource)
-    case resource
-    when User
-       "/users/mypage/#{current_user.id}"
-    when Provider
-      "/works"
-
-    end
-  end
+ 
 
   def after_sign_up_path_for(resource)
   case resource
     when User
-      respond_to   users_complete_path
+      "/users/complete/#{current_user.id}"
     when Provider
       "/works"
     end
 
+  end
+   def after_sign_in_path_for(resource)
+    case resource
+    when User
+       "/users/complete/#{current_user.id}"
+    when Provider
+      "/works"
+
+    end
   end
 
   def after_invite_path_for(resource)

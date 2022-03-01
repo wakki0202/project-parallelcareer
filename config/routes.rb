@@ -86,7 +86,7 @@ Rails.application.routes.draw do
   get "users/index",to:"users#index"
   get "users/:id",to:"users#show"
   
-  get "users/complete",to:"users#complete"
+  get "users/complete/:id",to:"users#complete"
   get "users/mypage/:id",to:"users#mypage"
   get "users/destroy/:id",to:"users#destroy"
   
