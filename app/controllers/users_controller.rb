@@ -16,7 +16,8 @@ require 'csv'
     # リンクを押すとsend_posts_csv(@posts)の処理を行います。
     respond_to do |format|
       format.html
-      format.csv do |csv|
+      format.csv do |csv|      
+      @users = User.all
         send_users_csv(@users)
       end
     end
