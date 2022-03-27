@@ -91,9 +91,9 @@ require 'csv'
           user.account_no,
           user.career,
           user.appeal,
-          user.invitername,
-          user.inviteremail,
-          user.invitertel,
+          user.invitername.or(user.invited_by.name) ,
+          user.inviteremail.or(user.invited_by.email),
+          user.invitertel.or(user.invited_by.tel),
           user.deleted_at
 
                 ]
