@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 before_action :authenticate_user!,only: [:news,:destroy,:mypage]
+require 'csv'
 
   def index
     @users = User.all.page(params[:page]).per(10)
@@ -9,6 +10,16 @@ before_action :authenticate_user!,only: [:news,:destroy,:mypage]
     @introductionall = Introduction.where(step: nil).count
     @detailnumber = current_provider.works.joins(:details).where(details: {status: "未対応"}).count
     @detailnumberall = Detail.where(status: "未対応").count
+     # respond_to はリクエストに応じた処理を行うメソッドです。
+    # 通常時はhtmlをリクエストしているので、処理は記述していません。
+    # viewのlink_toでformatをcsvとして指定しているので、
+    # リンクを押すとsend_posts_csv(@posts)の処理を行います。
+    respond_to do |format|
+      format.html
+      format.csv do |csv|
+        send_users_csv(@users)
+      end
+    end
   end
 
   
@@ -54,6 +65,44 @@ before_action :authenticate_user!,only: [:news,:destroy,:mypage]
 
     private
 
+     def send_users_csv(users)
+      bom = "\uFEFF"
+    # CSV.generateとは、対象データを自動的にCSV形式に変換してくれるCSVライブラリの一種
+    csv_data = CSV.generate(bom) do |csv|
+      # %w()は、空白で区切って配列を返します
+      column_names = %w(ID 作成日 名前 電話番号 eメール 出身 生年月日 ラインID 銀行 支店 口座種類 口座番号  経歴 アピールポイント 招待者 招待者電話番号 招待者eメール 退会日)
+      # csv << column_namesは表の列に入る名前を定義します。
+      csv << column_names
+      # column_valuesに代入するカラム値を定義します。
+      users.each do |user|
+        column_values = [
+          user.id,
+          user.created_at,
+          user.name,
+          user.tel,
+          user.email,
+          user.residence,
+          user.birth_date,
+          user.line_id,
+          user.bank,
+          user.branch,
+          user.account_type,
+          user.account_no,
+          user.career,
+          user.appeal,
+          user.invitername,
+          user.inviteremail,
+          user.invitertel,
+          user.deleted_at
+
+                ]
+      # csv << column_valueshは表の行に入る値を定義します。
+        csv << column_values
+      end
+    end
+    # csv出力のファイル名を定義します。
+    send_data(csv_data, filename: "ユーザー一覧.csv")
+  end
 
 
 

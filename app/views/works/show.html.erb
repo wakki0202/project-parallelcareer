@@ -39,8 +39,10 @@
                       <%= form.label :images, "画像をアップロード", class: "h4" %>
                   <% if @work.images.present? %>
                       <%= form.file_field :images,multiple: true, class: "form-control",id:"exampleFormControlInput1",value: params[:images]  %>
+                      <%= form.hidden_field :images_cache %>
                   <% elsif %>
                       <%= form.file_field :images,multiple: true, class: "form-control",id:"exampleFormControlInput1" %>
+                      <%= form.hidden_field :images_cache %>
                   <% end %>
               </div>
 
@@ -133,6 +135,7 @@
           <% @work.images.each do |img| %>
             <li class="text-center">
               <%= image_tag img.url ,class:"m-auto  mt-5"   %>
+              
             </li>
           <% end %>
         </ul>

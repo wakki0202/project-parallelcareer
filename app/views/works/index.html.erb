@@ -49,6 +49,7 @@
                 <div class="w-75 m-auto mb-4 mt-2">
                     <%= form.label :images, "画像をアップロード", class: "h4" %>
                     <%= form.file_field :images,multiple: true, class: "form-control",id:"exampleFormControlInput1"  %>
+                    <%= form.hidden_field :images_cache %>
                 </div>
 
                 <div class="w-75 m-auto mb-4 mt-2">
