@@ -71,12 +71,11 @@ require 'csv'
     # CSV.generateとは、対象データを自動的にCSV形式に変換してくれるCSVライブラリの一種
     csv_data = CSV.generate(bom) do |csv|
       # %w()は、空白で区切って配列を返します
-      column_names = %w(ID 作成日 退会日 名前 電話番号 eメール 出身 生年月日 ラインID 銀行 支店 口座種類 口座番号  経歴 アピールポイント 招待者➀ 招待者電話番号➀ 招待者eメール➀ 招待者➁  招待者電話番号➁ 招待者メール➁ )
+      column_names = %w(ID 作成日 退会日 名前 電話番号 eメール 出身 生年月日 ラインID 銀行 支店 口座種類 口座番号  経歴 アピールポイント )
       # csv << column_namesは表の列に入る名前を定義します。
       csv << column_names
       # column_valuesに代入するカラム値を定義します。
       users.each do |user|
-        if user.invited_by.present?
         column_values = [
           user.id,
           user.created_at,
@@ -92,18 +91,10 @@ require 'csv'
           user.account_type,
           user.account_no,
           user.career,
-          user.appeal,
-          user.invitername,
-          user.inviteremail,
-          user.invitertel,
-          user.invited_by.name,          
-          user.invited_by.email,          
-          user.invited_by.tel        
+          user.appeal
                 ]
-              
-      # csv << column_valueshは表の行に入る値を定義します。
         csv << column_values
-      end
+       
       end
     end
     # csv出力のファイル名を定義します。
