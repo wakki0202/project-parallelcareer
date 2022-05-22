@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_12_190205) do
+ActiveRecord::Schema.define(version: 2022_05_21_161947) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -143,6 +143,14 @@ ActiveRecord::Schema.define(version: 2022_02_12_190205) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "work_providers", force: :cascade do |t|
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "work_id"
+    t.index ["work_id"], name: "index_work_providers_on_work_id"
+  end
+
   create_table "works", force: :cascade do |t|
     t.string "title"
     t.string "company"
@@ -167,6 +175,8 @@ ActiveRecord::Schema.define(version: 2022_02_12_190205) do
     t.string "display_order"
     t.integer "position"
     t.string "remove_images"
+    t.string "id_second"
+    t.string "id_third"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
@@ -176,4 +186,5 @@ ActiveRecord::Schema.define(version: 2022_02_12_190205) do
   add_foreign_key "introductions", "users"
   add_foreign_key "introductions", "works"
   add_foreign_key "providers", "works"
+  add_foreign_key "work_providers", "works"
 end

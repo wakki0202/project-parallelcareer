@@ -6,12 +6,12 @@
   <div class="side">
     <%= render '/works/side' %>
   </div>
- 
+
   <div class="main">
-    
+
   <%= render '/works/side_header' %>
-    
-        
+
+
     <div class="userIndex">
       <h1 class="text-left">お問い合わせ（案件詳細希望者一覧)</h1>
       <div class="providerTable">
@@ -30,7 +30,7 @@
             <%= f.submit "検索",id:"btn",class:"fs-4 " %>
         <% end %>
       </div>
-      
+
 
          <table class="table userTable">
         <tr class="heading text-left">
@@ -41,7 +41,7 @@
           <th class="border border-black "></th>
         </tr>
 
-       <% @details.each do |detail| %> 
+       <% @details.each do |detail| %>
        <% if current_provider.email == "tanachu_78@yahoo.co.jp" %>
       <tr class="text-left">
         <td style="width:40%" class="border border-black"><%= detail.work.title %></td>
@@ -50,7 +50,7 @@
         <td style="width:10%" class="border border-black"><%= detail.status %></td>
         <td style="width:8%" class="border border-black text-center"><%= link_to '詳細', detail,class:"toShow text-decoration-none px-3 py-1  " %></td>
       </tr>
-      <% elsif detail.work.provider_id == current_provider.id %>
+      <% elsif detail.work.provider_id == current_provider.id || detail.work.id_second == current_provider.email || detail.work.id_third == current_provider.email %>
       <tr class="text-left">
         <td style="width:40%" class="border border-black"><%= detail.work.title %></td>
         <td style="width:10%" class="border border-black"><%= detail.user.name %></td>
@@ -60,10 +60,10 @@
       </tr>
     <% end %>
     <% end %>
-        
+
         </table>
         <div class=" pagenation">
-       
+
         </div>
       </div>
     </div>

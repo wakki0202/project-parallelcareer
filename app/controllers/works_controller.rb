@@ -5,11 +5,12 @@ class WorksController < ApplicationController
   # GET /works or /works.json
   def index
     @works = Work.all.page(params[:page]).order(:position)
+    @work_provider = WorkProvider.all
     @details = Detail.all
     @worknew = Work.new
     @q = Work.ransack(params[:q])
     @works = @q.result(distinct: true).order(:position)
-    if current_provider.present?
+    if current_provider.present? || current_provider.works.id_second.present?
     @introductionnumber = current_provider.works.joins(:introductions).where(introductions: {step: nil}).count
     @introductionall = Introduction.where(step: nil).count
     @detailnumber = current_provider.works.joins(:details).where(details: {status: "未対応"}).count
@@ -40,7 +41,7 @@ class WorksController < ApplicationController
   # GET /works/1 or /works/1.json
   def show
     @work = Work.find(params[:id])
-    @provider = @work.provider 
+    @provider = @work.provider
     if current_provider.present?
     @introductionnumber = current_provider.works.joins(:introductions).where(introductions: {step: nil}).count
     @introductionall = Introduction.where(step: nil).count
@@ -56,7 +57,7 @@ class WorksController < ApplicationController
 
   # GET /works/1/edit
   def edit
-    
+
   end
 
   # POST /works or /works.json
@@ -98,7 +99,7 @@ class WorksController < ApplicationController
     end
   end
 
-  
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -108,8 +109,8 @@ class WorksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def work_params
-      params.require(:work).permit(:title, :company_name, :link, :reward, :pcontent, :rday, :rcontent, :area, :appeal, :status,:remove_images, :images_cache, images: [])
+      params.require(:work).permit(:title, :company_name, :link, :reward, :pcontent, :rday, :rcontent, :area, :appeal, :status,:id_second,:id_third,:remove_images, :images_cache, images: [])
     end
 
-    
+
 end

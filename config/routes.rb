@@ -44,8 +44,7 @@ Rails.application.routes.draw do
     end
     resources :introductions, only: [:create, :edit, :update]
     resources :details, only: [:create]
-
-    
+    resources :work_providers, only: [:create]
   end
 
 
@@ -57,6 +56,9 @@ Rails.application.routes.draw do
   get "posts/:id",to:"posts#show"
   get "works/:id/introductions/new", to:"introductions#new"
   get "works/:id/introductions/edit", to:"introductions#edit"
+  get "works/:id/work_providers/index", to:"work_providers#index"
+  get "works/:id/work_providers/new", to:"work_providers#new"
+  post "works/:id/work_providers", to:"work_providers#create"
   get "introductions/complete", to:"introductions#complete"
 
   get "works/:id/details/new", to:"details#new"

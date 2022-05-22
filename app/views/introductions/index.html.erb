@@ -1,17 +1,17 @@
 
 
-    
+
 
 <body class="providerPage">
   <div class="side">
     <%= render '/works/side' %>
   </div>
- 
+
   <div class="main">
-    
+
   <%= render '/works/side_header' %>
-    
-        
+
+
     <div class="userIndex">
       <h1 class="text-left">口コミ一覧</h1>
       <div class="providerTable">
@@ -26,7 +26,7 @@
         <%= search_form_for @q, url: introductions_index_path do |f| %>
             <%= f.label :name, "キーワード",class:"fs-4" %>
             <%= f.search_field :name_or_user_name_or_work_title_cont,class:"rounded border border-dark fs-4" %>
-            
+
 
             <%= f.submit "検索",id:"btn",class:"fs-4 " %>
         <% end %>
@@ -39,12 +39,12 @@
       <th class="border border-black">受信日時</th>
       <th class="border border-black">進捗状況</th>
       <th class="border border-black"></th></tr>
-      
-      
-      <% @introductions.each do |introduction| %> 
+
+
+      <% @introductions.each do |introduction| %>
         <% if current_provider.email == "tanachu_78@yahoo.co.jp" %>
         <tr class="border text-left">
-        <td style=" class="border border-black"><%= introduction.work.title %></td> 
+        <td style=" class="border border-black"><%= introduction.work.title %></td>
         <td style="width:10%" class="border border-black"><%= introduction.user.name %></td>
         <td class="border border-black"><%= introduction.name %></td>
         <td style="width:25%" class=""><%= l introduction.created_at %></td>
@@ -54,9 +54,9 @@
           <td style="width:10%" class="border border-black"><%= introduction.step %></td>
         <% end %>
           <td style="width:8%" class="morebtn  text-center "><a href="<%= introduction.id %>" class="toShow text-decoration-none">詳細</a></td></tr>
-        <% elsif introduction.work.provider_id == current_provider.id %>
+        <% elsif introduction.work.provider_id == current_provider.id || introduction.work.id_second == current_provider.email || introduction.work.id_third == current_provider.email  %>
         <tr class="border text-left">
-        <td class="border border-black"><%= introduction.work.title %></td> 
+        <td class="border border-black"><%= introduction.work.title %></td>
         <td style="width:10%" class="border border-black"><%= introduction.user.name %></td>
         <td class="border border-black"><%= introduction.name %></td>
         <td style="width:25%" class=""><%= l introduction.created_at %></td>
@@ -68,8 +68,8 @@
           <td style="width:8%" class="morebtn  text-center "><a href="<%= introduction.id %>" class="toShow text-decoration-none">詳細</a></td></tr>
         <% end %>
       <% end %>
-  
-      
+
+
       </table>
       <div class="text-center pagenation">
       <%= paginate @introductions %>

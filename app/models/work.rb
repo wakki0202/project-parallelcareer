@@ -7,6 +7,7 @@ class Work < ApplicationRecord
   belongs_to :provider, optional: true
 
   has_many :details, dependent: :destroy
+  has_many :work_providers
   has_many :users, through: :details
   accepts_nested_attributes_for :details
 
